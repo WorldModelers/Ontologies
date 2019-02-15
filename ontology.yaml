@@ -1,0 +1,98 @@
+# Attempt to unify the upper-level ontologies of UArizona Eidos and BBN Hume
+# - focus on semantic distinctions other than the terminologies
+#  - we don't attemp to differentiate "event" and "entities" but rather trying to put all causal factors into "causal_factor"
+#  - use coarse-grained concepts "causal_factor", "entity" (where the causal factor is located, who and what artifacts are involved in a causal factor), "time", and "indicator_and_reported_property" as the top level concepts. 
+# - allow multiple inheritance (""UN/events/human/economic_crisis" is a child to both "economic_and_commerce" and "crisis_and_disaster"). Concepts under "intervention" and "condition" will overlap with other categories
+- concept
+  - causal_factor
+    - intervention
+      - "UN/interventions"
+      - "Hume/event/intervention"
+    - environment
+      - "UN/events/nature_impact"
+      - "Hume/event/environment"
+    - crisis_and_disaster
+      - "UN/events/crisis"
+      - "UN/events/human/economic_crisis"
+      - "UN/events/natural_disaster"
+      - "Hume/event/crisis"
+    - economic_and_commerce
+      - "UN/events/human/economic_crisis"
+      - "UN/entities/human/financial/economic/economy"
+      - "Hume/event/economic activity"
+      - cross_boarder_trade
+        - "Hume/event/economic activity/cross border trade"
+        - import
+          - "Hume/event/economic activity/cross border trade/import"
+        - export
+          - "Hume/event/economic activity/cross border trade/export"
+      - market
+        - "UN/entities/human/financial/economic/market"
+        - price
+          - "Hume/event/economic activity/market/price"
+    - social_and_political
+      - political
+        - "UN/events/human/political"
+      - migration
+        - "UN/events/human/human_migration"
+        - "Hume/event/movement/human displacement"
+      - crime
+        - "Hume/event/offense/crime"
+      - exploitation
+        - "Hume/event/offense/exploitation"
+      - conflict
+        - "UN/events/human/conflict"
+        - "Hume/event/conflict"
+    - movement
+      - "Hume/event/movement"
+    - weather
+      - "UN/events/weather"
+      - "Hume/event/weather"
+    - agriculture
+      - "UN/events/human/agriculture"
+      - "Hume/event/economic activity/production/agriculture production"
+    - health_and_life
+      - "UN/entities/human/health/disease"
+      - "Hume/event/healthcare/human disease"
+      - "Hume/event/healthcare/pest infestation"
+      - "Hume/event/healthcare/plant disease"
+      - "Hume/event/healthcare/treatment"
+      - "Hume/event/death"
+    - access
+      - "Hume/event/access/shortage/food shortage"
+      - "Hume/event/access/shortage/water shortage"
+    - condition
+      - tension
+        - "Hume/event/tension"
+      - trend
+        - "Hume/event/trend"
+      - famine
+        - "UN/events/human/famine"
+        - "Hume/event/healthcare/famine"
+  - entity
+    - geo-location
+      - "UN/entities/GPE"
+      - "Hume/entity/location"
+    - organization
+      - "UN/entities/human/government/government_actions/organization"
+      - "UN/entities/human/government/government_entity"
+      - "Hume/entity/organization"
+    - person_and_group
+      - "UN/entities/human/population"
+      - "Hume/entity/person/group/community"
+    - artifact
+  - time
+    - "UN/temporal"
+    - "Hume/entity/temporal"
+  - indicator_and_reported_property
+    - "Hume/indicator"
+    - weather
+      - "Hume/indicator/weather/rainfall"
+    - agriculture
+      - "Hume/indicator/agriculture/Crop Production"
+    - commerce
+      - "Hume/indicator/commerce/Cross Border Trade"
+    - conflict
+      - "Hume/indicator/conflict/population displacement"
+    - health
+      - "Hume/indicator/health/Global Acute Malnutrition (GAM) rate"
