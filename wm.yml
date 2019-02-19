@@ -1,0 +1,144 @@
+# Attempt to unify the upper-level ontologies of UArizona Eidos and BBN Hume
+# - focus on semantic distinctions other than the terminologies
+#  - we don't attemp to differentiate "event" and "entities" but rather trying to put all causal factors into "causal_factor"
+#  - use coarse-grained concepts "causal_factor", "entity" (where the causal factor is located, who and what artifacts are involved in a causal factor), "time", and "indicator_and_reported_property" as the top level concepts.
+# - allow multiple inheritance (""UN/events/human/economic_crisis" is a child to both "economic_and_commerce" and "crisis_and_disaster"). Concepts under "intervention" and "condition" will overlap with other categories
+- wm:
+  - concept:
+    - causal_factor:
+      - intervention:
+        - humanitarian assistance
+        - provision of goods and services
+        - infrastructure
+        - peacekeeping and security
+        - institutional support
+      - environment:
+        - environment
+        - climate_change_mitigation
+        - resource_management
+        - forestry
+        - natural_resources:
+          - natural_resource
+          - land
+          - water
+          - fossil_fuels
+          - soil
+        - pollution:
+          - air_pollution
+          - land_pollution
+          - climate_change
+      - crisis_and_disaster:
+        - crisis:
+          -crisis
+          - economic_crisis:
+            - poverty
+          - natural_disaster:
+            - flooding
+            - drought
+            - storm
+      - economic_and_commerce:
+        - economic_crisis
+        - economic activity:
+          - livelihood
+          - currency
+          - cross_boarder_trade:
+            - import
+            - export
+          - market:
+            - fuel
+            - price:
+              - food price
+              - oil price # should we have these?
+            - inflation
+            - depreciation
+            - revenue
+            - assets
+      - social_and_political:
+        - education
+        - government:
+          - census
+          - regulation
+          - tax_duty
+        - political:
+          - political_instability
+          - independence
+        - migration:
+          - human_displacement
+          - human_migration
+        - threat:
+          - crime
+          - exploitation
+            - "Hume/event/offense/exploitation"
+          - conflict
+          - physical_insecurity
+          - disarmament
+      - movement:
+        - movement
+      - weather:
+        - weather
+        - climate
+        - precipitation
+        - temperature
+      - agriculture:
+        - agricultural production
+        - planting
+        - crop storage
+        - fertilization
+        - irrigation
+        - pesticide
+        - crop
+        - livestock
+        - pest
+      - health_and_life:
+        - disease:
+          - human disease
+          - pest infestation
+          - plant disease
+        - treatment:
+          - treatment
+          - health_intervention # can these be combined?
+        - death
+        - birth
+      - access:
+        - infrastructure:
+          - electrical
+          - water
+          - waste
+          - road
+          - bridge
+          - transportation:
+            - travel
+            - shipping
+        - food_shortage  # or availability
+        - water_shortage # or availability
+        - road_access
+      - condition:
+        - tension
+        - trend
+        - famine
+        - poverty
+        - food security
+        - food insecurity
+    - entity:
+      - geo-location
+      - organization
+      - government_enttity
+      - person_and_group:
+        - population
+        - community
+      - artifact
+    - time:
+      - temporal:
+        - crop season
+        - season
+    - indicator_and_reported_property:
+      - weather:
+        - rainfall
+      - agriculture:
+        - Crop Production
+      - commerce:
+        - Cross Border Trade
+      - conflict:
+        - population displacement
+      - health:
+        - Global Acute Malnutrition (GAM) rate
