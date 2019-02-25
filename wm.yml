@@ -1,6 +1,6 @@
 # Attempt to unify the upper-level ontologies of UArizona Eidos and BBN Hume
 # - focus on semantic distinctions other than the terminologies
-#  - we don't attemp to differentiate "event" and "entities" but rather trying to put all causal factors into "causal_factor"
+#  - we don't attempt to differentiate "event" and "entities" but rather trying to put all causal factors into "causal_factor"
 #  - use coarse-grained concepts "causal_factor", "entity" (where the causal factor is located, who and what artifacts are involved in a causal factor), "time", and "indicator_and_reported_property" as the top level concepts.
 # - allow multiple inheritance (""UN/events/human/economic_crisis" is a child to both "economic_and_commerce" and "crisis_and_disaster"). Concepts under "intervention" and "condition" will overlap with other categories
 - wm:
@@ -9,9 +9,31 @@
       - intervention:
         - humanitarian assistance
         - provision of goods and services
+          - education:
+            - child friendly learning spaces
+          - health:
+            - anti-retroviral treatment
+            - sexual violence management
+            - vector control
+          - nutrition:
+            - therapeutic feeding or treating
+          - provide hygiene tool
+          - provide delivery kit
+          - provide farming tool
+          - provide seed
+          - provide livestock feed
+          - provide veterinary service
+          - provide stationary
+          - provide fishing tool
+          - provide cash
+          - provide food
+          - provide veterinary drugs vaccines
+          - provide moving of houseHolds
         - infrastructure
         - peacekeeping and security
-        - institutional support
+        - institutional support:
+          - protection:
+            - capacity building human right
       - environment:
         - environment
         - climate_change_mitigation
@@ -36,6 +58,8 @@
             - flooding
             - drought
             - storm
+            - earthquake
+        - fire
       - economic_and_commerce:
         - economic_crisis
         - economic activity:
@@ -43,7 +67,9 @@
           - currency
           - cross_boarder_trade:
             - import
+              - food import
             - export
+              - food export
           - market:
             - fuel
             - price:
@@ -53,6 +79,18 @@
             - depreciation
             - revenue
             - assets
+            - supply
+              - food supply
+            - demand
+              - food demand
+            - transaction
+              - oil transaction
+            - inflation
+            - currency devaluation
+          - consumption
+            - food consumption
+          - competition
+          - development
       - social_and_political:
         - education
         - government:
@@ -66,18 +104,30 @@
           - human_displacement
           - human_migration
         - threat:
-          - crime
           - exploitation
-            - "Hume/event/offense/exploitation"
-          - conflict
           - physical_insecurity
           - disarmament
+        - crime
+        - conflict:
+          - hostility
+          - demostrate
+          - war
+          - attack
+          - strike
+          - terrorism
+        - sanction
       - movement:
-        - movement
+        - movement:
+          - transport
+          - human displacement
+          - evacuate humanitarian workers
       - weather:
         - weather
         - climate
-        - precipitation
+        - precipitation:
+          - flooding
+          - drought
+          - storm
         - temperature
       - agriculture:
         - agricultural production
@@ -87,18 +137,20 @@
         - irrigation
         - pesticide
         - crop
-        - livestock
+        - livestock production
         - pest
       - health_and_life:
         - disease:
           - human disease
-          - pest infestation
-          - plant disease
+          - plant disease:
+            - pest infestation
+          - animal disease
         - treatment:
           - treatment
           - health_intervention # can these be combined?
         - death
         - birth
+        - famine
       - access:
         - infrastructure:
           - electrical

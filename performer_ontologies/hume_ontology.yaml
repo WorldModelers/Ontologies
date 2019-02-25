@@ -1,0 +1,942 @@
+# This ontology contains concepts from
+# - Concepts from Eidos, developed by University of Arizona
+# - Concepts from SOFIA Ontology.xlsx (developed by University of Pittsburgh and CMU)
+# - World Development Indicators
+# Some wikidata concepts (wikidata_annotation1.txt.annotated.gt3.lists.edited) are mapped to concepts in this list.
+- event:
+  - _source:
+      - wikidata.ACTIVITY
+      - wikidata.BIOLOGICAL_PROCESS
+      - wikidata.BUSINESS_PROCES
+      - wikidata.ESTIMATION_PROCESS
+      - wikidata.KEY_EVENT
+      - wikidata.LITERARY_GENRE
+      - wikidata.OCCURRENCE
+      - wikidata.PHENOMENON
+      - wikidata.PHYSICAL_PHENOMENON
+      - wikidata.PROCESS
+      - wikidata.SEPARATION_PROCESS
+      - wikidata.STATEMENT
+  - _description: "event is an action, process, condition or state"
+  - environment:
+    - "pollution"
+  - weather:
+    - _source:
+      - wikidata.WEATHER
+    - "deforestation"
+    - precipitation:
+      - "precipitation"
+      - "rain"
+      - "rainfall"
+      - "snow"
+      - "storm"
+    - flooding:
+      - "flood"
+      - "flash flood"
+    - drought:
+      - "drought"
+    - storm:
+      - "hurricane"
+      - "cyclone"
+      - "tornado"
+    - "wind"
+    - "extreme winds"
+  - conflict:
+    - hostility:
+      - "violence"
+      - "hostility"
+      - "vandalize"
+    - demostrate:
+      - "strike"
+    - war:
+      - "war"
+      - "invasion"
+    - attack:
+      - "attack"
+      - psychological attack:
+        - "psychological warfare"
+    - repression:
+      - "oppression"
+    - "fight"
+    - "fight"
+    - "explosion"
+    - "bombing"
+    - "shooting"
+    - "conflict"
+    - "fighting"
+    - "disarmament"
+    - "infighting"
+    - "civil unrest"
+    - "genocide"
+    - collision:
+      - "clash"
+    - "raid"
+    - terrorism:
+      - "terrorism"
+    - sabotage:
+      - "sabotage"
+    - strike:
+      - "strike"
+  - death:
+    - "death"
+    - "mortality"
+    - "morbidity"
+    - "decease"
+    - "kill"
+    - "murder"
+    - "death"
+    - "die"
+    - "suicide"
+    - "mortality"
+  - offense:
+    - crime:
+      - "bribery"
+      - "ransom"
+    - exploitation:
+      - "exploitation"
+  - healthcare:
+    - pest infestation:
+      - "pest infestation"
+    - famine:
+      - "famine"
+      - "hunger"
+      - "starvation"
+      - "malnutrition"
+      - "food security"
+      - "food insecurity"
+      - "food gap"
+    - human disease:
+      - _source:
+        - wikidata.DISEASE
+      - "outbreak"
+      - "HIV"
+      - "infection"
+      - "fever"
+      - "cholera"
+    - plant disease:
+      - "plant disease"
+      - "crop disease"
+    - animal disease:
+      - "livestock disease"
+      - "animal disease"
+    - treatment:
+      - "cure"
+      - "vaccine"
+      - "vaccination"
+      - "surgery"
+    - "healthcare"
+    - injury
+    - "infestation"
+  - movement:
+    - transport:
+      - "trucking"
+      - "shipping"
+      - "transport"
+      - "drive"
+      - "travel"
+      - "food transportation"
+    - human displacement:
+      - "migration"
+      - "migrate"
+      - "immigration"
+      - "displacement"
+      - "refugee migration"
+      - "emigration"
+      - "flee"
+    - evacuate humanitarian workers:
+      - "evacuate"
+  - economic activity:
+    - _source:
+      - wikidata.ECONOMIC_ACTIVITY
+    - production:
+      - agriculture production:
+        - irrigation:
+          - "irrigation"
+          - "fertigation"
+          - "watering"
+        - fertilization:
+          - "fertilizer"
+          - "potting composts"
+          - "superphosphate"
+          - "biofertilizers"
+          - "fish manure"
+          - "guano"
+          - "nitrophosphates"
+          - "composts"
+        - crop production:
+          - "crop production"
+          - "crop cultivation"
+          - "farming"
+        - livestock production:
+          - "milk production"
+          - "fishery"
+          - "fishing"
+        - "grow"
+        - "cultivate"
+        - "produce"
+        - "agriculture production"
+        - "agricultural productivity"
+      - oil production:
+        - "oil production"
+      - "diamond production"
+      - "opium poppy cultivation"
+      - "industry"
+      - "manufacture"
+      - "construct"
+      - "build"
+    - market:
+      - transaction:
+        - "transfer money"
+        - oil transaction:
+          - "fuel exports"
+      - inflation:
+        - "inflation"
+        - "hyperinflation"
+        - "food inflation"
+      - currency devaluation:
+        - "devaluate"
+        - "devaluation"
+      - price:
+        - food price:
+          - "food price"
+        - oil price:
+          - "fuel price"
+      - "depreciation"
+      - "market"
+      - "sell"
+      - "buy"
+      - "exchange"
+      - "commerce"
+      - "profit"
+      - "revenue"
+      - "earn"
+      - "net profit"
+      - "earning"
+    - consumption:
+      - "consumption"
+      - food consumption:
+        - "food consumption"
+    - competition:
+      - "competition for resources"
+      - "economic competition"
+    - development:
+      - "rural development"
+      - "agricultural development"
+    - demand:
+      - "demand for oil"
+    - cross border trade:
+      - "trade"
+      - import:
+        - "import"
+      - export:
+        - "export"
+    - business:
+      - "bankrupt"
+    - "economy"
+    - "finance"
+    - "supply chain disruption"
+  - access:
+    - "access"
+    - "access to education"
+    - "access to financial markets"
+    - "access to water"
+    - "food access"
+    - "availability"
+    - "need"
+    - "availability of cropland"
+    - "availability of schools"
+    - shortage:
+      - food shortage:
+        - "food shortage"
+      - water shortage:
+        - "water scarcity"
+      - "medicine shortage"
+      - "housing shortage"
+      - "electricity shortage"
+      - "land shortage"
+      - "information shortage"
+  - intervention:
+    - "intervention"
+    - "government intervention"
+    - "wealth distribution"
+    - "pest control"
+    - "government spending"
+    - "subsidy"
+    - therapeutic feeding or treating:
+      - "therapeutic feeding"
+      - "therapeutic treating"
+    - anti-retroviral treatment:
+      - "anti-retroviral"
+    - sexual violence management:
+      - "post-exposure prophylaxis"
+    - vector control:
+      - "vector control"
+      - "mosquito control"
+    - capacity building human rights:
+      - "respects"
+    - child friendly learning spaces:
+      - "protective environment"
+    - provide humanitarian resources:
+      - provide hygiene tool:
+        - _NA
+      - provide delivery kit:
+        - _NA
+      - provide farming tool:
+        - _NA
+      - provide seed:
+        - "seed aid"
+      - provide livestock feed:
+        - _NA
+      - provide veterinary service:
+        - _NA
+      - provide stationary:
+        - _NA
+      - provide fishing tool:
+        - _NA
+      - provide cash:
+        - _NA
+      - provide food:
+        - "food aid"
+        - "food assistance"
+      - provide veterinary drugs vaccines:
+        - "veterinary care"
+    - provide moving of houseHolds:
+      - _NA
+    - tax:
+      - _source:
+        - wikidata.TAX
+      - "tariff"
+    - education:
+      - "training"
+      - "agriculture training"
+    - assistance:
+      - "food aid"
+      - "humanitarian response"
+      - "humanitarian aid"
+      - "assistance"
+      - "humanitarian support"
+      - "support"
+      - "help"
+    - command:
+      - "order"
+      - "veto"
+    - sanction:
+      - "sanction"
+    - military operation:
+      - counter terrorism operation:
+        - "counterinsurgency"
+  - crisis:
+    - "crisis"
+    - "emergency"
+    - "catastrophe"
+    - "urgency"
+    - disaster:
+      - earthquake:
+        - "earthquake"
+      - "disaster"
+    - fire:
+      - "fire"
+  - trend:
+    - "incline"
+    - "decline"
+    - "escalation"
+    - "drop"
+    - "raise"
+    - "increase"
+    - "decrease"
+  - forecast:
+    - risk:
+      - "risk"
+      - "danger"
+      - "insecurity"
+      - "hazard"
+      - "liability"
+      - "peril"
+    - likelihood:
+      - "estimate"
+      - "forecast"
+      - "expect"
+      - "suggest"
+      - "predict"
+  - tension:
+    - "tension"
+    - "stress"
+  - emotion:
+    - _source:
+      - wikidata.BASIC_EMOTION
+      - wikidata.EMOTION
+    - "fear"
+  - cognitive process:
+    - "understand"
+    - "reason"
+    - "think"
+    - "conclude"
+  - communication:
+    - "communication"
+    - "statement"
+    - "report"
+    - "speak"
+    - "communicate"
+    - "broadcast"
+    - "tell"
+    - "analysis"
+  - personal:
+    - marriage or divorce:
+      - "divorce"
+    - meet
+  - employment:
+    - "recruit"
+  - legal:
+    - "trial"
+    - arrest
+  - defensive:
+    - "defend"
+  - condition:
+    - _source:
+      - wikidata.CONDITION
+      - wikidata.CONFIDENCE_VALUE
+      - wikidata.CONSERVATION_STATUS
+      - wikidata.FAO_RISK_STATUS
+      - wikidata.STATE
+      - wikidata.SYMPTOM
+    - poverty:
+      - "poverty"
+      - "poor"
+  - factor:
+    - "bias"
+    - "evidence"
+  - personnel:
+    - "hire"
+  - refugee population:
+    - "refugee population"
+  - lean season:
+    - "lean season"
+  - peace treaty:
+    - "truce"
+    - "peace treaty"
+  - destroy crops:
+    - _NA
+  - event group:
+    - _NA
+- indicator:
+  - Agriculture:
+    - Livestock Production:
+      - "Livestock Production"
+    - Crop Production:
+      - "Crop Production"
+  - Health:
+    - Global Acute Malnutrition (GAM) rate:
+      - "Global Acute Malnutrition (GAM) rate"
+  - Conflict:
+    - Population Displacement:
+      - "population displacement"
+  - Rainfall:
+    - "rainfall"
+  - Commerce:
+    - Cross Border Trade:
+      - "cross borader trade"
+  - Wealth:
+    - Inflation Rate:
+      - "inflation rate"
+- entity:
+  - _source:
+    - wikidata.ANOMALY
+    - wikidata.APTITUDE
+    - wikidata.CLASSICAL_ELEMENT
+    - wikidata.CLASSIFICATION_SCHEME
+    - wikidata.CONTRACT
+    - wikidata.CRITERION
+    - wikidata.FIRST-ORDER_METACLASS
+    - wikidata.FORM_OF_GOVERNMENT
+    - wikidata.GEOLOGY
+    - wikidata.HOME_APPLIANCE
+  - agriculture:
+    - food:
+      - _source:
+        - wikidata.FOOD_INGREDIENT
+        - wikidata.INGREDIENT
+      - crop:
+        - "wheat"
+        - "corn"
+        - "maize"
+        - "rice"
+        - "sorghum"
+        - "barley"
+        - "flax"
+        - "grain"
+        - "beans"
+        - "sugar"
+        - "flour"
+        - "tea"
+        - "leaf vegetables"
+        - "groundnuts"
+        - "cultivar"
+      - "cheese"
+      - "vegetables"
+      - fruit:
+        - _source:
+          - wikidata.FRUIT
+        - "fruits"
+      - "meat"
+      - "tomato"
+  - chemical substance:
+    - _source:
+      - wikidata.CHEMICAL_COMPOUND
+      - wikidata.CHEMICAL_ELEMENT
+      - wikidata.CHEMICAL_SUBSTANCE
+    - fertilizer:
+      - "fertilizers"
+    - drug:
+      - "drug"
+    - "acids"
+    - "vitamins"
+    - "proteins"
+  - disease:
+    - human disease:
+      - "HIV"
+    - "plant disease"
+    - animal disease:
+      - "mad cow disease"
+  - organism:
+    - animal:
+      - _source:
+        - wikidata.HERALDIC_ANIMAL
+      - "ox"
+      - "sheep"
+      - "donkey"
+      - "livestock"
+      - "herd"
+    - pest:
+      - "armyworm"
+      - "insect"
+      - "swarm"
+      - "locust"
+      - "fungus"
+      - "plant nematodes"
+      - "weeds"
+      - "volunteer plants"
+      - "pests"
+      - "mice"
+      - "midges"
+      - "slugs"
+    - "bird"
+    - "germination"
+    - "swamps"
+  - location:
+    - _source:
+      - wikidata.ARCHAEOLOGICAL_SITE
+      - wikidata.BIOSPHERE_RESERVE
+      - wikidata.CASTE
+      - wikidata.DESIGNATION_FOR_AN_ADMINISTRATIVE_TERRITORIAL_ENTITY
+      - wikidata.GEOGRAPHIC_LOCATION
+      - wikidata.LOCALITY
+      - wikidata.NEIGHBORHOOD
+      - wikidata.PENINSULA
+      - wikidata.PHYSICAL_GEOGRAPHY
+      - wikidata.REGION
+      - wikidata.RESERVOIR
+      - wikidata.SECOND-LEVEL_ADMINISTRATIVE_COUNTRY_SUBDIVISION
+      - wikidata.SETTLEMENT
+      - wikidata.STATE_OF_SOUTH_SUDAN
+      - wikidata.STATE_OF_SUDAN
+      - wikidata.TERRITORIAL_ENTITY
+    - water body:
+      - river:
+        - _source:
+          - wikidata.RIVER
+          - wikidata.STREAM
+        - "river"
+      - lake:
+        - _source:
+          - wikidata.LAKE
+      - sea:
+        - _source:
+          - wikidata.SEA
+    - geopolitical entities:
+      - _source:
+        - wikidata.COMMONWEALTH_REALM
+        - wikidata.CONSTITUENCY_OF_THE_EUROPEAN_PARLIAMENT
+        - wikidata.CONSTITUTION
+        - wikidata.DISTRICT_OF_ETHIOPIA
+        - wikidata.HISTORICAL_COUNTRY
+        - wikidata.ISLAND
+      - nation:
+        - "nation"
+        - "country"
+      - "government"
+      - city:
+        - _source:
+          - wikidata.BIG_CITY
+          - wikidata.CAPITAL
+          - wikidata.CITY
+        - "city"
+      - village:
+        - _source:
+          - wikidata.VILLAGE
+        - "village"
+      - town:
+        - _source:
+          - wikidata.TOWN
+        - "town"
+      - "state"
+      - country:
+        - _source:
+          - wikidata.COUNTRY
+        - "Nigeria"
+        - "Sudan"
+        - "South Sudan"
+      - continent:
+        - _source:
+          - wikidata.CONTINENT
+        - "Africa"
+    - "northern"
+    - "southern"
+  - nature:
+    - _source:
+      - wikidata.ECOSYSTEM
+      - wikidata.HABITAT
+      - wikidata.LANDSCAPE
+    - mountain:
+      - _source:
+        - wikidata.HILL
+        - wikidata.MOUNTAIN
+      - "mountain"
+    - "valley"
+    - "water"
+    - "forestry"
+    - land:
+      - "Cropland"
+      - "The Sudd wetland"
+    - soil:
+      - soil contents:
+        - "phosphorous"
+        - "organic matter"
+  - artificial physical objects:
+    - _source:
+      - wikidata.CANAL
+      - wikidata.ELECTRICAL_GRID
+    - facility:
+      - _source:
+        - wikidata.FACILITY
+      - "facility"
+    - vehicle:
+      - "vehicle"
+    - weapon:
+      - "weapon"
+    - artifact:
+      - "artifact"
+    - "building"
+    - "bridge"
+    - road:
+      - _source:
+        - wikidata.ROAD_TYPE
+      - "road"
+    - "highways"
+    - "border"
+    - "monument"
+    - "harbour"
+  - economics:
+    - financial:
+      - "investment"
+      - "stipend"
+      - "income"
+      - "pay"
+      - price:
+        - _source:
+          - wikidata.PRICE
+        - "price"
+      - "cost"
+      - "expense"
+    - agent:
+      - _source:
+        - wikidata.ECONOMIC_AGENT
+        - wikidata.GOODS
+      - "household"
+    - concept:
+      - _source:
+        - wikidata.ECONOMICAL_CONCEPT
+      - "profitability"
+    - branch:
+      - _source:
+        - wikidata.ECONOMIC_BRANCH
+      - "agriculture"
+    - indicator:
+      - _source:
+        - wikidata.ECONOMIC_INDICATOR
+        - wikidata.MACROECONOMIC_INDICATOR
+      - "GDP"
+      - "income level"
+      - "interest rate"
+      - "household income"
+      - "take home pay"
+    - sector:
+      - _source:
+        - wikidata.ECONOMIC_SECTOR
+      - "manufacturing"
+    - commodity:
+      - _source:
+        - wikidata.PRODUCT
+      - "tobacco"
+      - "petroleum"
+  - politics:
+    - _source:
+      - wikidata.POLITICAL_IDEOLOGY
+      - wikidata.POLITICAL_COALITION
+      - POLITICAL_IDEOLOGY
+    - concept:
+      - _source:
+        - wikidata.POLITICAL_CONCEPT
+      - "Initiative"
+  - sociology:
+    - _source:
+      - wikidata.SOCIOLOGICAL_CONCEPT
+    - "dominance"
+  - organization:
+    - _source:
+      - wikidata.CENTRAL_BANK
+      - wikidata.CULTURAL_INSTITUTION
+      - wikidata.GOVERNMENT_AGENCY
+      - wikidata.GOVERNMENT
+      - wikidata.HEALTH_ORGANIZATION
+      - wikidata.INTERGOV_ORG
+      - wikidata.INTERNATIONAL_ORGANIZATION
+      - wikidata.MUSEUM
+      - wikidata.NAT_HIST_MUSEAU
+      - wikidata.NON-GOVERNMENTAL_ORGANIZATION
+      - wikidata.NONPROFIT_ORGANIZATION
+      - wikidata.ORGANIZATION
+      - wikidata.PRIVATELY_HELD_COMPANY
+      - wikidata.RESEARCH_INSTITUTE
+      - wikidata.THINK_TANK
+      - wikidata.TYPE_OF_BUSINESS_ENTITY
+    - "organization"
+    - "association"
+    - "agency"
+    - corporation:
+      - "business"
+      - "company"
+      - "corporation"
+    - educational:
+      - _source:
+        - wikidata.EDUCATIONAL_INSTITUTION
+        - wikidata.PUBLIC_EDUCATIONAL_INSTITUTION_OF_THE_UNITED_STATES
+      - university:
+        - _source:
+          - wikidata.UNIVERSITY
+        - "university"
+    - military organizations:
+      - "army"
+    - "laboratory"
+  - person:
+    - individual:
+      - "person"
+    - group:
+      - _source:
+        - wikidata.POPULATION_GROUP
+      - "household"
+      - community:
+        - _source:
+          - wikidata.UNINCORPORATED_COMMUNITY
+        - "communities"
+        - "families"
+      - "ethic group"
+      - tribe:
+        - _source: wikidata.ETHNIC_GROUP
+        - "Zulu"
+        - "Maasai"
+    - "population"
+  - academic discipline:
+    - _source:
+      - wikidata.ACADEMIC_DISCIPLINE
+      - wikidata.APPLIED_SCIENCE
+      - wikidata.BRANCH_OF_SCIENCE
+    - "sociology"
+    - "science"
+    - "research"
+    - "engineering"
+    - "epidemiology"
+    - "informatics"
+  - rule:
+    - "regulation"
+    - law:
+      - _source:
+        - wikidata.LAW
+        - wikidata.LEGAL_INSTRUMENT
+        - wikidata.wikidata.LEGAL_CONCEPT
+      - "law"
+  - right:
+    - "equality"
+    - "freedom"
+    - "property"
+    - "general human rights"
+    - "political rights"
+    - "economic rights"
+    - "freedom of the press"
+    - "economic freedom"
+  - media:
+    - _source:
+      - wikidata.PERIODICAL_LITERATURE
+    - "newspaper"
+    - "reports"
+    - "news"
+    - "article"
+    - "video"
+    - "photographs"
+    - "documents"
+  - temporal:
+    - _source:
+      - wikidata.CHRONOSTRATIGRAPHIC_UNIT
+      - wikidata.DECADE
+      - wikidata.DETERMINATOR_FOR_DATE_OF_PERIODIC_OCCURRENCE
+      - wikidata.ERA
+      - wikidata.GEOLOGICAL_PERIOD
+      - wikidata.HOLIDAY
+      - wikidata.SEASON
+    - seasons:
+      - crop season:
+        - "harvest"
+        - "lean season"
+        - "planting season"
+        - "sowing season"
+      - annual:
+        - "summer"
+        - "winter"
+        - "fall"
+        - "spring"
+        - "dry season"
+        - "rainy season"
+        - "monsoon season"
+    - months:
+      - _source:
+        - wikidata.CALENDAR_MONTH
+      - "January"
+      - "February"
+      - "March"
+      - "April"
+      - "May"
+      - "June"
+      - "July"
+      - "August"
+      - "September"
+      - "October"
+      - "November"
+      - "December"
+    - "2009"
+  - land type:
+    - "Cropland"
+    - "Grass with crop"
+    - "Trees with crop"
+  - measurement:
+    - _source:
+      - wikidata.DESCRIPTIVE_ITEM_USED_AS_UNIT
+      - wikidata.ENGLISH_UNITS_OF_MEASUREMENT
+      - wikidata.EXTENSIVE_PHYSICAL_QUANTITY
+      - wikidata.GEOMETRIC_CONCEPT
+      - wikidata.HUMAN-BASED_UNIT_OF_MEASUREMENT
+      - wikidata.INTENSIVE_QUANTITY
+      - wikidata.ISQ_DERIVED_QUANTITY
+      - wikidata.MEASUREMENT
+      - wikidata.PHYSICAL_QUANTITY
+      - wikidata.UNIT_OF_AMOUNT
+      - wikidata.UNIT_OF_MEASUREMENT
+    - distance:
+      - _source:
+        - wikidata.UNIT_OF_LENGTH
+      - "feet"
+      - "meter"
+      - "inch"
+      - "yard"
+      - "mile"
+      - "kilometer"
+    - area:
+      - _source:
+        - wikidata.UNIT_OF_AREA
+      - "acre"
+      - "hectare"
+    - weight:
+      - "ton"
+      - "tonne"
+      - "gram"
+      - "kilogram"
+      - "pound"
+      - "ounce"
+    - volume:
+      - _source:
+        - wikidata.UNIT_OF_VOLUME
+      - "liter"
+      - "gallon"
+    - mass:
+      - _source:
+        - wikidata.UNIT_OF_MASS
+      - "tons"
+    - energy:
+      - _source:
+        - wikidata.UNIT_OF_ENERGY
+      - "kWh"
+    - time:
+      - _source:
+        - wikidata.UNIT_OF_TIME
+      - "days"
+  - mathematics:
+    - _source:
+      - wikidata.MATHEMATICAL_CONCEPT
+      - wikidata.UNARY_OPERATION
+    - statistics:
+      - _source:
+        - wikidata.DESCRIPTIVE_STATISTIC
+        - wikidata.TYPE_OF_STATISTIC
+      - "mean"
+      - "statistics"
+  - percentage:
+    - "percent"
+  - money:
+    - "$227"
+    - "US$800 million"
+  - currency:
+    - _source:
+      - wikidata.CURRENCY
+    - "dollar"
+  - temperature:
+    - _source:
+      - wikidata.TEMPERATURE
+    - "temperature"
+  - "security"
+  - "insecurity"
+  - "instability"
+  - "transparency"
+  - "safety"
+  - "attention"
+  - "peace"
+  - "pollution"
+  - "pressure"
+  - "opportunity"
+  - "influence"
+  - "inequality"
+  - "democracy"
+  - "capability"
+  - "capacity"
+  - "power"
+  - "corruption"
+  - "livelihood"
+  - "resources"
+  - industry:
+    - _source:
+      - wikidata.INDUSTRY
+    - "industry"
+  - "work"
+  - position or role:
+    - _source:
+      - wikidata.JOB
+      - wikidata.PROFESSION
+      - wikidata.OCCUPATION
+    - "engineers"
+  - language:
+    - _source:
+      - wikidata.LANGUAGE
+  - "career"
+  - property:
+    - _source:
+      - wikidata.PHYSICAL_PROPERTY
+      - wikidata.QUALITY
+      - wikidata.RATE
+    - "permeability"
