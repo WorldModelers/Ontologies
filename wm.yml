@@ -8,7 +8,7 @@
     - causal_factor:
       - intervention:
         - humanitarian assistance
-        - provision of goods and services
+        - provision of goods and services:
           - education:
             - child friendly learning spaces
           - health:
@@ -51,7 +51,7 @@
           - climate_change
       - crisis_and_disaster:
         - crisis:
-          -crisis
+          - crisis
           - economic_crisis:
             - poverty
           - natural_disaster:
@@ -66,28 +66,28 @@
           - livelihood
           - currency
           - cross_boarder_trade:
-            - import
+            - import:
               - food import
-            - export
+            - export:
               - food export
           - market:
             - fuel
             - price:
-              - food price
+              - food_price
               - oil price # should we have these?
             - inflation
             - depreciation
             - revenue
             - assets
-            - supply
+            - supply:
               - food supply
-            - demand
+            - demand:
               - food demand
-            - transaction
+            - transaction:
               - oil transaction
             - inflation
             - currency devaluation
-          - consumption
+          - consumption:
             - food consumption
           - competition
           - development
@@ -132,7 +132,7 @@
       - agriculture:
         - agricultural production
         - planting
-        - crop storage
+        - crop_storage
         - fertilization
         - irrigation
         - pesticide
@@ -169,12 +169,12 @@
         - trend
         - famine
         - poverty
-        - food security
-        - food insecurity
+        - food_security
+        - food_insecurity
     - entity:
       - geo-location
       - organization
-      - government_enttity
+      - government_entity
       - person_and_group:
         - population
         - community
