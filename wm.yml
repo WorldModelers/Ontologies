@@ -56,9 +56,17 @@
             - poverty
           - natural_disaster:
             - flooding
+            # *********** CauseEX edit*************************
+            - avalanche
+            - wildfire
+            # *************************************************
             - drought
             - storm
             - earthquake
+          # *********** CauseEX edit*************************
+          - weather_issue:
+            - cold_temperature
+          # *************************************************
         - fire
       - economic_and_commerce:
         - economic_crisis
@@ -142,6 +150,9 @@
       - health_and_life:
         - disease:
           - human disease
+          #*****CauseEx Edit**************************************#
+          # healthAndDisease #
+          - AlcoholDrugAndSubstanceAbuse
           - plant disease:
             - pest infestation
           - animal disease
