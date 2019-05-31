@@ -45,25 +45,39 @@
           - water
           - fossil_fuels
           - soil
+          #****************CauseEx edit*********************************
+          - water_management
+          #*************************************************************
         - pollution:
           - air_pollution
           - land_pollution
           - climate_change
+      # ****************CauseEx edit**********************************
+      - food_water_and_nutrition:
+        - water_insecurity
+        - water_management
+        - water_security
+      #***************************************************************
       - crisis_and_disaster:
         - crisis:
           - crisis
           - economic_crisis:
             - poverty
-          - natural_disaster:
-            - flooding
-            # *********** CauseEX edit*************************
-            - avalanche
-            - wildfire
-            # *************************************************
-            - drought
-            - storm
-            - earthquake
           # *********** CauseEX edit*************************
+          - environmental_factor:
+            - crop_failure
+            - insect_infestation
+            - natural_disaster:
+              - flooding
+              # *********** CauseEX edit*************************
+              - avalanche
+              - wildfire
+              - volcanic_eruption
+              # *************************************************
+              - drought
+              - storm
+              - earthquake
+          # ******************************************************
           - weather_issue:
             - cold_temperature
           # *************************************************
@@ -159,6 +173,9 @@
         - treatment:
           - treatment
           - health_intervention # can these be combined?
+          #*****CauseEx Edit**************************************#
+          - vaccination_program
+          #********************************************************
         - death
         - birth
         - famine
@@ -176,6 +193,10 @@
         - water_shortage # or availability
         - road_access
       - condition:
+        #******************************CauseEx edit**********************************************
+        - living_condition:
+          - unsanitary_condition
+        #****************************************************************************************
         - tension
         - trend
         - famine

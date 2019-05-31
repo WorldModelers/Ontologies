@@ -244,6 +244,14 @@
             name: soil
             take_args: 0
             polarity: 1.0
+          #***********************CauseEx edit************************************************
+          - OntologyNode:
+            examples:
+            - water_management
+            name: water_management
+            take_args: 0
+            polarity: 1.0
+          #************************************************************************************
         - pollution:
           - OntologyNode:
             examples:
@@ -269,6 +277,27 @@
             name: climate_change
             take_args: 0
             polarity: 1.0
+      # ****************CauseEx edit**********************************
+      - food_water_and_nutrition:
+        - OntologyNode:
+          examples:
+          - water_insecurity
+          name: water_insecurity
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - water_management
+          name: water_management
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - water_security
+          name: water_security
+          take_args: 0
+          polarity: 1.0
+      #***************************************************************
       - crisis_and_disaster:
         - crisis:
           - OntologyNode:
@@ -286,47 +315,69 @@
               name: poverty
               take_args: 0
               polarity: 1.0
-          - natural_disaster:
+          # ***************************CauseEx edit **********************
+          - environmental_factor:
+            # ***************************CauseEx edit **********************
             - OntologyNode:
               examples:
-              - flood
-              - flash flood
-              name: flooding
+              - crop_failure
+              name: crop_failure
               take_args: 0
               polarity: 1.0
+            - OntologyNode:
+              examples:
+              - insect_infestation
+              name: insect_infestation
+              take_args: 0
+              polarity: 1.0
+            # **************************************************************
+            - natural_disaster:
+              - OntologyNode:
+                examples:
+                - flood
+                - flash flood
+                name: flooding
+                take_args: 0
+                polarity: 1.0
+              # *********** CauseEX edit*************************
+              - OntologyNode:
+                examples:
+                - avalanche
+                name: avalanche
+                take_args: 0
+                polarity: 1.0
+              - OntologyNode:
+                examples:
+                - wildfire
+                name: wildfire
+                take_args: 0
+                polarity: 1.0
+              - OntologyNode:
+                examples:
+                - volcanic_eruption
+                name: volcanic_eruption
+                take_args: 0
+                polarity: 1.0
+              # *************************************************
+              - OntologyNode:
+                examples:
+                - drought
+                name: drought
+                take_args: 0
+                polarity: 1.0
+              - OntologyNode:
+                examples:
+                - storm
+                name: storm
+                take_args: 0
+                polarity: 1.0
+              - OntologyNode:
+                examples:
+                - earthquake
+                name: earthquake
+                take_args: 0
+                polarity: 1.0
             # *********** CauseEX edit*************************
-            - OntologyNode:
-              examples:
-              - avalanche
-              name: avalanche
-              take_args: 0
-              polarity: 1.0
-            - OntologyNode:
-              examples:
-              - wildfire
-              name: wildfire
-              take_args: 0
-              polarity: 1.0
-            # *************************************************
-            - OntologyNode:
-              examples:
-              - drought
-              name: drought
-              take_args: 0
-              polarity: 1.0
-            - OntologyNode:
-              examples:
-              - storm
-              name: storm
-              take_args: 0
-              polarity: 1.0
-            - OntologyNode:
-              examples:
-              - earthquake
-              name: earthquake
-              take_args: 0
-              polarity: 1.0
-          # *********** CauseEX edit*************************
           - weather_issue:
             - OntologyNode:
               examples:
@@ -895,6 +946,14 @@
       #*****CauseEx Edit**************************************#
       # healthAndDisease #
         - disease:
+          #*****CauseEx Edit**************************************#
+          - OntologyNode:
+            examples:
+            - infectious human disease
+            name: infectious human disease
+            take_args: 0
+            polarity: 1.0
+          #*********************************************************
           - OntologyNode:
             examples:
             - HIV
@@ -1044,6 +1103,15 @@
           take_args: 1
           polarity: 1.0
       - condition:
+        # *************************CauseEX edit**********************************
+        - living_condition:
+          - OntologyNode:
+            examples:
+            - unsanitary_condition
+            name: unsanitary_condition
+            take_args: 0
+            polarity: 1.0
+        #************************************************************************
         - OntologyNode:
           examples:
           - tension
