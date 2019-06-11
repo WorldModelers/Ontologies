@@ -1,0 +1,465 @@
+unConcept	UN/events/weather/precipitation	mitre12	MITRE12/Rainfall	0.7757526
+unConcept	UN/events/weather/precipitation	mitre12	MITRE12/Average precipitation in depth	0.63484764
+unConcept	UN/events/weather/precipitation	mitre12	MITRE12/PM2.5 air pollution, mean annual exposure	0.47377715
+unConcept	UN/events/weather/precipitation	mitre12	MITRE12/Percentage of livestock whose main water source is lakes	0.46660322
+unConcept	UN/events/weather/precipitation	mitre12	MITRE12/Percentage of livestock whose main water source is rivers	0.45925426
+unConcept	UN/temporal/month	mitre12	MITRE12/Average number of cattle given out as bride price\/gift per household during last 4 weeks per household	0.08826002
+unConcept	UN/temporal/month	mitre12	MITRE12/Average number of sheep given out as bride price\/gift per household during last 4 weeks per household	0.0882187
+unConcept	UN/temporal/month	mitre12	MITRE12/Average number of poultry given out as bride price\/gift per household during last 4 weeks per household	0.088130586
+unConcept	UN/temporal/month	mitre12	MITRE12/Average number of goat given out as bride price\/gift per household during last 4 weeks per household	0.08732761
+unConcept	UN/temporal/month	mitre12	MITRE12/Average number of goat died\/slaughtered\/lost per  household during last 4 weeks	0.084283814
+unConcept	UN/entities/human/infrastructure/transportation/transportation_methods	mitre12	MITRE12/Transport services	0.693327
+unConcept	UN/entities/human/infrastructure/transportation/transportation_methods	mitre12	MITRE12/Travel services	0.67483217
+unConcept	UN/entities/human/infrastructure/transportation/transportation_methods	mitre12	MITRE12/International tourism, receipts for passenger transport items	0.6733566
+unConcept	UN/entities/human/infrastructure/transportation/transportation_methods	mitre12	MITRE12/International tourism, expenditures for passenger transport items	0.639774
+unConcept	UN/entities/human/infrastructure/transportation/transportation_methods	mitre12	MITRE12/International tourism, receipts for travel items	0.5966464
+unConcept	UN/entities/human/financial/economic/import	mitre12	MITRE12/Import Value, Forest products (export\/import)	0.78255874
+unConcept	UN/entities/human/financial/economic/import	mitre12	MITRE12/Export Value, Forest products (export\/import)	0.7361546
+unConcept	UN/entities/human/financial/economic/import	mitre12	MITRE12/Import Quantity, Pigmeat	0.7284795
+unConcept	UN/entities/human/financial/economic/import	mitre12	MITRE12/Import Quantity, Copra	0.7265239
+unConcept	UN/entities/human/financial/economic/import	mitre12	MITRE12/Import Quantity, Maize	0.7261422
+unConcept	UN/events/human/political/political_instability	mitre12	MITRE12/Value, Political stability and absence of violence\/terrorism (index)	0.68211776
+unConcept	UN/events/human/political/political_instability	mitre12	MITRE12/Internally displaced persons, total displaced by conflict and violence	0.6681291
+unConcept	UN/events/human/political/political_instability	mitre12	MITRE12/Internally displaced persons, new displacement associated with conflict and violence	0.6651602
+unConcept	UN/events/human/political/political_instability	mitre12	MITRE12/Legislation exists on domestic violence	0.63314354
+unConcept	UN/events/human/political/political_instability	mitre12	MITRE12/Conflict incidences	0.6313534
+unConcept	UN/temporal/seasons/crop_season	mitre12	MITRE12/Area harvested, Sunflower seed	0.58783007
+unConcept	UN/temporal/seasons/crop_season	mitre12	MITRE12/Duration in months pasture is projected to last	0.5537098
+unConcept	UN/temporal/seasons/crop_season	mitre12	MITRE12/Area harvested, Sesame seed	0.55209625
+unConcept	UN/temporal/seasons/crop_season	mitre12	MITRE12/Area harvested, Vegetables Primary	0.5418285
+unConcept	UN/temporal/seasons/crop_season	mitre12	MITRE12/Area harvested, Sorghum	0.52788746
+unConcept	UN/events/human/agriculture/planting	mitre12	MITRE12/Area harvested, Sunflower seed	0.5183447
+unConcept	UN/events/human/agriculture/planting	mitre12	MITRE12/Area harvested, Vegetables Primary	0.51560974
+unConcept	UN/events/human/agriculture/planting	mitre12	MITRE12/Livestock units per agricultural land area, Major livestock types	0.50689673
+unConcept	UN/events/human/agriculture/planting	mitre12	MITRE12/Production, Vegetables Primary	0.48902068
+unConcept	UN/events/human/agriculture/planting	mitre12	MITRE12/Emissions (CO2eq) (Burning biomass), Organic soils	0.48525277
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/water	mitre12	MITRE12/Percentage of livestock whose main water source is natural ponds	0.7112516
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/water	mitre12	MITRE12/Percentage of livestock whose main water source is rivers	0.7111447
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/water	mitre12	MITRE12/Percentage of livestock whose main water source is lakes	0.7090125
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/water	mitre12	MITRE12/Level of water stress: freshwater withdrawal as a proportion of available freshwater resources	0.700781
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/water	mitre12	MITRE12/Percentage of livestock whose main water source is traditional river wells	0.69828993
+unConcept	UN/events/human/death	mitre12	MITRE12/Cause of death, by non-communicable diseases	0.71006376
+unConcept	UN/events/human/death	mitre12	MITRE12/Cause of death, by communicable diseases and maternal, prenatal and nutrition conditions	0.70439744
+unConcept	UN/events/human/death	mitre12	MITRE12/Lifetime risk of maternal death	0.70313185
+unConcept	UN/events/human/death	mitre12	MITRE12/Cause of death, by injury	0.697343
+unConcept	UN/events/human/death	mitre12	MITRE12/Battle-related deaths	0.6658299
+unConcept	UN/entities/food_availability	mitre12	MITRE12/Production, Meat, chicken	0.6965198
+unConcept	UN/entities/food_availability	mitre12	MITRE12/Food aid shipments, Cereals	0.6950886
+unConcept	UN/entities/food_availability	mitre12	MITRE12/Production, Meat indigenous, total	0.6949745
+unConcept	UN/entities/food_availability	mitre12	MITRE12/Import Value, Total Meat	0.6926464
+unConcept	UN/entities/food_availability	mitre12	MITRE12/Import Value, Infant food	0.6867154
+unConcept	UN/entities/human/financial/economic/fuel	mitre12	MITRE12/Production, Wood fuel, non-coniferous	0.7715134
+unConcept	UN/entities/human/financial/economic/fuel	mitre12	MITRE12/Production, Wood fuel	0.7715134
+unConcept	UN/entities/human/financial/economic/fuel	mitre12	MITRE12/Pump price for diesel fuel	0.7412301
+unConcept	UN/entities/human/financial/economic/fuel	mitre12	MITRE12/Electricity production from oil, gas and coal sources	0.7300478
+unConcept	UN/entities/human/financial/economic/fuel	mitre12	MITRE12/Fossil fuel energy consumption	0.70936775
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/land	mitre12	MITRE12/Share in Forest land, Other naturally regenerated forest	0.7148747
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/land	mitre12	MITRE12/Share in Agricultural land, Land under perm. meadows and pastures	0.7044195
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/land	mitre12	MITRE12/Share in Agricultural land, Cropland	0.66231084
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/land	mitre12	MITRE12/Carbon stock in living biomass, Forest land	0.65375876
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/land	mitre12	MITRE12/Livestock units per agricultural land area, Major livestock types	0.6396605
+unConcept	UN/entities/natural/chemical	mitre12	MITRE12/Emissions (CO2) (Burning biomass), Organic soils	0.6051388
+unConcept	UN/entities/natural/chemical	mitre12	MITRE12/Emissions (N2O) (Burning biomass), Organic soils	0.58753514
+unConcept	UN/entities/natural/chemical	mitre12	MITRE12/Emissions (CO2eq) from N2O (Burning biomass), Organic soils	0.5871735
+unConcept	UN/entities/natural/chemical	mitre12	MITRE12/Implied emission factor for N2O (Burning biomass), Organic soils	0.58437693
+unConcept	UN/entities/natural/chemical	mitre12	MITRE12/Implied emission factor for CO2, Organic soils	0.5751615
+unConcept	UN/events/human/conflict	mitre12	MITRE12/Conflict incidences	0.725169
+unConcept	UN/events/human/conflict	mitre12	MITRE12/Internally displaced persons, total displaced by conflict and violence	0.6580004
+unConcept	UN/events/human/conflict	mitre12	MITRE12/Conflict fatalities	0.64682186
+unConcept	UN/events/human/conflict	mitre12	MITRE12/Internally displaced persons, new displacement associated with conflict and violence	0.60062087
+unConcept	UN/events/human/conflict	mitre12	MITRE12/Legislation exists on domestic violence	0.56590945
+unConcept	UN/entities/human/infrastructure/building	mitre12	MITRE12/Percentage of livestock whose main water source is pans & dams	0.5961891
+unConcept	UN/entities/human/infrastructure/building	mitre12	MITRE12/Percentage of livestock whose main water source is rivers	0.5932751
+unConcept	UN/entities/human/infrastructure/building	mitre12	MITRE12/Percentage of livestock whose main water source is traditional river wells	0.5912161
+unConcept	UN/entities/human/infrastructure/building	mitre12	MITRE12/Percentage of livestock whose main water source is natural ponds	0.5859698
+unConcept	UN/entities/human/infrastructure/building	mitre12	MITRE12/Percentage of livestock whose main water source is lakes	0.57364655
+unConcept	UN/entities/human/financial/economic/currency	mitre12	MITRE12/Bank liquid reserves to bank assets ratio	0.5756528
+unConcept	UN/entities/human/financial/economic/currency	mitre12	MITRE12/Domestic credit to private sector by banks	0.5705902
+unConcept	UN/entities/human/financial/economic/currency	mitre12	MITRE12/Profit tax	0.5700788
+unConcept	UN/entities/human/financial/economic/currency	mitre12	MITRE12/Inflation, consumer prices	0.56211287
+unConcept	UN/entities/human/financial/economic/currency	mitre12	MITRE12/Annual growth Local Currency, Value Added (Agriculture)	0.5522854
+unConcept	UN/entities/human/infrastructure/electrical	mitre12	MITRE12/Alternative and nuclear energy	0.6682031
+unConcept	UN/entities/human/infrastructure/electrical	mitre12	MITRE12/Renewable energy consumption	0.666658
+unConcept	UN/entities/human/infrastructure/electrical	mitre12	MITRE12/Fossil fuel energy consumption	0.66422266
+unConcept	UN/entities/human/infrastructure/electrical	mitre12	MITRE12/Electricity production from oil, gas and coal sources	0.6129123
+unConcept	UN/entities/human/infrastructure/electrical	mitre12	MITRE12/Energy intensity level of primary energy	0.6068598
+unConcept	UN/entities/human/livelihood	mitre12	MITRE12/Claims on other sectors of the domestic economy	0.62465024
+unConcept	UN/entities/human/livelihood	mitre12	MITRE12/Employment in agriculture	0.6116208
+unConcept	UN/entities/human/livelihood	mitre12	MITRE12/Domestic credit provided by financial sector	0.6114046
+unConcept	UN/entities/human/livelihood	mitre12	MITRE12/Employment in agriculture, female	0.60696137
+unConcept	UN/entities/human/livelihood	mitre12	MITRE12/CPIA public sector management and institutions cluster average	0.60027194
+unConcept	UN/interventions/infrastructure	mitre12	MITRE12/CPIA policies for social inclusion\/equity cluster average	0.071968846
+unConcept	UN/interventions/infrastructure	mitre12	MITRE12/CPIA public sector management and institutions cluster average	0.06286373
+unConcept	UN/interventions/infrastructure	mitre12	MITRE12/CPIA economic management cluster average	0.05949787
+unConcept	UN/interventions/infrastructure	mitre12	MITRE12/Access to electricity, urban	0.059038367
+unConcept	UN/interventions/infrastructure	mitre12	MITRE12/Transport services	0.0590141
+unConcept	UN/entities/natural/pest	mitre12	MITRE12/Area harvested, Sunflower seed	0.466143
+unConcept	UN/entities/natural/pest	mitre12	MITRE12/Residues (Crop residues), All Crops	0.46187723
+unConcept	UN/entities/natural/pest	mitre12	MITRE12/Yield, Sunflower seed	0.45937812
+unConcept	UN/entities/natural/pest	mitre12	MITRE12/Direct emissions (CO2eq) (Crop residues), All Crops	0.45819113
+unConcept	UN/entities/natural/pest	mitre12	MITRE12/Emissions (CO2eq) (Crop residues), All Crops	0.45810997
+unConcept	UN/events/human/health_intervention	mitre12	MITRE12/Immunization, measles	0.7376403
+unConcept	UN/events/human/health_intervention	mitre12	MITRE12/Immunization, HepB3	0.72761744
+unConcept	UN/events/human/health_intervention	mitre12	MITRE12/Immunization, DPT	0.6253887
+unConcept	UN/events/human/health_intervention	mitre12	MITRE12/Vaccinated	0.5614033
+unConcept	UN/events/human/health_intervention	mitre12	MITRE12/Percentage of livestock with Contagious Bovine Pleuropneumonia (CBPP) that are vaccinated	0.54595196
+unConcept	UN/entities/natural/crop_technology/irrigation	mitre12	MITRE12/Percentage of livestock whose main water source is boreholes	0.56194973
+unConcept	UN/entities/natural/crop_technology/irrigation	mitre12	MITRE12/Percentage of livestock whose main water source is natural ponds	0.5527701
+unConcept	UN/entities/natural/crop_technology/irrigation	mitre12	MITRE12/Percentage of livestock whose main water source is pans & dams	0.5488495
+unConcept	UN/entities/natural/crop_technology/irrigation	mitre12	MITRE12/Percentage of livestock whose main water source is lakes	0.53312916
+unConcept	UN/entities/natural/crop_technology/irrigation	mitre12	MITRE12/Percentage of livestock migrating due to water	0.53295976
+unConcept	UN/events/human/famine	mitre12	MITRE12/Percentage of cattle loss accounted for by starvation	0.5324915
+unConcept	UN/events/human/famine	mitre12	MITRE12/Percentage of poultry loss accounted for by starvation	0.5283323
+unConcept	UN/events/human/famine	mitre12	MITRE12/Percentage of livestock migrating due to conflict \/ insecurity	0.52485514
+unConcept	UN/events/human/famine	mitre12	MITRE12/Percentage of goat loss accounted for by starvation	0.50983524
+unConcept	UN/events/human/famine	mitre12	MITRE12/Cause of death, by communicable diseases and maternal, prenatal and nutrition conditions	0.49758443
+unConcept	UN/entities/natural/crop_technology/pesticide	mitre12	MITRE12/Emissions (CO2eq) (Crop residues), Maize	0.49291977
+unConcept	UN/entities/natural/crop_technology/pesticide	mitre12	MITRE12/Indirect emissions (CO2eq) (Crop residues), Maize	0.49154735
+unConcept	UN/entities/natural/crop_technology/pesticide	mitre12	MITRE12/Emissions (CO2eq) (Crop residues), Millet	0.49133793
+unConcept	UN/entities/natural/crop_technology/pesticide	mitre12	MITRE12/Direct emissions (CO2eq) (Crop residues), Maize	0.49083328
+unConcept	UN/entities/natural/crop_technology/pesticide	mitre12	MITRE12/Emissions (CO2eq) (Crop residues), All Crops	0.4905213
+unConcept	UN/entities/human/infrastructure/shipping_facilities_air	mitre12	MITRE12/International tourism, receipts for passenger transport items	0.51161283
+unConcept	UN/entities/human/infrastructure/shipping_facilities_air	mitre12	MITRE12/International tourism, expenditures for passenger transport items	0.5050923
+unConcept	UN/entities/human/infrastructure/shipping_facilities_air	mitre12	MITRE12/Travel services	0.47838604
+unConcept	UN/entities/human/infrastructure/shipping_facilities_air	mitre12	MITRE12/International tourism, receipts for travel items	0.46083245
+unConcept	UN/entities/human/infrastructure/shipping_facilities_air	mitre12	MITRE12/International tourism, expenditures for travel items	0.45324734
+unConcept	UN/events/nature_impact/pollution/land_pollution	mitre12	MITRE12/Emissions (CO2eq) (Burning biomass), Organic soils	0.63968426
+unConcept	UN/events/nature_impact/pollution/land_pollution	mitre12	MITRE12/Emissions (CO2eq), Manure applied to Soils	0.6387406
+unConcept	UN/events/nature_impact/pollution/land_pollution	mitre12	MITRE12/Emissions (CO2) (Burning biomass), Organic soils	0.63262856
+unConcept	UN/events/nature_impact/pollution/land_pollution	mitre12	MITRE12/Implied emission factor for CO2, Organic soils	0.6268854
+unConcept	UN/events/nature_impact/pollution/land_pollution	mitre12	MITRE12/Implied emission factor for CH4 (Burning biomass), Organic soils	0.6242099
+unConcept	UN/entities/human/food/food_price	mitre12	MITRE12/Average price of poultry	0.73445624
+unConcept	UN/entities/human/food/food_price	mitre12	MITRE12/Average price of poultry sold	0.730801
+unConcept	UN/entities/human/food/food_price	mitre12	MITRE12/Average price of cattle sold	0.6923634
+unConcept	UN/entities/human/food/food_price	mitre12	MITRE12/Import Quantity, Infant food	0.6923272
+unConcept	UN/entities/human/food/food_price	mitre12	MITRE12/Average price of cattle	0.68273115
+unConcept	UN/entities/natural/biology/ecosystem	mitre12	MITRE12/Share in Forest land, Other naturally regenerated forest	0.65709406
+unConcept	UN/entities/natural/biology/ecosystem	mitre12	MITRE12/Carbon stock in living biomass, Forest land	0.62033325
+unConcept	UN/entities/natural/biology/ecosystem	mitre12	MITRE12/Level of water stress: freshwater withdrawal as a proportion of available freshwater resources	0.58684564
+unConcept	UN/entities/natural/biology/ecosystem	mitre12	MITRE12/Percentage of livestock whose main water source is lakes	0.57380825
+unConcept	UN/entities/natural/biology/ecosystem	mitre12	MITRE12/Percentage of livestock whose main water source is traditional river wells	0.57014155
+unConcept	UN/entities/human/government/government_actions/census	mitre12	MITRE12/Rural population	0.5242341
+unConcept	UN/entities/human/government/government_actions/census	mitre12	MITRE12/Rural population growth	0.51690423
+unConcept	UN/entities/human/government/government_actions/census	mitre12	MITRE12/Population ages 0-14	0.48567554
+unConcept	UN/entities/human/government/government_actions/census	mitre12	MITRE12/Population ages 15-64	0.48567554
+unConcept	UN/entities/human/government/government_actions/census	mitre12	MITRE12/Employment to population ratio, ages 15-24, total	0.47934133
+unConcept	UN/entities/human/financial/economic/export	mitre12	MITRE12/Import Value, Forest products (export\/import)	0.79505986
+unConcept	UN/entities/human/financial/economic/export	mitre12	MITRE12/Export Value, Industrial roundwood, non-coniferous tropical (export\/import)	0.7753318
+unConcept	UN/entities/human/financial/economic/export	mitre12	MITRE12/Export Quantity, Industrial roundwood, non-coniferous tropical (export\/import)	0.7698066
+unConcept	UN/entities/human/financial/economic/export	mitre12	MITRE12/Export Value, Forest products (export\/import)	0.7600795
+unConcept	UN/entities/human/financial/economic/export	mitre12	MITRE12/High-technology exports	0.707147
+unConcept	UN/entities/human/food/food_insecurity	mitre12	MITRE12/Import Value, Infant food	0.64295775
+unConcept	UN/entities/human/food/food_insecurity	mitre12	MITRE12/Percentage of livestock migrating due to conflict \/ insecurity	0.6333871
+unConcept	UN/entities/human/food/food_insecurity	mitre12	MITRE12/Mortality rate attributed to unsafe water, unsafe sanitation and lack of hygiene	0.6280747
+unConcept	UN/entities/human/food/food_insecurity	mitre12	MITRE12/Percentage of poultry loss accounted for by starvation	0.6055714
+unConcept	UN/entities/human/food/food_insecurity	mitre12	MITRE12/Import Quantity, Infant food	0.60024416
+unConcept	UN/entities/natural/soil/soil_contents	mitre12	MITRE12/Biomass burned (dry matter), Organic soils	0.66221416
+unConcept	UN/entities/natural/soil/soil_contents	mitre12	MITRE12/Manure applied to soils that leaches (N content), All Animals	0.6435158
+unConcept	UN/entities/natural/soil/soil_contents	mitre12	MITRE12/Manure applied to soils that leaches (N content), Chickens, layers	0.63431764
+unConcept	UN/entities/natural/soil/soil_contents	mitre12	MITRE12/Implied emission factor for N2O (Burning biomass), Organic soils	0.6331086
+unConcept	UN/entities/natural/soil/soil_contents	mitre12	MITRE12/Manure applied to soils (N content), All Animals	0.6308279
+unConcept	UN/events/human/agriculture/farming	mitre12	MITRE12/Emissions (CO2eq) (Manure on pasture), All Animals	0.61161464
+unConcept	UN/events/human/agriculture/farming	mitre12	MITRE12/Indirect emissions (CO2eq) (Manure on pasture), All Animals	0.6101843
+unConcept	UN/events/human/agriculture/farming	mitre12	MITRE12/Percentage of livestock pasture in poor condition	0.6100092
+unConcept	UN/events/human/agriculture/farming	mitre12	MITRE12/Direct emissions (CO2eq) (Manure on pasture), All Animals	0.60962045
+unConcept	UN/events/human/agriculture/farming	mitre12	MITRE12/Percentage of livestock pasture in fair condition	0.60950273
+unConcept	UN/entities/human/farming	mitre12	MITRE12/Livestock units per agricultural land area, Major livestock types	0.6343577
+unConcept	UN/entities/human/farming	mitre12	MITRE12/Livestock units per agricultural land area, Sheep	0.62412983
+unConcept	UN/entities/human/farming	mitre12	MITRE12/Livestock units per agricultural land area, Cattle	0.623215
+unConcept	UN/entities/human/farming	mitre12	MITRE12/Livestock units per agricultural land area, Cattle and Buffaloes	0.6206723
+unConcept	UN/entities/human/farming	mitre12	MITRE12/Livestock units per agricultural land area, Chickens	0.6186385
+unConcept	UN/entities/human/health/disease	mitre12	MITRE12/Incidence of HIV	0.71740085
+unConcept	UN/entities/human/health/disease	mitre12	MITRE12/Incidence of malaria	0.6868149
+unConcept	UN/entities/human/health/disease	mitre12	MITRE12/Incidence of tuberculosis	0.64795566
+unConcept	UN/entities/human/health/disease	mitre12	MITRE12/Prevalence of anemia among children	0.63806194
+unConcept	UN/entities/human/health/disease	mitre12	MITRE12/Prevalence of anemia among pregnant women	0.6361848
+unConcept	UN/events/nature_impact/pollution/climate_change	mitre12	MITRE12/Implied emission factor for CH4 (Burning biomass), Humid tropical forest	0.4524846
+unConcept	UN/events/nature_impact/pollution/climate_change	mitre12	MITRE12/Implied emission factor for CH4 (Burning biomass), Other forest	0.44949892
+unConcept	UN/events/nature_impact/pollution/climate_change	mitre12	MITRE12/Emissions (CO2eq) (Burning biomass), Other forest	0.4491158
+unConcept	UN/events/nature_impact/pollution/climate_change	mitre12	MITRE12/Emissions (CO2eq) (Burning biomass), Humid tropical forest	0.44889104
+unConcept	UN/events/nature_impact/pollution/climate_change	mitre12	MITRE12/Emissions (CO2eq) from CH4 (Burning biomass), Humid tropical forest	0.44806296
+unConcept	UN/interventions/provision of goods and services	mitre12	MITRE12/Imports of goods and services	0.09112017
+unConcept	UN/interventions/provision of goods and services	mitre12	MITRE12/Exports of goods and services	0.09110702
+unConcept	UN/interventions/provision of goods and services	mitre12	MITRE12/Imports of goods, services and primary income	0.08969235
+unConcept	UN/interventions/provision of goods and services	mitre12	MITRE12/Exports of goods, services and primary income	0.08923883
+unConcept	UN/interventions/provision of goods and services	mitre12	MITRE12/Net trade in goods and services	0.085421674
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/air	mitre12	MITRE12/PM2.5 air pollution, mean annual exposure	0.6800746
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/air	mitre12	MITRE12/Mortality rate attributed to household and ambient air pollution, age-standardized	0.5678869
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/air	mitre12	MITRE12/Mortality rate attributed to household and ambient air pollution, age-standardized, female	0.5663598
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/air	mitre12	MITRE12/Mortality rate attributed to household and ambient air pollution, age-standardized, male	0.56599915
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/air	mitre12	MITRE12/PM2.5 air pollution, population exposed to levels exceeding WHO guideline value	0.5281948
+unConcept	UN/events/human/human_migration	mitre12	MITRE12/Net migration	0.71312296
+unConcept	UN/events/human/human_migration	mitre12	MITRE12/Migration normal at this time of year, No	0.70488185
+unConcept	UN/events/human/human_migration	mitre12	MITRE12/Migration normal at this time of year, Yes	0.704602
+unConcept	UN/events/human/human_migration	mitre12	MITRE12/Refugee population by country or territory of asylum	0.67093617
+unConcept	UN/events/human/human_migration	mitre12	MITRE12/Refugee population by country or territory of origin	0.6506212
+unConcept	UN/events/nature_impact/forestry	mitre12	MITRE12/Share in Forest land, Other naturally regenerated forest	0.5667612
+unConcept	UN/events/nature_impact/forestry	mitre12	MITRE12/Emissions (CO2eq) (Burning biomass), Other forest	0.5416915
+unConcept	UN/events/nature_impact/forestry	mitre12	MITRE12/Emissions (CO2eq) (Burning biomass), Humid tropical forest	0.53792953
+unConcept	UN/events/nature_impact/forestry	mitre12	MITRE12/Carbon stock in living biomass, Forest land	0.5142518
+unConcept	UN/events/nature_impact/forestry	mitre12	MITRE12/Emissions (N2O) (Burning biomass), Other forest	0.5137383
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/resource	mitre12	MITRE12/Total natural resources rents	0.68233484
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/resource	mitre12	MITRE12/IDA resource allocation index	0.66519874
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/resource	mitre12	MITRE12/Renewable internal freshwater resources, total	0.627021
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/resource	mitre12	MITRE12/Renewable internal freshwater resources per capita	0.623763
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/resource	mitre12	MITRE12/CPIA building human resources rating	0.62275934
+unConcept	UN/entities/human/infrastructure/water_management	mitre12	MITRE12/Percentage of livestock whose main water source is pans & dams	0.6658797
+unConcept	UN/entities/human/infrastructure/water_management	mitre12	MITRE12/Percentage of livestock whose main water source is natural ponds	0.6488958
+unConcept	UN/entities/human/infrastructure/water_management	mitre12	MITRE12/Percentage of livestock whose main water source is rivers	0.64173806
+unConcept	UN/entities/human/infrastructure/water_management	mitre12	MITRE12/Percentage of livestock whose main water source is lakes	0.6291016
+unConcept	UN/entities/human/infrastructure/water_management	mitre12	MITRE12/Percentage of livestock whose main water source is boreholes	0.6283735
+unConcept	UN/entities/human/financial/economic/market	mitre12	MITRE12/Inflation, consumer prices	0.64043903
+unConcept	UN/entities/human/financial/economic/market	mitre12	MITRE12/Consumer price index	0.6170125
+unConcept	UN/entities/human/financial/economic/market	mitre12	MITRE12/Firms using banks to finance working capital	0.6037413
+unConcept	UN/entities/human/financial/economic/market	mitre12	MITRE12/Claims on other sectors of the domestic economy	0.6035338
+unConcept	UN/entities/human/financial/economic/market	mitre12	MITRE12/Firms using banks to finance investment	0.59863174
+unConcept	UN/entities/human/infrastructure/transportation/road	mitre12	MITRE12/Mortality caused by road traffic injury	0.6168972
+unConcept	UN/entities/human/infrastructure/transportation/road	mitre12	MITRE12/Percentage of livestock whose main water source is traditional river wells	0.46261308
+unConcept	UN/entities/human/infrastructure/transportation/road	mitre12	MITRE12/Travel services	0.45676762
+unConcept	UN/entities/human/infrastructure/transportation/road	mitre12	MITRE12/Percentage of livestock whose main water source is rivers	0.45132643
+unConcept	UN/entities/human/infrastructure/transportation/road	mitre12	MITRE12/Transport services	0.43810397
+unConcept	UN/events/human/political/independence	mitre12	MITRE12/Refugee population by country or territory of origin	0.45158103
+unConcept	UN/events/human/political/independence	mitre12	MITRE12/Refugee population by country or territory of asylum	0.45002866
+unConcept	UN/events/human/political/independence	mitre12	MITRE12/Conflict incidences	0.43385553
+unConcept	UN/events/human/political/independence	mitre12	MITRE12/Value, Political stability and absence of violence\/terrorism (index)	0.40731075
+unConcept	UN/events/human/political/independence	mitre12	MITRE12/Nondiscrimination clause mentions gender in the constitution	0.39999914
+unConcept	UN/entities/natural/crop_technology/crop_storage	mitre12	MITRE12/Total amount of cereal grains imported	0.54142064
+unConcept	UN/entities/natural/crop_technology/crop_storage	mitre12	MITRE12/Emissions (CO2eq) (Burning crop residues), All Crops	0.5400537
+unConcept	UN/entities/natural/crop_technology/crop_storage	mitre12	MITRE12/Residues (Crop residues), All Crops	0.53479886
+unConcept	UN/entities/natural/crop_technology/crop_storage	mitre12	MITRE12/Emissions (CO2eq) (Crop residues), All Crops	0.52992684
+unConcept	UN/entities/natural/crop_technology/crop_storage	mitre12	MITRE12/Direct emissions (CO2eq) (Crop residues), All Crops	0.52891785
+unConcept	UN/entities/human/financial/economic/poverty	mitre12	MITRE12/Poverty headcount ratio at national poverty lines	0.7164186
+unConcept	UN/entities/human/financial/economic/poverty	mitre12	MITRE12/Unemployment, youth total	0.5878088
+unConcept	UN/entities/human/financial/economic/poverty	mitre12	MITRE12/Percentage of livestock migrating due to conflict \/ insecurity	0.5830268
+unConcept	UN/entities/human/financial/economic/poverty	mitre12	MITRE12/Population living in slums	0.5680101
+unConcept	UN/entities/human/financial/economic/poverty	mitre12	MITRE12/Unemployment, youth female	0.55016303
+unConcept	UN/entities/natural/crop	mitre12	MITRE12/Yield, Sunflower seed	0.69045955
+unConcept	UN/entities/natural/crop	mitre12	MITRE12/Production, Vegetables Primary	0.67839044
+unConcept	UN/entities/natural/crop	mitre12	MITRE12/Production, Sorghum	0.6780625
+unConcept	UN/entities/natural/crop	mitre12	MITRE12/Historical Production (Maize)	0.67561805
+unConcept	UN/entities/natural/crop	mitre12	MITRE12/Historical Production (Sorghum)	0.6734843
+unConcept	UN/interventions/peacekeeping and security	mitre12	MITRE12/Value, Political stability and absence of violence\/terrorism (index)	0.07020461
+unConcept	UN/interventions/peacekeeping and security	mitre12	MITRE12/Computer, communications and other services	0.06611266
+unConcept	UN/interventions/peacekeeping and security	mitre12	MITRE12/Armed forces personnel, total	0.066080436
+unConcept	UN/interventions/peacekeeping and security	mitre12	MITRE12/Armed forces personnel	0.06594792
+unConcept	UN/interventions/peacekeeping and security	mitre12	MITRE12/CPIA transparency, accountability, and corruption in the public sector rating	0.06474015
+unConcept	UN/entities/human/infrastructure/transportation/bridge	mitre12	MITRE12/Mortality caused by road traffic injury	0.3915297
+unConcept	UN/entities/human/infrastructure/transportation/bridge	mitre12	MITRE12/Commercial bank branches	0.36808926
+unConcept	UN/entities/human/infrastructure/transportation/bridge	mitre12	MITRE12/Percentage of livestock whose main water source is traditional river wells	0.36673567
+unConcept	UN/entities/human/infrastructure/transportation/bridge	mitre12	MITRE12/Percentage of livestock whose main water source is rivers	0.36258262
+unConcept	UN/entities/human/infrastructure/transportation/bridge	mitre12	MITRE12/Procedures to build a warehouse	0.3422208
+unConcept	UN/events/nature_impact/pollution/air_pollution	mitre12	MITRE12/CO2 emissions from gaseous fuel consumption	0.7538211
+unConcept	UN/events/nature_impact/pollution/air_pollution	mitre12	MITRE12/CO2 emissions from liquid fuel consumption	0.7518224
+unConcept	UN/events/nature_impact/pollution/air_pollution	mitre12	MITRE12/CO2 emissions from solid fuel consumption	0.7488775
+unConcept	UN/events/nature_impact/pollution/air_pollution	mitre12	MITRE12/CO2 emissions	0.74130124
+unConcept	UN/events/nature_impact/pollution/air_pollution	mitre12	MITRE12/CO2 emissions from transport	0.72582257
+unConcept	UN/entities/human/food/food_security	mitre12	MITRE12/Import Value, Infant food	0.68153715
+unConcept	UN/entities/human/food/food_security	mitre12	MITRE12/Food aid shipments, Cereals	0.6507516
+unConcept	UN/entities/human/food/food_security	mitre12	MITRE12/Import Quantity, Infant food	0.6290591
+unConcept	UN/entities/human/food/food_security	mitre12	MITRE12/Food aid shipments, Milk,Total	0.62739414
+unConcept	UN/entities/human/food/food_security	mitre12	MITRE12/Food aid shipments, Other Non-Cereals	0.6169817
+unConcept	UN/events/nature_impact/resource_management	mitre12	MITRE12/Share in Forest land, Other naturally regenerated forest	0.6425307
+unConcept	UN/events/nature_impact/resource_management	mitre12	MITRE12/Direct emissions (CO2eq) (Manure management), All Animals	0.63981855
+unConcept	UN/events/nature_impact/resource_management	mitre12	MITRE12/Emissions (CO2eq) (Manure management), All Animals	0.63795096
+unConcept	UN/events/nature_impact/resource_management	mitre12	MITRE12/Indirect emissions (CO2eq) (Manure management), All Animals	0.63783395
+unConcept	UN/events/nature_impact/resource_management	mitre12	MITRE12/Carbon stock in living biomass, Forest land	0.61767656
+unConcept	UN/events/natural_disaster/drought	mitre12	MITRE12/Rainfall	0.5785482
+unConcept	UN/events/natural_disaster/drought	mitre12	MITRE12/Percentage of livestock migrating due to conflict \/ insecurity	0.48349595
+unConcept	UN/events/natural_disaster/drought	mitre12	MITRE12/Area harvested, Sorghum	0.45064977
+unConcept	UN/events/natural_disaster/drought	mitre12	MITRE12/Emissions (CO2eq) (Burning crop residues), All Crops	0.44366762
+unConcept	UN/events/natural_disaster/drought	mitre12	MITRE12/Emissions (CO2eq) (Crop residues), All Crops	0.44319066
+unConcept	UN/events/human/agriculture/food_production	mitre12	MITRE12/Cereal yield	0.7003432
+unConcept	UN/events/human/agriculture/food_production	mitre12	MITRE12/Production, Cereals excluding rice	0.6894354
+unConcept	UN/events/human/agriculture/food_production	mitre12	MITRE12/Yield, Milk, whole fresh sheep	0.6860474
+unConcept	UN/events/human/agriculture/food_production	mitre12	MITRE12/Total amount of cereal grains imported	0.6842227
+unConcept	UN/events/human/agriculture/food_production	mitre12	MITRE12/Yield, Milk, whole fresh cow	0.6819112
+unConcept	UN/entities/natural/natural_resources/biotic_resources/biotic_resources	mitre12	MITRE12/Share in Forest land, Other naturally regenerated forest	0.711368
+unConcept	UN/entities/natural/natural_resources/biotic_resources/biotic_resources	mitre12	MITRE12/Carbon stock in living biomass, Forest land	0.6638746
+unConcept	UN/entities/natural/natural_resources/biotic_resources/biotic_resources	mitre12	MITRE12/Livestock units per agricultural land area, Major livestock types	0.6137974
+unConcept	UN/entities/natural/natural_resources/biotic_resources/biotic_resources	mitre12	MITRE12/Area, Other naturally regenerated forest	0.607424
+unConcept	UN/entities/natural/natural_resources/biotic_resources/biotic_resources	mitre12	MITRE12/Percentage of livestock whose main water source is lakes	0.5985301
+unConcept	UN/entities/human/population	mitre12	MITRE12/Rural population	0.6641669
+unConcept	UN/entities/human/population	mitre12	MITRE12/Rural population growth	0.66041595
+unConcept	UN/entities/human/population	mitre12	MITRE12/Refugee population by country or territory of origin	0.63382447
+unConcept	UN/entities/human/population	mitre12	MITRE12/Refugee population by country or territory of asylum	0.59603626
+unConcept	UN/entities/human/population	mitre12	MITRE12/Urban population	0.5904614
+unConcept	UN/entities/human/government/government_actions/organization	mitre12	MITRE12/Technical cooperation grants	0.61386424
+unConcept	UN/entities/human/government/government_actions/organization	mitre12	MITRE12/Firms visited or required meetings with tax officials	0.6084849
+unConcept	UN/entities/human/government/government_actions/organization	mitre12	MITRE12/Number of visits or required meetings of affected firms with tax officials	0.60692745
+unConcept	UN/entities/human/government/government_actions/organization	mitre12	MITRE12/Net official development assistance received	0.59847176
+unConcept	UN/entities/human/government/government_actions/organization	mitre12	MITRE12/Net official development assistance and official aid received	0.58074915
+unConcept	UN/entities/human/infrastructure/shipping_facilities_water	mitre12	MITRE12/Total fisheries production	0.3840448
+unConcept	UN/entities/human/infrastructure/shipping_facilities_water	mitre12	MITRE12/Percentage of livestock whose main water source is rivers	0.36850733
+unConcept	UN/entities/human/infrastructure/shipping_facilities_water	mitre12	MITRE12/Capture fisheries production	0.36642012
+unConcept	UN/entities/human/infrastructure/shipping_facilities_water	mitre12	MITRE12/Percentage of livestock whose main water source is traditional river wells	0.36441395
+unConcept	UN/entities/human/infrastructure/shipping_facilities_water	mitre12	MITRE12/Percentage of livestock whose main water source is lakes	0.34451067
+unConcept	UN/interventions/humanitarian assistance	mitre12	MITRE12/Net official development assistance and official aid received	0.75333804
+unConcept	UN/interventions/humanitarian assistance	mitre12	MITRE12/Net official development assistance received	0.69878995
+unConcept	UN/interventions/humanitarian assistance	mitre12	MITRE12/Net bilateral aid flows from DAC donors, European Union institutions	0.64150697
+unConcept	UN/interventions/humanitarian assistance	mitre12	MITRE12/Net bilateral aid flows from DAC donors, United States	0.6283657
+unConcept	UN/interventions/humanitarian assistance	mitre12	MITRE12/Net bilateral aid flows from DAC donors, Canada	0.6259773
+unConcept	UN/temporal/seasons/season	mitre12	MITRE12/Duration in months pasture is projected to last	0.4793478
+unConcept	UN/temporal/seasons/season	mitre12	MITRE12/Duration in months browse is projected to last	0.42992216
+unConcept	UN/temporal/seasons/season	mitre12	MITRE12/Primary school starting age	0.41870573
+unConcept	UN/temporal/seasons/season	mitre12	MITRE12/Lower secondary school starting age	0.4179953
+unConcept	UN/temporal/seasons/season	mitre12	MITRE12/Production, Meat, game	0.40024537
+unConcept	UN/events/human/physical_insecurity	mitre12	MITRE12/Percentage of livestock migrating due to conflict \/ insecurity	0.6668799
+unConcept	UN/events/human/physical_insecurity	mitre12	MITRE12/Percentage reporting insecurity as the main forage constraint	0.57661736
+unConcept	UN/events/human/physical_insecurity	mitre12	MITRE12/Conflict incidences	0.5298232
+unConcept	UN/events/human/physical_insecurity	mitre12	MITRE12/Value, Political stability and absence of violence\/terrorism (index)	0.5208785
+unConcept	UN/events/human/physical_insecurity	mitre12	MITRE12/Internally displaced persons, new displacement associated with conflict and violence	0.5192011
+unConcept	UN/entities/natural/crop_technology/fertilizer	mitre12	MITRE12/Indirect emissions (N2O that leaches) (Manure on pasture), Chickens	0.6395493
+unConcept	UN/entities/natural/crop_technology/fertilizer	mitre12	MITRE12/Manure (N content that leaches) (Manure on pasture), Chickens	0.6383879
+unConcept	UN/entities/natural/crop_technology/fertilizer	mitre12	MITRE12/Manure (N content that leaches) (Manure on pasture), Chickens, broilers	0.6357373
+unConcept	UN/entities/natural/crop_technology/fertilizer	mitre12	MITRE12/Manure (N content that leaches) (Manure on pasture), All Animals	0.63256264
+unConcept	UN/entities/natural/crop_technology/fertilizer	mitre12	MITRE12/Manure (N content that leaches) (Manure on pasture), Cattle, dairy	0.6303598
+unConcept	UN/entities/human/government/government_actions/duty	mitre12	MITRE12/Net official development assistance received	0.6535002
+unConcept	UN/entities/human/government/government_actions/duty	mitre12	MITRE12/Net official development assistance and official aid received	0.6486305
+unConcept	UN/entities/human/government/government_actions/duty	mitre12	MITRE12/Domestic general government health expenditure	0.6395022
+unConcept	UN/entities/human/government/government_actions/duty	mitre12	MITRE12/Government expenditure on education, total	0.63019276
+unConcept	UN/entities/human/government/government_actions/duty	mitre12	MITRE12/Time spent dealing with the requirements of government regulations	0.6235988
+unConcept	UN/entities/human/financial/economic/budget	mitre12	MITRE12/General government final consumption expenditure	0.6077356
+unConcept	UN/entities/human/financial/economic/budget	mitre12	MITRE12/Adjusted savings: education expenditure	0.59478945
+unConcept	UN/entities/human/financial/economic/budget	mitre12	MITRE12/Domestic general government health expenditure	0.5913841
+unConcept	UN/entities/human/financial/economic/budget	mitre12	MITRE12/Government expenditure on education, total	0.58327943
+unConcept	UN/entities/human/financial/economic/budget	mitre12	MITRE12/Domestic general government health expenditure per capita	0.57824117
+unConcept	UN/events/human/disarmament	mitre12	MITRE12/Conflict incidences	0.38452348
+unConcept	UN/events/human/disarmament	mitre12	MITRE12/Legislation exists on domestic violence	0.3162002
+unConcept	UN/events/human/disarmament	mitre12	MITRE12/Value, Political stability and absence of violence\/terrorism (index)	0.29810536
+unConcept	UN/events/human/disarmament	mitre12	MITRE12/Conflict fatalities	0.29727083
+unConcept	UN/events/human/disarmament	mitre12	MITRE12/Nondiscrimination clause mentions gender in the constitution	0.29618037
+unConcept	UN/entities/natural/livestock	mitre12	MITRE12/Production, Meat, cattle	0.78214353
+unConcept	UN/entities/natural/livestock	mitre12	MITRE12/Share in total livestock, Major livestock types	0.75695086
+unConcept	UN/entities/natural/livestock	mitre12	MITRE12/Emissions (CO2eq) (Manure on pasture), Cattle, dairy	0.73592013
+unConcept	UN/entities/natural/livestock	mitre12	MITRE12/Indirect emissions (CO2eq) (Manure on pasture), Cattle, dairy	0.7347729
+unConcept	UN/entities/natural/livestock	mitre12	MITRE12/Direct emissions (CO2eq) (Manure on pasture), Cattle, dairy	0.7334957
+unConcept	UN/entities/human/government/government_actions/regulation	mitre12	MITRE12/Legislation exists on domestic violence	0.6539192
+unConcept	UN/entities/human/government/government_actions/regulation	mitre12	MITRE12/Law prohibits or invalidates child or early marriage	0.61284
+unConcept	UN/entities/human/government/government_actions/regulation	mitre12	MITRE12/Time spent dealing with the requirements of government regulations	0.60924506
+unConcept	UN/entities/human/government/government_actions/regulation	mitre12	MITRE12/Law mandates nondiscrimination based on gender in hiring	0.60534203
+unConcept	UN/entities/human/government/government_actions/regulation	mitre12	MITRE12/CPIA property rights and rule-based governance rating	0.59524345
+unConcept	UN/entities/human/financial/economic/depreciation	mitre12	MITRE12/Profit tax	0.5265356
+unConcept	UN/entities/human/financial/economic/depreciation	mitre12	MITRE12/Discrepancy in expenditure estimate of GDP	0.5057121
+unConcept	UN/entities/human/financial/economic/depreciation	mitre12	MITRE12/Net secondary income	0.5043127
+unConcept	UN/entities/human/financial/economic/depreciation	mitre12	MITRE12/Net primary income	0.501292
+unConcept	UN/entities/human/financial/economic/depreciation	mitre12	MITRE12/Primary income payments	0.49603307
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/material	mitre12	MITRE12/Adjusted savings: mineral depletion	0.5105747
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/material	mitre12	MITRE12/Import Quantity, Oil, linseed	0.48931554
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/material	mitre12	MITRE12/Import Quantity, Oil, olive, virgin	0.48656195
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/material	mitre12	MITRE12/Electricity production from oil, gas and coal sources	0.48377258
+unConcept	UN/entities/natural/natural_resources/abiotic_resources/material	mitre12	MITRE12/Manure applied to soils that leaches (N content), Chickens, layers	0.4789165
+unConcept	UN/entities/natural/crop_technology/product	mitre12	MITRE12/Import Quantity, Infant food	0.67278576
+unConcept	UN/entities/natural/crop_technology/product	mitre12	MITRE12/Import Quantity, Chocolate products nes	0.6420918
+unConcept	UN/entities/natural/crop_technology/product	mitre12	MITRE12/Import Value, Food and Animals	0.64087284
+unConcept	UN/entities/natural/crop_technology/product	mitre12	MITRE12/Import Quantity, Food wastes	0.640168
+unConcept	UN/entities/natural/crop_technology/product	mitre12	MITRE12/Import Quantity, Tobacco products nes	0.6326584
+unConcept	UN/entities/human/financial/economic/assets	mitre12	MITRE12/Net foreign assets	0.78990614
+unConcept	UN/entities/human/financial/economic/assets	mitre12	MITRE12/Bank liquid reserves to bank assets ratio	0.65659547
+unConcept	UN/entities/human/financial/economic/assets	mitre12	MITRE12/CPIA property rights and rule-based governance rating	0.64449847
+unConcept	UN/entities/human/financial/economic/assets	mitre12	MITRE12/Firms using banks to finance investment	0.62736154
+unConcept	UN/entities/human/financial/economic/assets	mitre12	MITRE12/Foreign direct investment, net	0.6209053
+unConcept	UN/entities/natural/crop_technology/management	mitre12	MITRE12/CPIA public sector management and institutions cluster average	0.6744658
+unConcept	UN/entities/natural/crop_technology/management	mitre12	MITRE12/Livestock units per agricultural land area, Major livestock types	0.65239197
+unConcept	UN/entities/natural/crop_technology/management	mitre12	MITRE12/Claims on other sectors of the domestic economy	0.62925524
+unConcept	UN/entities/natural/crop_technology/management	mitre12	MITRE12/Percentage of livestock whose main water source is shallow wells	0.621246
+unConcept	UN/entities/natural/crop_technology/management	mitre12	MITRE12/Domestic credit provided by financial sector	0.61978793
+unConcept	UN/events/nature_impact/climate_change_mitigation	mitre12	MITRE12/Adjusted savings: net forest depletion	0.52927715
+unConcept	UN/events/nature_impact/climate_change_mitigation	mitre12	MITRE12/Mortality rate attributed to household and ambient air pollution, age-standardized	0.5179231
+unConcept	UN/events/nature_impact/climate_change_mitigation	mitre12	MITRE12/Mortality rate attributed to household and ambient air pollution, age-standardized, female	0.5154731
+unConcept	UN/events/nature_impact/climate_change_mitigation	mitre12	MITRE12/Mortality rate attributed to household and ambient air pollution, age-standardized, male	0.51520693
+unConcept	UN/events/nature_impact/climate_change_mitigation	mitre12	MITRE12/PM2.5 pollution, population exposed to levels exceeding WHO Interim Target-2 value	0.51028025
+unConcept	UN/entities/human/financial/economic/revenue	mitre12	MITRE12/Profit tax	0.7834554
+unConcept	UN/entities/human/financial/economic/revenue	mitre12	MITRE12/Net primary income	0.7666187
+unConcept	UN/entities/human/financial/economic/revenue	mitre12	MITRE12/Net secondary income	0.76529485
+unConcept	UN/entities/human/financial/economic/revenue	mitre12	MITRE12/Secondary income, other sectors, payments	0.7531353
+unConcept	UN/entities/human/financial/economic/revenue	mitre12	MITRE12/Primary income payments	0.73753804
+unConcept	UN/entities/natural/biology/fauna	mitre12	MITRE12/Import Value, Bovine, Animals	0.6163174
+unConcept	UN/entities/natural/biology/fauna	mitre12	MITRE12/Average number of poultry born per household during last 4 weeks	0.5738351
+unConcept	UN/entities/natural/biology/fauna	mitre12	MITRE12/Average number of goat born per household during last 4 weeks	0.5483211
+unConcept	UN/entities/natural/biology/fauna	mitre12	MITRE12/Milk Animals, Milk, whole fresh sheep	0.5415915
+unConcept	UN/entities/natural/biology/fauna	mitre12	MITRE12/Import Value, Animals, live, non-food	0.53477573
+unConcept	UN/events/weather/temperature	mitre12	MITRE12/CO2 emissions from electricity and heat production, total	0.5419493
+unConcept	UN/events/weather/temperature	mitre12	MITRE12/Average precipitation in depth	0.5211425
+unConcept	UN/events/weather/temperature	mitre12	MITRE12/Emissions intensity, Milk, whole fresh cow	0.5065289
+unConcept	UN/events/weather/temperature	mitre12	MITRE12/Adjusted savings: carbon dioxide damage	0.48574057
+unConcept	UN/events/weather/temperature	mitre12	MITRE12/Emissions intensity, Milk, whole fresh sheep	0.47248748
+unConcept	UN/entities/natural/natural_resources/solar_radiation	mitre12	MITRE12/Alternative and nuclear energy	0.6838711
+unConcept	UN/entities/natural/natural_resources/solar_radiation	mitre12	MITRE12/Renewable energy consumption	0.6834127
+unConcept	UN/entities/natural/natural_resources/solar_radiation	mitre12	MITRE12/Energy intensity level of primary energy	0.66361195
+unConcept	UN/entities/natural/natural_resources/solar_radiation	mitre12	MITRE12/CO2 emissions from electricity and heat production, total	0.64790654
+unConcept	UN/entities/natural/natural_resources/solar_radiation	mitre12	MITRE12/Fossil fuel energy consumption	0.61323845
+unConcept	UN/entities/natural/watershed	mitre12	MITRE12/Total fisheries production	0.45178133
+unConcept	UN/entities/natural/watershed	mitre12	MITRE12/Renewable internal freshwater resources per capita	0.42540467
+unConcept	UN/entities/natural/watershed	mitre12	MITRE12/Share in Forest land, Other naturally regenerated forest	0.41405368
+unConcept	UN/entities/natural/watershed	mitre12	MITRE12/Percentage of livestock whose main water source is rivers	0.41402605
+unConcept	UN/entities/natural/watershed	mitre12	MITRE12/Area, Other naturally regenerated forest	0.41288516
+unConcept	UN/entities/GPE	mitre12	MITRE12/Refugee population by country or territory of origin	0.5826545
+unConcept	UN/entities/GPE	mitre12	MITRE12/Refugee population by country or territory of asylum	0.5424109
+unConcept	UN/entities/GPE	mitre12	MITRE12/Population in largest city	0.48196134
+unConcept	UN/entities/GPE	mitre12	MITRE12/Rural population	0.47968417
+unConcept	UN/entities/GPE	mitre12	MITRE12/Population in the largest city	0.47822946
+unConcept	UN/events/weather/climate	mitre12	MITRE12/Rainfall	0.50678796
+unConcept	UN/events/weather/climate	mitre12	MITRE12/Average precipitation in depth	0.4496828
+unConcept	UN/events/weather/climate	mitre12	MITRE12/Emissions (CO2eq) (Burning biomass), Humid tropical forest	0.43085396
+unConcept	UN/events/weather/climate	mitre12	MITRE12/Implied emission factor for CH4 (Burning biomass), Humid tropical forest	0.43076974
+unConcept	UN/events/weather/climate	mitre12	MITRE12/Implied emission factor for N2O (Burning biomass), Humid tropical forest	0.42875928
+unConcept	UN/entities/human/government/government_entity	mitre12	MITRE12/Firms visited or required meetings with tax officials	0.7026014
+unConcept	UN/entities/human/government/government_entity	mitre12	MITRE12/Number of visits or required meetings of affected firms with tax officials	0.6998357
+unConcept	UN/entities/human/government/government_entity	mitre12	MITRE12/Domestic general government health expenditure	0.66203946
+unConcept	UN/entities/human/government/government_entity	mitre12	MITRE12/CPIA public sector management and institutions cluster average	0.6480102
+unConcept	UN/entities/human/government/government_entity	mitre12	MITRE12/Firms expected to give gifts in meetings with tax officials	0.6455135
+unConcept	UN/events/human/economic_crisis	mitre12	MITRE12/Claims on other sectors of the domestic economy	0.56907696
+unConcept	UN/events/human/economic_crisis	mitre12	MITRE12/Conflict incidences	0.53575414
+unConcept	UN/events/human/economic_crisis	mitre12	MITRE12/Value, Political stability and absence of violence\/terrorism (index)	0.53314793
+unConcept	UN/events/human/economic_crisis	mitre12	MITRE12/Domestic credit to private sector by banks	0.5176291
+unConcept	UN/events/human/economic_crisis	mitre12	MITRE12/Domestic credit to private sector	0.51399577
+unConcept	UN/entities/human/fishery	mitre12	MITRE12/Total fisheries production	0.8603867
+unConcept	UN/entities/human/fishery	mitre12	MITRE12/Capture fisheries production	0.66904324
+unConcept	UN/entities/human/fishery	mitre12	MITRE12/Aquaculture production	0.6320148
+unConcept	UN/entities/human/fishery	mitre12	MITRE12/Annual growth US$, Agriculture, forestry, fishing (Central Government)	0.4706452
+unConcept	UN/entities/human/fishery	mitre12	MITRE12/Value Local Currency, 2010 prices, Value Added Deflator (Agriculture, forestry and fishery)	0.46279657
+unConcept	UN/events/natural_disaster/storm	mitre12	MITRE12/Rainfall	0.51647747
+unConcept	UN/events/natural_disaster/storm	mitre12	MITRE12/PM2.5 air pollution, mean annual exposure	0.4348559
+unConcept	UN/events/natural_disaster/storm	mitre12	MITRE12/Percentage of livestock whose main water source is rivers	0.4095396
+unConcept	UN/events/natural_disaster/storm	mitre12	MITRE12/Percentage of livestock whose main water source is pans & dams	0.4067085
+unConcept	UN/events/natural_disaster/storm	mitre12	MITRE12/Percentage of livestock whose main water source is traditional river wells	0.39873987
+unConcept	UN/entities/human/education	mitre12	MITRE12/Primary education, teachers	0.81693095
+unConcept	UN/entities/human/education	mitre12	MITRE12/Secondary education, teachers	0.8160758
+unConcept	UN/entities/human/education	mitre12	MITRE12/Secondary education, teachers, female	0.7408706
+unConcept	UN/entities/human/education	mitre12	MITRE12/Primary education, pupils	0.7380834
+unConcept	UN/entities/human/education	mitre12	MITRE12/Secondary education, pupils	0.7360004
+unConcept	UN/events/crisis	mitre12	MITRE12/Internally displaced persons, new displacement associated with disasters	0.5508063
+unConcept	UN/events/crisis	mitre12	MITRE12/Claims on other sectors of the domestic economy	0.50898224
+unConcept	UN/events/crisis	mitre12	MITRE12/Domestic general government health expenditure	0.5071166
+unConcept	UN/events/crisis	mitre12	MITRE12/Conflict fatalities	0.49791455
+unConcept	UN/events/crisis	mitre12	MITRE12/Value, Political stability and absence of violence\/terrorism (index)	0.49653402
+unConcept	UN/entities/human/health/nutrient	mitre12	MITRE12/Vitamin A supplementation coverage rate	0.6345695
+unConcept	UN/entities/human/health/nutrient	mitre12	MITRE12/Cause of death, by communicable diseases and maternal, prenatal and nutrition conditions	0.5737959
+unConcept	UN/entities/human/health/nutrient	mitre12	MITRE12/Import Value, Infant food	0.5408991
+unConcept	UN/entities/human/health/nutrient	mitre12	MITRE12/Losses from manure treated (N content), Cattle, dairy	0.5310865
+unConcept	UN/entities/human/health/nutrient	mitre12	MITRE12/Import Value, Oils, fats of animal nes	0.51836616
+unConcept	UN/entities/natural/biology/flora	mitre12	MITRE12/Share in Forest land, Other naturally regenerated forest	0.63577276
+unConcept	UN/entities/natural/biology/flora	mitre12	MITRE12/Emissions (CO2eq) (Burning biomass), Humid tropical forest	0.6046032
+unConcept	UN/entities/natural/biology/flora	mitre12	MITRE12/Burned Area, Humid tropical forest	0.60011065
+unConcept	UN/entities/natural/biology/flora	mitre12	MITRE12/Emissions (CO2eq) (Burning biomass), Other forest	0.593417
+unConcept	UN/entities/natural/biology/flora	mitre12	MITRE12/Burned Area, Other forest	0.58706534
+unConcept	UN/interventions/institutional support	mitre12	MITRE12/CPIA policies for social inclusion\/equity cluster average	0.076467685
+unConcept	UN/interventions/institutional support	mitre12	MITRE12/CPIA public sector management and institutions cluster average	0.069073066
+unConcept	UN/interventions/institutional support	mitre12	MITRE12/CPIA policy and institutions for environmental sustainability rating	0.069013655
+unConcept	UN/interventions/institutional support	mitre12	MITRE12/Value, Political stability and absence of violence\/terrorism (index)	0.06756848
+unConcept	UN/interventions/institutional support	mitre12	MITRE12/Technical cooperation grants	0.06627214
+unConcept	UN/entities/human/financial/economic/inflation	mitre12	MITRE12/Inflation Rate	0.8862979
+unConcept	UN/entities/human/financial/economic/inflation	mitre12	MITRE12/Inflation, GDP deflator	0.7599829
+unConcept	UN/entities/human/financial/economic/inflation	mitre12	MITRE12/Inflation, GDP deflator: linked series	0.7335429
+unConcept	UN/entities/human/financial/economic/inflation	mitre12	MITRE12/Inflation, consumer prices	0.7004974
+unConcept	UN/entities/human/financial/economic/inflation	mitre12	MITRE12/GDP growth	0.6149242
+unConcept	UN/entities/human/financial/economic/economy	mitre12	MITRE12/Secondary income, other sectors, payments	0.73587567
+unConcept	UN/entities/human/financial/economic/economy	mitre12	MITRE12/Claims on other sectors of the domestic economy	0.71964234
+unConcept	UN/entities/human/financial/economic/economy	mitre12	MITRE12/General government final consumption expenditure	0.7185807
+unConcept	UN/entities/human/financial/economic/economy	mitre12	MITRE12/Domestic general government health expenditure	0.70906645
+unConcept	UN/entities/human/financial/economic/economy	mitre12	MITRE12/Domestic general government health expenditure per capita	0.7021217
+unConcept	UN/events/natural_disaster/flooding	mitre12	MITRE12/Percentage of livestock whose main water source is rivers	0.487193
+unConcept	UN/events/natural_disaster/flooding	mitre12	MITRE12/Percentage of livestock whose main water source is pans & dams	0.4823424
+unConcept	UN/events/natural_disaster/flooding	mitre12	MITRE12/Percentage of livestock whose main water source is traditional river wells	0.4741246
+unConcept	UN/events/natural_disaster/flooding	mitre12	MITRE12/Percentage of livestock whose main water source is lakes	0.45302135
+unConcept	UN/events/natural_disaster/flooding	mitre12	MITRE12/Percentage of livestock whose main water source is natural ponds	0.4522059
