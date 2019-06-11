@@ -29,7 +29,7 @@ If you want to make edits directly through the GitHub user interface, please be 
 Leaf nodes in the ontology with metadata are presently formatted as such:
 ```yml
 - OntologyNode:
-  patterns:
+  pattern:
   - pattern1
   - ...
   - patternN
