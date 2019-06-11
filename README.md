@@ -1,6 +1,6 @@
 # Ontologies
 
-[![Build Status](https://travis-ci.org/kwalcock/Ontologies.svg?branch=master)](https://travis-ci.org/kwalcock/Ontologies)
+[![Build Status](https://travis-ci.org/WorldModelers/Ontologies.svg?branch=master)](https://travis-ci.org/WorldModelers/Ontologies)
 [![](https://jitpack.io/v/WorldModelers/Ontologies.svg)](https://jitpack.io/#WorldModelers/Ontologies)
 
 Documentation for the format of these files will soon appear here.
