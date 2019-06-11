@@ -9,7 +9,7 @@
 
 ## Procedure
 
-When working with these files, please follow these steps:
+When working on these files with other programs, please follow these steps:
 
 1. Clone the repo
 1. Create a separate branch for your work
@@ -21,6 +21,8 @@ When working with these files, please follow these steps:
 1. Check that tests will also pass for the merged version
 1. Accept the pull request and merge
 1. Update any other projects that depend on the changes
+
+If you want to make edits directly through the GitHub user interface, please be sure to select the option "Create a new branch for this commit and start a pull request." when submitting the changes.  This allows the unit tests to be run at the right time.
 
 ## Format
 
