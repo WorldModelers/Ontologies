@@ -7,6 +7,23 @@
 
 <sup>2</sup>It is furthermore connected to jitPack so that build tools like gradle, maven, sbt, or leiningen can retrieve their dependencies directly from GitHub.  Click on the jitPack icon for configuration instructions.
 
+## Procedure
+
+When working with these files, please follow these steps:
+
+1. Clone the repo
+1. Create a separate branch for your work
+1. Make your changes
+1. Push the branch back here
+1. Check that tests have been run
+1. Account for any failing tests
+1. Create a pull request
+1. Check that tests will also pass for the merged version
+1. Accept the pull request and merge
+1. Update any other projects that depend on the changes
+
+## Format
+
 Leaf nodes in the ontology with metadata are presently formatted as such:
 ```yml
 - OntologyNode:
@@ -106,6 +123,8 @@ Here's a small, but concrete example:
             - OntologyNode:
               name: sexual violence management
 ```
+
+## Tests
 
 The unit tests presently check for
 * yml syntax
