@@ -9,7 +9,22 @@
       - intervention:
         - OntologyNode:
           pattern:
-          - (intervention)
+            - (inter“vention)
+            - (humanitarian)(\s|\w)+(aid|assistance)
+          examples:
+            - access
+            - humanitarian response
+            - humanitarian aid
+            - assistance
+            - humanitarian support
+            - intervention
+            - rehabilitation
+            - poverty alleviation
+          name: humanitarian assistance
+          polarity: 1.0
+        - OntologyNode:
+          pattern:
+          - (inter“vention)
           - (humanitarian)(\s|\w)+(aid|assistance)
           examples:
           - access
