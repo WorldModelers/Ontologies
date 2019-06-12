@@ -1,6 +1,7 @@
 ## Files for mapping between the indicators and the higher-level ontology concepts (from the unified ontology)
 
 Format of the mapping files:
+
     [source] \t [source concept/indicator] \t [destination] \t [destination concept/indicator]
 
 For each source concept/indicator, the top `k` alignments are given in descending order by confidence.  
