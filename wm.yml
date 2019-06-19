@@ -96,8 +96,7 @@
             - fuel
             - price:
               - food_price
-              - oil price # should we have these?
-            - inflation
+              - oil price
             - depreciation
             - revenue
             - assets
@@ -189,8 +188,8 @@
           - transportation:
             - travel
             - shipping
-        - food_shortage  # or availability
-        - water_shortage # or availability
+        - food_shortage 
+        - water_shortage
         - road_access
       - condition:
         #******************************CauseEx edit**********************************************

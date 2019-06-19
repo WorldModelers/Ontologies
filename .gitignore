@@ -1,0 +1,8 @@
+*.class
+
+# sbt specific
+target/
+
+
+# IntelliJ
+.idea

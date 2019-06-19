@@ -207,12 +207,12 @@
             - mt
             - wetland
             - sand
-            - flood plains #ppt-#6
-            - cropland #ppt-#6
-            - greenbelt #ppt-#6
-            - agricultural land #ppt-#7
-            - arable land #ppt-#7
-            - cultivated area #ppt-#7
+            - flood plains 
+            - cropland 
+            - greenbelt
+            - agricultural land
+            - arable land
+            - cultivated area
             name: land
             take_args: 0
             polarity: 1.0
@@ -304,7 +304,7 @@
             examples:
             - crisis
             - emergency
-            - catastrophe #ppt-#10
+            - catastrophe
             name: crisis
             take_args: 0
             polarity: 1.0
@@ -397,7 +397,7 @@
           examples:
           - economic crisis
           - financial crisis
-          name: economic_crisis #ppt-#4
+          name: economic_crisis
           take_args: 0
           polarity: 1.0
         - economic activity:
@@ -416,7 +416,7 @@
             - opportunity
             - employment
             - agribusiness
-            - pastoralist livelihood #ppt-#8
+            - pastoralist livelihood
             name: livelihood
             take_args: 0
             polarity: 1.0
@@ -427,7 +427,7 @@
             - pound
             - cash
             - hard currency
-            name: currency #ppt-nov1-#14
+            name: currency
             take_args: 0
             polarity: 1.0
           - cross_boarder_trade:
@@ -435,14 +435,14 @@
               - OntologyNode:
                 examples:
                 - food import
-                name: food import #ppt-nov1-#14
+                name: food import
                 take_args: 1
                 polarity: 1.0
             - export:
               - OntologyNode:
                 examples:
                 - food export
-                name: food export #ppt-nov1-#14
+                name: food export
                 take_args: 1
                 polarity: 1.0
           - market:
@@ -454,8 +454,8 @@
               - gas
               - oil
               - crude
-              - petrol #doc-#pg3
-              - diesel #doc-#pg3
+              - petrol
+              - diesel
               name: fuel
               take_args: 0
               polarity: 1.0
@@ -465,8 +465,8 @@
                 - food price
                 - crop price
                 - food cost
-                - staple food price #ppt-#9
-                name: food_price #ppt-#3
+                - staple food price
+                name: food_price 
                 take_args: 0
                 polarity: 1.0
               - OntologyNode:
@@ -478,7 +478,6 @@
             - OntologyNode:
               examples:
               - inflation
-              #- inflation rate #ppt-nov1-#16
               name: inflation
               take_args: 1
               polarity: 1.0
@@ -507,7 +506,7 @@
               - assets
               - property
               - land assets
-              name: assets #ppt-#3
+              name: assets
               take_args: 0
               polarity: 1.0
             - supply:
@@ -534,7 +533,6 @@
             - OntologyNode:
               examples:
               - inflation
-              #- inflation rate #ppt-nov1-#16
               name: inflation
               take_args: 1
               polarity: 1.0
@@ -614,7 +612,7 @@
             - independence
             - self-rule
             - political independence
-            name: independence #ppt-#3
+            name: independence 
             take_args: 0
             polarity: 1.0
         - migration:
@@ -672,7 +670,7 @@
             - civil unrest
             - genocide
             - clash
-            - armed clash #ppt-#8
+            - armed clash
             - raid
             - hostility
             name: hostility
@@ -684,7 +682,7 @@
             - civil unrest
             - genocide
             - clash
-            - attack #ppt-#8
+            - attack
             - destroy
             - fight
             name: demostrate
@@ -696,7 +694,7 @@
             - civil unrest
             - genocide
             - clash
-            - attack #ppt-#8
+            - attack
             - destroy
             - fight
             - war
@@ -709,7 +707,7 @@
             - civil unrest
             - genocide
             - clash
-            - attack #ppt-#8
+            - attack
             - destroy
             - fight
             - war
@@ -723,7 +721,7 @@
             - civil unrest
             - genocide
             - clash
-            - attack #ppt-#8
+            - attack
             - destroy
             - fight
             - war
@@ -776,7 +774,7 @@
           - climate
           - tropical
           - equatorial
-          name: climate #ppt-#5
+          name: climate
           take_args: 0
           polarity: 1.0
         - precipitation:
@@ -802,7 +800,7 @@
         - OntologyNode:
           examples:
           - temperature
-          name: temperature #ppt-nov1-#10
+          name: temperature 
           take_args: 0
           polarity: 1.0
       - agriculture:
@@ -867,17 +865,17 @@
           - maize
           - rice
           - sorghum
-          - white sorghum #doc-#pg2
-          - red sorghum #doc-#pg2
-          - brown sorghum #doc-#pg2
-          - oats #doc-#pg2
-          - white maize #doc-#pg2
-          - millet #doc-#pg2
+          - white sorghum
+          - red sorghum
+          - brown sorghum
+          - oats 
+          - white maize
+          - millet 
           - barley
           - flax
           - grain
           - beans
-          - sesame #doc-#pg4
+          - sesame
           - sugar
           - flour
           - tea
@@ -919,14 +917,14 @@
           - cattle
           - poultry
           - domestic animals
-          name: livestock production #ppt-#3
+          name: livestock production
           take_args: 0
           polarity: 1.0
         - OntologyNode:
           examples:
           - infestation
           - armyworm
-          - fall armyworm #ppt-nov1-#13
+          - fall armyworm
           - insect
           - swarm
           - locust
@@ -999,7 +997,7 @@
             examples:
             - vaccine
             - vaccination
-            name: health_intervention # can these be combined?
+            name: health_intervention
             polarity: 1.0 
         - OntologyNode:
           examples:
@@ -1007,9 +1005,9 @@
           - mortality
           - morbidity
           - decease
-          - loss of life #ppt-#3
-          - life loss #ppt-#3
-          - fatalitiy #ppt-#8
+          - loss of life
+          - life loss
+          - fatalitiy
           name: death
           take_args: 0
           polarity: 1.0
@@ -1061,7 +1059,7 @@
             examples:
             - road
             - highways
-            - road network #ppt-#4
+            - road network
             name: road
             take_args: 0
             polarity: 1.0
@@ -1086,19 +1084,19 @@
               polarity: 1.0
         - OntologyNode:
           examples:
-          - food_shortage
-          name: food_shortage  # or availability
+          - food shortage
+          name: food_shortage
           take_args: 0
           polarity: 1.0
         - OntologyNode:
           examples:
-          - water_shortage
-          name: water_shortage # or availability
+          - water shortage
+          name: water_shortage
           take_args: 0
           polarity: 1.0
         - OntologyNode:
           examples:
-          - road_access
+          - road access
           name: road_access
           take_args: 1
           polarity: 1.0
@@ -1157,8 +1155,8 @@
           - undernourishment
           - stunting
           - wasting
-          - food riots #ppt-#3
-          - food inflation #ppt-nov1-#16
+          - food riots
+          - food inflation
           name: food_insecurity
           take_args: 0
           polarity: 1.0
@@ -1203,7 +1201,7 @@
           - family
           - ethnic group
           - population
-          - rural #ppt-#3
+          - rural
           name: population
           take_args: 0
           polarity: 1.0
@@ -1229,7 +1227,7 @@
           - sowing season
           name: crop season
           take_args: 0
-        polarity: 1.0
+          polarity: 1.0
         - OntologyNode:
           examples:
           - summer
