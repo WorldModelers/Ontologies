@@ -2,7 +2,7 @@
 # - focus on semantic distinctions other than the terminologies
 #  - we don't attempt to differentiate "event" and "entities" but rather trying to put all causal factors into "causal_factor"
 #  - use coarse-grained concepts "causal_factor", "entity" (where the causal factor is located, who and what artifacts are involved in a causal factor), "time", and "indicator_and_reported_property" as the top level concepts.
-# - allow multiple inheritance (""UN/events/human/economic_crisis" is a child to both "economic_and_commerce" and "crisis_and_disaster"). Concepts under "intervention" and "condition" will overlap with other categories
+# - allow multiple inheritance ("economic_crisis" is a child to both "economic_and_commerce" and "crisis_and_disaster"). Concepts under "intervention" and "condition" will overlap with other categories
 - wm:
   - concept:
     - causal_factor:
@@ -21,7 +21,7 @@
           - rehabilitation
           - poverty alleviation
           name: humanitarian assistance
-          take_args: 1
+          take_args: 0
           polarity: 1.0
         - provision of goods and services:
           - education:
@@ -181,7 +181,7 @@
           - water management
           - management forest
           name: resource_management
-          take_args: 0
+          take_args: 1
           polarity: 1.0
         - OntologyNode:
           examples:
@@ -195,7 +195,7 @@
         - natural_resources:
           - OntologyNode:
             examples:
-            - natural_resource
+            - natural resource
             name: natural_resource
             take_args: 0
             polarity: 1.0
@@ -234,7 +234,7 @@
             polarity: 1.0
           - OntologyNode:
             examples:
-            - fossil_fuels
+            - fossil fuels
             name: fossil_fuels
             take_args: 0
             polarity: 1.0
