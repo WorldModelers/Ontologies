@@ -42,12 +42,13 @@
               examples:
               - sexual violence management
               name: sexual violence management
-              take_args: 1
+              take_args: 0
               polarity: 1.0
             - OntologyNode:
               examples:
               - vector control
               name: vector control
+              take_args: 1
               polarity: 1.0
           - nutrition:
             - OntologyNode:
@@ -55,7 +56,7 @@
               - therapeutic feeding
               - therapeutic treating
               name: therapeutic feeding or treating
-              take_args: 1
+              take_args: 0
               polarity: 1.0
           - OntologyNode:
             examples:
@@ -123,8 +124,8 @@
             examples:
             - provide veterinary drugs vaccines
             name: provide veterinary drugs vaccines
-            polarity: 1.0
             take_args: 0
+            polarity: 1.0
           - OntologyNode:
             examples:
             - provide moving of houseHolds
@@ -190,7 +191,7 @@
           - forest management
           - reforestation
           name: forestry
-          take_args: 1
+          take_args: 0
           polarity: 1.0
         - natural_resources:
           - OntologyNode:
@@ -208,7 +209,6 @@
             - wetland
             - sand
             - flood plains 
-            - cropland 
             - greenbelt
             - agricultural land
             - arable land
@@ -235,6 +235,9 @@
           - OntologyNode:
             examples:
             - fossil fuels
+            - coal
+            - oil
+            - natural gas
             name: fossil_fuels
             take_args: 0
             polarity: 1.0
@@ -244,14 +247,12 @@
             name: soil
             take_args: 0
             polarity: 1.0
-          #***********************CauseEx edit************************************************
           - OntologyNode:
             examples:
-            - water_management
-            name: water_management
+            - water management
+            name: water_management # CauseEx
             take_args: 0
             polarity: 1.0
-          #************************************************************************************
         - pollution:
           - OntologyNode:
             examples:
@@ -277,27 +278,25 @@
             name: climate_change
             take_args: 0
             polarity: 1.0
-      # ****************CauseEx edit**********************************
       - food_water_and_nutrition:
         - OntologyNode:
           examples:
-          - water_insecurity
+          - water insecurity
           name: water_insecurity
           take_args: 0
           polarity: 1.0
         - OntologyNode:
           examples:
-          - water_management
+          - water management
           name: water_management
           take_args: 0
           polarity: 1.0
         - OntologyNode:
           examples:
-          - water_security
+          - water security
           name: water_security
           take_args: 0
           polarity: 1.0
-      #***************************************************************
       - crisis_and_disaster:
         - crisis:
           - OntologyNode:
@@ -315,22 +314,19 @@
               name: poverty
               take_args: 0
               polarity: 1.0
-          # ***************************CauseEx edit **********************
           - environmental_factor:
-            # ***************************CauseEx edit **********************
             - OntologyNode:
               examples:
-              - crop_failure
+              - crop failure
               name: crop_failure
               take_args: 0
               polarity: 1.0
             - OntologyNode:
               examples:
-              - insect_infestation
-              name: insect_infestation
+              - insect infestation
+              name: insect infestation
               take_args: 0
               polarity: 1.0
-            # **************************************************************
             - natural_disaster:
               - OntologyNode:
                 examples:
@@ -339,7 +335,6 @@
                 name: flooding
                 take_args: 0
                 polarity: 1.0
-              # *********** CauseEX edit*************************
               - OntologyNode:
                 examples:
                 - avalanche
@@ -354,11 +349,10 @@
                 polarity: 1.0
               - OntologyNode:
                 examples:
-                - volcanic_eruption
+                - volcanic eruption
                 name: volcanic_eruption
                 take_args: 0
                 polarity: 1.0
-              # *************************************************
               - OntologyNode:
                 examples:
                 - drought
@@ -377,7 +371,6 @@
                 name: earthquake
                 take_args: 0
                 polarity: 1.0
-            # *********** CauseEX edit*************************
           - weather_issue:
             - OntologyNode:
               examples:
@@ -385,12 +378,11 @@
               name: cold_temperature
               take_args: 0
               polarity: 1.0
-          # *************************************************
         - OntologyNode:
           examples:
           - fire
           name: fire
-          take_args: 1
+          take_args: 1 # what is on fire?
           polarity: 1.0
       - economic_and_commerce:
         - OntologyNode:
@@ -436,14 +428,14 @@
                 examples:
                 - food import
                 name: food import
-                take_args: 1
+                take_args: 1 # thing imported
                 polarity: 1.0
             - export:
               - OntologyNode:
                 examples:
                 - food export
                 name: food export
-                take_args: 1
+                take_args: 1 # thing exported
                 polarity: 1.0
           - market:
             - OntologyNode:
@@ -477,12 +469,6 @@
                 polarity: 1.0
             - OntologyNode:
               examples:
-              - inflation
-              name: inflation
-              take_args: 1
-              polarity: 1.0
-            - OntologyNode:
-              examples:
               - depreciation
               name: depreciation
               take_args: 1
@@ -507,14 +493,14 @@
               - property
               - land assets
               name: assets
-              take_args: 0
+              take_args: 1
               polarity: 1.0
             - supply:
               - OntologyNode:
                 examples:
                 - food supply
                 name: food supply
-                take_args: 1
+                take_args: 0
                 polarity: 1.0
             - demand:
               - OntologyNode:
@@ -534,33 +520,33 @@
               examples:
               - inflation
               name: inflation
-              take_args: 1
+              take_args: 0
               polarity: 1.0
             - OntologyNode:
               examples:
               - currency devaluation
               name: currency devaluation
-              take_args: 1
+              take_args: 0
               polarity: 1.0
           - consumption:
             - OntologyNode:
               examples:
               - food consumption
               name: food consumption
-              take_args: 1
+              take_args: 1 # food
               polarity: 1.0
           - OntologyNode:
             examples:
             - competition
             - contest
             name: competition
-            take_args: 1
+            take_args: 1 # between? about?
             polarity: 1.0
           - OntologyNode:
             examples:
             - development
             name: development
-            take_args: 1
+            take_args: 1 # being developed
             polarity: 1.0  
       - social_and_political:
         - OntologyNode:
@@ -589,11 +575,11 @@
             - policy
             - legislation
             name: regulation
-            take_args: 1
+            take_args: 1 # topic
             polarity: 1.0
           - OntologyNode:
             examples:
-            - tax_duty
+            - tax duty
             name: tax_duty
             take_args: 0
             polarity: 1.0
@@ -602,9 +588,9 @@
             examples:
             - political instability
             - power struggle
-            - regime breakdown #doc-#pg1
-            - political violence #doc-pg1
-            name: political_instability #ppt-#3
+            - regime breakdown
+            - political violence
+            name: political_instability
             take_args: 0
             polarity: 1.0
           - OntologyNode:
@@ -620,7 +606,7 @@
             examples:
             - human_displacement
             name: human_displacement
-            take_args: 1
+            take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
@@ -631,7 +617,7 @@
             - emigration
             - flee
             name: human_migration
-            take_args: 1
+            take_args: 0
             polarity: 1.0
         - threat:
           - OntologyNode:
@@ -652,7 +638,7 @@
             examples:
             - disarmament
             name: disarmament
-            take_args: 1
+            take_args: 0
             polarity: 1.0
         - OntologyNode:
           examples:
@@ -686,7 +672,7 @@
             - destroy
             - fight
             name: demostrate
-            take_args: 1
+            take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
@@ -699,7 +685,7 @@
             - fight
             - war
             name: war
-            take_args: 1
+            take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
@@ -713,7 +699,7 @@
             - war
             - attack
             name: attack
-            take_args: 1
+            take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
@@ -728,7 +714,7 @@
             - strike
             - attack
             name: strike
-            take_args: 1
+            take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
@@ -754,7 +740,7 @@
             examples:
             - human displacement
             name: human displacement
-            take_args: 1
+            take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
@@ -789,7 +775,7 @@
             examples:
             - drought
             name: drought
-            take_args: take_args
+            take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
@@ -801,14 +787,14 @@
           examples:
           - temperature
           name: temperature 
-          take_args: 0
+          take_args: 1 # temperature of ...
           polarity: 1.0
       - agriculture:
         - OntologyNode:
           examples:
           - agricultural production
           name: agricultural production
-          take_args: 0
+          take_args: 1
           polarity: 1.0
         - OntologyNode:
           examples:
@@ -822,13 +808,13 @@
           - store crops
           - granary
           name: crop_storage
-          take_args: 0
+          take_args: 1
           polarity: 1.0
         - OntologyNode:
           examples:
           - fertilization
           name: fertilization
-          take_args: 0
+          take_args: 1
           polarity: 1.0
         - OntologyNode:
           examples:
@@ -850,7 +836,7 @@
           - irrigation system
           - irrigation
           name: irrigation
-          take_args: 1
+          take_args: 0
           polarity: 1.0
         - OntologyNode:
           examples:
@@ -941,17 +927,7 @@
           take_args: 0
           polarity: 1.0
       - health_and_life:
-      #*****CauseEx Edit**************************************#
-      # healthAndDisease #
         - disease:
-          #*****CauseEx Edit**************************************#
-          - OntologyNode:
-            examples:
-            - infectious human disease
-            name: infectious human disease
-            take_args: 0
-            polarity: 1.0
-          #*********************************************************
           - OntologyNode:
             examples:
             - HIV
@@ -965,6 +941,8 @@
             - virus
             - bacteria
             - human disease
+            - infection
+            - infectious
             name: human disease
             take_args: 0
             polarity: 1.0
@@ -985,19 +963,24 @@
             examples:
             - animal disease
             name: animal disease
+            take_args: 0
             polarity: 1.0
         - treatment:
           - OntologyNode:
             examples:
-            - treatment
-            name: treatment
-            take_args: 0
+            - disease treatment
+            - medication
+            - medical therapy
+            - theraputic treatment
+            name: health_treatment
+            take_args: 1
             polarity: 1.0
           - OntologyNode:
             examples:
             - vaccine
             - vaccination
-            name: health_intervention
+            name: vaccination
+            take_args: 1
             polarity: 1.0 
         - OntologyNode:
           examples:
@@ -1007,9 +990,9 @@
           - decease
           - loss of life
           - life loss
-          - fatalitiy
+          - fatality
           name: death
-          take_args: 0
+          take_args: 1
           polarity: 1.0
         - OntologyNode:
           examples:
@@ -1052,6 +1035,8 @@
           - OntologyNode:
             examples:
             - waste
+            - sewage treatment
+            - garbage removal
             name: waste
             take_args: 0
             polarity: 1.0
@@ -1079,6 +1064,8 @@
             - OntologyNode:
               examples:
               - shipping
+              - frieght
+              - cargo
               name: shipping
               take_args: 1
               polarity: 1.0
@@ -1101,15 +1088,13 @@
           take_args: 1
           polarity: 1.0
       - condition:
-        # *************************CauseEX edit**********************************
         - living_condition:
           - OntologyNode:
             examples:
-            - unsanitary_condition
+            - unsanitary condition
             name: unsanitary_condition
             take_args: 0
             polarity: 1.0
-        #************************************************************************
         - OntologyNode:
           examples:
           - tension
@@ -1163,7 +1148,7 @@
     - entity:
       - OntologyNode:
         examples:
-        - geo-location
+        - geographic location
         name: geo-location
         take_args: 0
         polarity: 1.0
@@ -1183,21 +1168,18 @@
         polarity: 1.0
       - OntologyNode:
         examples:
-        - government_entity
-        - program_entity
+        - government entity
+        - program entity
         name: government_entity
         take_args: 0
         polarity: 1.0
       - person_and_group:
         - OntologyNode:
           examples:
-          - communities
           - people group
           - households
           - families
-          - villages
           - people
-          - community
           - family
           - ethnic group
           - population
@@ -1207,7 +1189,9 @@
           polarity: 1.0
         - OntologyNode:
           examples:
+          - villages
           - community
+          - communities
           name: community
           take_args: 0
           polarity: 1.0

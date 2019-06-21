@@ -2,7 +2,7 @@
 # - focus on semantic distinctions other than the terminologies
 #  - we don't attempt to differentiate "event" and "entities" but rather trying to put all causal factors into "causal_factor"
 #  - use coarse-grained concepts "causal_factor", "entity" (where the causal factor is located, who and what artifacts are involved in a causal factor), "time", and "indicator_and_reported_property" as the top level concepts.
-# - allow multiple inheritance (""UN/events/human/economic_crisis" is a child to both "economic_and_commerce" and "crisis_and_disaster"). Concepts under "intervention" and "condition" will overlap with other categories
+# - allow multiple inheritance ("economic_crisis" is a child to both "economic_and_commerce" and "crisis_and_disaster"). Concepts under "intervention" and "condition" will overlap with other categories
 - wm:
   - concept:
     - causal_factor:
@@ -45,42 +45,33 @@
           - water
           - fossil_fuels
           - soil
-          #****************CauseEx edit*********************************
-          - water_management
-          #*************************************************************
+          - water_management # CauseEx
         - pollution:
           - air_pollution
           - land_pollution
           - climate_change
-      # ****************CauseEx edit**********************************
       - food_water_and_nutrition:
         - water_insecurity
         - water_management
         - water_security
-      #***************************************************************
       - crisis_and_disaster:
         - crisis:
           - crisis
           - economic_crisis:
             - poverty
-          # *********** CauseEX edit*************************
           - environmental_factor:
             - crop_failure
-            - insect_infestation
+            - insect infestation
             - natural_disaster:
               - flooding
-              # *********** CauseEX edit*************************
               - avalanche
               - wildfire
               - volcanic_eruption
-              # *************************************************
               - drought
               - storm
               - earthquake
-          # ******************************************************
           - weather_issue:
             - cold_temperature
-          # *************************************************
         - fire
       - economic_and_commerce:
         - economic_crisis
@@ -95,7 +86,7 @@
           - market:
             - fuel
             - price:
-              - food_price
+              - food_price 
               - oil price
             - depreciation
             - revenue
@@ -120,7 +111,7 @@
           - tax_duty
         - political:
           - political_instability
-          - independence
+          - independence 
         - migration:
           - human_displacement
           - human_migration
@@ -149,7 +140,7 @@
           - flooding
           - drought
           - storm
-        - temperature
+        - temperature 
       - agriculture:
         - agricultural production
         - planting
@@ -163,18 +154,13 @@
       - health_and_life:
         - disease:
           - human disease
-          #*****CauseEx Edit**************************************#
-          # healthAndDisease #
-          - AlcoholDrugAndSubstanceAbuse
+          - alcohol drug and substance abuse
           - plant disease:
             - pest infestation
           - animal disease
         - treatment:
-          - treatment
-          - health_intervention # can these be combined?
-          #*****CauseEx Edit**************************************#
-          - vaccination_program
-          #********************************************************
+          - health_treatment
+          - vaccination
         - death
         - birth
         - famine
@@ -188,14 +174,12 @@
           - transportation:
             - travel
             - shipping
-        - food_shortage 
+        - food_shortage
         - water_shortage
         - road_access
       - condition:
-        #******************************CauseEx edit**********************************************
         - living_condition:
           - unsanitary_condition
-        #****************************************************************************************
         - tension
         - trend
         - famine
