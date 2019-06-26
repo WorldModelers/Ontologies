@@ -1,0 +1,269 @@
+- Interventions:
+  - Events:
+    - Providing
+      appliedTo:
+      - Objects/Personnel
+      - Objects/Goods
+      - Objects/Training
+      - Objects/Services
+    - Constructing
+      appliedTo:
+      - Objects/Infrastructures
+    - Repairing
+      appliedTo:
+      - Objects/Infrastructures
+    - Assessing
+      appliedTo:
+      - Objects/Infrastructures
+      - Objects/Services
+      - Objects/Operations
+      - Objects/Goods
+      - Objects/Hazards
+    - Maintaining
+    - Removing
+      appliedTo:
+      - Objects/Hazards
+    - Administering
+      appliedTo:
+      - Objects/Operations
+    - Conserving
+      appliedTo:
+      - Objects/Environment
+    - Protecting
+  - Objects:
+    - Infrastructures:
+      - Health facilities:
+        - Field hospital
+        - Doctor's Office
+        - Health centre
+        - Hospital
+        - Urgent Care
+        - Surgery Center
+        - Nursing Home
+        - Health post
+      - Sanitation:
+        - Pit Latrine
+        - Composting Toilets
+        - Pit latrines with a slab
+        - Flush Toilet
+        - Ventilated Improved pit latrines
+        - Waste Management:
+          - Solid Waste Management
+          - Hazardous Waste Management
+      - Roads:
+        - Long-term roads:
+          - Primary
+          - Tertiary
+          - Seoncdary
+        - Temporary roads
+      - Washing and bathing facilities:
+        - Laundry facilities
+        - Hand-washing stations
+        - Shower blocks
+      - Telecommunication
+      - Power Generation:
+        - Wind Energy
+        - Solar Electric
+        - Potential Energy:
+          - Hydroelectric Dam
+        - Thermal Energy:
+          - Nuclear
+          - Coal
+          - Natural Gas
+          - Petroleum
+          - Solar Thermal Energy
+          - Geothermal
+        - Chemical Energy:
+          - Batteries
+          - Fuel Cells
+      - Railway lines
+      - Airports:
+        - Airplane Hangers
+        - Run Ways
+        - Airport Terminals
+      - Housing:
+        - Short Term Housing:
+          - Temporary Communal Settlement
+          - Prefabricated buildings
+        - Long Term Housing
+      - Water infrastructures:
+        - Protected Dug Well
+        - Piped Water to a Plot
+        - Irrigation scheme
+        - Dam
+        - Well
+        - Protected Spring
+        - Wastewater Plants
+        - Rainwater
+        - Public tap
+        - Borehole
+        - Piped Water to a Dwelling
+      - Bridge:
+        - Suspension Bridges
+        - Arch Bridge
+        - Cable-stayed Bridge
+        - Beam Bridge
+        - Truss Bridge
+        - Cantilever Bridge
+      - Schools
+    - Services:
+      - Real estate services
+      - Electricity, gas and water distribution services
+      - Business and production services:
+        - Other manufacturing services; publishing, printing and reproduction
+        - Professional, technical and business services (except research, development,
+        - Support and operation services to agriculture, hunting, forestry, fishing, mining and utilities:
+          - Famine early warning system
+        - Manufacturing services on physical inputs owned by others
+        - Indoor residual spraying
+        - Livestock services:
+          - Livestock destocking
+          - Veterinary services
+        - Research and development services
+        - Larval source management:
+          - Larviciding
+          - Environmental management:
+            - Habitat manipulation
+            - Habitat modification
+          - Biological control
+        - Maintenance, repair and installation (except construction) services
+        - Legal and accounting services
+        - Support services
+      - Transport services:
+        - Supporting transport services
+        - Rental services of transport vehicles with operators
+        - Passenger transport services
+        - Freight transport services
+        - Postal and courier services
+      - Distributive trade services
+      - Rental and leasing services:
+        - Waste clean-up
+        - Solid waste collection
+        - Recycling services
+        - Solid waste disposal
+      - Community, social and personal services:
+        - Education services
+        - Guardianship and foster parenting
+        - Compulsory social security services
+        - Human and child rights monitoring
+        - Other services
+        - Sewage and waste collection, treatment and disposal and other environmental
+        - Legal aid for displaced persons:
+          - Legal information programs
+          - Legal aid programs
+          - Legal counselling
+        - Public administration and other services provided to the community
+        - Family reunification
+        - Services of membership organizations
+        - Domestic services
+        - Recreational, cultural and sporting services
+        - Human health and social care services:
+          - Malnutrition screening
+        - School feeding
+    - Operations:
+      - Dialogue sessions
+      - Community assessment
+      - Disarmament, demobilization and reintegration? TBC
+      - Public information campaigns:
+        - Community awareness days
+        - Television campaigns
+        - Communication materials:
+          - Posters
+          - Leaflets
+          - Billboards
+        - Radio campaigns
+      - Impact evaluation
+      - Pest control operation
+      - Conflict mediation
+      - Peacekeeping mission
+    - Goods:
+      - Ores and minerals:
+        - Stone, sand and clay
+        - Electricity, town gas, steam and hot water Natural water
+        - Coal and peat
+        - Uranium and thorium ores and concentrates Metal ores
+        - Crude petroleum and natural gas
+        - Other minerals
+      - Textiles, apparel and leather products:
+        - Leather and leather products
+        - Knitted or crocheted fabrics
+        - Footwear
+        - Textile articles other than apparel
+        - Yarn and thread
+        - Wearing apparel
+        - Woven and tufted textile fabrics
+      - Agriculture, forestry and fishery products:
+        - Fish and other fishing products
+        - Live animals and animal products (excluding meat)
+        - Products of agriculture, horticulture and market gardening
+        - Forestry and logging products
+      - Cash and vouchers
+      - Other transportable goods (except metal products, machinery and equipment):
+        - Other chemical products; man-made fibres
+        - Wastes or scraps
+        - Basic chemicals
+        - Glass and glass products and other non-metallic products n.e.c.
+        - Furniture; other transportable goods n.e.c.
+        - Products of wood, cork, straw and plaiting materials Pulp, paper and
+        - Rubber and plastics products
+        - Coke oven products; refined petroleum products; nuclear fuel
+      - Metal products, machinery and equipment:
+        - Basic metals
+        - General-purpose machinery
+        - Fabricated metal products, except machinery and equipment
+        - Office, accounting and computing machinery
+        - Special-purpose machinery
+        - Transport equipment
+        - Radio, television and communication equipment and apparatus
+        - Medical appliances, precision and optical instruments, watches and
+        - Electrical machinery and apparatus
+      - Food products and beverages:
+        - Meat, fish, fruits, vegetables, oils and fats
+        - Dairy products and egg products
+        - Other food products
+        - Beverages
+        - Grain mill products, starches and starch products
+    - Training topics:
+      - Good WASH practices:
+        - Water safety
+        - Good hygiene practices
+        - Latrine use
+      - Peacekeeping mandate
+      - Mine risk
+      - Teaching
+      - Income generation:
+        - Financial training
+        - Vocational training
+      - Public health
+      - School attendance
+      - Good nutrition practices:
+        - Malnutrition
+        - IYCF:
+          - Breastfeeding
+          - Balanced diet
+      - ITN use
+    - Training
+    - Environment
+    - Hazards:
+      - Debris
+      - Mines
+    - Personnel
+  - Organizations:
+    - Private:
+      - Cooperatives
+      - Sole Proprietor
+      - Partnership
+      - Franchise
+      - Limited Companies
+      - Charities
+    - Government:
+      - Multilateral
+      - Bilateral
+      - Unilateral
+    - NGO:
+      - Bilateral
+      - Unilateral
+      - Multilateral
+
+
+
