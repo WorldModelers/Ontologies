@@ -3,13 +3,14 @@ This code takes an RDF file (eg:from kimetrica) and converts it into a YAML onto
 
 Prerequisites:
     python3, rdfextras,rdflib
-Input file:
-    root-ontology.owl (keep it at the same location as the script)
 Usage:
      python convert_owl_yaml.py  --input_file [INPUT_FILE] --output_file [OUTPUT_FILE]
+Default Behavior:
+    python convert_owl_yaml.py
 
-    Output:
-    will be writen to converted_file.py
+    (expects input file named as root-ontology.owl  kept at the same level as
+    this script and the output file will be created as interventions_metadata.yml)
+
 """
 
 
