@@ -2,7 +2,7 @@
 # - focus on semantic distinctions other than the terminologies
 #  - we don't attempt to differentiate "event" and "entities" but rather trying to put all causal factors into "causal_factor"
 #  - use coarse-grained concepts "causal_factor", "entity" (where the causal factor is located, who and what artifacts are involved in a causal factor), "time", and "indicator_and_reported_property" as the top level concepts.
-# - allow multiple inheritance (""UN/events/human/economic_crisis" is a child to both "economic_and_commerce" and "crisis_and_disaster"). Concepts under "intervention" and "condition" will overlap with other categories
+# - allow multiple inheritance ("economic_crisis" is a child to both "economic_and_commerce" and "crisis_and_disaster"). Concepts under "intervention" and "condition" will overlap with other categories
 - wm:
   - concept:
     - causal_factor:
@@ -46,20 +46,33 @@
           - water_commodity
           - fossil_fuels
           - soil
+          - water_management # CauseEx
         - pollution:
           - air_pollution
           - land_pollution
           - climate_change
+      - food_water_and_nutrition:
+        - water_insecurity
+        - water_management
+        - water_security
       - crisis_and_disaster:
         - crisis:
           - crisis
           - economic_crisis:
             - poverty
-          - natural_disaster:
-            - flooding
-            - drought
-            - storm
-            - earthquake
+          - environmental_factor:
+            - crop_failure
+            - insect infestation
+            - natural_disaster:
+              - flooding
+              - avalanche
+              - wildfire
+              - volcanic_eruption
+              - drought
+              - storm
+              - earthquake
+          - weather_issue:
+            - cold_temperature
         - fire
       - economic_and_commerce:
         - economic_crisis
@@ -75,7 +88,7 @@
             - labor_market
             - fuel
             - price:
-              - food_price
+              - food_price 
               - oil price
             - depreciation
             - revenue
@@ -104,7 +117,7 @@
           - tax_duty
         - political:
           - political_instability
-          - independence
+          - independence 
         - migration:
           - human_migration
           - hosting_idps
@@ -140,7 +153,7 @@
           - flooding
           - drought
           - storm
-        - temperature
+        - temperature 
       - agriculture:
         - agricultural_production
         - planting
@@ -155,12 +168,13 @@
         - biometrics
         - disease:
           - human disease
+          - alcohol drug and substance abuse
           - plant disease:
             - pest infestation
           - animal disease
         - treatment:
-          - treatment
-          - health_intervention
+          - health_treatment
+          - vaccination
         - death
         - birth
         - famine
@@ -183,6 +197,8 @@
         - water_shortage
         - road_access
       - condition:
+        - living_condition:
+          - unsanitary_condition
         - tension
         - trend
         - famine
