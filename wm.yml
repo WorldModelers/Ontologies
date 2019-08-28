@@ -95,8 +95,9 @@
           - development
       - social_and_political:
         - basic_services
-        - education
-        - educational_materials
+        - education:
+          - education
+          - educational_materials
         - government:
           - census
           - regulation
@@ -177,6 +178,7 @@
             - shipping
           - medical:
             - ambulances
+            - medical_facility
         - food_shortage 
         - water_shortage
         - road_access

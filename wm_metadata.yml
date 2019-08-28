@@ -457,26 +457,27 @@
           - essential services
           name: basic_services
           polarity: 1.0
-        - OntologyNode:
-          examples:
-          - literacy
-          - education
-          - school
-          - teacher training
-          - teacher
-          - classroom
-          - school leadership
-          name: education
-          polarity: 1.0
-        - OntologyNode:
-          examples:
-          - educational materials
-          - reading materials
-          - teaching aids
-          - classroom supplies
-          - school supplies
-          name: educational_materials
-          polarity: 1.0
+        - education:
+          - OntologyNode:
+            examples:
+            - literacy
+            - education
+            - school
+            - teacher training
+            - teacher
+            - classroom
+            - school leadership
+            name: education
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - educational materials
+            - reading materials
+            - teaching aids
+            - classroom supplies
+            - school supplies
+            name: educational_materials
+            polarity: 1.0
         - government:
           - OntologyNode:
             examples:
@@ -673,6 +674,7 @@
             examples:
             - cattle raid
             - livestock raid
+            - cattle raiding
             name: livestock_raid
             polarity: 1.0
         - OntologyNode:
@@ -1007,6 +1009,13 @@
               - ambulances
               name: ambulances
               polarity: 1.0
+            - OntologyNode:
+              examples:
+              - hospital
+              - clinic
+              - health post
+              name: medical_facility
+              polarity: 1.0
         - OntologyNode:
           examples:
           - food_shortage
@@ -1070,6 +1079,8 @@
         - OntologyNode:
           examples:
           - food diversity
+          - food variety
+          - nutritional variety
           name: food_diversity
           polarity: 1.0
     - entity:
