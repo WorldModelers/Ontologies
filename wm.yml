@@ -174,7 +174,7 @@
           - animal disease
         - treatment:
           - health_treatment
-          - vaccination
+          - health_intervention
         - death
         - birth
         - famine
@@ -193,7 +193,7 @@
           - medical:
             - ambulances
             - medical_facility
-        - food_shortage 
+        - food_shortage
         - water_shortage
         - road_access
       - condition:
