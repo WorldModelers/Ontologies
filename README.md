@@ -132,5 +132,3 @@ The unit tests presently check for
 * yml syntax
 * special characters that might have been copied in unnecessarily
 * duplicate leaf nodes
-
-This has been edited just to force some tests.
