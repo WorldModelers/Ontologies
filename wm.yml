@@ -42,7 +42,8 @@
         - natural_resources:
           - natural_resource
           - land
-          - water
+          - water_bodies
+          - water_commodity
           - fossil_fuels
           - soil
           - water_management # CauseEx
@@ -84,12 +85,14 @@
             - export:
               - food export
           - market:
+            - labor_market
             - fuel
             - price:
               - food_price 
               - oil price
             - depreciation
             - revenue
+            - budget
             - assets
             - supply:
               - food supply
@@ -104,7 +107,10 @@
           - competition
           - development
       - social_and_political:
-        - education
+        - basic_services
+        - education:
+          - education
+          - educational_materials
         - government:
           - census
           - regulation
@@ -113,20 +119,27 @@
           - political_instability
           - independence 
         - migration:
-          - human_displacement
           - human_migration
+          - hosting_idps
+          - emigration
+          - immigration
+          - migration_returnees
+          - seasonal_migration
         - threat:
           - exploitation
           - physical_insecurity
           - disarmament
-        - crime
+        - crime:
+          - crime
+          - abduction
         - conflict:
           - hostility
-          - demostrate
+          - demonstrate
           - war
           - attack
           - strike
           - terrorism
+          - livestock_raid
         - sanction
       - movement:
         - movement:
@@ -142,7 +155,7 @@
           - storm
         - temperature 
       - agriculture:
-        - agricultural production
+        - agricultural_production
         - planting
         - crop_storage
         - fertilization
@@ -152,6 +165,7 @@
         - livestock production
         - pest
       - health_and_life:
+        - biometrics
         - disease:
           - human disease
           - alcohol drug and substance abuse
@@ -160,10 +174,11 @@
           - animal disease
         - treatment:
           - health_treatment
-          - vaccination
+          - health_intervention
         - death
         - birth
         - famine
+        - basic_needs
       - access:
         - infrastructure:
           - electrical
@@ -171,9 +186,13 @@
           - waste
           - road
           - bridge
+          - construction_materials
           - transportation:
             - travel
             - shipping
+          - medical:
+            - ambulances
+            - medical_facility
         - food_shortage
         - water_shortage
         - road_access
@@ -186,12 +205,15 @@
         - poverty
         - food_security
         - food_insecurity
+        - food_diversity
     - entity:
       - geo-location
       - organization
       - government_entity
       - person_and_group:
         - population
+        - de-population
+        - overcrowding
         - community
       - artifact
     - time:

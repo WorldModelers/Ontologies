@@ -229,7 +229,22 @@
             - surface water
             - groundwater
             - water body
-            name: water
+            - reservoir
+            name: water_bodies
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - water pumps
+            - water pipes
+            - cistern
+            - potable water
+            - access to water
+            - drinking water
+            - groundwater
+            - water production
+            - water trucking
+            name: water_commodity
             take_args: 0
             polarity: 1.0
           - OntologyNode:
@@ -396,12 +411,7 @@
           - OntologyNode:
             examples:
             - livelihood
-            - food production
-            - agriculture
-            - industry
-            - commerce
             - workplace
-            - trade
             - work
             - job
             - career
@@ -438,6 +448,15 @@
                 take_args: 1 # thing exported
                 polarity: 1.0
           - market:
+            - OntologyNode:
+              examples:
+              - labor market
+              - labour market
+              - employees
+              - hiring
+              - employment
+              name: labor_market
+              polarity: 1.0
             - OntologyNode:
               examples:
               - fuel
@@ -486,6 +505,12 @@
               - investment
               name: revenue
               take_args: 0
+              polarity: 1.0
+            - OntologyNode:
+              examples:
+              - budget
+              - budgetary constraints
+              name: budget
               polarity: 1.0
             - OntologyNode:
               examples:
@@ -551,12 +576,33 @@
       - social_and_political:
         - OntologyNode:
           examples:
-          - literacy
-          - education
-          - school
-          name: education
+          - basic services
+          - primary services
+          - essential services
+          name: basic_services
           take_args: 0
           polarity: 1.0
+        - education:
+          - OntologyNode:
+            examples:
+            - literacy
+            - education
+            - school
+            - teacher training
+            - teacher
+            - classroom
+            - school leadership
+            name: education
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - educational materials
+            - reading materials
+            - teaching aids
+            - classroom supplies
+            - school supplies
+            name: educational_materials
+            polarity: 1.0
         - government:
           - OntologyNode:
             examples:
@@ -604,19 +650,56 @@
         - migration:
           - OntologyNode:
             examples:
-            - human_displacement
-            name: human_displacement
+            - migration
+            - displacement
+            - refugee migration
+            - residence move
+            - movement trends
+            name: human_migration
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
-            - migration
-            - immigration
-            - displacement
-            - refugee migration
+            - hosting IDPs
+            - host displaced persons
+            - host refugees
+            - host migrants
+            name: hosting_idps
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
             - emigration
+            - leaving
+            - leave
+            - flight
             - flee
-            name: human_migration
+            name: emigration
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - arrival
+            - arrive
+            - immigration
+            - immigrate
+            - choose to come
+            - influx
+            name: immigration
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - returnee
+            - return
+            name: migration_returnees
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - seasonal migration
+            - cyclic migration
+            name: seasonal_migration
             take_args: 0
             polarity: 1.0
         - threat:
@@ -631,6 +714,7 @@
             - insecurity
             - instability
             - physical insecurity
+            - perceived security
             name: physical_insecurity
             take_args: 0
             polarity: 1.0
@@ -640,12 +724,22 @@
             name: disarmament
             take_args: 0
             polarity: 1.0
-        - OntologyNode:
-          examples:
-          - crime
-          name: crime
-          take_args: 0
-          polarity: 1.0 
+        - crime:
+          - OntologyNode:
+            examples:
+            - crime
+            name: crime
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - child abductions
+            - abduction
+            - kidnapping
+            - forced recruitment
+            take_args: 0
+            name: abduction
+            polarity: 1.0
         - conflict:
           - OntologyNode:
             examples:
@@ -659,19 +753,20 @@
             - armed clash
             - raid
             - hostility
+            - armed mobilization
+            - army mobilization
             name: hostility
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
-            - bombard
             - civil unrest
-            - genocide
             - clash
-            - attack
             - destroy
-            - fight
-            name: demostrate
+            - protest
+            - picket
+            - riot
+            name: demonstrate
             take_args: 0
             polarity: 1.0
           - OntologyNode:
@@ -721,6 +816,13 @@
             - terrorism
             name: terrorism
             take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - cattle raid
+            - livestock raid
+            - cattle raiding
+            name: livestock_raid
             polarity: 1.0
         - OntologyNode:
           examples:
@@ -793,7 +895,10 @@
         - OntologyNode:
           examples:
           - agricultural production
-          name: agricultural production
+          - crop yield
+          - harvest
+          - cultivate
+          name: agricultural_production
           take_args: 1
           polarity: 1.0
         - OntologyNode:
@@ -927,6 +1032,14 @@
           take_args: 0
           polarity: 1.0
       - health_and_life:
+        - OntologyNode:
+          examples:
+          - biometrics
+          - fingerprint
+          - human features
+          name: biometrics
+          take_args: 0
+          polarity: 1.0
         - disease:
           - OntologyNode:
             examples:
@@ -941,6 +1054,7 @@
             - virus
             - bacteria
             - human disease
+            - epidemic
             - infection
             - infectious
             name: human disease
@@ -979,7 +1093,10 @@
             examples:
             - vaccine
             - vaccination
-            name: vaccination
+            - disease prevention
+            - health services
+            - health intervention
+            name: health_intervention
             take_args: 1
             polarity: 1.0 
         - OntologyNode:
@@ -1006,6 +1123,13 @@
           name: famine
           take_args: 0
           polarity: 1.0
+        - OntologyNode:
+          examples:
+          - basic needs
+          - population needs
+          - humanitarian needs
+          name: basic_needs
+          polarity: 1.0
       - access:
         - infrastructure:
           - OntologyNode:
@@ -1029,6 +1153,7 @@
             - surface water
             - groundwater
             - water body
+            - capacity of pumps
             name: water
             take_args: 0
             polarity: 1.0
@@ -1045,6 +1170,7 @@
             - road
             - highways
             - road network
+            - access road
             name: road
             take_args: 0
             polarity: 1.0
@@ -1052,6 +1178,12 @@
             examples:
             - bridge
             name: bridge
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - construction materials
+            name: construction_materials
             take_args: 0
             polarity: 1.0
           - transportation:
@@ -1068,6 +1200,21 @@
               - cargo
               name: shipping
               take_args: 1
+              polarity: 1.0
+          - medical:
+            - OntologyNode:
+              examples:
+              - ambulances
+              take_args: 0
+              name: ambulances
+              polarity: 1.0
+            - OntologyNode:
+              examples:
+              - hospital
+              - clinic
+              - health post
+              name: medical_facility
+              take_args: 0
               polarity: 1.0
         - OntologyNode:
           examples:
@@ -1145,6 +1292,14 @@
           name: food_insecurity
           take_args: 0
           polarity: 1.0
+        - OntologyNode:
+          examples:
+          - food diversity
+          - food variety
+          - nutritional variety
+          name: food_diversity
+          take_args: 0
+          polarity: 1.0
     - entity:
       - OntologyNode:
         examples:
@@ -1177,10 +1332,7 @@
         - OntologyNode:
           examples:
           - people group
-          - households
-          - families
           - people
-          - family
           - ethnic group
           - population
           - rural
@@ -1189,7 +1341,26 @@
           polarity: 1.0
         - OntologyNode:
           examples:
+          - depopulation
+          - de-population
+          name: de-population
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - overcrowding
+          - over-crowding
+          - population density
+          name: overcrowding
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - community
           - villages
+          - households
+          - family
+          - families
           - community
           - communities
           name: community
