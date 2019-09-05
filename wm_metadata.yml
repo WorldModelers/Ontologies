@@ -235,6 +235,12 @@
             polarity: 1.0
           - OntologyNode:
             examples:
+            - land availability
+            name: land_availability
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
             - water pumps
             - water pipes
             - cistern
@@ -470,20 +476,33 @@
               name: fuel
               take_args: 0
               polarity: 1.0
-            - price:
+            - price_or_cost:
               - OntologyNode:
                 examples:
                 - food price
                 - crop price
                 - food cost
                 - staple food price
+                - cost of food
                 name: food_price 
                 take_args: 0
                 polarity: 1.0
               - OntologyNode:
                 examples:
                 - oil price # should we have these?
-                name: oil price
+                name: oil_price
+                take_args: 0
+                polarity: 1.0
+              - OntologyNode:
+                examples:
+                - cost of living
+                name: cost_of_living
+                take_args: 0
+                polarity: 1.0
+              - OntologyNode:
+                examples:
+                - cost of transportation
+                name: cost_of_transportation 
                 take_args: 0
                 polarity: 1.0
             - OntologyNode:
@@ -850,6 +869,12 @@
             name: evacuate humanitarian workers
             take_args: 0
             polarity: 1.0
+        - OntologyNode:
+          examples:
+          - distribution of food
+          name: food_distribution
+          take_args: 0
+          polarity: 1.0
       - weather:
         - OntologyNode:
           examples:
@@ -1057,7 +1082,7 @@
             - epidemic
             - infection
             - infectious
-            name: human disease
+            name: human_disease
             take_args: 0
             polarity: 1.0
           - OntologyNode:
@@ -1066,17 +1091,17 @@
             name: alcohol drug and substance abuse
             take_args: 0
             polarity: 1.0
-          - plant disease:
+          - plant_disease:
             - OntologyNode:
               examples:
               - pest infestation
-              name: pest infestation
+              name: pest_infestation
               take_args: 0
               polarity: 1.0
           - OntologyNode:
             examples:
             - animal disease
-            name: animal disease
+            name: animal_disease
             take_args: 0
             polarity: 1.0
         - treatment:
@@ -1109,6 +1134,12 @@
           - life loss
           - fatality
           name: death
+          take_args: 1
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - injury
+          name: injury
           take_args: 1
           polarity: 1.0
         - OntologyNode:
