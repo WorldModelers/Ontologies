@@ -42,6 +42,7 @@
         - natural_resources:
           - natural_resource
           - land
+          - land_availability
           - water_bodies
           - water_commodity
           - fossil_fuels
@@ -87,9 +88,12 @@
           - market:
             - labor_market
             - fuel
-            - price:
+            - price_or_cost:
               - food_price 
-              - oil price
+              - oil_price
+              - cost_of_food
+              - cost_of_living
+              - cost_of_transportation
             - depreciation
             - revenue
             - budget
@@ -146,6 +150,7 @@
           - transport
           - human displacement
           - evacuate humanitarian workers
+        - food_distribution
       - weather:
         - weather
         - climate
@@ -167,15 +172,16 @@
       - health_and_life:
         - biometrics
         - disease:
-          - human disease
+          - human_disease
           - alcohol drug and substance abuse
-          - plant disease:
-            - pest infestation
-          - animal disease
+          - plant_disease:
+            - pest_infestation
+          - animal_disease
         - treatment:
           - health_treatment
           - health_intervention
         - death
+        - injury
         - birth
         - famine
         - basic_needs
