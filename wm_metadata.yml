@@ -20,7 +20,7 @@
           - intervention
           - rehabilitation
           - poverty alleviation
-          name: humanitarian assistance
+          name: humanitarian_assistance
           take_args: 0
           polarity: 1.0
         - provision of goods and services:
@@ -28,26 +28,26 @@
             - OntologyNode:
               examples:
               - child friendly learning spaces
-              name: child friendly learning spaces
+              name: child_friendly_learning_spaces
               take_args: 0
               polarity: 1.0
           - health:
             - OntologyNode:
               examples:
               - anti-retroviral treatment
-              name: anti-retroviral treatment
+              name: anti-retroviral_treatment
               take_args: 0
               polarity: 1.0
             - OntologyNode:
               examples:
               - sexual violence management
-              name: sexual violence management
+              name: sexual_violence_management
               take_args: 0
               polarity: 1.0
             - OntologyNode:
               examples:
               - vector control
-              name: vector control
+              name: vector_control
               take_args: 1
               polarity: 1.0
           - nutrition:
@@ -55,55 +55,55 @@
               examples:
               - therapeutic feeding
               - therapeutic treating
-              name: therapeutic feeding or treating
+              name: therapeutic_feeding_or_treating
               take_args: 0
               polarity: 1.0
           - OntologyNode:
             examples:
             - provide hygiene tool
-            name: provide hygiene tool
+            name: provide_hygiene_tool
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - provide delivery kit
-            name: provide delivery kit
+            name: provide_delivery_kit
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - provide farming tool
-            name: provide farming tool
+            name: provide_farming_tool
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - provide seed
-            name: provide seed
+            name: provide_seed
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - provide livestock feed
-            name: provide livestock feed
+            name: provide_livestock_feed
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - provide veterinary service
-            name: provide veterinary service
+            name: provide_veterinary_service
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - provide stationary
-            name: provide stationary
+            name: provide_stationary
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - provide fishing tool
-            name: provide fishing tool
+            name: provide_fishing_tool
             take_args: 0
             polarity: 1.0
           - OntologyNode:
@@ -111,25 +111,25 @@
             - provide cash
             - provide money
             - provide loan
-            name: provide cash
+            name: provide_cash
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - provide food
-            name: provide food
+            name: provide_food
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - provide veterinary drugs vaccines
-            name: provide veterinary drugs vaccines
+            name: provide_veterinary_drugs_vaccines
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - provide moving of houseHolds
-            name: provide moving of houseHolds
+            name: provide_moving_of_houseHolds
             take_args: 0
             polarity: 1.0
         - OntologyNode:
@@ -149,14 +149,14 @@
           - (formal\s+mediation)
           - (ceasefire|cease\s+fire)
           - (disarm|demobiliz|reintegrat)
-          name: peacekeeping and security
+          name: peacekeeping_and_security
           polarity: 1.0
         - institutional support:
           - protection:
             - OntologyNode:
               examples:
               - capacity building human right
-              name: capacity building human right
+              name: capacity_building_human_right
               take_args: 0
               polarity: 1.0
       - environment:
@@ -345,7 +345,7 @@
             - OntologyNode:
               examples:
               - insect infestation
-              name: insect infestation
+              name: insect_infestation
               take_args: 0
               polarity: 1.0
             - natural_disaster:
@@ -443,14 +443,14 @@
               - OntologyNode:
                 examples:
                 - food import
-                name: food import
+                name: food_import
                 take_args: 1 # thing imported
                 polarity: 1.0
             - export:
               - OntologyNode:
                 examples:
                 - food export
-                name: food export
+                name: food_export
                 take_args: 1 # thing exported
                 polarity: 1.0
           - market:
@@ -484,7 +484,7 @@
                 - food cost
                 - staple food price
                 - cost of food
-                name: food_price 
+                name: food_price
                 take_args: 0
                 polarity: 1.0
               - OntologyNode:
@@ -502,7 +502,7 @@
               - OntologyNode:
                 examples:
                 - cost of transportation
-                name: cost_of_transportation 
+                name: cost_of_transportation
                 take_args: 0
                 polarity: 1.0
             - OntologyNode:
@@ -543,21 +543,21 @@
               - OntologyNode:
                 examples:
                 - food supply
-                name: food supply
+                name: food_supply
                 take_args: 0
                 polarity: 1.0
             - demand:
               - OntologyNode:
                 examples:
                 - food demand
-                name: food demand
+                name: food_demand
                 take_args: 1
                 polarity: 1.0
             - transaction:
               - OntologyNode:
                 examples:
                 - oil transaction
-                name: oil transaction
+                name: oil_transaction
                 take_args: 0
                 polarity: 1.0
             - OntologyNode:
@@ -569,14 +569,14 @@
             - OntologyNode:
               examples:
               - currency devaluation
-              name: currency devaluation
+              name: currency_devaluation
               take_args: 0
               polarity: 1.0
           - consumption:
             - OntologyNode:
               examples:
               - food consumption
-              name: food consumption
+              name: food_consumption
               take_args: 1 # food
               polarity: 1.0
           - OntologyNode:
@@ -663,7 +663,7 @@
             - independence
             - self-rule
             - political independence
-            name: independence 
+            name: independence
             take_args: 0
             polarity: 1.0
         - migration:
@@ -860,13 +860,13 @@
           - OntologyNode:
             examples:
             - human displacement
-            name: human displacement
+            name: human_displacement
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
             - evacuate humanitarian workers
-            name: evacuate humanitarian workers
+            name: evacuate_humanitarian_workers
             take_args: 0
             polarity: 1.0
         - OntologyNode:
@@ -913,7 +913,7 @@
         - OntologyNode:
           examples:
           - temperature
-          name: temperature 
+          name: temperature
           take_args: 1 # temperature of ...
           polarity: 1.0
       - agriculture:
@@ -1033,7 +1033,7 @@
           - cattle
           - poultry
           - domestic animals
-          name: livestock production
+          name: livestock_production
           take_args: 0
           polarity: 1.0
         - OntologyNode:
@@ -1088,7 +1088,7 @@
           - OntologyNode:
             examples:
             - alcohol drug and substance abuse
-            name: alcohol drug and substance abuse
+            name: alcohol_drug_and_substance_abuse
             take_args: 0
             polarity: 1.0
           - plant_disease:
@@ -1411,7 +1411,7 @@
           - lean season
           - planting season
           - sowing season
-          name: crop season
+          name: crop_season
           take_args: 0
           polarity: 1.0
         - OntologyNode:
@@ -1438,27 +1438,27 @@
         - OntologyNode:
           examples:
           - Crop Production
-          name: Crop Production
+          name: Crop_Production
           take_args: 0
           polarity: 1.0
       - commerce:
         - OntologyNode:
           examples:
           - Cross Border Trade
-          name: Cross Border Trade
+          name: Cross_Border_Trade
           take_args: 0
           polarity: 1.0
       - conflict:
         - OntologyNode:
           examples:
           - population displacement
-          name: population displacement
+          name: population_displacement
           take_args: 0
           polarity: 1.0
       - health:
         - OntologyNode:
           examples:
           - Global Acute Malnutrition (GAM) rate
-          name: Global Acute Malnutrition (GAM) rate
+          name: Global_Acute_Malnutrition_(GAM)_rate
           take_args: 0
           polarity: 1.0
