@@ -23,7 +23,7 @@
           name: humanitarian_assistance
           take_args: 0
           polarity: 1.0
-        - provision of goods and services:
+        - provision_of_goods_and_services:
           - education:
             - OntologyNode:
               examples:
@@ -151,7 +151,7 @@
           - (disarm|demobiliz|reintegrat)
           name: peacekeeping_and_security
           polarity: 1.0
-        - institutional support:
+        - institutional_support:
           - protection:
             - OntologyNode:
               examples:
@@ -413,7 +413,7 @@
           name: economic_crisis
           take_args: 0
           polarity: 1.0
-        - economic activity:
+        - economic_activity:
           - OntologyNode:
             examples:
             - livelihood
