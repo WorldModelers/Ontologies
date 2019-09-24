@@ -43,13 +43,16 @@ class TestDomainOntology extends FlatSpec with Matchers {
     var spaces = false
 
     visitor.foreachNode { (node: EidosNode, depth: Int) =>
-      if (network.isLeaf(node)) {
+      if (node.name.contains(' ')) {
         val newPath = path.slice(0, depth) :+ node.name
+        spaces = true
+        println(s"Spaces: $newPath")
+      }
 
-        println(newPath)
-        if (node.name.contains(' ')) {
-          spaces = true
-          println(s"Spaces: $newPath")
+      if (network.isLeaf(node)) {
+        if (!node.name.contains(' ')) { // Otherwise already printed
+          val newPath = path.slice(0, depth) :+ node.name
+          println(newPath)
         }
       }
       else
