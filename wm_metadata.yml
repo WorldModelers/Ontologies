@@ -438,7 +438,7 @@
             name: currency
             take_args: 0
             polarity: 1.0
-          - cross_boarder_trade:
+          - cross_border_trade:
             - import:
               - OntologyNode:
                 examples:

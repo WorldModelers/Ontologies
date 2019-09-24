@@ -80,7 +80,7 @@
         - economic_activity:
           - livelihood
           - currency
-          - cross_boarder_trade:
+          - cross_border_trade:
             - import:
               - food_import
             - export:
