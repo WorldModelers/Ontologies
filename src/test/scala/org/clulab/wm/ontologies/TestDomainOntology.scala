@@ -37,16 +37,44 @@ class TestDomainOntology extends FlatSpec with Matchers {
     duplicate
   }
 
+  def hasSpaces(network: EidosNetwork): Boolean = {
+    val visitor = new network.HierarchicalGraphVisitor()
+    var path = mutable.Seq.empty[String]
+    var spaces = false
+
+    visitor.foreachNode { (node: EidosNode, depth: Int) =>
+      if (network.isLeaf(node)) {
+        val newPath = path.slice(0, depth) :+ node.name
+
+        println(newPath)
+        if (node.name.contains(' ')) {
+          spaces = true
+          println(s"Spaces: $newPath")
+        }
+      }
+      else
+        if (depth < path.size)
+          path(depth) = node.name
+        else
+          path = path :+ node.name
+        true
+    }
+    spaces
+  }
+
   behavior of "ontologies"
 
   def test(path: String): Unit = {
-    it should "load and not have duplicates in " + path in {
+    it should "load and not have duplicates or spaces in " + path in {
       val network = new EidosNetwork()
       val reader = new EidosReader(network)
 
       // This is the load part which will fail on exception.
       reader.readFromFile(path)
+      println("Checking for duplicates")
       hasDuplicates(network) should be (false)
+      println("Checking for spaces")
+      hasSpaces(network) should be (false)
     }
   }
 
