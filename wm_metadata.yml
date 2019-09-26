@@ -128,8 +128,8 @@
             polarity: 1.0
           - OntologyNode:
             examples:
-            - provide moving of houseHolds
-            name: provide_moving_of_houseHolds
+            - provide moving of households
+            name: provide_moving_of_households
             take_args: 0
             polarity: 1.0
         - OntologyNode:
