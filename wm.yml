@@ -28,7 +28,7 @@
           - provide_cash
           - provide_food
           - provide_veterinary_drugs_vaccines
-          - provide_moving_of_houseHolds
+          - provide_moving_of_households
         - infrastructure
         - peacekeeping_and_security
         - institutional_support:
