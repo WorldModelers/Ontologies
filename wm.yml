@@ -23,7 +23,7 @@
           - provide_seed
           - provide_livestock_feed
           - provide_veterinary_service
-          - provide_stationary
+          - provide_stationery
           - provide_fishing_tool
           - provide_cash
           - provide_food
