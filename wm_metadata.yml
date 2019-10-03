@@ -386,6 +386,7 @@
         - water insecurity
         name: water_insecurity
         take_args: 0
+        opposite: wm/concept/environmental/food_water_and_nutrition/water_security
         polarity: 1.0
       - OntologyNode:
         examples:
@@ -398,6 +399,7 @@
         - water security
         name: water_security
         take_args: 0
+        opposite: wm/concept/environmental/food_water_and_nutrition/water_insecurity
         polarity: 1.0
     - crisis_and_disaster:
       - OntologyNode:
@@ -612,12 +614,6 @@
               polarity: 1.0
           - OntologyNode:
             examples:
-            - depreciation
-            name: depreciation
-            take_args: 1
-            polarity: 1.0
-          - OntologyNode:
-            examples:
             - livelihood
             - income
             - household income
@@ -654,6 +650,7 @@
               - maize supply
               name: food_supply
               take_args: 0
+              opposite: wm/concept/access/food_shortage
               polarity: 1.0
           - demand:
             - OntologyNode:
@@ -673,6 +670,12 @@
               name: oil_transaction
               take_args: 0
               polarity: 1.0
+          - OntologyNode:
+            examples:
+            - depreciation
+            name: depreciation
+            take_args: 1
+            polarity: 1.0
           - OntologyNode:
             examples:
             - inflation
@@ -1395,6 +1398,7 @@
         - cereal shortage
         name: food_shortage
         take_args: 0
+        opposite: wm/concept/economic_and_commerce/economic_activity/market/supply/food_supply
         polarity: 1.0
       - OntologyNode:
         examples:
@@ -1404,6 +1408,15 @@
         - water deficits
         name: water_shortage
         take_args: 0
+        opposite: wm/concept/access/water_supply
+        polarity: 1.0
+      - OntologyNode:
+        examples:
+        - water supply
+        - access to water
+        name: water_supply
+        take_args: 0
+        opposite: wm/concept/access/water_shortage
         polarity: 1.0
       - OntologyNode:
         examples:
@@ -1460,6 +1473,7 @@
         - nutritional security
         name: food_security
         take_args: 0
+        opposite: wm/concept/condition/food_insecurity
         polarity: 1.0
       - OntologyNode:
         examples:
@@ -1472,6 +1486,7 @@
         - food riots
         name: food_insecurity
         take_args: 0
+        opposite: wm/concept/condition/food_security
         polarity: 1.0
       - OntologyNode:
         examples:

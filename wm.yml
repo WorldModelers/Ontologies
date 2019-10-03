@@ -100,7 +100,6 @@
             - oil_price
             - cost_of_living
             - cost_of_transportation
-          - depreciation
           - revenue
           - budget
           - assets
@@ -110,6 +109,7 @@
             - food_demand
           - transaction:
             - oil_transaction
+          - depreciation
           - inflation
           - currency_devaluation
         - consumption:
@@ -204,6 +204,7 @@
           - medical_facility
       - food_shortage
       - water_shortage
+      - water_supply
       - road_access
     - condition:
       - living_condition:
