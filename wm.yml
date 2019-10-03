@@ -151,6 +151,7 @@
       - food_distribution
     - weather:
       - weather
+      - season
       - climate
       - precipitation:
         - rainfall
@@ -160,6 +161,7 @@
       - temperature
     - agriculture:
       - agricultural_production
+      - crop_season
       - planting
       - crop_storage
       - fertilization
@@ -220,8 +222,5 @@
       - de-population
       - overcrowding
       - community
-    - artifact
-  - time:
-    - temporal:
-      - crop_season
-      - season
+
+

@@ -954,6 +954,18 @@
         polarity: 1.0
       - OntologyNode:
         examples:
+        - summer
+        - winter
+        - fall
+        - spring
+        - dry season
+        - rainy season
+        - monsoon season
+        name: season
+        take_args: 1
+        polarity: 1.0
+      - OntologyNode:
+        examples:
         - climate
         - tropical
         - equatorial
@@ -1006,6 +1018,15 @@
         - cultivate
         name: agricultural_production
         take_args: 1
+        polarity: 1.0
+      - OntologyNode:
+        examples:
+        - harvest
+        - lean season
+        - planting season
+        - sowing season
+        name: crop_season
+        take_args: 0
         polarity: 1.0
       - OntologyNode:
         examples:
@@ -1494,32 +1515,5 @@
         name: community
         take_args: 0
         polarity: 1.0
-    - OntologyNode:
-      examples:
-      - artifact
-      name: artifact
-      take_args: 0
-      polarity: 1.0
-  - time:
-    - temporal:
-      - OntologyNode:
-        examples:
-        - harvest
-        - lean season
-        - planting season
-        - sowing season
-        name: crop_season
-        take_args: 0
-        polarity: 1.0
-      - OntologyNode:
-        examples:
-        - summer
-        - winter
-        - fall
-        - spring
-        - dry season
-        - rainy season
-        - monsoon season
-        name: season
-        take_args: 1
-        polarity: 1.0
+
+
