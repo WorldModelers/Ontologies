@@ -110,6 +110,10 @@
         - development
     - social_and_political:
       - basic_services
+      - person_and_group:
+        - population
+        - de-population
+        - overcrowding
       - education:
         - education
         - educational_materials
@@ -120,6 +124,7 @@
       - political:
         - political_instability
         - independence
+        - sanction
       - migration:
         - human_migration
         - hosting_idps
@@ -142,7 +147,6 @@
         - strike
         - terrorism
         - livestock_raid
-      - sanction
     - movement:
       - movement:
         - transport
@@ -213,14 +217,3 @@
       - food_security
       - food_insecurity
       - food_diversity
-  - entity:
-    - geo-location
-    - organization
-    - government_entity
-    - person_and_group:
-      - population
-      - de-population
-      - overcrowding
-      - community
-
-

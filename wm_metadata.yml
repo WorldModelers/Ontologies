@@ -659,6 +659,32 @@
         name: basic_services
         take_args: 0
         polarity: 1.0
+      - person_and_group:
+        - OntologyNode:
+          examples:
+          - people group
+          - people
+          - ethnic group
+          - population
+          - rural
+          name: population
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - depopulation
+          - de-population
+          name: de-population
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - overcrowding
+          - over-crowding
+          - population density
+          name: overcrowding
+          take_args: 0
+          polarity: 1.0
       - education:
         - OntologyNode:
           examples:
@@ -725,6 +751,12 @@
           - political independence
           name: independence
           take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - sanction
+          name: sanction
+          take_args: 1
           polarity: 1.0
       - migration:
         - OntologyNode:
@@ -910,12 +942,6 @@
           - cattle raiding
           name: livestock_raid
           polarity: 1.0
-      - OntologyNode:
-        examples:
-        - sanction
-        name: sanction
-        take_args: 1
-        polarity: 1.0
     - movement:
       - movement:
         - OntologyNode:
@@ -1450,70 +1476,3 @@
         name: food_diversity
         take_args: 0
         polarity: 1.0
-  - entity:
-    - OntologyNode:
-      examples:
-      - geographic location
-      name: geo-location
-      take_args: 0
-      polarity: 1.0
-    - OntologyNode:
-      examples:
-      - commission
-      - workshop
-      - conference
-      - partnership
-      - management
-      - organization
-      - programme
-      - Programme Work
-      - convention
-      name: organization
-      take_args: 1
-      polarity: 1.0
-    - OntologyNode:
-      examples:
-      - government entity
-      - program entity
-      name: government_entity
-      take_args: 0
-      polarity: 1.0
-    - person_and_group:
-      - OntologyNode:
-        examples:
-        - people group
-        - people
-        - ethnic group
-        - population
-        - rural
-        name: population
-        take_args: 0
-        polarity: 1.0
-      - OntologyNode:
-        examples:
-        - depopulation
-        - de-population
-        name: de-population
-        take_args: 0
-        polarity: 1.0
-      - OntologyNode:
-        examples:
-        - overcrowding
-        - over-crowding
-        - population density
-        name: overcrowding
-        take_args: 0
-        polarity: 1.0
-      - OntologyNode:
-        examples:
-        - community
-        - villages
-        - households
-        - family
-        - families
-        - communities
-        name: community
-        take_args: 0
-        polarity: 1.0
-
-
