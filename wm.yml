@@ -154,6 +154,7 @@
         - weather
         - climate
         - precipitation:
+          - rainfall
           - flooding
           - drought
           - storm
@@ -225,14 +226,3 @@
       - temporal:
         - crop_season
         - season
-    - indicator_and_reported_property:
-      - weather:
-        - rainfall
-      - agriculture:
-        - Crop_Production
-      - commerce:
-        - Cross_Border_Trade
-      - conflict:
-        - population_displacement
-      - health:
-        - Global_Acute_Malnutrition_(GAM)_rate

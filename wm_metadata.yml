@@ -964,6 +964,15 @@
         - precipitation:
           - OntologyNode:
             examples:
+            - rainfall
+            - precipitation
+            - rains
+            - rain
+            name: rainfall
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
             - flood
             - flash flood
             name: flooding
@@ -1514,43 +1523,4 @@
           - monsoon season
           name: season
           take_args: 1
-          polarity: 1.0
-    - indicator_and_reported_property:
-      - weather:
-        - OntologyNode:
-          examples:
-          - rainfall
-          - precipitation
-          - rains
-          - rain
-          name: rainfall
-          take_args: 0
-          polarity: 1.0
-      - agriculture:
-        - OntologyNode:
-          examples:
-          - Crop Production
-          name: Crop_Production
-          take_args: 0
-          polarity: 1.0
-      - commerce:
-        - OntologyNode:
-          examples:
-          - Cross Border Trade
-          name: Cross_Border_Trade
-          take_args: 0
-          polarity: 1.0
-      - conflict:
-        - OntologyNode:
-          examples:
-          - population displacement
-          name: population_displacement
-          take_args: 0
-          polarity: 1.0
-      - health:
-        - OntologyNode:
-          examples:
-          - Global Acute Malnutrition (GAM) rate
-          name: Global_Acute_Malnutrition_(GAM)_rate
-          take_args: 0
           polarity: 1.0
