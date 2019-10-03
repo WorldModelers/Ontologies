@@ -33,13 +33,22 @@
       - institutional_support:
         - protection:
           - capacity_building_human_right
-    - environment:
+    - environmental:
+      - meteorologic:
+        - weather
+        - season
+        - climate
+        - precipitation:
+          - rainfall
+          - flooding
+          - drought
+          - storm
+        - temperature
       - environment
       - climate_change_mitigation
       - resource_management
       - forestry
       - natural_resources:
-        - natural_resource
         - land
         - water_bodies
         - land_availability
@@ -56,26 +65,25 @@
       - water_management
       - water_security
     - crisis_and_disaster:
-      - crisis:
-        - crisis
-        - economic_crisis:
-          - poverty
-        - environmental_factor:
-          - crop_failure
-          - insect_infestation
-          - natural_disaster:
-            - flooding
-            - avalanche
-            - wildfire
-            - volcanic_eruption
-            - drought
-            - storm
-            - earthquake
+      - crisis
+      - economic:
+        - economic_crisis
+        - poverty
+      - environmental:
+        - crop_failure
+        - insect_infestation
+        - natural_disaster:
+          - flooding
+          - avalanche
+          - wildfire
+          - volcanic_eruption
+          - drought
+          - storm
+          - earthquake
         - weather_issue:
           - cold_temperature
-      - fire
+        - fire
     - economic_and_commerce:
-      - economic_crisis
       - economic_activity:
         - livelihood
         - currency
@@ -114,7 +122,7 @@
         - population
         - de-population
         - overcrowding
-      - education:
+      - educational:
         - education
         - educational_materials
       - government:
@@ -123,6 +131,7 @@
         - tax_duty
       - political:
         - political_instability
+        - corruption
         - independence
         - sanction
       - migration:
@@ -136,7 +145,7 @@
         - exploitation
         - physical_insecurity
         - disarmament
-      - crime:
+      - criminal:
         - crime
         - abduction
       - conflict:
@@ -148,21 +157,10 @@
         - terrorism
         - livestock_raid
     - movement:
-      - movement:
-        - transport
-        - human_displacement
-        - evacuate_humanitarian_workers
+      - transport
+      - human_displacement
+      - evacuate_humanitarian_workers
       - food_distribution
-    - weather:
-      - weather
-      - season
-      - climate
-      - precipitation:
-        - rainfall
-        - flooding
-        - drought
-        - storm
-      - temperature
     - agriculture:
       - agricultural_production
       - crop_season

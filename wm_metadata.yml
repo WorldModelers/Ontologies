@@ -181,7 +181,73 @@
             name: capacity_building_human_right
             take_args: 0
             polarity: 1.0
-    - environment:
+    - environmental:
+      - meteorologic:
+        - OntologyNode:
+          examples:
+          - weather
+          - weather systems
+          - rains
+          - rainfall
+          name: weather
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - summer
+          - winter
+          - fall
+          - spring
+          - dry season
+          - rainy season
+          - monsoon season
+          name: season
+          take_args: 1
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - climate
+          - tropical
+          - equatorial
+          name: climate
+          take_args: 0
+          polarity: 1.0
+        - precipitation:
+          - OntologyNode:
+            examples:
+            - rainfall
+            - precipitation
+            - rains
+            - rain
+            name: rainfall
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - flood
+            - flash flood
+            name: flooding
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - drought
+            name: drought
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - storm
+            - seasonal monsoon
+            name: storm
+            take_args: 0
+            polarity: 1.0
+        - OntologyNode:
+          examples:
+          - temperature
+          name: temperature
+          take_args: 1 # temperature of ...
+          polarity: 1.0
       - OntologyNode:
         examples:
         - environment
@@ -216,12 +282,6 @@
         take_args: 0
         polarity: 1.0
       - natural_resources:
-        - OntologyNode:
-          examples:
-          - natural resource
-          name: natural_resource
-          take_args: 0
-          polarity: 1.0
         - OntologyNode:
           examples:
           - area
@@ -340,79 +400,85 @@
         take_args: 0
         polarity: 1.0
     - crisis_and_disaster:
-      - crisis:
+      - OntologyNode:
+        examples:
+        - crisis
+        - emergency
+        - catastrophe
+        name: crisis
+        take_args: 0
+        polarity: 1.0
+      - economic:
         - OntologyNode:
           examples:
-          - crisis
-          - emergency
-          - catastrophe
-          name: crisis
+          - economic crisis
+          - financial crisis
+          name: economic_crisis
           take_args: 0
           polarity: 1.0
-        - economic_crisis:
+        - OntologyNode:
+          examples:
+          - poverty
+          name: poverty
+          take_args: 0
+          polarity: 1.0
+      - environmental:
+        - OntologyNode:
+          examples:
+          - crop failure
+          name: crop_failure
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - insect infestation
+          name: insect_infestation
+          take_args: 0
+          polarity: 1.0
+        - natural_disaster:
           - OntologyNode:
             examples:
-            - poverty
-            name: poverty
-            take_args: 0
-            polarity: 1.0
-        - environmental_factor:
-          - OntologyNode:
-            examples:
-            - crop failure
-            name: crop_failure
+            - flood
+            - flash flood
+            name: flooding
             take_args: 0
             polarity: 1.0
           - OntologyNode:
             examples:
-            - insect infestation
-            name: insect_infestation
+            - avalanche
+            name: avalanche
             take_args: 0
             polarity: 1.0
-          - natural_disaster:
-            - OntologyNode:
-              examples:
-              - flood
-              - flash flood
-              name: flooding
-              take_args: 0
-              polarity: 1.0
-            - OntologyNode:
-              examples:
-              - avalanche
-              name: avalanche
-              take_args: 0
-              polarity: 1.0
-            - OntologyNode:
-              examples:
-              - wildfire
-              name: wildfire
-              take_args: 0
-              polarity: 1.0
-            - OntologyNode:
-              examples:
-              - volcanic eruption
-              name: volcanic_eruption
-              take_args: 0
-              polarity: 1.0
-            - OntologyNode:
-              examples:
-              - drought
-              name: drought
-              take_args: 0
-              polarity: 1.0
-            - OntologyNode:
-              examples:
-              - storm
-              name: storm
-              take_args: 0
-              polarity: 1.0
-            - OntologyNode:
-              examples:
-              - earthquake
-              name: earthquake
-              take_args: 0
-              polarity: 1.0
+          - OntologyNode:
+            examples:
+            - wildfire
+            name: wildfire
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - volcanic eruption
+            name: volcanic_eruption
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - drought
+            name: drought
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - storm
+            name: storm
+            take_args: 0
+            polarity: 1.0
+          - OntologyNode:
+            examples:
+            - earthquake
+            name: earthquake
+            take_args: 0
+            polarity: 1.0
         - weather_issue:
           - OntologyNode:
             examples:
@@ -420,21 +486,14 @@
             name: cold_temperature
             take_args: 0
             polarity: 1.0
-      - OntologyNode:
-        examples:
-        - fire
-        - wildfires
-        name: fire
-        take_args: 1 # what is on fire?
-        polarity: 1.0
+        - OntologyNode:
+          examples:
+          - fire
+          - wildfires
+          name: fire
+          take_args: 1 # what is on fire?
+          polarity: 1.0
     - economic_and_commerce:
-      - OntologyNode:
-        examples:
-        - economic crisis
-        - financial crisis
-        name: economic_crisis
-        take_args: 0
-        polarity: 1.0
       - economic_activity:
         - OntologyNode:
           examples:
@@ -685,7 +744,7 @@
           name: overcrowding
           take_args: 0
           polarity: 1.0
-      - education:
+      - educational:
         - OntologyNode:
           examples:
           - literacy
@@ -742,6 +801,17 @@
           - political violence
           - unrest
           name: political_instability
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - corruption
+          - fraud
+          - fraudulency
+          - bribery
+          - extortion
+          - nepotism
+          name: corruption
           take_args: 0
           polarity: 1.0
         - OntologyNode:
@@ -843,10 +913,12 @@
           name: disarmament
           take_args: 0
           polarity: 1.0
-      - crime:
+      - criminal:
         - OntologyNode:
           examples:
           - crime
+          - lawlessness
+          - illegal
           name: crime
           take_args: 0
           polarity: 1.0
@@ -943,96 +1015,29 @@
           name: livestock_raid
           polarity: 1.0
     - movement:
-      - movement:
-        - OntologyNode:
-          examples:
-          - transport
-          name: transport
-          take_args: 1
-          polarity: 1.0
-        - OntologyNode:
-          examples:
-          - human displacement
-          name: human_displacement
-          take_args: 0
-          polarity: 1.0
-        - OntologyNode:
-          examples:
-          - evacuate humanitarian workers
-          name: evacuate_humanitarian_workers
-          take_args: 0
-          polarity: 1.0
+      - OntologyNode:
+        examples:
+        - transport
+        name: transport
+        take_args: 1
+        polarity: 1.0
+      - OntologyNode:
+        examples:
+        - human displacement
+        name: human_displacement
+        take_args: 0
+        polarity: 1.0
+      - OntologyNode:
+        examples:
+        - evacuate humanitarian workers
+        name: evacuate_humanitarian_workers
+        take_args: 0
+        polarity: 1.0
       - OntologyNode:
         examples:
         - distribution of food
         name: food_distribution
         take_args: 0
-        polarity: 1.0
-    - weather:
-      - OntologyNode:
-        examples:
-        - weather
-        - weather systems
-        - rains
-        - rainfall
-        name: weather
-        take_args: 0
-        polarity: 1.0
-      - OntologyNode:
-        examples:
-        - summer
-        - winter
-        - fall
-        - spring
-        - dry season
-        - rainy season
-        - monsoon season
-        name: season
-        take_args: 1
-        polarity: 1.0
-      - OntologyNode:
-        examples:
-        - climate
-        - tropical
-        - equatorial
-        name: climate
-        take_args: 0
-        polarity: 1.0
-      - precipitation:
-        - OntologyNode:
-          examples:
-          - rainfall
-          - precipitation
-          - rains
-          - rain
-          name: rainfall
-          take_args: 0
-          polarity: 1.0
-        - OntologyNode:
-          examples:
-          - flood
-          - flash flood
-          name: flooding
-          take_args: 0
-          polarity: 1.0
-        - OntologyNode:
-          examples:
-          - drought
-          name: drought
-          take_args: 0
-          polarity: 1.0
-        - OntologyNode:
-          examples:
-          - storm
-          - seasonal monsoon
-          name: storm
-          take_args: 0
-          polarity: 1.0
-      - OntologyNode:
-        examples:
-        - temperature
-        name: temperature
-        take_args: 1 # temperature of ...
         polarity: 1.0
     - agriculture:
       - OntologyNode:
