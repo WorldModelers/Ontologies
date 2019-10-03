@@ -43,7 +43,7 @@
           - flooding
           - drought
           - storm
-        - temperature
+        - temperature # temperature of ...
       - environment
       - climate_change_mitigation
       - resource_management
@@ -82,16 +82,16 @@
           - earthquake
         - weather_issue:
           - cold_temperature
-        - fire
+        - fire # what is on fire?
     - economic_and_commerce:
       - economic_activity:
         - livelihood
         - currency
         - cross_border_trade:
           - import:
-            - food_import
+            - food_import # thing imported
           - export:
-            - food_export
+            - food_export # thing exported
         - market:
           - labor_market
           - fuel
@@ -113,9 +113,9 @@
           - inflation
           - currency_devaluation
         - consumption:
-          - food_consumption
-        - competition
-        - development
+          - food_consumption # food
+        - competition # between? about?
+        - development # being developed
     - social_and_political:
       - basic_services
       - person_and_group:
@@ -127,7 +127,7 @@
         - educational_materials
       - government:
         - census
-        - regulation
+        - regulation # topic
         - tax_duty
       - political:
         - political_instability
