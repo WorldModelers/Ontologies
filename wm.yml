@@ -37,7 +37,6 @@
       - environmental:
         - meteorologic:
           - weather
-          - season
           - climate
           - precipitation:
             - rainfall
@@ -120,7 +119,7 @@
       - social_and_political:
         - basic_services
         - person_and_group:
-          - population
+          - population_density
           - de-population
           - overcrowding
         - educational:
@@ -164,7 +163,6 @@
         - food_distribution
       - agriculture:
         - agricultural_production
-        - crop_season
         - planting
         - crop_storage
         - fertilization
@@ -217,3 +215,15 @@
         - food_security
         - food_insecurity
         - food_diversity
+    - entity:
+      - geo-location
+      - organization
+      - government_entity
+      - person_and_group:
+        - population
+        - community
+      - artifact
+    - time:
+      - temporal:
+        - crop_season
+        - season

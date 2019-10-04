@@ -174,17 +174,6 @@
             polarity: 1.0
           - OntologyNode:
             examples:
-            - summer
-            - winter
-            - fall
-            - spring
-            - dry season
-            - rainy season
-            - monsoon season
-            name: season
-            polarity: 1.0
-          - OntologyNode:
-            examples:
             - climate
             - tropical
             - equatorial
@@ -645,12 +634,9 @@
         - person_and_group:
           - OntologyNode:
             examples:
-            - people group
-            - people
-            - ethnic group
-            - population
-            - rural
-            name: population
+            - population density
+            - local population
+            name: population_density
             polarity: 1.0
           - OntologyNode:
             examples:
@@ -941,14 +927,6 @@
           - harvests
           - cultivate
           name: agricultural_production
-          polarity: 1.0
-        - OntologyNode:
-          examples:
-          - harvest
-          - lean season
-          - planting season
-          - sowing season
-          name: crop_season
           polarity: 1.0
         - OntologyNode:
           examples:
@@ -1342,4 +1320,83 @@
           - food variety
           - nutritional variety
           name: food_diversity
+          polarity: 1.0
+    - entity:
+      - OntologyNode:
+        examples:
+        - geographic location
+        name: geo-location
+        take_args: 0
+        polarity: 1.0
+      - OntologyNode:
+        examples:
+        - commission
+        - workshop
+        - conference
+        - partnership
+        - management
+        - organization
+        - programme
+        - Programme Work
+        - convention
+        name: organization
+        take_args: 1
+        polarity: 1.0
+      - OntologyNode:
+        examples:
+        - government entity
+        - program entity
+        name: government_entity
+        take_args: 0
+        polarity: 1.0
+      - person_and_group:
+        - OntologyNode:
+          examples:
+          - people group
+          - people
+          - ethnic group
+          - population
+          - rural
+          name: population
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - community
+          - villages
+          - households
+          - family
+          - families
+          - communities
+          name: community
+          take_args: 0
+          polarity: 1.0
+      - OntologyNode:
+        examples:
+        - artifact
+        name: artifact
+        take_args: 0
+        polarity: 1.0
+    - time:
+      - temporal:
+        - OntologyNode:
+          examples:
+          - harvest
+          - lean season
+          - planting season
+          - sowing season
+          name: crop_season
+          take_args: 0
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - summer
+          - winter
+          - fall
+          - spring
+          - dry season
+          - rainy season
+          - monsoon season
+          name: season
+          take_args: 1
           polarity: 1.0
