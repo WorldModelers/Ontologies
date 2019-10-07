@@ -41,6 +41,7 @@
             - OntologyNode:
               examples:
               - provided paper
+              - office supplies
               name: provide_stationery
               polarity: 1
             - OntologyNode:
@@ -54,6 +55,7 @@
               - anti-retroviral treatment
               - antiretrovirals
               - HIV therapy
+              - AIDS treatment
               name: anti-retroviral_treatment
               polarity: 1
             - OntologyNode:
@@ -65,6 +67,8 @@
               - intimate partner violence
               - gbv
               - gender based violence
+              - emergency contraception
+              - post exposure prophylaxis
               name: sexual_violence_management
               polarity: 1
             - OntologyNode:
@@ -143,6 +147,7 @@
               - nutritional assistance
               - nutrition services
               - nutrition assistance
+              - dietary supplement
               name: therapeutic_feeding_or_treating
               polarity: 1
             - OntologyNode:
@@ -177,7 +182,7 @@
               polarity: 1
             - OntologyNode:
               examples:
-              - provide veterinary service
+              - provide veterinarian service
               - provide veterinary drugs
               - animal vaccination
               name: provide_veterinary_service
@@ -771,6 +776,7 @@
                 examples:
                 - cost of living
                 - rent
+                - housing cost
                 name: cost_of_living
                 polarity: 1
               - OntologyNode:
@@ -1569,6 +1575,9 @@
             - capacity of pumps
             - desalination
             - water recycling
+            - water access availability
+            - water resource
+            - water pipes
             name: water
             polarity: 1
           - OntologyNode:
@@ -1680,6 +1689,7 @@
             examples:
             - unsanitary condition
             - unclean workspaces
+            - unclean unsafe living conditions
             name: unsanitary_condition
             polarity: 1
         - OntologyNode:
