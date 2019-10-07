@@ -157,7 +157,6 @@
         - transport
         - human_displacement
         - evacuate_humanitarian_workers
-        - food_distribution
       - agriculture:
         - agricultural_production
         - planting

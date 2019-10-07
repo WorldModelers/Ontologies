@@ -112,6 +112,7 @@
               - food aid
               - deliver food
               - humanitarian food drop
+              - distribution of food
               name: provide_food
               polarity: 1
           - water_sanitation_hygiene:
@@ -889,11 +890,6 @@
           examples:
           - evacuate humanitarian workers
           name: evacuate_humanitarian_workers
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - distribution of food
-          name: food_distribution
           polarity: 1
       - agriculture:
         - OntologyNode:
