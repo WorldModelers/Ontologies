@@ -34,13 +34,21 @@
         - institutional_support:
           - protection:
             - capacity_building_human_right
-      - environment:
+      - environmental:
+        - meteorologic:
+          - weather
+          - climate
+          - precipitation:
+            - rainfall
+            - flooding
+            - drought
+            - storm
+          - temperature # temperature of ...
         - environment
         - climate_change_mitigation
         - resource_management
         - forestry
         - natural_resources:
-          - natural_resource
           - land
           - water_bodies
           - land_availability
@@ -57,34 +65,33 @@
         - water_management
         - water_security
       - crisis_and_disaster:
-        - crisis:
-          - crisis
-          - economic_crisis:
-            - poverty
-          - environmental_factor:
-            - crop_failure
-            - insect_infestation
-            - natural_disaster:
-              - flooding
-              - avalanche
-              - wildfire
-              - volcanic_eruption
-              - drought
-              - storm
-              - earthquake
+        - crisis
+        - economic:
+          - economic_crisis
+          - poverty
+        - environmental:
+          - crop_failure
+          - insect_infestation
+          - natural_disaster:
+            - flooding
+            - avalanche
+            - wildfire
+            - volcanic_eruption
+            - drought
+            - storm
+            - earthquake
           - weather_issue:
             - cold_temperature
-        - fire
+          - fire # what is on fire?
       - economic_and_commerce:
-        - economic_crisis
         - economic_activity:
           - livelihood
           - currency
           - cross_border_trade:
             - import:
-              - food_import
+              - food_import # thing imported
             - export:
-              - food_export
+              - food_export # thing exported
           - market:
             - labor_market
             - fuel
@@ -93,7 +100,6 @@
               - oil_price
               - cost_of_living
               - cost_of_transportation
-            - depreciation
             - revenue
             - budget
             - assets
@@ -103,24 +109,31 @@
               - food_demand
             - transaction:
               - oil_transaction
+            - depreciation
             - inflation
             - currency_devaluation
           - consumption:
-            - food_consumption
-          - competition
-          - development
+            - food_consumption # food
+          - competition # between? about?
+          - development # being developed
       - social_and_political:
         - basic_services
-        - education:
+        - person_and_group:
+          - population_density
+          - de-population
+          - overcrowding
+        - educational:
           - education
           - educational_materials
         - government:
           - census
-          - regulation
+          - regulation # topic
           - tax_duty
         - political:
           - political_instability
+          - corruption
           - independence
+          - sanction
         - migration:
           - human_migration
           - hosting_idps
@@ -132,7 +145,7 @@
           - exploitation
           - physical_insecurity
           - disarmament
-        - crime:
+        - criminal:
           - crime
           - abduction
         - conflict:
@@ -143,21 +156,11 @@
           - strike
           - terrorism
           - livestock_raid
-        - sanction
       - movement:
-        - movement:
-          - transport
-          - human_displacement
-          - evacuate_humanitarian_workers
+        - transport
+        - human_displacement
+        - evacuate_humanitarian_workers
         - food_distribution
-      - weather:
-        - weather
-        - climate
-        - precipitation:
-          - flooding
-          - drought
-          - storm
-        - temperature
       - agriculture:
         - agricultural_production
         - planting
@@ -200,6 +203,7 @@
             - medical_facility
         - food_shortage
         - water_shortage
+        - water_supply
         - road_access
       - condition:
         - living_condition:
@@ -217,22 +221,9 @@
       - government_entity
       - person_and_group:
         - population
-        - de-population
-        - overcrowding
         - community
       - artifact
     - time:
       - temporal:
         - crop_season
         - season
-    - indicator_and_reported_property:
-      - weather:
-        - rainfall
-      - agriculture:
-        - Crop_Production
-      - commerce:
-        - Cross_Border_Trade
-      - conflict:
-        - population_displacement
-      - health:
-        - Global_Acute_Malnutrition_(GAM)_rate
