@@ -14,13 +14,18 @@ mappings in (Compile, packageBin) += {
   file("wm_metadata.yml") -> "org/clulab/wm/eidos/english/ontologies/wm_metadata.yml"
 }
 
+// Turn this into a case class
+// Learn how to serialize it
+
 lazy val versioningTask = taskKey[Seq[(String, String, String)]]("extract version info from the revision list")
+val versioningFiles = settingKey[Seq[String]]("Specifies which files to version.")
 
 versioningTask := {
   val runner: com.typesafe.sbt.git.GitRunner = git.runner.value
   val dir = baseDirectory.value
+  // needs to get some values from outside!
   val files = Seq("wm_metadata.yml", "interventions.yml")
-
+  
   //  println(buildInfoKeys.value) // does show proper information
   //  buildInfoKeys := buildInfoKeys.value + "keith" -> { "brad" }
   //  println(buildInfoKeys.value) // does show proper information
@@ -33,13 +38,11 @@ versioningTask := {
   }
 }
 
-def generateVersions(gitrunner: com.typesafe.sbt.git.GitRunner, codebase: File, namespace: String, ontologies: Map[String, String]): Seq[File] = {
+def generateVersions(gitRunner: com.typesafe.sbt.git.GitRunner, gitHeadHash: Option[String], gitHeadCommitDate: Option[String],
+    codebase: File, namespace: String, ontologies: Map[String, String]): Seq[File] = {
   println(s"Generating resources in $codebase at $namespace for $ontologies")
   val filename = codebase.getCanonicalPath + "/" + namespace.replace('.', '/') + "/Versions.scala"
-  val version = "Once upon a time"
   val file = new File(filename)
-  val gitHeadHash = git.gitHeadCommit.value.get
-  val gitHeadCommitDate = git.gitHeadCommitDate.value.get
   val versions = """"a" -> "b""""
 
   val code = s"""
@@ -53,8 +56,8 @@ def generateVersions(gitrunner: com.typesafe.sbt.git.GitRunner, codebase: File, 
     |
     |object Versions {
     |  // These first values apply to the entire repository.
-    |  val endHash: String = "$gitHeadHash"
-    |  val endDate: ZonedDateTime = ZonedDateTime.parse($gitHeadCommitDate)
+    |  val endHash: String = "${gitHeadHash.get}"
+    |  val endDate: ZonedDateTime = ZonedDateTime.parse("${gitHeadCommitDate.get}")
     |
     |  val versions: Map[String, String] = Map(
     |    $versions
@@ -67,25 +70,18 @@ def generateVersions(gitrunner: com.typesafe.sbt.git.GitRunner, codebase: File, 
 }
 
 sourceGenerators in Compile += Def.task {
+  // Capture git values in a task so they can be used elsewhere.
+  def generateGitVersions(codebase: File, namespace: String, ontologies: Map[String, String]) =
+      generateVersions(git.runner.value, git.gitHeadCommit.value, git.gitHeadCommitDate.value,
+      codebase, namespace, ontologies)
+
   val codebase = (sourceManaged in Compile).value
   val namespace = "com.github.worldModelers.ontologies"
   val ontologies = Map {
     "wm" -> "wm_metadata.yml"
   }
 
-  generateVersions(git.runner.value, codebase, namespace, ontologies)
+  generateGitVersions(codebase, namespace, ontologies)
 }.taskValue
 
 lazy val root = (project in file("."))
-  .enablePlugins(BuildInfoPlugin)
-  .settings(
-    buildInfoPackage := "worldmodelers.ontologies",
-    buildInfoOptions += BuildInfoOption.BuildTime,
-    buildInfoKeys := Seq[BuildInfoKey](
-      name, version, scalaVersion, sbtVersion, libraryDependencies, scalacOptions,
-      "gitCurrentBranch" -> { git.gitCurrentBranch.value },
-      "gitHeadCommit" -> { git.gitHeadCommit.value.getOrElse("") },
-      "gitHeadCommitDate" -> { git.gitHeadCommitDate.value.getOrElse("") },
-      "gitUncommittedChanges" -> { git.gitUncommittedChanges.value }
-    )
-  )
