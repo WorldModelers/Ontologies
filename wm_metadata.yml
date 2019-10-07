@@ -959,7 +959,7 @@
             - policy
             - legislation
             - policies
-            name: regutn # topic
+            name: regulation # topic
             polarity: 1
           - OntologyNode:
             examples:
