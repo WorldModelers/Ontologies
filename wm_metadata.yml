@@ -333,7 +333,7 @@
           examples:
           - water insecurity
           name: water_insecurity
-          opposite: wm/concept/casual_factor/environmental/food_water_and_nutrition/water_security
+          opposite: wm/concept/causal_factor/environmental/food_water_and_nutrition/water_security
           polarity: -1
         - OntologyNode:
           examples:
@@ -344,7 +344,7 @@
           examples:
           - water security
           name: water_security
-          opposite: wm/concept/casual_factor/environmental/food_water_and_nutrition/water_insecurity
+          opposite: wm/concept/causal_factor/environmental/food_water_and_nutrition/water_insecurity
           polarity: 1
       - crisis_and_disaster:
         - OntologyNode:
@@ -569,7 +569,7 @@
                 - market supply of crops
                 - maize supply
                 name: food_supply
-                opposite: wm/concept/casual_factor/access/food_shortage
+                opposite: wm/concept/causal_factor/access/food_shortage
                 polarity: 1
             - demand:
               - OntologyNode:
@@ -1234,7 +1234,7 @@
           - food deficits
           - cereal shortage
           name: food_shortage
-          opposite: wm/concept/casual_factor/economic_and_commerce/economic_activity/market/supply/food_supply
+          opposite: wm/concept/causal_factor/economic_and_commerce/economic_activity/market/supply/food_supply
           polarity: -1
         - OntologyNode:
           examples:
@@ -1243,14 +1243,14 @@
           - drought
           - water deficits
           name: water_shortage
-          opposite: wm/concept/casual_factor/access/water_supply
+          opposite: wm/concept/causal_factor/access/water_supply
           polarity: -1
         - OntologyNode:
           examples:
           - water supply
           - access to water
           name: water_supply
-          opposite: wm/concept/casual_factor/access/water_shortage
+          opposite: wm/concept/causal_factor/access/water_shortage
           polarity: 1
         - OntologyNode:
           examples:
@@ -1300,7 +1300,7 @@
           - nutrition
           - nutritional security
           name: food_security
-          opposite: wm/concept/casual_factor/condition/food_insecurity
+          opposite: wm/concept/causal_factor/condition/food_insecurity
           polarity: 1
         - OntologyNode:
           examples:
@@ -1312,7 +1312,7 @@
           - wasting
           - food riots
           name: food_insecurity
-          opposite: wm/concept/casual_factor/condition/food_security
+          opposite: wm/concept/causal_factor/condition/food_security
           polarity: -1
         - OntologyNode:
           examples:
