@@ -40,8 +40,6 @@
           - climate
           - precipitation:
             - rainfall
-            - flooding
-            - drought
             - storm
           - temperature # temperature of ...
         - environment
@@ -68,7 +66,6 @@
         - crisis
         - economic:
           - economic_crisis
-          - poverty
         - environmental:
           - crop_failure
           - insect_infestation
@@ -78,7 +75,6 @@
             - wildfire
             - volcanic_eruption
             - drought
-            - storm
             - earthquake
           - weather_issue:
             - cold_temperature
@@ -185,7 +181,6 @@
         - death
         - injury
         - birth
-        - famine
         - basic_needs
       - access:
         - infrastructure:

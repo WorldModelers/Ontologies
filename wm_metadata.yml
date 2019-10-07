@@ -190,17 +190,6 @@
               polarity: 1
             - OntologyNode:
               examples:
-              - flood
-              - flash flood
-              name: flooding
-              polarity: 1
-            - OntologyNode:
-              examples:
-              - drought
-              name: drought
-              polarity: 1
-            - OntologyNode:
-              examples:
               - storm
               - seasonal monsoon
               name: storm
@@ -361,11 +350,6 @@
             - financial crisis
             name: economic_crisis
             polarity: 1
-          - OntologyNode:
-            examples:
-            - poverty
-            name: poverty
-            polarity: 1
         - environmental:
           - OntologyNode:
             examples:
@@ -403,11 +387,6 @@
               examples:
               - drought
               name: drought
-              polarity: 1
-            - OntologyNode:
-              examples:
-              - storm
-              name: storm
               polarity: 1
             - OntologyNode:
               examples:
@@ -1130,11 +1109,6 @@
           examples:
           - birth
           name: birth
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - famine
-          name: famine
           polarity: 1
         - OntologyNode:
           examples:
