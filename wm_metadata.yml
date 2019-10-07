@@ -91,6 +91,24 @@
               - newborn care
               name: obstetric_newborn_care
               polarity: 1
+            - OntologyNode:
+              examples:
+              - psychological support
+              - psychosocial support services
+              - psychosocial services
+              - social services
+              name: psychological_support
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - epidemiological surveillance
+              - disease surveillance
+              - awd surveillance
+              - meningitis surveillance
+              - measles surveillance
+              - cholera surveillance
+              name: epidemiological_surveillance_system
+              polarity: 1
           - nutrition:
             - OntologyNode:
               examples:
@@ -162,6 +180,15 @@
           - water_sanitation_hygiene:
             - OntologyNode:
               examples:
+              - wash services
+              - sanitation services
+              - hygiene services
+              - wash assistance
+              - wash interventions
+              name: sanitation_services
+              polarity: 1
+            - OntologyNode:
+              examples:
               - provide hygiene tool
               name: provide_hygiene_tool
               polarity: 1
@@ -211,6 +238,31 @@
               examples:
               - policing
               name: policing_services
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - child protection services
+              name: child_rights
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - mine risk education
+              name: mine_risk_education
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - family separation
+              - child separation
+              - children separation
+              - reunification services
+              - family reunification
+              name: family_reunification
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - legal aid
+              - legal assistance
+              name: legal_aid
               polarity: 1
           - OntologyNode:
             examples:
@@ -395,6 +447,15 @@
             examples:
             - water management
             name: water_management # CauseEx
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - pastoral conditions
+            - pasture conditions
+            - rangeland conditions
+            - vegetation conditions
+            - grazing conditions
+            name: pasture
             polarity: 1
         - pollution:
           - OntologyNode:
@@ -1095,6 +1156,26 @@
           - white maize
           - white sorghum
           name: crop
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - cereal production
+          - rice production
+          - grain production
+          - soybean production
+          - sorghum production
+          - maize production
+          - groundnut production
+          - bean production
+          - vegetable production
+          - sesame production
+          - seed production
+          - cropping
+          - coffee production
+          - meher production
+          - pepper production
+          - millet production
+          name: crop_production
           polarity: 1
         - OntologyNode:
           examples:
