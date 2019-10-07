@@ -334,7 +334,7 @@
           - water insecurity
           name: water_insecurity
           opposite: wm/concept/casual_factor/environmental/food_water_and_nutrition/water_security
-          polarity: 1
+          polarity: -1
         - OntologyNode:
           examples:
           - water management
@@ -1235,7 +1235,7 @@
           - cereal shortage
           name: food_shortage
           opposite: wm/concept/casual_factor/economic_and_commerce/economic_activity/market/supply/food_supply
-          polarity: 1
+          polarity: -1
         - OntologyNode:
           examples:
           - water shortage
@@ -1244,7 +1244,7 @@
           - water deficits
           name: water_shortage
           opposite: wm/concept/casual_factor/access/water_supply
-          polarity: 1
+          polarity: -1
         - OntologyNode:
           examples:
           - water supply
@@ -1313,7 +1313,7 @@
           - food riots
           name: food_insecurity
           opposite: wm/concept/casual_factor/condition/food_security
-          polarity: 1
+          polarity: -1
         - OntologyNode:
           examples:
           - food diversity
