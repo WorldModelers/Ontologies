@@ -36,6 +36,11 @@
               - provided paper
               name: provide_stationery
               polarity: 1
+            - OntologyNode:
+              examples:
+              - school feeding
+              name: school_feeding
+              polarity: 1
           - health:
             - OntologyNode:
               examples:
@@ -60,6 +65,28 @@
               - provide delivery kit
               name: provide_delivery_kit
               polarity: 1
+            - OntologyNode:
+              examples:
+              - vaccination
+              - disease control
+              - disease management
+              - epidemic prevention
+              - outbreak control
+              name: disease_outbreak_control
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - first aid
+              - medical care
+              - health care
+              name: first_aid_basic_medical_care
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - obstetric care
+              - newborn care
+              name: obstetric_newborn_care
+              polarity: 1
           - nutrition:
             - OntologyNode:
               examples:
@@ -67,6 +94,19 @@
               - therapeutic treating
               - nutritional assistance
               name: therapeutic_feeding_or_treating
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - malnutrition screening
+              - malnutrition assessment
+              - nutrition assessment
+              - screening of acute malnutrition
+              - management of acute malnutrition
+              - nutritional assessment
+              - nutrition screening
+              - nutritional surveillance
+              - screening for malnutrition
+              name: malnutrition_screening
               polarity: 1
           - food_security:
             - OntologyNode:
@@ -121,6 +161,53 @@
               - provide hygiene tool
               name: provide_hygiene_tool
               polarity: 1
+            - OntologyNode:
+              examples:
+              - communal shower
+              - emergency laundry
+              - emergency handwashing
+              - communal sanitation
+              - communal wash
+              name: communal_washing_and_bathing
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - waste disposal
+              - waste treatment
+              name: household_solid_waste_management
+              polarity: 1
+          - emergency_shelter:
+            - OntologyNode:
+              examples:
+              - delivery of tents
+              - provision of tents
+              - provision of shelter
+              - provide tents
+              - provide shelter
+              - distribute tents
+              name: provide_tent_shelter
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - prefab construction
+              - prefabricated housing construction
+              - modular construction
+              - modular building construction
+              name: construction_of_prefabricated_buildings
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - housing subsidies
+              - rental subsidies
+              - housing assistance
+              name: rental_subsidies
+              polarity: 1
+          - protection:
+            - OntologyNode:
+              examples:
+              - policing
+              name: policing_services
+              polarity: 1
           - OntologyNode:
             examples:
             - provide moving of households
@@ -139,6 +226,13 @@
           - construction
           - improving infrastructure
           - repairing
+          - mobile hospital deployment
+          - rehabilitate road
+          - maintain road
+          - repair road
+          - road rehabilitation
+          - road maintenance
+          - road repair
           polarity: 1
         - OntologyNode:
           pattern:
@@ -153,6 +247,10 @@
           - ceasefire
           - demobilization
           - mediation
+          - conflict resolution
+          - conflict mediation
+          - disarmament
+          - reintegration
           polarity: 1
         - institutional_support:
           - protection:

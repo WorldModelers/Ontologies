@@ -12,13 +12,18 @@
           - education:
             - child_friendly_learning_spaces
             - provide_stationery
+            - school_feeding
           - health:
             - anti-retroviral_treatment
             - sexual_violence_management
             - vector_control
             - provide_delivery_kit
+            - disease_outbreak_control
+            - first_aid_basic_medical_care
+            - obstetric_newborn_care
           - nutrition:
             - therapeutic_feeding_or_treating
+            - malnutrition_screening
           - food_security:
             - provide_farming_tool
             - provide_seed
@@ -29,6 +34,14 @@
             - provide_food
           - water_sanitation_hygiene:
             - provide_hygiene_tool
+            - communal_washing_and_bathing
+            - household_solid_waste_management
+          - emergency_shelter:
+            - provide_tent_shelter
+            - construction_of_prefabricated_buildings
+            - rental_subsidies
+          - protection:
+            - policing_services
           - provide_moving_of_households
         - infrastructure
         - peacekeeping_and_security
