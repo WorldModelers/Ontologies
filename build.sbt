@@ -17,29 +17,42 @@ mappings in (Compile, packageBin) += {
 // Turn this into a case class
 // Learn how to serialize it
 
-lazy val versioningTask = taskKey[Seq[(String, String, String)]]("extract version info from the revision list")
-val versioningFiles = settingKey[Seq[String]]("Specifies which files to version.")
+lazy val versioningTask = taskKey[(Option[String], Option[String], Seq[(String, Option[String], Option[String])])]("extract version info from the revision list")
+lazy val versioningFiles = taskKey[Seq[String]]("specify which files to version")
+
+versioningFiles := Seq("wm_metadata.yml", "interventions.yml")
 
 versioningTask := {
-  val runner: com.typesafe.sbt.git.GitRunner = git.runner.value
-  val dir = baseDirectory.value
-  // needs to get some values from outside!
-  val files = Seq("wm_metadata.yml", "interventions.yml")
-  
-  //  println(buildInfoKeys.value) // does show proper information
-  //  buildInfoKeys := buildInfoKeys.value + "keith" -> { "brad" }
-  //  println(buildInfoKeys.value) // does show proper information
-  files.map { file =>
+  val gitRunner: com.typesafe.sbt.git.GitRunner = git.runner.value
+  val gitHeadCommitOpt: Option[String] = git.gitHeadCommit.value
+  val gitHeadCommitDateOpt: Option[String] = git.gitHeadCommitDate.value
+//  val files = Seq("wm_metadata.yml", "interventions.yml") // versioningFiles.value
+  val files = versioningFiles.value
+//  val files = (versioningFiles in versioningTask).value
+  val versions = files.map { file =>
     val gitArgs = Seq("rev-list", "--timestamp", "-1", "master", file)
-    val output = runner(gitArgs: _*)(dir, com.typesafe.sbt.git.NullLogger)
+    val output = gitRunner(gitArgs: _*)(baseDirectory.value, com.typesafe.sbt.git.NullLogger)
     val Array(timestamp, hash) = output.split(" ")
 
-    (file, hash, timestamp)
+    (file, Some(hash), Some(timestamp))
   }
+  (gitHeadCommitOpt, gitHeadCommitDateOpt, versions)
 }
 
-def generateVersions(gitRunner: com.typesafe.sbt.git.GitRunner, gitHeadHash: Option[String], gitHeadCommitDate: Option[String],
-    codebase: File, namespace: String, ontologies: Map[String, String]): Seq[File] = {
+def versionIt(gitRunner: com.typesafe.sbt.git.GitRunner, baseDirectory: File, files: Seq[String]): Seq[(String, Option[String], Option[String])] = {
+  val versions = files.map { file =>
+    val gitArgs = Seq("rev-list", "--timestamp", "-1", "master", file)
+    val output = gitRunner(gitArgs: _*)(baseDirectory, com.typesafe.sbt.git.NullLogger)
+    val Array(timestamp, hash) = output.split(" ")
+
+    (file, Some(hash), Some(timestamp))
+  }
+
+  versions
+}
+
+def generateVersions(codebase: File, namespace: String, gitHeadHash: Option[String], gitHeadCommitDate: Option[String],
+    ontologies: Seq[(String, Option[String], Option[String])]): Seq[File] = {
   println(s"Generating resources in $codebase at $namespace for $ontologies")
   val filename = codebase.getCanonicalPath + "/" + namespace.replace('.', '/') + "/Versions.scala"
   val file = new File(filename)
@@ -70,18 +83,14 @@ def generateVersions(gitRunner: com.typesafe.sbt.git.GitRunner, gitHeadHash: Opt
 }
 
 sourceGenerators in Compile += Def.task {
-  // Capture git values in a task so they can be used elsewhere.
-  def generateGitVersions(codebase: File, namespace: String, ontologies: Map[String, String]) =
-      generateVersions(git.runner.value, git.gitHeadCommit.value, git.gitHeadCommitDate.value,
-      codebase, namespace, ontologies)
-
   val codebase = (sourceManaged in Compile).value
   val namespace = "com.github.worldModelers.ontologies"
-  val ontologies = Map {
-    "wm" -> "wm_metadata.yml"
-  }
 
-  generateGitVersions(codebase, namespace, ontologies)
+//  versioningFiles := Seq("wm_metadata.yml", "interventions.yml")
+
+  val (gitHeadCommitOpt, gitHeadCommitDateOpt, versions) = versioningTask.value
+
+  generateVersions(codebase, namespace, gitHeadCommitOpt, gitHeadCommitDateOpt, versions)
 }.taskValue
 
 lazy val root = (project in file("."))
