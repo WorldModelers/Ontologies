@@ -11,23 +11,25 @@
         - provision_of_goods_and_services:
           - education:
             - child_friendly_learning_spaces
+            - provide_stationery
           - health:
             - anti-retroviral_treatment
             - sexual_violence_management
             - vector_control
+            - provide_delivery_kit
           - nutrition:
             - therapeutic_feeding_or_treating
-          - provide_hygiene_tool
-          - provide_delivery_kit
-          - provide_farming_tool
-          - provide_seed
-          - provide_livestock_feed
-          - provide_veterinary_service
-          - provide_stationery
-          - provide_fishing_tool
-          - provide_cash
-          - provide_food
-          - provide_veterinary_drugs_vaccines
+          - food_security:
+            - provide_farming_tool
+            - provide_seed
+            - provide_livestock_feed
+            - provide_veterinary_service
+            - provide_fishing_tool
+            - provide_cash
+            - provide_food
+            - provide_veterinary_drugs_vaccines
+          - water_sanitation_hygiene:
+            - provide_hygiene_tool
           - provide_moving_of_households
         - infrastructure
         - peacekeeping_and_security

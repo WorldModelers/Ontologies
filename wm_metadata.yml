@@ -31,6 +31,11 @@
               - provide schools for children
               name: child_friendly_learning_spaces
               polarity: 1
+            - OntologyNode:
+              examples:
+              - provided paper
+              name: provide_stationery
+              polarity: 1
           - health:
             - OntologyNode:
               examples:
@@ -50,6 +55,11 @@
               - disease vector control
               name: vector_control
               polarity: 1
+            - OntologyNode:
+              examples:
+              - provide delivery kit
+              name: provide_delivery_kit
+              polarity: 1
           - nutrition:
             - OntologyNode:
               examples:
@@ -58,70 +68,62 @@
               - nutritional assistance
               name: therapeutic_feeding_or_treating
               polarity: 1
-          - OntologyNode:
-            examples:
-            - provide hygiene tool
-            name: provide_hygiene_tool
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide delivery kit
-            name: provide_delivery_kit
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide farming tool
-            name: provide_farming_tool
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide seed
-            name: provide_seed
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide livestock feed
-            - provided with fodder
-            name: provide_livestock_feed
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide veterinary service
-            name: provide_veterinary_service
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provided paper
-            name: provide_stationery
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide fishing nets
-            name: provide_fishing_tool
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide cash
-            - provide money
-            - provide loan
-            - monetary injection
-            name: provide_cash
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide food
-            - food assistance
-            - food aid
-            - deliver food
-            - humanitarian food drop
-            name: provide_food
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide veterinary drugs
-            - animal vaccination
-            name: provide_veterinary_drugs_vaccines
-            polarity: 1
+          - food_security:
+            - OntologyNode:
+              examples:
+              - provide farming tool
+              name: provide_farming_tool
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide seed
+              name: provide_seed
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide livestock feed
+              - provided with fodder
+              name: provide_livestock_feed
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide veterinary service
+              name: provide_veterinary_service
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide fishing nets
+              name: provide_fishing_tool
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide cash
+              - provide money
+              - provide loan
+              - monetary injection
+              name: provide_cash
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide food
+              - food assistance
+              - food aid
+              - deliver food
+              - humanitarian food drop
+              name: provide_food
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide veterinary drugs
+              - animal vaccination
+              name: provide_veterinary_drugs_vaccines
+              polarity: 1
+          - water_sanitation_hygiene:
+            - OntologyNode:
+              examples:
+              - provide hygiene tool
+              name: provide_hygiene_tool
+              polarity: 1
           - OntologyNode:
             examples:
             - provide moving of households
