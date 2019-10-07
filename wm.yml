@@ -27,7 +27,6 @@
             - provide_fishing_tool
             - provide_cash
             - provide_food
-            - provide_veterinary_drugs_vaccines
           - water_sanitation_hygiene:
             - provide_hygiene_tool
           - provide_moving_of_households

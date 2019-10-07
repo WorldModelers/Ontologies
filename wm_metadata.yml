@@ -88,6 +88,8 @@
             - OntologyNode:
               examples:
               - provide veterinary service
+              - provide veterinary drugs
+              - animal vaccination
               name: provide_veterinary_service
               polarity: 1
             - OntologyNode:
@@ -111,12 +113,6 @@
               - deliver food
               - humanitarian food drop
               name: provide_food
-              polarity: 1
-            - OntologyNode:
-              examples:
-              - provide veterinary drugs
-              - animal vaccination
-              name: provide_veterinary_drugs_vaccines
               polarity: 1
           - water_sanitation_hygiene:
             - OntologyNode:
