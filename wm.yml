@@ -190,7 +190,6 @@
           - animal_disease
         - treatment:
           - health_treatment
-          - health_intervention
         - death
         - injury
         - birth

@@ -72,6 +72,7 @@
               - disease management
               - epidemic prevention
               - outbreak control
+              - disease prevention
               name: disease_outbreak_control
               polarity: 1
             - OntologyNode:
@@ -79,6 +80,9 @@
               - first aid
               - medical care
               - health care
+              - health services
+              - health intervention
+              - medical crisis response
               name: first_aid_basic_medical_care
               polarity: 1
             - OntologyNode:
@@ -1170,16 +1174,6 @@
             - medical therapy
             - theraputic treatment
             name: health_treatment
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - vaccine
-            - vaccination
-            - disease prevention
-            - health services
-            - health intervention
-            - medical crisis response
-            name: health_intervention
             polarity: 1
         - OntologyNode:
           examples:
