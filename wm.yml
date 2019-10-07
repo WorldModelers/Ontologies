@@ -11,23 +11,44 @@
         - provision_of_goods_and_services:
           - education:
             - child_friendly_learning_spaces
+            - provide_stationery
+            - school_feeding
           - health:
             - anti-retroviral_treatment
             - sexual_violence_management
             - vector_control
+            - provide_delivery_kit
+            - disease_outbreak_control
+            - first_aid_basic_medical_care
+            - obstetric_newborn_care
+            - psychological_support
+            - epidemiological_surveillance_system
           - nutrition:
             - therapeutic_feeding_or_treating
-          - provide_hygiene_tool
-          - provide_delivery_kit
-          - provide_farming_tool
-          - provide_seed
-          - provide_livestock_feed
-          - provide_veterinary_service
-          - provide_stationery
-          - provide_fishing_tool
-          - provide_cash
-          - provide_food
-          - provide_veterinary_drugs_vaccines
+            - malnutrition_screening
+          - food_security:
+            - provide_farming_tool
+            - provide_seed
+            - provide_livestock_feed
+            - provide_veterinary_service
+            - provide_fishing_tool
+            - provide_cash
+            - provide_food
+          - water_sanitation_hygiene:
+            - sanitation_services
+            - provide_hygiene_tool
+            - communal_washing_and_bathing
+            - household_solid_waste_management
+          - emergency_shelter:
+            - provide_tent_shelter
+            - construction_of_prefabricated_buildings
+            - rental_subsidies
+          - protection:
+            - policing_services
+            - child_rights
+            - mine_risk_education
+            - family_reunification
+            - legal_aid
           - provide_moving_of_households
         - infrastructure
         - peacekeeping_and_security
@@ -40,8 +61,6 @@
           - climate
           - precipitation:
             - rainfall
-            - flooding
-            - drought
             - storm
           - temperature # temperature of ...
         - environment
@@ -56,6 +75,7 @@
           - fossil_fuels
           - soil
           - water_management # CauseEx
+          - pasture
         - pollution:
           - air_pollution
           - land_pollution
@@ -68,7 +88,6 @@
         - crisis
         - economic:
           - economic_crisis
-          - poverty
         - environmental:
           - crop_failure
           - insect_infestation
@@ -78,7 +97,6 @@
             - wildfire
             - volcanic_eruption
             - drought
-            - storm
             - earthquake
           - weather_issue:
             - cold_temperature
@@ -160,7 +178,6 @@
         - transport
         - human_displacement
         - evacuate_humanitarian_workers
-        - food_distribution
       - agriculture:
         - agricultural_production
         - planting
@@ -169,6 +186,7 @@
         - irrigation
         - pesticide
         - crop
+        - crop_production
         - livestock_production
         - pest
       - health_and_life:
@@ -181,11 +199,9 @@
           - animal_disease
         - treatment:
           - health_treatment
-          - health_intervention
         - death
         - injury
         - birth
-        - famine
         - basic_needs
       - access:
         - infrastructure:

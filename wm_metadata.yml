@@ -31,6 +31,16 @@
               - provide schools for children
               name: child_friendly_learning_spaces
               polarity: 1
+            - OntologyNode:
+              examples:
+              - provided paper
+              name: provide_stationery
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - school feeding
+              name: school_feeding
+              polarity: 1
           - health:
             - OntologyNode:
               examples:
@@ -50,6 +60,55 @@
               - disease vector control
               name: vector_control
               polarity: 1
+            - OntologyNode:
+              examples:
+              - provide delivery kit
+              name: provide_delivery_kit
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - vaccination
+              - disease control
+              - disease management
+              - epidemic prevention
+              - outbreak control
+              - disease prevention
+              name: disease_outbreak_control
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - first aid
+              - medical care
+              - health care
+              - health services
+              - health intervention
+              - medical crisis response
+              name: first_aid_basic_medical_care
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - obstetric care
+              - newborn care
+              name: obstetric_newborn_care
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - psychological support
+              - psychosocial support services
+              - psychosocial services
+              - social services
+              name: psychological_support
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - epidemiological surveillance
+              - disease surveillance
+              - awd surveillance
+              - meningitis surveillance
+              - measles surveillance
+              - cholera surveillance
+              name: epidemiological_surveillance_system
+              polarity: 1
           - nutrition:
             - OntologyNode:
               examples:
@@ -58,70 +117,153 @@
               - nutritional assistance
               name: therapeutic_feeding_or_treating
               polarity: 1
-          - OntologyNode:
-            examples:
-            - provide hygiene tool
-            name: provide_hygiene_tool
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide delivery kit
-            name: provide_delivery_kit
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide farming tool
-            name: provide_farming_tool
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide seed
-            name: provide_seed
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide livestock feed
-            - provided with fodder
-            name: provide_livestock_feed
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide veterinary service
-            name: provide_veterinary_service
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provided paper
-            name: provide_stationery
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide fishing nets
-            name: provide_fishing_tool
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide cash
-            - provide money
-            - provide loan
-            - monetary injection
-            name: provide_cash
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide food
-            - food assistance
-            - food aid
-            - deliver food
-            - humanitarian food drop
-            name: provide_food
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - provide veterinary drugs
-            - animal vaccination
-            name: provide_veterinary_drugs_vaccines
-            polarity: 1
+            - OntologyNode:
+              examples:
+              - malnutrition screening
+              - malnutrition assessment
+              - nutrition assessment
+              - screening of acute malnutrition
+              - management of acute malnutrition
+              - nutritional assessment
+              - nutrition screening
+              - nutritional surveillance
+              - screening for malnutrition
+              name: malnutrition_screening
+              polarity: 1
+          - food_security:
+            - OntologyNode:
+              examples:
+              - provide farming tool
+              name: provide_farming_tool
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide seed
+              name: provide_seed
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide livestock feed
+              - provided with fodder
+              name: provide_livestock_feed
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide veterinary service
+              - provide veterinary drugs
+              - animal vaccination
+              name: provide_veterinary_service
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide fishing nets
+              name: provide_fishing_tool
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide cash
+              - provide money
+              - provide loan
+              - monetary injection
+              name: provide_cash
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide food
+              - food assistance
+              - food aid
+              - deliver food
+              - humanitarian food drop
+              - distribution of food
+              name: provide_food
+              polarity: 1
+          - water_sanitation_hygiene:
+            - OntologyNode:
+              examples:
+              - wash services
+              - sanitation services
+              - hygiene services
+              - wash assistance
+              - wash interventions
+              name: sanitation_services
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - provide hygiene tool
+              name: provide_hygiene_tool
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - communal shower
+              - emergency laundry
+              - emergency handwashing
+              - communal sanitation
+              - communal wash
+              name: communal_washing_and_bathing
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - waste disposal
+              - waste treatment
+              name: household_solid_waste_management
+              polarity: 1
+          - emergency_shelter:
+            - OntologyNode:
+              examples:
+              - delivery of tents
+              - provision of tents
+              - provision of shelter
+              - provide tents
+              - provide shelter
+              - distribute tents
+              name: provide_tent_shelter
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - prefab construction
+              - prefabricated housing construction
+              - modular construction
+              - modular building construction
+              name: construction_of_prefabricated_buildings
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - housing subsidies
+              - rental subsidies
+              - housing assistance
+              name: rental_subsidies
+              polarity: 1
+          - protection:
+            - OntologyNode:
+              examples:
+              - policing
+              name: policing_services
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - child protection services
+              name: child_rights
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - mine risk education
+              name: mine_risk_education
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - family separation
+              - child separation
+              - children separation
+              - reunification services
+              - family reunification
+              name: family_reunification
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - legal aid
+              - legal assistance
+              name: legal_aid
+              polarity: 1
           - OntologyNode:
             examples:
             - provide moving of households
@@ -140,6 +282,13 @@
           - construction
           - improving infrastructure
           - repairing
+          - mobile hospital deployment
+          - rehabilitate road
+          - maintain road
+          - repair road
+          - road rehabilitation
+          - road maintenance
+          - road repair
           polarity: 1
         - OntologyNode:
           pattern:
@@ -154,6 +303,10 @@
           - ceasefire
           - demobilization
           - mediation
+          - conflict resolution
+          - conflict mediation
+          - disarmament
+          - reintegration
           polarity: 1
         - institutional_support:
           - protection:
@@ -187,17 +340,6 @@
               - rains
               - rain
               name: rainfall
-              polarity: 1
-            - OntologyNode:
-              examples:
-              - flood
-              - flash flood
-              name: flooding
-              polarity: 1
-            - OntologyNode:
-              examples:
-              - drought
-              name: drought
               polarity: 1
             - OntologyNode:
               examples:
@@ -306,6 +448,15 @@
             - water management
             name: water_management # CauseEx
             polarity: 1
+          - OntologyNode:
+            examples:
+            - pastoral conditions
+            - pasture conditions
+            - rangeland conditions
+            - vegetation conditions
+            - grazing conditions
+            name: pasture
+            polarity: 1
         - pollution:
           - OntologyNode:
             examples:
@@ -361,11 +512,6 @@
             - financial crisis
             name: economic_crisis
             polarity: 1
-          - OntologyNode:
-            examples:
-            - poverty
-            name: poverty
-            polarity: 1
         - environmental:
           - OntologyNode:
             examples:
@@ -403,11 +549,6 @@
               examples:
               - drought
               name: drought
-              polarity: 1
-            - OntologyNode:
-              examples:
-              - storm
-              name: storm
               polarity: 1
             - OntologyNode:
               examples:
@@ -913,11 +1054,6 @@
           - evacuate humanitarian workers
           name: evacuate_humanitarian_workers
           polarity: 1
-        - OntologyNode:
-          examples:
-          - distribution of food
-          name: food_distribution
-          polarity: 1
       - agriculture:
         - OntologyNode:
           examples:
@@ -1023,6 +1159,26 @@
           polarity: 1
         - OntologyNode:
           examples:
+          - cereal production
+          - rice production
+          - grain production
+          - soybean production
+          - sorghum production
+          - maize production
+          - groundnut production
+          - bean production
+          - vegetable production
+          - sesame production
+          - seed production
+          - cropping
+          - coffee production
+          - meher production
+          - pepper production
+          - millet production
+          name: crop_production
+          polarity: 1
+        - OntologyNode:
+          examples:
           - livestock
           - cattle
           - poultry production
@@ -1100,16 +1256,6 @@
             - theraputic treatment
             name: health_treatment
             polarity: 1
-          - OntologyNode:
-            examples:
-            - vaccine
-            - vaccination
-            - disease prevention
-            - health services
-            - health intervention
-            - medical crisis response
-            name: health_intervention
-            polarity: 1
         - OntologyNode:
           examples:
           - death
@@ -1130,11 +1276,6 @@
           examples:
           - birth
           name: birth
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - famine
-          name: famine
           polarity: 1
         - OntologyNode:
           examples:
