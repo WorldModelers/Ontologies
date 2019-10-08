@@ -9,45 +9,71 @@
       - intervention:
         - humanitarian_assistance
         - provision_of_goods_and_services:
-          - education:
+          - education_intervention:
             - child_friendly_learning_spaces
+            - provide_stationery
+            - school_feeding
           - health:
             - anti-retroviral_treatment
             - sexual_violence_management
             - vector_control
+            - provide_delivery_kit
+            - disease_outbreak_control
+            - first_aid_basic_medical_care
+            - obstetric_newborn_care
+            - psychological_support
+            - epidemiological_surveillance_system
           - nutrition:
             - therapeutic_feeding_or_treating
-          - provide_hygiene_tool
-          - provide_delivery_kit
-          - provide_farming_tool
-          - provide_seed
-          - provide_livestock_feed
-          - provide_veterinary_service
-          - provide_stationary
-          - provide_fishing_tool
-          - provide_cash
-          - provide_food
-          - provide_veterinary_drugs_vaccines
-          - provide_moving_of_houseHolds
+            - malnutrition_screening
+          - food_security_intervention:
+            - provide_farming_tool
+            - provide_seed
+            - provide_livestock_feed
+            - provide_veterinary_service
+            - provide_fishing_tool
+            - provide_cash
+            - provide_food
+          - water_sanitation_hygiene:
+            - sanitation_services
+            - provide_hygiene_tool
+            - communal_washing_and_bathing
+            - household_solid_waste_management
+          - emergency_shelter:
+            - provide_tent_shelter
+            - construction_of_prefabricated_buildings
+            - rental_subsidies
+          - protection:
+            - policing_services
+            - child_rights
+            - mine_risk_education
+            - family_reunification
+            - legal_aid
+          - provide_moving_of_households
         - infrastructure
         - peacekeeping_and_security
         - institutional_support:
-          - protection:
-            - capacity_building_human_right
-      - environment:
+          - capacity_building_human_right
+      - environmental:
+        - meteorologic:
+          - weather
+          - climate
+          - precipitation:
+            - rainfall
+            - storm
+          - temperature # temperature of ...
         - environment
         - climate_change_mitigation
         - resource_management
         - forestry
         - natural_resources:
-          - natural_resource
           - land
           - water_bodies
           - land_availability
           - water_commodity
           - fossil_fuels
           - soil
-          - water_management # CauseEx
+          - pasture
         - pollution:
           - air_pollution
           - land_pollution
@@ -57,34 +83,31 @@
         - water_management
         - water_security
       - crisis_and_disaster:
-        - crisis:
-          - crisis
-          - economic_crisis:
-            - poverty
-          - environmental_factor:
-            - crop_failure
-            - insect_infestation
-            - natural_disaster:
-              - flooding
-              - avalanche
-              - wildfire
-              - volcanic_eruption
-              - drought
-              - storm
-              - earthquake
+        - crisis
+        - economic:
+          - economic_crisis
+        - environmental_disasters:
+          - crop_failure
+          - insect_infestation
+          - natural_disaster:
+            - flooding
+            - avalanche
+            - wildfire
+            - volcanic_eruption
+            - drought
+            - earthquake
           - weather_issue:
             - cold_temperature
-        - fire
+          - fire # what is on fire?
       - economic_and_commerce:
-        - economic_crisis
         - economic_activity:
           - livelihood
           - currency
           - cross_border_trade:
             - import:
-              - food_import
+              - food_import # thing imported
             - export:
-              - food_export
+              - food_export # thing exported
           - market:
             - labor_market
             - fuel
@@ -93,7 +116,6 @@
               - oil_price
               - cost_of_living
               - cost_of_transportation
-            - depreciation
             - revenue
             - budget
             - assets
@@ -103,24 +125,31 @@
               - food_demand
             - transaction:
               - oil_transaction
+            - depreciation
             - inflation
             - currency_devaluation
           - consumption:
-            - food_consumption
-          - competition
-          - development
+            - food_consumption # food
+          - competition # between? about?
+          - development # being developed
       - social_and_political:
         - basic_services
-        - education:
+        - population_group:
+          - population_density
+          - de-population
+          - overcrowding
+        - educational:
           - education
           - educational_materials
         - government:
           - census
-          - regulation
+          - regulation # topic
           - tax_duty
         - political:
           - political_instability
+          - corruption
           - independence
+          - sanction
         - migration:
           - human_migration
           - hosting_idps
@@ -132,7 +161,7 @@
           - exploitation
           - physical_insecurity
           - disarmament
-        - crime:
+        - criminal:
           - crime
           - abduction
         - conflict:
@@ -143,21 +172,10 @@
           - strike
           - terrorism
           - livestock_raid
-        - sanction
       - movement:
-        - movement:
-          - transport
-          - human_displacement
-          - evacuate_humanitarian_workers
-        - food_distribution
-      - weather:
-        - weather
-        - climate
-        - precipitation:
-          - flooding
-          - drought
-          - storm
-        - temperature
+        - transport
+        - human_displacement
+        - evacuate_humanitarian_workers
       - agriculture:
         - agricultural_production
         - planting
@@ -166,6 +184,7 @@
         - irrigation
         - pesticide
         - crop
+        - crop_production
         - livestock_production
         - pest
       - health_and_life:
@@ -178,14 +197,12 @@
           - animal_disease
         - treatment:
           - health_treatment
-          - health_intervention
         - death
         - injury
         - birth
-        - famine
         - basic_needs
       - access:
-        - infrastructure:
+        - infrastructure_access:
           - electrical
           - water
           - waste
@@ -200,6 +217,7 @@
             - medical_facility
         - food_shortage
         - water_shortage
+        - water_supply
         - road_access
       - condition:
         - living_condition:
@@ -217,22 +235,9 @@
       - government_entity
       - person_and_group:
         - population
-        - de-population
-        - overcrowding
         - community
       - artifact
     - time:
       - temporal:
         - crop_season
         - season
-    - indicator_and_reported_property:
-      - weather:
-        - rainfall
-      - agriculture:
-        - Crop_Production
-      - commerce:
-        - Cross_Border_Trade
-      - conflict:
-        - population_displacement
-      - health:
-        - Global_Acute_Malnutrition_(GAM)_rate
