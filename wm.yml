@@ -9,7 +9,7 @@
       - intervention:
         - humanitarian_assistance
         - provision_of_goods_and_services:
-          - education:
+          - education_intervention:
             - child_friendly_learning_spaces
             - provide_stationery
             - school_feeding
@@ -26,7 +26,7 @@
           - nutrition:
             - therapeutic_feeding_or_treating
             - malnutrition_screening
-          - food_security:
+          - food_security_intervention:
             - provide_farming_tool
             - provide_seed
             - provide_livestock_feed
@@ -53,8 +53,7 @@
         - infrastructure
         - peacekeeping_and_security
         - institutional_support:
-          - protection:
-            - capacity_building_human_right
+          - capacity_building_human_right
       - environmental:
         - meteorologic:
           - weather
@@ -74,7 +73,6 @@
           - water_commodity
           - fossil_fuels
           - soil
-          - water_management # CauseEx
           - pasture
         - pollution:
           - air_pollution
@@ -88,7 +86,7 @@
         - crisis
         - economic:
           - economic_crisis
-        - environmental:
+        - environmental_disasters:
           - crop_failure
           - insect_infestation
           - natural_disaster:
@@ -136,7 +134,7 @@
           - development # being developed
       - social_and_political:
         - basic_services
-        - person_and_group:
+        - population_group:
           - population_density
           - de-population
           - overcrowding
@@ -204,7 +202,7 @@
         - birth
         - basic_needs
       - access:
-        - infrastructure:
+        - infrastructure_access:
           - electrical
           - water
           - waste

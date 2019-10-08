@@ -30,7 +30,7 @@
           name: humanitarian_assistance
           polarity: 1
         - provision_of_goods_and_services:
-          - education:
+          - education_intervention:
             - OntologyNode:
               examples:
               - child friendly learning spaces
@@ -163,7 +163,7 @@
               - screening for malnutrition
               name: malnutrition_screening
               polarity: 1
-          - food_security:
+          - food_security_intervention:
             - OntologyNode:
               examples:
               - provide farming tool
@@ -350,14 +350,13 @@
           - reintegration
           polarity: 1
         - institutional_support:
-          - protection:
-            - OntologyNode:
-              examples:
-              - capacity building human right
-              - respect for human rights
-              - equality
-              name: capacity_building_human_right
-              polarity: 1
+          - OntologyNode:
+            examples:
+            - capacity building human right
+            - respect for human rights
+            - equality
+            name: capacity_building_human_right
+            polarity: 1
       - environmental:
         - meteorologic:
           - OntologyNode:
@@ -514,11 +513,6 @@
             polarity: 1
           - OntologyNode:
             examples:
-            - water management
-            name: water_management # CauseEx
-            polarity: 1
-          - OntologyNode:
-            examples:
             - pastoral conditions
             - pasture conditions
             - rangeland conditions
@@ -595,7 +589,7 @@
             - economic volatility
             name: economic_crisis
             polarity: 1
-        - environmental:
+        - environmental_disasters:
           - OntologyNode:
             examples:
             - crop failure
@@ -907,7 +901,7 @@
           - essential services
           name: basic_services
           polarity: 1
-        - person_and_group:
+        - population_group:
           - OntologyNode:
             examples:
             - population density
@@ -1556,7 +1550,7 @@
           name: basic_needs
           polarity: 1
       - access:
-        - infrastructure:
+        - infrastructure_access:
           - OntologyNode:
             examples:
             - energy
