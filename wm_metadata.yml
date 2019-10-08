@@ -489,7 +489,7 @@
           examples:
           - water insecurity
           name: water_insecurity
-          opposite: wm/concept/causal_factor/environmental/food_water_and_nutrition/water_security
+          opposite: wm/concept/causal_factor/food_water_and_nutrition/water_security
           polarity: -1
         - OntologyNode:
           examples:
@@ -500,7 +500,7 @@
           examples:
           - water security
           name: water_security
-          opposite: wm/concept/causal_factor/environmental/food_water_and_nutrition/water_insecurity
+          opposite: wm/concept/causal_factor/food_water_and_nutrition/water_insecurity
           polarity: 1
       - crisis_and_disaster:
         - OntologyNode:
