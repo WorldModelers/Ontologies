@@ -53,8 +53,7 @@
         - infrastructure
         - peacekeeping_and_security
         - institutional_support:
-          - protection:
-            - capacity_building_human_right
+          - capacity_building_human_right
       - environmental:
         - meteorologic:
           - weather
@@ -74,7 +73,6 @@
           - water_commodity
           - fossil_fuels
           - soil
-          - water_management # CauseEx
           - pasture
         - pollution:
           - air_pollution
@@ -88,7 +86,7 @@
         - crisis
         - economic:
           - economic_crisis
-        - environmental:
+        - environmental_disasters:
           - crop_failure
           - insect_infestation
           - natural_disaster:

@@ -350,14 +350,13 @@
           - reintegration
           polarity: 1
         - institutional_support:
-          - protection:
-            - OntologyNode:
-              examples:
-              - capacity building human right
-              - respect for human rights
-              - equality
-              name: capacity_building_human_right
-              polarity: 1
+          - OntologyNode:
+            examples:
+            - capacity building human right
+            - respect for human rights
+            - equality
+            name: capacity_building_human_right
+            polarity: 1
       - environmental:
         - meteorologic:
           - OntologyNode:
@@ -514,11 +513,6 @@
             polarity: 1
           - OntologyNode:
             examples:
-            - water management
-            name: water_management # CauseEx
-            polarity: 1
-          - OntologyNode:
-            examples:
             - pastoral conditions
             - pasture conditions
             - rangeland conditions
@@ -595,7 +589,7 @@
             - economic volatility
             name: economic_crisis
             polarity: 1
-        - environmental:
+        - environmental_disasters:
           - OntologyNode:
             examples:
             - crop failure
