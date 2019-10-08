@@ -13,7 +13,7 @@ protected class Versioner(
 ) {
 
   def version(namespace: String, files: Seq[String]): Seq[File] = {
-    val versions = readVersions(files)
+    val versions = readVersions("HEAD" +: files)
 
     codeVersions(namespace, versions)
   }
@@ -37,13 +37,9 @@ object Versioner {
 
     // In this version of the constructor, the date is in ISO 8601 format.
     def apply(hash: Option[String], date: Option[String]): Version = {
-      println("Trying to parse " + date.get)
       if (hash.isDefined && date.isDefined) {
         Try {
-          println("trying to parse") // This format cannot be parsed, what to do?
-          val result = Version(Some(hash.get, ZonedDateTime.parse(date.get)))
-          println("finished parsing")
-          result
+          Version(Some(hash.get, ZonedDateTime.parse(date.get)))
         }.getOrElse(Version(None))
       }
       else
@@ -80,13 +76,11 @@ object Versioner {
     versions
   }
 
-  protected def codeVersionsBase(codebase: File, version: Version)(
-    namespace: String, versions: Seq[(String, Version)]): Seq[File] = {
-
+  protected def codeVersionsBase(codebase: File)(namespace: String, versions: Seq[(String, Version)]): Seq[File] = {
     val filename = codebase.getCanonicalPath + "/" + namespace.replace('.', '/') + "/Versions.scala"
     val file = new File(filename)
-    val versionCode = version.code
-    val versionsCode = Versions(versions).code
+    val versionCode = versions.head._2.code // This should be the HEAD
+    val versionsCode = Versions(versions.tail).code
 
     val code = s"""
       |/* This code is automatically generated during project compilation. */
@@ -112,10 +106,10 @@ object Versioner {
     Seq(file)
   }
 
-  def apply(gitRunner: com.typesafe.sbt.git.GitRunner, baseDirectory: File,
-      codebase: File, gitHeadHashOpt: Option[String], gitHeadCommitDateOpt: Option[String]): Versioner = {
+  def apply(gitRunner: com.typesafe.sbt.git.GitRunner, baseDirectory: File, codebase: File): Versioner = {
+
     val readVersions = readVersionsBase(gitRunner, baseDirectory) _
-    val codeVersions = codeVersionsBase(codebase, Version(gitHeadHashOpt, gitHeadCommitDateOpt)) _
+    val codeVersions = codeVersionsBase(codebase) _
 
     new Versioner(readVersions, codeVersions)
   }
