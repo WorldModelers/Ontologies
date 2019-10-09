@@ -20,7 +20,7 @@ class TestVersioner extends FlatSpec with Matchers {
     }
   }
 
-  test("[project]", TestVersions.version, ZonedDateTime.now)
+  test("HEAD", TestVersions.version, ZonedDateTime.now)
 
   TestVersions.versions.nonEmpty should be (true)
 
