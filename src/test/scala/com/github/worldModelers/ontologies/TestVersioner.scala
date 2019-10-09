@@ -8,6 +8,7 @@ import java.time.ZonedDateTime
 import org.scalatest._
 
 class TestVersioner extends FlatSpec with Matchers {
+  val now = ZonedDateTime.now
 
   behavior of "Versions"
 
@@ -20,11 +21,11 @@ class TestVersioner extends FlatSpec with Matchers {
     }
   }
 
-  test("HEAD", TestVersions.version, ZonedDateTime.now)
+  test("HEAD", TestVersions.version, now)
 
   TestVersions.versions.nonEmpty should be (true)
 
   TestVersions.versions.foreach { case (file, version) =>
-    test(file, version, TestVersions.version.get.date)
+    test(file, version, TestVersions.version.map { _.date }.getOrElse(now))
   }
 }
