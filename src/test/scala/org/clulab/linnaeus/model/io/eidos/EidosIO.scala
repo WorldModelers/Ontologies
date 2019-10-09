@@ -7,5 +7,6 @@ object EidosIO {
   val EXAMPLES = "examples"
   val DESCRIPTION = "descriptions"
   val NAME = "name"
+  val OPPOSITE = "opposite"
   val POLARITY = "polarity"
 }
