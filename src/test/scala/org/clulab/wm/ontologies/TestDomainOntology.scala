@@ -9,6 +9,14 @@ import scala.collection.mutable
 
 class TestDomainOntology extends FlatSpec with Matchers {
 
+  def trace(text: Seq[String]): Unit = {
+//    println(text)
+  }
+
+  def error(text: String): Unit = {
+    println(text)
+  }
+
   def hasDuplicatePaths(network: EidosNetwork): Boolean = {
     val visitor = new network.HierarchicalGraphVisitor()
     var paths = List.empty[Seq[String]]
@@ -19,10 +27,10 @@ class TestDomainOntology extends FlatSpec with Matchers {
       if (network.isLeaf(node)) {
         val newPath = path.slice(0, depth) :+ node.name
 
-        println(newPath)
+        trace(newPath)
         if (paths.contains(newPath)) {
           duplicate = true
-          println(s"Duplicate path: $newPath")
+          error(s"Duplicate path: $newPath")
         }
         else
           paths = newPath :: paths
@@ -48,10 +56,10 @@ class TestDomainOntology extends FlatSpec with Matchers {
         val newPath = path.slice(0, depth) :+ node.name
         val newLeaf = node.name
 
-        println(newPath)
+        trace(newPath)
         if (leaves.contains(newLeaf)) {
           duplicate = true
-          println(s"Duplicate leaf: $newPath")
+          error(s"Duplicate leaf: $newPath")
         }
         else
           leaves = newLeaf :: leaves
@@ -75,13 +83,13 @@ class TestDomainOntology extends FlatSpec with Matchers {
       if (node.name.contains(' ')) {
         val newPath = path.slice(0, depth) :+ node.name
         spaces = true
-        println(s"Spaces: $newPath")
+        error(s"Spaces: $newPath")
       }
 
       if (network.isLeaf(node)) {
         if (!node.name.contains(' ')) { // Otherwise already printed
           val newPath = path.slice(0, depth) :+ node.name
-          println(newPath)
+          trace(newPath)
         }
       }
       else
@@ -104,7 +112,7 @@ class TestDomainOntology extends FlatSpec with Matchers {
       if (network.isLeaf(node)) {
         val newPath = path.slice(0, depth) :+ node.name
 
-        println(newPath)
+        trace(newPath)
         leaves = leaves + (newPath.mkString("/") -> node)
       }
       else
@@ -121,14 +129,14 @@ class TestDomainOntology extends FlatSpec with Matchers {
 
         if (!leaves.contains(opposite)) {
           missing = true
-          println(s"Missing opposite: $path -> $opposite")
+          error(s"Missing opposite: $path -> $opposite")
         }
         else {
           val counterpart = leaves(opposite)
 
           if (node.polarityOpt.isEmpty || counterpart.polarityOpt.isEmpty) {
             missing = true
-            println(s"Missing polarity: $path -> $opposite")
+            error(s"Missing polarity: $path -> $opposite")
           }
           else {
             val nodePolarity: Int = node.polarityOpt.get
@@ -136,7 +144,7 @@ class TestDomainOntology extends FlatSpec with Matchers {
 
             if (nodePolarity != -counterpartPolarity) {
               missing = true
-              println(s"Mismatched polarity: $path -> $opposite")
+              error(s"Mismatched polarity: $path -> $opposite")
             }
           }
         }
