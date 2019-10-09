@@ -70,7 +70,10 @@ object Versioner {
         val zonedDateTime = ZonedDateTime.ofInstant(instant, ZoneOffset.UTC)
 
         (file, Version(Some((hash, zonedDateTime))))
-      }.getOrElse((file, Version(None)))
+      }.getOrElse {
+        println(s"Warning: Couldn't get version for $file.")
+        (file, Version(None))
+      }
     }
 
     versions
