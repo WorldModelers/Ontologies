@@ -62,6 +62,13 @@ object Versioner {
     val versions = files.map { file =>
       val gitArgs = Seq("rev-list", "--timestamp", "-1", "master", file)
 
+      Versioner.getClass.getClassLoader match {
+        case cl: java.net.URLClassLoader =>
+          println("It was URL class loader!")
+          val cp = cl.getURLs map (_.getFile) mkString ":"
+          println(s"cp is $cp")
+      }
+
       try {
         val output = gitRunner(gitArgs: _*)(baseDirectory, com.typesafe.sbt.git.NullLogger)
         val Array(timestamp, hash) = output.split(' ')
