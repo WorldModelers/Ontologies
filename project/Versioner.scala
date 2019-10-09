@@ -62,7 +62,7 @@ object Versioner {
     val versions = files.map { file =>
       val gitArgs = Seq("rev-list", "--timestamp", "-1", "master", file)
 
-      Try {
+      try {
         val output = gitRunner(gitArgs: _*)(baseDirectory, com.typesafe.sbt.git.NullLogger)
         val Array(timestamp, hash) = output.split(' ')
         val integerTime = Integer.parseInt(timestamp)
@@ -70,9 +70,12 @@ object Versioner {
         val zonedDateTime = ZonedDateTime.ofInstant(instant, ZoneOffset.UTC)
 
         (file, Version(Some((hash, zonedDateTime))))
-      }.getOrElse {
-        println(s"Warning: Couldn't get version for $file.")
-        (file, Version(None))
+      }
+      catch {
+        case throwable: Throwable =>
+          println(s"Warning: Couldn't get version for $file.")
+          throwable.printStackTrace()
+          (file, Version(None))
       }
     }
 
