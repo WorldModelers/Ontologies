@@ -94,14 +94,64 @@ class TestDomainOntology extends FlatSpec with Matchers {
     spaces
   }
 
+  def hasMissingOpposites(network: EidosNetwork): Boolean = {
+    val visitor = new network.HierarchicalGraphVisitor()
+    var leaves: Map[String, EidosNode] = Map.empty
+    var path = mutable.Seq.empty[String]
+    var missing = false
+
+    visitor.foreachNode { (node: EidosNode, depth: Int) =>
+      if (network.isLeaf(node)) {
+        val newPath = path.slice(0, depth) :+ node.name
+
+        println(newPath)
+        leaves = leaves + (newPath.mkString("/") -> node)
+      }
+      else
+      if (depth < path.size)
+        path(depth) = node.name
+      else
+        path = path :+ node.name
+      true
+    }
+
+    leaves.foreach { case (path, node) =>
+      if (node.oppositeOpt.isDefined) {
+        val opposite = node.oppositeOpt.get
+
+        if (!leaves.contains(opposite)) {
+          missing = true
+          println(s"Missing opposite: $path -> $opposite")
+        }
+        else {
+          val counterpart = leaves(opposite)
+
+          if (node.polarityOpt.isEmpty || counterpart.polarityOpt.isEmpty) {
+            missing = true
+            println(s"Missing polarity: $path -> $opposite")
+          }
+          else {
+            val nodePolarity: Int = node.polarityOpt.get
+            val counterpartPolarity: Int = counterpart.polarityOpt.get
+
+            if (nodePolarity != -counterpartPolarity) {
+              missing = true
+              println(s"Mismatched polarity: $path -> $opposite")
+            }
+          }
+        }
+      }
+    }
+    missing
+  }
+
   def test(path: String): Unit = {
       val network = new EidosNetwork()
       val reader = new EidosReader(network)
 
     behavior of "ontology in " + path
 
-    it should "load" in {
-      // This is the load part which will fail on exception.
+    it should "load without exception" in {
       reader.readFromFile(path)
     }
 
@@ -115,6 +165,10 @@ class TestDomainOntology extends FlatSpec with Matchers {
 
     it should "not have spaces" in {
       hasSpaces(network) should be (false)
+    }
+
+    it should "not have missing opposites" in {
+      hasMissingOpposites(network) should be (false)
     }
   }
 

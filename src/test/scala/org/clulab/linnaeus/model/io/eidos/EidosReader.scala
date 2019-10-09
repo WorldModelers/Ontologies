@@ -26,12 +26,13 @@ class EidosReader(val network: EidosNetwork) extends GraphReader {
     // This code is largely stolen from Eidos
     def parseYamlLeaf(parentNodeOpt: Option[EidosNode], yamlNodes: mutable.Map[String, JCollection[Any]]): Unit = {
       val name = yamlNodes(EidosIO.NAME).asInstanceOf[String]
-      val polarityOpt = yamlNodes.get(EidosIO.POLARITY).asInstanceOf[Option[Double]]
+      val oppositeOpt = yamlNodes.get(EidosIO.OPPOSITE).asInstanceOf[Option[String]]
+      val polarityOpt = yamlNodes.get(EidosIO.POLARITY).asInstanceOf[Option[Int]]
       val examples = yamlNodesToStrings(yamlNodes, EidosIO.EXAMPLES)
       val descriptions = yamlNodesToStrings(yamlNodes, EidosIO.DESCRIPTION)
       // These need to be valid regexes, but don't check that just yet.
       val patterns = yamlNodesToStrings(yamlNodes, EidosIO.PATTERN)
-      val childNode = new EidosNode(network.nodeIndexer.next, name, polarityOpt, examples, descriptions, patterns)
+      val childNode = new EidosNode(network.nodeIndexer.next, name, oppositeOpt, polarityOpt, examples, descriptions, patterns)
 
       network.addNode(childNode)
       parentNodeOpt.foreach { parentNode =>
