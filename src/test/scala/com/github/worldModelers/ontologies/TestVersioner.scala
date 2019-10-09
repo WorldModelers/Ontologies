@@ -1,8 +1,8 @@
 package com.github.worldModelers.ontologies
 
 // Switch these back and forth to test code generation
-import com.github.worldModelers.ontologies.{MockVersions => TestVersions, MockVersion => TestVersion }
-//import com.github.worldModelers.ontologies.{Versions => TestVersions, Version => TestVersion }
+//import com.github.worldModelers.ontologies.{MockVersions => TestVersions, MockVersion => TestVersion }
+import com.github.worldModelers.ontologies.{Versions => TestVersions, Version => TestVersion }
 import java.time.ZonedDateTime
 
 import org.scalatest._
