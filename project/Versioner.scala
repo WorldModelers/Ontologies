@@ -58,10 +58,11 @@ object Versioner {
     }
   }
 
-  protected def readVersionsBase(gitRunner: com.typesafe.sbt.git.GitRunner, baseDirectory: File)(files: Seq[String]): Seq[(String, Version)] = {
+  protected def readVersionsBase(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File)
+      (files: Seq[String]): Seq[(String, Version)] = {
     val versions = files.map { file =>
-      val gitArgs = Seq("rev-list", "--timestamp", "-1", "master", file) // This must include "master".
-//      val gitArgs = Seq("log", """--format="%at %H"""", "--max-count=1", "master", file)
+      val gitArgs = Seq("rev-list", "--timestamp", "-1", gitCurrentBranch, file) // This must include "master".
+//      val gitArgs = Seq("log", """--format="%at %H"""", "--max-count=1", gitCurrentBranch, file)
 println(gitArgs)
       try {
         val output = gitRunner(gitArgs: _*)(baseDirectory, com.typesafe.sbt.git.NullLogger)
@@ -114,9 +115,9 @@ println(gitArgs)
     Seq(file)
   }
 
-  def apply(gitRunner: com.typesafe.sbt.git.GitRunner, baseDirectory: File, codebase: File): Versioner = {
+  def apply(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File, codebase: File): Versioner = {
 
-    val readVersions = readVersionsBase(gitRunner, baseDirectory) _
+    val readVersions = readVersionsBase(gitRunner, gitCurrentBranch, baseDirectory) _
     val codeVersions = codeVersionsBase(codebase) _
 
     new Versioner(readVersions, codeVersions)

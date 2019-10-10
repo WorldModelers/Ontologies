@@ -17,7 +17,7 @@ mappings in (Compile, packageBin) += {
 sourceGenerators in Compile += Def.task {
   import Versioner._
   // These values need to be collected in a task in order have them forwarded to Scala functions.
-  val versioner = Versioner(git.runner.value, baseDirectory.value, (sourceManaged in Compile).value)
+  val versioner = Versioner(git.runner.value, git.gitCurrentBranch.value, baseDirectory.value, (sourceManaged in Compile).value)
 println("Value from git is " + git.gitCurrentBranch.value)
   // The user should set these values.
   val namespace = "com.github.worldModelers.ontologies"
