@@ -14,4 +14,17 @@ mappings in (Compile, packageBin) += {
   file("wm_metadata.yml") -> "org/clulab/wm/eidos/english/ontologies/wm_metadata.yml"
 }
 
-lazy val root = (project in file("."))
+sourceGenerators in Compile += Def.task {
+  import Versioner._
+  // These values need to be collected in a task in order have them forwarded to Scala functions.
+  val versioner = Versioner(git.runner.value, git.gitCurrentBranch.value, baseDirectory.value, (sourceManaged in Compile).value)
+
+  // The user should set these values.
+  val namespace = "com.github.worldModelers.ontologies"
+  val files = Seq("wm_metadata.yml", "interventions.yml")
+
+  // This reads and codes the versions.
+  versioner.version(namespace, files)
+}.taskValue
+
+lazy val root = project in file(".")
