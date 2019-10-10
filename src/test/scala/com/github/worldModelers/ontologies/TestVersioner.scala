@@ -18,6 +18,7 @@ class TestVersioner extends FlatSpec with Matchers {
       version.nonEmpty should be (true)
       version.get.commit.nonEmpty should be (true)
       version.get.date.isBefore(expirationDate) should be (true)
+      println(file + ": " + version)
     }
   }
 

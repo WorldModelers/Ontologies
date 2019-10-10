@@ -61,12 +61,11 @@ object Versioner {
   protected def readVersionsBase(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File)
       (files: Seq[String]): Seq[(String, Version)] = {
     val versions = files.map { file =>
-      val gitArgs = Seq("rev-list", "--timestamp", "-1", gitCurrentBranch, file) // This must include "master".
-//      val gitArgs = Seq("log", """--format="%at %H"""", "--max-count=1", gitCurrentBranch, file)
-println(gitArgs)
+      val gitArgs = Seq("rev-list", "--timestamp", "-1", gitCurrentBranch, file)
+      // val gitArgs = Seq("log", """--format="%at %H"""", "--max-count=1", gitCurrentBranch, file)
+
       try {
         val output = gitRunner(gitArgs: _*)(baseDirectory, com.typesafe.sbt.git.NullLogger)
-        println("output is " + output)
         val Array(timestamp, hash) = output.split(' ')
         val integerTime = Integer.parseInt(timestamp)
         val instant = Instant.ofEpochSecond(integerTime)
