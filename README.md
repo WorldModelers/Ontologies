@@ -45,19 +45,20 @@ Leaf nodes in the ontology with metadata are presently formatted as such:
   polarity: 1.0
 
 ```
-where all the keys (`OntologyNode`, `pattern`, `examples`, `descriptions`, `name`, and `polarity`)
+where all the keys (`OntologyNode`, `pattern`, `examples`, `descriptions`, `name`, `opposite`, and `polarity`)
 should be reproduced verbatim when they are used.  `name` is the only one required.  Not all nodes
-need to have the same values.
+need to have the same set of keys.
 
 Values are described briefly in the table below.
 
-|Value|Description|
+|Key|Description of Value|
 |---|---|
 |pattern|A regular expression that might be used to identify text that should match the node|
 |examples|Short phrases, possibly synonyms, that should match the node|
 |descriptions|Longer texts that define the node or exemplify the context in which it might be found|
 |name|The name of the node, used for identification purposes|
-|polarity|Presently always 1.0, but potentially -1.0 to use for opposites|
+|opposite|A /-separated path to an ontology node with the same meaning but of opposite polarity|
+|polarity|Presently always 1, but potentially -1 to use for opposites|
 
 Here are two examples based loosely on real entries:
 ````yml
@@ -71,7 +72,8 @@ Here are two examples based loosely on real entries:
   - humanitarian aid
   - poverty alleviation
   name: humanitarian assistance
-  polarity: 1.0
+  opposite: wm/concept/.../water_security
+  polarity: 1
 ````
 ```yml
 - OntologyNode:
@@ -79,7 +81,8 @@ Here are two examples based loosely on real entries:
   - Upper secondary school pupil-teacher ratio is the average number of pupils per
     teacher in upper secondary school.
   name: Pupil-teacher_ratio,_upper_secondary
-  polarity: 1.0
+  opposite: wm/concept/.../water_insecurity
+  polarity: -1
 ```
 
 Branch nodes have only a branch name and have no data associated with them other than
@@ -129,6 +132,9 @@ Here's a small, but concrete example:
 ## Tests
 
 The unit tests presently check for
-* yml syntax
+* yml syntax errors
 * special characters that might have been copied in unnecessarily
+* duplicate paths
 * duplicate leaf nodes
+* spaces in path
+* mismatched opposites
