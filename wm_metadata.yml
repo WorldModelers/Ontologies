@@ -139,7 +139,7 @@
               - cholera surveillance
               name: epidemiological_surveillance_system
               polarity: 1
-          - nutrition:
+          - nutrition_intervention:
             - OntologyNode:
               examples:
               - therapeutic feeding
@@ -483,21 +483,6 @@
             polarity: 1
           - OntologyNode:
             examples:
-            - water pumps
-            - water pipes
-            - cistern
-            - potable water
-            - access to water
-            - drinking water
-            - groundwater
-            - snow melt
-            - water production
-            - water trucking
-            - salinization
-            name: water_commodity
-            polarity: 1
-          - OntologyNode:
-            examples:
             - fossil fuels
             - coal
             - oil
@@ -547,30 +532,6 @@
             - desertification
             name: climate_change
             polarity: 1
-      - food_water_and_nutrition:
-        - OntologyNode:
-          examples:
-          - water insecurity
-          - water shortage
-          - water crisis
-          - water scarcity
-          name: water_insecurity
-          opposite: wm/concept/causal_factor/food_water_and_nutrition/water_security
-          polarity: -1
-        - OntologyNode:
-          examples:
-          - water management
-          - administration of water resources
-          - water rationing
-          name: water_management
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - water security
-          - availability of water
-          name: water_security
-          opposite: wm/concept/causal_factor/food_water_and_nutrition/water_insecurity
-          polarity: 1
       - crisis_and_disaster:
         - OntologyNode:
           examples:
@@ -658,25 +619,44 @@
             name: fire # what is on fire?
             polarity: 1
       - economic_and_commerce:
+        - OntologyNode:
+          examples:
+          - poverty
+          - poor
+          name: poverty
+          polarity: 1
         - economic_activity:
-          - OntologyNode:
-            examples:
-            - livelihood
-            - livelihood activities
-            - workplace
-            - work
-            - job
-            - career
-            - opportunity
-            - employment
-            - agribusiness
-            - pastoralist livelihood
-            - find work
-            - wages
-            - high unemployment
-            - underemployment
-            name: livelihood
-            polarity: 1
+          - livelihood:
+            #examples:
+            #- livelihood
+            #- livelihood activities
+            #- workplace
+            #- work
+            #- job
+            #- career
+            #- opportunity
+            #- employment
+            #- agribusiness
+            #- pastoralist livelihood
+            #- find work
+            #- wages
+            #- high unemployment
+            #- underemployment
+            - OntologyNode:
+              examples:
+              - foraging
+              name: foraging
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - hunting
+              name: hunting
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - farming
+              name: farming
+              polarity: 1
           - OntologyNode:
             examples:
             - currency
@@ -762,6 +742,54 @@
                 polarity: 1
               - OntologyNode:
                 examples:
+i               - bamboo prices
+                - banana prices
+                - barley prices
+                - bean prices
+                - beans prices
+                - cassava prices
+                - cereal prices
+                - cereals prices
+                - cocoa prices
+                - coconut prices
+                - coffee prices
+                - corn prices
+                - crop prices
+                - cultivar prices
+                - flux prices
+                - flour prices
+                - grain prices
+                - groundnut prices
+                - groundnuts prices
+                - legume prices
+                - maize prices
+                - mango prices
+                - meher prices
+                - millet prices
+                - oats prices
+                - oilseed prices
+                - onion prices
+                - pepper prices
+                - potato prices
+                - rice prices
+                - rubber prices
+                - seed prices
+                - sesame prices
+                - sorghum prices
+                - soybean prices
+                - staple prices
+                - sugar prices
+                - tea prices
+                - tobacco prices
+                - tomato prices
+                - tuber prices
+                - vegetable prices
+                - wheat prices
+                - white maize prices
+                name: crop_price
+                polarity: 1
+              - OntologyNode:
+                examples:
                 - oil price # should we have these?
                 - cost of crude oil
                 name: oil_price
@@ -780,27 +808,33 @@
                 - fuel prices
                 name: cost_of_transportation
                 polarity: 1
-            - OntologyNode:
-              examples:
-              - livelihood
-              - income
-              - household income
-              - take home pay
-              - net profit
-              - seasonal income
-              - profit
-              - earning
-              - earnings
-              - revenue
-              - wages
-              - compensation
-              - investment
-              - repaying
-              - fee
-              - dividend
-              - disbursements
-              name: revenue
-              polarity: 1
+            - revenue:
+              #examples:
+              #- livelihood
+              #- net profit
+              #- profit
+              #- earning
+              #- earnings
+              #- revenue
+              #- investment
+              #- repaying
+              #- fee
+              #- dividend
+              #- disbursements
+              - OntologyNode:
+                examples:
+                - household income
+                - take home pay
+                - wages
+                - compensation
+                name: household_income
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - farmer income
+                - seasonal income
+                name: farmer_income
+                polarity: 1
             - OntologyNode:
               examples:
               - budget
@@ -843,6 +877,11 @@
                 - selling barrels
                 name: oil_transaction
                 polarity: 1
+              - OntologyNode:
+                examples:
+                - purchasing food
+                name: food_purchase
+                polarity: 1
             - OntologyNode:
               examples:
               - depreciation
@@ -865,15 +904,12 @@
               - currency devalued
               name: currency_devaluation
               polarity: 1
-          - consumption:
             - OntologyNode:
               examples:
-              - food consumption
-              - purchasing food
-              - consumer staples
-              - eat
-              - feed
-              name: food_consumption # food
+              - food stocks
+              - food reserves
+              - grain storage
+              name: food_stocks
               polarity: 1
           - OntologyNode:
             examples:
@@ -1025,6 +1061,7 @@
             - refugees
             - refugee population
             - IDPs
+            - human displacement
             name: human_migration
             polarity: 1
           - OntologyNode:
@@ -1259,25 +1296,18 @@
           polarity: 1
         - OntologyNode:
           examples:
-          - human displacement
-          name: human_displacement
-          polarity: 1
-        - OntologyNode:
-          examples:
           - evacuate humanitarian workers
           - evacuated aid personnel
           - evacuating humanitarian
           name: evacuate_humanitarian_workers
           polarity: 1
-      - agriculture:
         - OntologyNode:
           examples:
-          - agricultural production
-          - cultivate
-          - farming
-          - food production
-          name: agricultural_production
+          - animal migration
+          - livestock migration
+          name: animal_migration
           polarity: 1
+      - agriculture:
         - OntologyNode:
           examples:
           - planting
@@ -1331,56 +1361,6 @@
           polarity: 1
         - OntologyNode:
           examples:
-          - bamboo
-          - banana
-          - barley
-          - bean
-          - beans
-          - brown sorghum
-          - cassava
-          - cereal
-          - cereals
-          - cocoa
-          - coconut
-          - coffee
-          - corn
-          - crop
-          - cultivar
-          - feed
-          - flax
-          - flour
-          - food crop
-          - grain
-          - groundnut
-          - groundnuts
-          - leaf vegetables
-          - legume
-          - maize
-          - mango
-          - millet
-          - oats
-          - oilseed
-          - onion
-          - potato
-          - red sorghum
-          - rice
-          - rubber
-          - sesame
-          - sorghum
-          - soybean
-          - sugar
-          - tea
-          - tobacco
-          - tomato
-          - tuber
-          - vegetable
-          - wheat
-          - white maize
-          - white sorghum
-          name: crop
-          polarity: 1
-        - OntologyNode:
-          examples:
           - crop yield
           - harvest
           - harvests
@@ -1388,26 +1368,55 @@
           - cultivate
           - crop production conditions
           - domestic crop production
-          - cereal production
           - crop cultivation
-          - staple production
+          - bamboo production
+          - banana production
+          - barley production
+          - bean production
+          - beans production
+          - cassava production
+          - cereal production
+          - cereals production
+          - cocoa production
+          - coconut production
+          - coffee production
+          - corn production
           - crop productivity
           - crop performance
-          - rice production
+          - cultivar production
+          - flux production
+          - flour production
           - grain production
-          - soybean production
-          - sorghum production
-          - maize production
           - groundnut production
-          - bean production
-          - vegetable production
-          - sesame production
-          - seed production
-          - cropping
-          - coffee production
+          - groundnuts production
+          - legume production
+          - maize production
+          - mango production
           - meher production
-          - pepper production
           - millet production
+          - oats production
+          - oilseed production
+          - onion production
+          - pepper production
+          - potato production
+          - rice production
+          - rubber production
+          - seed production
+          - sesame production
+          - sorghum production
+          - soybean production
+          - staple production
+          - sugar production
+          - tea production
+          - tobacco production
+          - tomato production
+          - tuber production
+          - vegetable production
+          - wheat production
+          - white maize production
+          - cropping
+          - agricultural production
+          - cultivate
           name: crop_production
           polarity: 1
         - OntologyNode:
@@ -1425,26 +1434,85 @@
           - meat production
           name: livestock_production
           polarity: 1
+        - plant_disease:
+          - OntologyNode:
+            examples:
+            - pest infestation
+            - armyworm
+            - fall armyworm
+            - insect
+            - swarm
+            - locust
+            - fungus
+            - plant nematodes
+            - weeds
+            - volunteer plants
+            - pests
+            - mice
+            - midges
+            - slugs
+            - pest
+            name: pest_infestation
+            polarity: 1
         - OntologyNode:
           examples:
-          - infestation
-          - armyworm
-          - fall armyworm
-          - insect
-          - swarm
-          - locust
-          - fungus
-          - plant nematodes
-          - weeds
-          - volunteer plants
-          - pests
-          - mice
-          - midges
-          - slugs
-          - pest
-          name: pest
+          - livestock disease
+          - livestock diseases
+          name: livestock_disease
           polarity: 1
       - health_and_life:
+        - living_condition:
+          - OntologyNode:
+            examples:
+            - food safety
+            name: food_safety
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - water safety
+            - unsafe water
+            - lack of clean water
+            - unpotable
+            name: water_safety
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - unsanitary condition
+            - unclean workspaces
+            - unclean unsafe living conditions
+            name: sanitation_and_hygiene
+            polarity: 1
+        - nutrition:
+          - OntologyNode:
+            examples:
+            name: food_intake
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - food diversity
+            - food variety
+            - nutritional variety
+            - nutrition
+            - nutritional security
+            name: food_diversity
+            opposite: wm/concept/causal_factor/health_and_life/nutrition/malnutrition
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - food gap
+            - malnutrition
+            - undernutrition
+            - undernourishment
+            - nutritional deficiency
+            - vitamin deficiencies
+            - food riots
+            name: malnutrition
+            opposite: wm/concept/causal_factor/health_and_life/nutrition/food_diversity
+            polarity: -1
+          - OntologyNode:
+            examples:
+            name: breast_feeding
+            polarity: 1
         - OntologyNode:
           examples:
           - biometrics
@@ -1487,18 +1555,6 @@
             - alcohol abuse
             - drug rehabilitation
             name: alcohol_drug_and_substance_abuse
-            polarity: 1
-          - plant_disease:
-            - OntologyNode:
-              examples:
-              - pest infestation
-              name: pest_infestation
-              polarity: 1
-          - OntologyNode:
-            examples:
-            - animal disease
-            - livestock diseases
-            name: animal_disease
             polarity: 1
         - treatment:
           - OntologyNode:
@@ -1550,6 +1606,11 @@
           name: basic_needs
           polarity: 1
       - access:
+        - OntologyNode:
+          examples:
+          - market access
+          name: market_access
+          polarity: 1
         - infrastructure_access:
           - OntologyNode:
             examples:
@@ -1564,18 +1625,6 @@
             polarity: 1
           - OntologyNode:
             examples:
-            - wells
-            - access to wells
-            - capacity of pumps
-            - desalination
-            - water recycling
-            - water access availability
-            - water resource
-            - water pipes
-            name: water
-            polarity: 1
-          - OntologyNode:
-            examples:
             - waste
             - sewage treatment
             - garbage removal
@@ -1583,10 +1632,13 @@
             polarity: 1
           - OntologyNode:
             examples:
-            - road
-            - highways
-            - road network
-            name: road
+            - highway access
+            - road network access
+            - road access
+            - accessibility by road
+            - able to be reached by road
+            - road conditions
+            name: road_access
             polarity: 1
           - OntologyNode:
             examples:
@@ -1634,58 +1686,63 @@
               - access to hospitals
               name: medical_facility
               polarity: 1
-        - OntologyNode:
-          examples:
-          - lack of food
-          - food shortage
-          - unavailability of food
-          - unable to eat
-          - unable to access food supplies
-          - food deficits
-          - cereal shortage
-          - food scarcity
-          - inadequate food consumption
-          name: food_shortage
-          opposite: wm/concept/causal_factor/economic_and_commerce/economic_activity/market/supply/food_supply
-          polarity: -1
-        - OntologyNode:
-          examples:
-          - water shortage
-          - lack of access to water
-          - drought
-          - water deficits
-          - moisture deficits
-          - unpotable
-          - lack of clean water
-          - unsafe water
-          - water scarcity
-          name: water_shortage
-          opposite: wm/concept/causal_factor/access/water_supply
-          polarity: -1
+        - water_access:
+          - OntologyNode:
+            examples:
+            - water insecurity
+            - water shortage
+            - water crisis
+            - water scarcity
+            - lack of access to water
+            - water deficits
+            - moisture deficits
+            name: water_insecurity
+            opposite: wm/concept/causal_factor/access/water_access/water_security
+            polarity: -1
+          - OntologyNode:
+            examples:
+            - water management
+            - administration of water resources
+            - water rationing
+            name: water_management
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - water security
+            - availability of water
+            name: water_security
+            opposite: wm/concept/causal_factor/access/water_access/water_insecurity
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - water pumps
+            - water pipes
+            - cistern
+            - potable water
+            - access to water
+            - drinking water
+            - groundwater
+            - snow melt
+            - water production
+            - water trucking
+            - salinization
+            - wells
+            - access to wells
+            - capacity of pumps
+            - desalination
+            - water recycling
+            - water access availability
+            - water resource
+            - water pipes
+            name: water_commodity
+          polarity: 1
         - OntologyNode:
           examples:
           - water supply
           - access to water
           name: water_supply
-          opposite: wm/concept/causal_factor/access/water_shortage
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - road access
-          - accessibility by road
-          - able to be reached by road
-          - road conditions
-          name: road_access
           polarity: 1
       - condition:
-        - living_condition:
-          - OntologyNode:
-            examples:
-            - unsanitary condition
-            - unclean workspaces
-            - unclean unsafe living conditions
-            name: unsanitary_condition
-            polarity: 1
         - OntologyNode:
           examples:
           - tension
@@ -1726,49 +1783,70 @@
           - acute malnutrition
           name: famine
           polarity: 1
-        - OntologyNode:
-          examples:
-          - poverty
-          - poor
-          name: poverty
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - food security
-          - food access
-          - food availability
-          - nutrition
-          - nutritional security
-          - good domestic food supply
-          - availability of foods
-          - consumption of enough food
-          name: food_security
-          opposite: wm/concept/causal_factor/condition/food_insecurity
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - food insecurity
-          - food gap
-          - malnutrition
-          - undernutrition
-          - undernourishment
-          - nutritional deficiency
-          - vitamin deficiencies
-          - wasting
-          - food riots
-          - food scarcity
-          - uncertain food sources
-          - inadequate food consumption
-          name: food_insecurity
-          opposite: wm/concept/causal_factor/condition/food_security
-          polarity: -1
-        - OntologyNode:
-          examples:
-          - food diversity
-          - food variety
-          - nutritional variety
-          name: food_diversity
-          polarity: 1
+        - food_security:
+          - OntologyNode:
+            examples:
+            - food availability
+            - food security
+            - good demestic food supply
+            - availability of foods
+            name: food_availability
+            opposite: wm/concept/causal_factor/condition/food_insecurity/food_unavailability
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - food utilization
+            - consumption of enough food
+            name: food_utilization
+            opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonutilization
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - food access
+            name: food_access
+            opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonaccess
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - food stability
+            name: food_stability
+            opposite: wm/concept/causal_factor/condition/food_insecurity/food_instability
+            polarity: 1
+        - food_insecurity:
+          - OntologyNode:
+            examples:
+            - food insecurity
+            - food scarcity
+            - uncertain food sources
+            - lack of food
+            - food shortage
+            - unavailability of food
+            - food deficits
+            - cereal shortage
+            name: food_unavailability
+            opposite: wm/concept/causal_factor/condition/food_security/food_availability
+            polarity: -1
+          - OntologyNode:
+            examples:
+            - food wasting
+            - food wastage
+            - inadequate food consumption
+            name: food_nonutilization
+            opposite: wm/concept/causal_factor/condition/food_security/food_utilization
+            polarity: -1
+          - OntologyNode:
+            examples:
+            - food nonaccess
+            - unable to access food supplies
+            name: food_nonaccess
+            opposite: wm/concept/causal_factor/condition/food_security/food_access
+            polarity: -1
+          - OntologyNode:
+            examples:
+            - food instability
+            name: food_instability
+            opposite: wm/concept/causal_factor/condition/food_security/food_stability
+            polarity: -1
     - entity:
       - OntologyNode:
         examples:
