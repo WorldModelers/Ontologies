@@ -23,7 +23,7 @@
             - obstetric_newborn_care
             - psychological_support
             - epidemiological_surveillance_system
-          - nutrition:
+          - nutrition_intervention:
             - therapeutic_feeding_or_treating
             - malnutrition_screening
           - food_security_intervention:
@@ -70,7 +70,6 @@
           - land
           - water_bodies
           - land_availability
-          - water_commodity
           - fossil_fuels
           - soil
           - pasture
@@ -78,10 +77,6 @@
           - air_pollution
           - land_pollution
           - climate_change
-      - food_water_and_nutrition:
-        - water_insecurity
-        - water_management
-        - water_security
       - crisis_and_disaster:
         - crisis
         - economic:
@@ -100,8 +95,12 @@
             - cold_temperature
           - fire # what is on fire?
       - economic_and_commerce:
+        - poverty
         - economic_activity:
-          - livelihood
+          - livelihood:
+            - foraging
+            - hunting
+            - farming
           - currency
           - cross_border_trade:
             - import:
@@ -113,10 +112,13 @@
             - fuel
             - price_or_cost:
               - food_price
+              - crop_price
               - oil_price
               - cost_of_living
               - cost_of_transportation
-            - revenue
+            - revenue:
+              - household_income
+              - farmer_income
             - budget
             - assets
             - supply:
@@ -125,11 +127,11 @@
               - food_demand
             - transaction:
               - oil_transaction
+              - food_purchase
             - depreciation
             - inflation
             - currency_devaluation
-          - consumption:
-            - food_consumption # food
+            - food_stocks
           - competition # between? about?
           - development # being developed
       - social_and_political:
@@ -174,27 +176,33 @@
           - livestock_raid
       - movement:
         - transport
-        - human_displacement
         - evacuate_humanitarian_workers
+        - animal migration
       - agriculture:
-        - agricultural_production
         - planting
         - crop_storage
         - fertilization
         - irrigation
         - pesticide
-        - crop
         - crop_production
         - livestock_production
-        - pest
+        - plant_disease:
+          - pest_infestation
+        - livestock_disease
       - health_and_life:
+        - living_condition:
+          - food_safety
+          - water_safety
+          - sanitation_and_hygiene
+        - nutrition:
+          - food_intake
+          - food_diversity
+          - malnutrition
+          - breast_feeding
         - biometrics
         - disease:
           - human_disease
           - alcohol_drug_and_substance_abuse
-          - plant_disease:
-            - pest_infestation
-          - animal_disease
         - treatment:
           - health_treatment
         - death
@@ -202,11 +210,11 @@
         - birth
         - basic_needs
       - access:
+        - market_access
         - infrastructure_access:
           - electrical
-          - water
           - waste
-          - road
+          - road_access
           - bridge
           - construction_materials
           - transportation:
@@ -215,20 +223,26 @@
           - medical:
             - ambulances
             - medical_facility
-        - food_shortage
-        - water_shortage
+        - water_access:
+          - water_insecurity
+          - water_management
+          - water_security
+          - water_commodity
         - water_supply
-        - road_access
       - condition:
-        - living_condition:
-          - unsanitary_condition
         - tension
         - trend
         - famine
-        - poverty
-        - food_security
-        - food_insecurity
-        - food_diversity
+        - food_security:
+          - food_availability
+          - food_utilization
+          - food_access
+          - food_stability
+        - food_insecurity:
+          - food_unavailability
+          - food_nonutilization
+          - food_nonaccess
+          - food_instability
     - entity:
       - geo-location
       - organization

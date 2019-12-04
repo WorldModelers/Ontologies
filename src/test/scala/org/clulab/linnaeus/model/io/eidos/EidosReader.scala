@@ -16,12 +16,14 @@ import scala.collection.mutable
 
 class EidosReader(val network: EidosNetwork) extends GraphReader {
 
+  protected def debugPrintln(text: String): Unit = println(text)
+  
   def read(bufferedInputStream: BufferedInputStream): Unit = {
     val yaml = new Yaml(new Constructor(classOf[JCollection[Any]]))
     val yamlNodes = yaml.load(bufferedInputStream).asInstanceOf[JCollection[Any]].asScala
 
     def yamlNodesToStrings(yamlNodes: mutable.Map[String, JCollection[Any]], name: String): Seq[String] =
-      yamlNodes.get(name).map(_.asInstanceOf[JCollection[String]].asScala.toSeq).getOrElse(Seq.empty)
+        yamlNodes.get(name).map(_.asInstanceOf[JCollection[String]].asScala.toSeq).getOrElse(Seq.empty)
 
     // This code is largely stolen from Eidos
     def parseYamlLeaf(parentNodeOpt: Option[EidosNode], yamlNodes: mutable.Map[String, JCollection[Any]]): Unit = {
@@ -34,6 +36,7 @@ class EidosReader(val network: EidosNetwork) extends GraphReader {
       val patterns = yamlNodesToStrings(yamlNodes, EidosIO.PATTERN)
       val childNode = new EidosNode(network.nodeIndexer.next, name, oppositeOpt, polarityOpt, examples, descriptions, patterns)
 
+      debugPrintln(s"Adding leaf node for $name")
       network.addNode(childNode)
       parentNodeOpt.foreach { parentNode =>
         val edge = new EidosEdge(network.edgeIndexer.next)
@@ -54,6 +57,7 @@ class EidosReader(val network: EidosNetwork) extends GraphReader {
         else {
           val childNode = new EidosNode(network.nodeIndexer.next, key)
 
+          debugPrintln(s"Adding non-leaf node for $key")
           network.addNode(childNode)
           parentNodeOpt.foreach { parentNode =>
             val edge = new EidosEdge(network.edgeIndexer.next)
