@@ -1483,7 +1483,6 @@
             polarity: 1
         - nutrition:
           - OntologyNode:
-            examples:
             name: food_intake
             polarity: 1
           - OntologyNode:
@@ -1509,7 +1508,6 @@
             opposite: wm/concept/causal_factor/health_and_life/nutrition/food_diversity
             polarity: -1
           - OntologyNode:
-            examples:
             name: breast_feeding
             polarity: 1
         - OntologyNode:

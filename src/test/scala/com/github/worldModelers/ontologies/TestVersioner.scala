@@ -13,7 +13,7 @@ class TestVersioner extends FlatSpec with Matchers {
   behavior of "Versions"
 
   def test(file: String, version: Option[TestVersion], expirationDate: ZonedDateTime): Unit = {
-    it should "should document version of " + file in {
+    it should "document version of " + file in {
 
       version.nonEmpty should be (true)
       version.get.commit.nonEmpty should be (true)
