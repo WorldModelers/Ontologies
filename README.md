@@ -46,8 +46,9 @@ Leaf nodes in the ontology with metadata are presently formatted as such:
 
 ```
 where all the keys (`OntologyNode`, `pattern`, `examples`, `descriptions`, `name`, `opposite`, and `polarity`)
-should be reproduced verbatim when they are used.  `name` is the only one required.  Not all nodes
-need to have the same set of keys.
+should be reproduced verbatim when they are used.  If they are not used, e.g., there is no example1, then the
+key should not be listed.  The parser doesn't like superfluous keys.  `name` is the only one required.  Not all
+nodes need to have the same set of keys.
 
 Values are described briefly in the table below.
 
@@ -138,3 +139,6 @@ The unit tests presently check for
 * duplicate leaf nodes
 * spaces in path
 * mismatched opposites
+
+If a test fails, there may be a hint to the reason why in the output which shows nodes as they
+are processed.  The last node printed, or one after, is the likely problem case.
