@@ -858,7 +858,6 @@
                 - domestic food supplies
                 - supplies of food crops
                 name: food_supply
-                opposite: wm/concept/causal_factor/access/food_shortage
                 polarity: 1
             - demand:
               - OntologyNode:
