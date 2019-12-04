@@ -742,7 +742,7 @@
                 polarity: 1
               - OntologyNode:
                 examples:
-i               - bamboo prices
+                - bamboo prices
                 - banana prices
                 - barley prices
                 - bean prices
