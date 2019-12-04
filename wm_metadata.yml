@@ -1493,7 +1493,6 @@
             - nutrition
             - nutritional security
             name: food_diversity
-            opposite: wm/concept/causal_factor/health_and_life/nutrition/malnutrition
             polarity: 1
           - OntologyNode:
             examples:
@@ -1505,7 +1504,6 @@
             - vitamin deficiencies
             - food riots
             name: malnutrition
-            opposite: wm/concept/causal_factor/health_and_life/nutrition/food_diversity
             polarity: -1
           - OntologyNode:
             name: breast_feeding
