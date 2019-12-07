@@ -1,0 +1,579 @@
+- interventions:
+  - Information Services:
+    - OntologyNode:
+      examples:
+      - food security or famine early warning system
+      - inform
+      name: food_security_or_famine_early_warning_system
+      polarity: 1.0
+  - Teaching, Training and Public Awareness:
+    - OntologyNode:
+      examples:
+      - training of farmers on weed control
+      - train
+      name: Training of Farmers on Weed Control
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - training of farmers on crop spacing
+      name: Training of farmers on crop spacing
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - training of farmers on planting times
+      - train
+      name: Training of farmers on planting times
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - training of community sourced emergency or temporary teachers
+      - train
+      name: training_of_community_sourced_emergency_or_temporary_teachers
+      polarity: 1.0
+  - Building Construction:
+    - OntologyNode:
+      examples:
+      - communal washing and bathing facilities
+      - construct
+      name: communal_washing_and_bathing_facilities
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - construction of prefabricated buildings
+      - construct
+      name: construction_of_prefabricated_buildings
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - creation of temporary water points
+      - construct
+      name: creation_of_temporary_water_points
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - deployment of field hospitals
+      - construct
+      name: deployment_of_field_hospitals
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - latrine construction
+      - construct
+      name: latrine_construction
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - rehabilitation of irrigation schemes
+      - repair
+      name: rehabilitation_of_irrigation_schemes
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - rehabilitation of schools
+      - repair
+      name: rehabilitation_of_schools
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - temporary communal settlement
+      - construct
+      name: temporary_communal_settlement
+      polarity: 1.0
+  - construction_of_infrastructure:
+    - OntologyNode:
+      examples:
+      - borehole repair
+      - repair
+      name: borehole_repair
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - bridge repair
+      - repair
+      name: bridge_repair
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - building long term roads
+      - construct
+      name: building_long_term_roads
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - building railway lines
+      - construct
+      name: building_railway_lines
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - building temporary roads
+      - construct
+      name: building_temporary_roads
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - road rehabilitation
+      - repair
+      name: road_rehabilitation
+      polarity: 1.0
+  - institutional_support:
+    - OntologyNode:
+      examples:
+      - capacity building of medical staff
+      - train
+      name: capacity_building_of_medical_staff
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - capacity building of national authorities on human rights
+      - train
+      name: capacity_building_of_national_authorities_on_human_rights
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - prison system reform
+      - reform
+      name: prison_system_reform
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - providing educational materials
+      - provide
+      name: providing_educational_materials
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - support to health facilities
+      - provide
+      name: support_to_health_facilities
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - support to veterinary services
+      - provide
+      name: support_to_veterinary_services
+      polarity: 1.0
+  - peacekeeping_and_security:
+    - OntologyNode:
+      examples:
+      - border patrols
+      - provide
+      name: border_patrols
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - community level conflict resolution
+      - provide
+      name: community_level_conflict_resolution
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - conflict mediation and political dialogue
+      - provide
+      name: conflict_mediation_and_political_dialogue
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - temporary policing services
+      - provide
+      name: temporary_policing_services
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - disarmament demobilization and reintegration
+      - provide
+      name: disarmament_demobilization_and_reintegration
+      polarity: 1.0
+  - provision_of_goods_and_services:
+    - OntologyNode:
+      examples:
+      - fertilizer subsidy
+      - fertiliser provision
+      - distribution of fertilizer
+      - provide
+      name: Fertilizer Subsidy
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - provision of farm tools
+      - provide
+      name: provision_of_farm_tools
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - anti retroviral treatment
+      - provide
+      name: anti_retroviral_treatment
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - assessment and triage of health facilities
+      - provide
+      name: assessment_and_triage_of_health_facilities
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - basic minimum household hygiene item package
+      - provide
+      name: basic_minimum_household_hygiene_item_package
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - cash for assets
+      - provide
+      name: cash_for_assets
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - cash for work
+      - provide
+      name: cash_for_work
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - cash transfer
+      - cash handout
+      - social protection
+      - provide
+      name: cash_transfer
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - child friendly learning spaces
+      - provide
+      name: child_friendly_learning_spaces
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - clinical management of sexual violence
+      - provide
+      name: clinical_management_of_sexual_violence
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - communicable disease outbreak control
+      - provide
+      name: communicable_disease_outbreak_control
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - debris removal
+      - provide
+      name: debris_removal
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - epidemiological surveillance system
+      - inform
+      name: epidemiological_surveillance_system
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - family reunification of separated children
+      - provide
+      name: family_reunification_of_separated_children
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - first aid and and basic medical care
+      - provide
+      name: first_aid_and_and_basic_medical_care
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - food for assets
+      - provide
+      name: food_for_assets
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - food for training
+      - provide
+      name: food_for_training
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - food for work
+      - provide
+      name: food_for_work
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - food fortification
+      - provide
+      name: food_fortification
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - food vouchers
+      - provide
+      name: food_vouchers
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - free food distribution
+      - provide
+      name: free_food_distribution
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - household relief non food item package
+      - provide
+      name: household_relief_non_food_item_package
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - household solid waste management
+      - provide
+      name: household_solid_waste_management
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - hygiene promotion campaigns
+      - provide
+      name: hygiene_promotion_campaigns
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - infant and young child feeding support
+      - provide
+      name: infant_and_young_child_feeding_support
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - legal aid for displaced persons
+      - provide
+      name: legal_aid_for_displaced_persons
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - livestock destocking
+      - provide
+      name: livestock_destocking
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - livestock restocking
+      - provide
+      name: livestock_restocking
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - livestock shelter and settlement
+      - provide
+      name: livestock_shelter_and_settlement
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - locust control operation
+      - provide
+      name: locust_control_operation
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - malnutrition screening
+      - provide
+      name: malnutrition_screening
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - mass vaccination campaign
+      - provide
+      name: mass_vaccination_campaign
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - micro nutrient supplementation
+      - provide
+      name: micro_nutrient_supplementation
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - mine clearance
+      - provide
+      name: mine_clearance
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - newborn and childhood essential health care services
+      - provide
+      name: newborn_and_childhood_essential_health_care_services
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - obstetric and newborn care
+      - provide
+      name: obstetric_and_newborn_care
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - once off cash transfer to facilitate return
+      - provide
+      name: once_off_cash_transfer_to_facilitate_return
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - operation of mobile clinics
+      - provide
+      name: operation_of_mobile_clinics
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - point of use water treatment at household level
+      - provide
+      name: point_of_use_water_treatment_at_household_level
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - provision of credit and training for income generation
+      - provide
+      name: provision_of_credit_and_training_for_income_generation
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - provision of family tents and shelter kits
+      - provide
+      name: provision_of_family_tents_and_shelter_kits
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - provision of fishing nets and boats
+      - provide
+      name: provision_of_fishing_nets_and_boats
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - provision of insecticide treated bednets
+      - provide
+      name: provision_of_insecticide_treated_bednets
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - provision of livestock feed
+      - provide
+      name: provision_of_livestock_feed
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - provision of non formal education
+      - provide
+      name: provision_of_non_formal_education
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - provision of veterinary services
+      - provide
+      name: provision_of_veterinary_services
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - provision of water for livestock
+      - provide
+      name: provision_of_water_for_livestock
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - psychological support
+      - provide
+      name: psychological_support
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - public health information campaign
+      - provide
+      name: public_health_information_campaign
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - public information campaigns on explosive hazards
+      - provide
+      name: public_information_campaigns_on_explosive_hazards
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - rehabilitation of child soldiers
+      - provide
+      name: rehabilitation_of_child_soldiers
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - reporting and verification of child rights violations
+      - provide
+      name: reporting_and_verification_of_child_rights_violations
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - school feeding
+      - provide
+      name: school_feeding
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - supplementary feeding
+      - provide
+      name: supplementary_feeding
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - therapeutic feeding
+      - treatment of acute malnutrition
+      - provide
+      name: therapeutic_feeding
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - trauma and surgical care
+      - provide
+      name: trauma_and_surgical_care
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - vector control
+      - provide
+      name: vector_control
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - water treatment of piped water supply
+      - provide
+      name: water_treatment_of_piped_water_supply
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - water trucking
+      - provide
+      name: water_trucking
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - desludging of toilets septic tanks and excreta containers
+      - provide
+      name: desludging_of_toilets_septic_tanks_and_excreta_containers
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - housing provision leasing or rental services
+      - provide
+      name: housing_provision_leasing_or_rental_services
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - human rights monitoring investigation and reporting
+      - provide
+      name: human_rights_monitoring_investigation_and_reporting
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - provision of seeds
+      - distribution of improved seed
+      - supply of seed
+      - improved seed distribution
+      - provide
+      name: provision_of_seeds
+      polarity: 1.0
+    - OntologyNode:
+      examples:
+      - trauma injury and post operative rehabilitation
+      - provide
+      name: trauma_injury_and_post_operative_rehabilitation
+      polarity: 1.0
