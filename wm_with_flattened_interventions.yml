@@ -7,14 +7,14 @@
   - concept:
     - causal_factor:
       - interventions:
-        - Information Services:
+        - information_services:
           - food_security_or_famine_early_warning_system
-        - Teaching, Training and Public Awareness:
+        - teaching,_training_and_public_awareness:
           - training_of_farmers_on_weed_control
           - training_of_farmers_on_crop_spacing
           - training_of_farmers_on_planting_times
           - training_of_community_sourced_emergency_or_temporary_teachers
-        - Building Construction:
+        - building_construction:
           - communal_washing_and_bathing_facilities
           - construction_of_prefabricated_buildings
           - creation_of_temporary_water_points
@@ -108,7 +108,6 @@
           - human_rights_monitoring_investigation_and_reporting
           - provision_of_seeds
           - trauma_injury_and_post_operative_rehabilitation
-
       - environmental:
         - meteorologic:
           - weather
