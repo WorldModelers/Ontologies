@@ -10,9 +10,9 @@
         - Information Services:
           - food_security_or_famine_early_warning_system
         - Teaching, Training and Public Awareness:
-          - Training of Farmers on Weed Control
-          - Training of farmers on crop spacing
-          - Training of farmers on planting times
+          - training_of_farmers_on_weed_control
+          - training_of_farmers_on_crop_spacing
+          - training_of_farmers_on_planting_times
           - training_of_community_sourced_emergency_or_temporary_teachers
         - Building Construction:
           - communal_washing_and_bathing_facilities
@@ -44,7 +44,7 @@
           - temporary_policing_services
           - disarmament_demobilization_and_reintegration
         - provision_of_goods_and_services:
-          - Fertilizer Subsidy
+          - fertilizer_subsidy
           - provision_of_farm_tools
           - anti_retroviral_treatment
           - assessment_and_triage_of_health_facilities
@@ -108,6 +108,7 @@
           - human_rights_monitoring_investigation_and_reporting
           - provision_of_seeds
           - trauma_injury_and_post_operative_rehabilitation
+
       - environmental:
         - meteorologic:
           - weather
