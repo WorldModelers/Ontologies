@@ -93,9 +93,9 @@ def ont_node(name, examples, keywords,appliesTo, add_name = True):
     if add_name:
         examples.append(name)
     if len(appliesTo)>0:
-        d = {'OntologyNode': None,"name": name,'examples': examples, 'appliedTo':appliesTo,'polarity': 1.0}
+        d = {'OntologyNode': None,"name": name,'examples': examples, 'appliedTo':appliesTo,'polarity': 1}
     else:
-        d = {'OntologyNode': None, "name": name,'examples': examples,  'polarity': 1.0}
+        d = {'OntologyNode': None, "name": name,'examples': examples,  'polarity': 1}
     if keywords is not None:
         d['keywords'] = keywords
     return d

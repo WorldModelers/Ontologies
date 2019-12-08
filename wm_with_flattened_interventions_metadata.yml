@@ -19,18 +19,18 @@
             examples:
             - training of farmers on weed control
             - train
-            name: Training of Farmers on Weed Control
+            name: training_of_farmers_on_weed_control
             polarity: 1
           - OntologyNode:
             examples:
             - training of farmers on crop spacing
-            name: Training of farmers on crop spacing
+            name: training_of_farmers_on_crop_spacing
             polarity: 1
           - OntologyNode:
             examples:
             - training of farmers on planting times
             - train
-            name: Training of farmers on planting times
+            name: training_of_farmers_on_planting_times
             polarity: 1
           - OntologyNode:
             examples:
@@ -199,7 +199,7 @@
             - fertiliser provision
             - distribution of fertilizer
             - provide
-            name: Fertilizer Subsidy
+            name: fertilizer_subsidy
             polarity: 1
           - OntologyNode:
             examples:
@@ -585,6 +585,7 @@
             - provide
             name: trauma_injury_and_post_operative_rehabilitation
             polarity: 1
+
       - environmental:
         - meteorologic:
           - OntologyNode:
