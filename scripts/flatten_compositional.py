@@ -19,9 +19,10 @@ def node_dict_to_node(d):
     examples = inner['examples']
     # print("examples:", examples)
 
-    name = inner['name']
+    name = inner['name'].lower()
+    name = re.sub(" ", "_", name)
     # print("name:", name)
-    polarity = inner['polarity']
+    polarity = int(inner['polarity'])
     # print("polarity:", polarity)
     examples = [re.sub("_", " ", x) for x in examples]
     new_examples = [ex.lower().strip() for ex in examples + aliases]
