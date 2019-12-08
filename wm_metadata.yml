@@ -1730,7 +1730,7 @@
             - water resource
             - water pipes
             name: water_commodity
-          polarity: 1
+            polarity: 1
         - OntologyNode:
           examples:
           - water supply
