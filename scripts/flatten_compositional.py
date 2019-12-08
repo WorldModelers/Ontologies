@@ -48,6 +48,8 @@ def main():
     branches = []
     for inner_d in interventions:
         for inter_type, interventions_of_type in inner_d.items():
+            inter_type = inter_type.lower()
+            inter_type = re.sub(" ", "_", inter_type)
             print()
             print(inter_type, len(interventions_of_type), type(interventions_of_type))
             nodes = []

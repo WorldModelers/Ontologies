@@ -7,14 +7,14 @@
   - concept:
     - causal_factor:
       - interventions:
-        - Information Services:
+        - information_services:
           - OntologyNode:
             examples:
             - food security or famine early warning system
             - inform
             name: food_security_or_famine_early_warning_system
             polarity: 1
-        - Teaching, Training and Public Awareness:
+        - teaching,_training_and_public_awareness:
           - OntologyNode:
             examples:
             - training of farmers on weed control
@@ -38,7 +38,7 @@
             - train
             name: training_of_community_sourced_emergency_or_temporary_teachers
             polarity: 1
-        - Building Construction:
+        - building_construction:
           - OntologyNode:
             examples:
             - communal washing and bathing facilities
@@ -585,7 +585,6 @@
             - provide
             name: trauma_injury_and_post_operative_rehabilitation
             polarity: 1
-
       - environmental:
         - meteorologic:
           - OntologyNode:
