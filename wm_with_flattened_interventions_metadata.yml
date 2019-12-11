@@ -43,6 +43,7 @@
             examples:
             - communal washing and bathing facilities
             - construct
+            - WASH facilities
             name: communal_washing_and_bathing_facilities
             polarity: 1
           - OntologyNode:
@@ -223,6 +224,7 @@
             examples:
             - basic minimum household hygiene item package
             - provide
+            - WASH packages
             name: basic_minimum_household_hygiene_item_package
             polarity: 1
           - OntologyNode:
@@ -761,6 +763,18 @@
             name: climate_change
             polarity: 1
       - crisis_and_disaster:
+        - OntologyNode:
+          examples:
+          - famine
+          - hunger
+          - starvation
+          - inadequate food consumption
+          - food deprivation
+          - severe food insecurity
+          - global acute malnutrition
+          - acute malnutrition
+          name: famine
+          polarity: 1
         - OntologyNode:
           examples:
           - crisis
@@ -1393,6 +1407,20 @@
             polarity: 1
         - conflict:
           - OntologyNode:
+          examples:
+          - political tension
+          - political tensions
+          - adversity
+          - political instability
+          - stress
+          - distress
+          - challenge
+          - hardship
+          - burden
+          - threatening
+          name: tension
+          polarity: 1
+          - OntologyNode:
             examples:
             - conflict
             - war
@@ -1711,6 +1739,8 @@
             polarity: 1
         - nutrition:
           - OntologyNode:
+            examples:
+            - food intake
             name: food_intake
             polarity: 1
           - OntologyNode:
@@ -1734,6 +1764,8 @@
             name: malnutrition
             polarity: -1
           - OntologyNode:
+            examples:
+            - breast feeding
             name: breast_feeding
             polarity: 1
         - OntologyNode:
@@ -1909,167 +1941,121 @@
               - access to hospitals
               name: medical_facility
               polarity: 1
-        - water_access:
-          - OntologyNode:
-            examples:
-            - water insecurity
-            - water shortage
-            - water crisis
-            - water scarcity
-            - lack of access to water
-            - water deficits
-            - moisture deficits
-            name: water_insecurity
-            opposite: wm/concept/causal_factor/access/water_access/water_security
-            polarity: -1
-          - OntologyNode:
-            examples:
-            - water management
-            - administration of water resources
-            - water rationing
-            name: water_management
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - water security
-            - availability of water
-            name: water_security
-            opposite: wm/concept/causal_factor/access/water_access/water_insecurity
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - water pumps
-            - water pipes
-            - cistern
-            - potable water
-            - access to water
-            - drinking water
-            - groundwater
-            - snow melt
-            - water production
-            - water trucking
-            - salinization
-            - wells
-            - access to wells
-            - capacity of pumps
-            - desalination
-            - water recycling
-            - water access availability
-            - water resource
-            - water pipes
-            name: water_commodity
-            polarity: 1
         - OntologyNode:
           examples:
-          - water supply
+          - water insecurity
+          - water shortage
+          - water crisis
+          - water scarcity
+          - lack of access to water
+          - water deficits
+          - moisture deficits
+          - water management
+          - administration of water resources
+          - water rationing
+          - water security
+          - availability of water
+          - water pumps
+          - water pipes
+          - cistern
+          - potable water
           - access to water
-          name: water_supply
+          - drinking water
+          - groundwater
+          - snow melt
+          - water production
+          - water trucking
+          - salinization
+          - wells
+          - access to wells
+          - capacity of pumps
+          - desalination
+          - water recycling
+          - water access availability
+          - water resource
+          - water pipes
+          - water access
+          - water supply
+          name: water_access
           polarity: 1
-      - condition:
+      - OntologyNode:
+        examples:
+        - trend
+        - trends
+        - increased
+        - decreased
+        - increase
+        - decrease
+        - change
+        - tendency
+        - declined
+        - improved
+        name: trend
+        polarity: 1
+      - food_security:
         - OntologyNode:
           examples:
-          - tension
-          - tensions
-          - adversity
-          - political instability
-          - stress
-          - distress
-          - challenge
-          - hardship
-          - burden
-          - threatening
-          name: tension
+          - food availability
+          - food security
+          - good demestic food supply
+          - availability of foods
+          name: food_availability
+          opposite: wm/concept/causal_factor/condition/food_insecurity/food_unavailability
           polarity: 1
         - OntologyNode:
           examples:
-          - trend
-          - trends
-          - increased
-          - decreased
-          - increase
-          - decrease
-          - change
-          - tendency
-          - declined
-          - improved
-          name: trend
+          - food utilization
+          - consumption of enough food
+          name: food_utilization
+          opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonutilization
           polarity: 1
         - OntologyNode:
           examples:
-          - famine
-          - hunger
-          - starvation
+          - food access
+          name: food_access
+          opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonaccess
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - food stability
+          name: food_stability
+          opposite: wm/concept/causal_factor/condition/food_insecurity/food_instability
+          polarity: 1
+      - food_insecurity:
+        - OntologyNode:
+          examples:
+          - food insecurity
+          - food scarcity
+          - uncertain food sources
+          - lack of food
+          - food shortage
+          - unavailability of food
+          - food deficits
+          - cereal shortage
+          name: food_unavailability
+          opposite: wm/concept/causal_factor/condition/food_security/food_availability
+          polarity: -1
+        - OntologyNode:
+          examples:
+          - food wasting
+          - food wastage
           - inadequate food consumption
-          - food deprivation
-          - severe food insecurity
-          - global acute malnutrition
-          - acute malnutrition
-          name: famine
-          polarity: 1
-        - food_security:
-          - OntologyNode:
-            examples:
-            - food availability
-            - food security
-            - good demestic food supply
-            - availability of foods
-            name: food_availability
-            opposite: wm/concept/causal_factor/condition/food_insecurity/food_unavailability
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - food utilization
-            - consumption of enough food
-            name: food_utilization
-            opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonutilization
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - food access
-            name: food_access
-            opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonaccess
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - food stability
-            name: food_stability
-            opposite: wm/concept/causal_factor/condition/food_insecurity/food_instability
-            polarity: 1
-        - food_insecurity:
-          - OntologyNode:
-            examples:
-            - food insecurity
-            - food scarcity
-            - uncertain food sources
-            - lack of food
-            - food shortage
-            - unavailability of food
-            - food deficits
-            - cereal shortage
-            name: food_unavailability
-            opposite: wm/concept/causal_factor/condition/food_security/food_availability
-            polarity: -1
-          - OntologyNode:
-            examples:
-            - food wasting
-            - food wastage
-            - inadequate food consumption
-            name: food_nonutilization
-            opposite: wm/concept/causal_factor/condition/food_security/food_utilization
-            polarity: -1
-          - OntologyNode:
-            examples:
-            - food nonaccess
-            - unable to access food supplies
-            name: food_nonaccess
-            opposite: wm/concept/causal_factor/condition/food_security/food_access
-            polarity: -1
-          - OntologyNode:
-            examples:
-            - food instability
-            name: food_instability
-            opposite: wm/concept/causal_factor/condition/food_security/food_stability
-            polarity: -1
+          name: food_nonutilization
+          opposite: wm/concept/causal_factor/condition/food_security/food_utilization
+          polarity: -1
+        - OntologyNode:
+          examples:
+          - food nonaccess
+          - unable to access food supplies
+          name: food_nonaccess
+          opposite: wm/concept/causal_factor/condition/food_security/food_access
+          polarity: -1
+        - OntologyNode:
+          examples:
+          - food instability
+          name: food_instability
+          opposite: wm/concept/causal_factor/condition/food_security/food_stability
+          polarity: -1
     - entity:
       - OntologyNode:
         examples:
