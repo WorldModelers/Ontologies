@@ -2014,8 +2014,8 @@
           polarity: 1
         - OntologyNode:
           examples:
-            - food production
-            - producing food
+          - food production
+          - producing food
           name: food_production
           polarity: 1
         - OntologyNode:
@@ -2023,6 +2023,12 @@
           - food utilization
           - consumption of enough food
           name: food_utilization
+          opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonutilization
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - household food storage
+          name: household_food_storage
           opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonutilization
           polarity: 1
         - OntologyNode:
