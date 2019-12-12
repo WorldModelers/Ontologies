@@ -318,7 +318,6 @@
         - food_nonaccess
         - food_instability
     - entity:
-      - land
       - geo-location
       - organization
       - government_entity

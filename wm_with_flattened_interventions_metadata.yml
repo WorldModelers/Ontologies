@@ -2046,21 +2046,6 @@
     - entity:
       - OntologyNode:
         examples:
-          - area
-          - land
-          - mountain
-          - mt
-          - wetland
-          - sand
-          - flood plains
-          - greenbelt
-          - agricultural land
-          - arable land
-          - cultivated area
-        name: land
-        polarity: 1
-      - OntologyNode:
-        examples:
         - geographic location
         name: geo-location
         take_args: 0
