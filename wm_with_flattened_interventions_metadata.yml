@@ -1125,6 +1125,10 @@
               - food stocks
               - food reserves
               - grain storage
+              - food reserves
+              - grain reserves
+              - food emergency reserves
+              - price stabilization reserves
               name: food_stocks
               polarity: 1
           - OntologyNode:
@@ -2032,15 +2036,6 @@
           - food stability
           name: food_stability
           opposite: wm/concept/causal_factor/condition/food_insecurity/food_instability
-          polarity: 1
-        - OntologyNode:
-          examples:
-            - food reserves
-            - grain reserves
-            - food stocks
-            - food emergency reserves
-            - price stabilization reserves
-          name: food_reserves
           polarity: 1
       - food_insecurity:
         - OntologyNode:

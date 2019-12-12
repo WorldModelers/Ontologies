@@ -316,7 +316,6 @@
         - food_utilization
         - food_access
         - food_stability
-        - food_reserves
       - food_insecurity:
         - food_unavailability
         - food_nonutilization
