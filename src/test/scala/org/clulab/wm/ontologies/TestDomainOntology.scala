@@ -181,6 +181,7 @@ class TestDomainOntology extends FlatSpec with Matchers {
   }
 
   Seq(
-    "./wm_metadata.yml"
+    "./wm_metadata.yml",
+    "./wm_with_flattened_interventions_metadata.yml"
   ).foreach(path => test(path))
 }
