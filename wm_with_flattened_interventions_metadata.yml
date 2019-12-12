@@ -676,21 +676,6 @@
         - natural_resources:
           - OntologyNode:
             examples:
-            - area
-            - land
-            - mountain
-            - mt
-            - wetland
-            - sand
-            - flood plains
-            - greenbelt
-            - agricultural land
-            - arable land
-            - cultivated area
-            name: land
-            polarity: 1
-          - OntologyNode:
-            examples:
             - water
             - sea
             - river
@@ -884,16 +869,6 @@
             #- wages
             #- high unemployment
             #- underemployment
-            - OntologyNode:
-              examples:
-              - foraging
-              name: foraging
-              polarity: 1
-            - OntologyNode:
-              examples:
-              - hunting
-              name: hunting
-              polarity: 1
             - OntologyNode:
               examples:
               - farming
@@ -1150,6 +1125,10 @@
               - food stocks
               - food reserves
               - grain storage
+              - food reserves
+              - grain reserves
+              - food emergency reserves
+              - price stabilization reserves
               name: food_stocks
               polarity: 1
           - OntologyNode:
@@ -1407,19 +1386,19 @@
             polarity: 1
         - conflict:
           - OntologyNode:
-          examples:
-          - political tension
-          - political tensions
-          - adversity
-          - political instability
-          - stress
-          - distress
-          - challenge
-          - hardship
-          - burden
-          - threatening
-          name: tension
-          polarity: 1
+            examples:
+            - political tension
+            - political tensions
+            - adversity
+            - political instability
+            - stress
+            - distress
+            - challenge
+            - hardship
+            - burden
+            - threatening
+            name: tension
+            polarity: 1
           - OntologyNode:
             examples:
             - conflict
@@ -1715,6 +1694,20 @@
           - livestock diseases
           name: livestock_disease
           polarity: 1
+      - wild_food_sources:
+        - OntologyNode:
+          examples:
+            - gather gathering wild foods
+            - forage
+            - foraging
+          name: foraging_wild_foods
+          polarity: 1
+        - OntologyNode:
+          examples:
+            - hunting
+            - trapping
+          name: hunting
+          polarity: 1
       - health_and_life:
         - living_condition:
           - OntologyNode:
@@ -1754,6 +1747,21 @@
             polarity: 1
           - OntologyNode:
             examples:
+              - food preparation
+              - cooking
+              - meal preparation
+            name: food_preparation
+            polarity: 1
+          - OntologyNode:
+            examples:
+              - food preference
+              - seed preference
+              - dietary preferences
+              - food taste choice
+            name: food_preference
+            polarity: 1
+          - OntologyNode:
+            examples:
             - food gap
             - malnutrition
             - undernutrition
@@ -1766,6 +1774,8 @@
           - OntologyNode:
             examples:
             - breast feeding
+            - breastfeeding
+            - breastfed
             name: breast_feeding
             polarity: 1
         - OntologyNode:
@@ -2001,6 +2011,12 @@
           - availability of foods
           name: food_availability
           opposite: wm/concept/causal_factor/condition/food_insecurity/food_unavailability
+          polarity: 1
+        - OntologyNode:
+          examples:
+            - food production
+            - producing food
+          name: food_production
           polarity: 1
         - OntologyNode:
           examples:

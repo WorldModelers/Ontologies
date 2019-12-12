@@ -121,7 +121,6 @@
         - resource_management
         - forestry
         - natural_resources:
-          - land
           - water_bodies
           - land_availability
           - fossil_fuels
@@ -168,8 +167,6 @@
             #- wages
             #- high unemployment
             #- underemployment
-            - foraging
-            - hunting
             - farming
           - currency
           - cross_border_trade:
@@ -272,6 +269,9 @@
         - plant_disease:
           - pest_infestation
         - livestock_disease
+      - wild_food_sources:
+        - foraging_wild_foods
+        - hunting
       - health_and_life:
         - living_condition:
           - food_safety
@@ -280,6 +280,8 @@
         - nutrition:
           - food_intake
           - food_diversity
+          - food_preparation
+          - food_preference
           - malnutrition
           - breast_feeding
         - biometrics
@@ -310,6 +312,7 @@
       - trend
       - food_security:
         - food_availability
+        - food_production
         - food_utilization
         - food_access
         - food_stability
