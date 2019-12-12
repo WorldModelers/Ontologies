@@ -871,16 +871,6 @@
             #- underemployment
             - OntologyNode:
               examples:
-              - foraging
-              name: foraging
-              polarity: 1
-            - OntologyNode:
-              examples:
-              - hunting
-              name: hunting
-              polarity: 1
-            - OntologyNode:
-              examples:
               - farming
               name: farming
               polarity: 1
@@ -1700,6 +1690,20 @@
           - livestock diseases
           name: livestock_disease
           polarity: 1
+      - wild_food_sources:
+        - OntologyNode:
+          examples:
+            - gather gathering wild foods
+            - forage
+            - foraging
+          name: foraging_wild_foods
+          polarity: 1
+        - OntologyNode:
+          examples:
+            - hunting
+            - trapping
+          name: hunting
+          polarity: 1
       - health_and_life:
         - living_condition:
           - OntologyNode:
@@ -1736,6 +1740,21 @@
             - nutrition
             - nutritional security
             name: food_diversity
+            polarity: 1
+          - OntologyNode:
+            examples:
+              - food preparation
+              - cooking
+              - meal preparation
+            name: food_preparation
+            polarity: 1
+          - OntologyNode:
+            examples:
+              - food preference
+              - seed preference
+              - dietary preferences
+              - food taste choice
+            name: food_preference
             polarity: 1
           - OntologyNode:
             examples:
@@ -1991,6 +2010,12 @@
           polarity: 1
         - OntologyNode:
           examples:
+            - food production
+            - producing food
+          name: food_production
+          polarity: 1
+        - OntologyNode:
+          examples:
           - food utilization
           - consumption of enough food
           name: food_utilization
@@ -2007,6 +2032,15 @@
           - food stability
           name: food_stability
           opposite: wm/concept/causal_factor/condition/food_insecurity/food_instability
+          polarity: 1
+        - OntologyNode:
+          examples:
+            - food reserves
+            - grain reserves
+            - food stocks
+            - food emergency reserves
+            - price stabilization reserves
+          name: food_reserves
           polarity: 1
       - food_insecurity:
         - OntologyNode:
