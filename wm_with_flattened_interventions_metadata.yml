@@ -2010,7 +2010,7 @@
           - good demestic food supply
           - availability of foods
           name: food_availability
-          opposite: wm/concept/causal_factor/condition/food_insecurity/food_unavailability
+          opposite: wm/concept/causal_factor/food_insecurity/food_unavailability
           polarity: 1
         - OntologyNode:
           examples:
@@ -2023,7 +2023,7 @@
           - food utilization
           - consumption of enough food
           name: food_utilization
-          opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonutilization
+          opposite: wm/concept/causal_factor/food_insecurity/food_nonutilization
           polarity: 1
         - OntologyNode:
           examples:
@@ -2034,13 +2034,13 @@
           examples:
           - food access
           name: food_access
-          opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonaccess
+          opposite: wm/concept/causal_factor/food_insecurity/food_nonaccess
           polarity: 1
         - OntologyNode:
           examples:
           - food stability
           name: food_stability
-          opposite: wm/concept/causal_factor/condition/food_insecurity/food_instability
+          opposite: wm/concept/causal_factor/food_insecurity/food_instability
           polarity: 1
       - food_insecurity:
         - OntologyNode:
@@ -2054,7 +2054,7 @@
           - food deficits
           - cereal shortage
           name: food_unavailability
-          opposite: wm/concept/causal_factor/condition/food_security/food_availability
+          opposite: wm/concept/causal_factor/food_security/food_availability
           polarity: -1
         - OntologyNode:
           examples:
@@ -2062,20 +2062,20 @@
           - food wastage
           - inadequate food consumption
           name: food_nonutilization
-          opposite: wm/concept/causal_factor/condition/food_security/food_utilization
+          opposite: wm/concept/causal_factor/food_security/food_utilization
           polarity: -1
         - OntologyNode:
           examples:
           - food nonaccess
           - unable to access food supplies
           name: food_nonaccess
-          opposite: wm/concept/causal_factor/condition/food_security/food_access
+          opposite: wm/concept/causal_factor/food_security/food_access
           polarity: -1
         - OntologyNode:
           examples:
           - food instability
           name: food_instability
-          opposite: wm/concept/causal_factor/condition/food_security/food_stability
+          opposite: wm/concept/causal_factor/food_security/food_stability
           polarity: -1
     - entity:
       - OntologyNode:
