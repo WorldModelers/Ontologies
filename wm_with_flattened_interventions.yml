@@ -314,6 +314,7 @@
         - food_availability
         - food_production
         - food_utilization
+        - household_food_storage
         - food_access
         - food_stability
       - food_insecurity:

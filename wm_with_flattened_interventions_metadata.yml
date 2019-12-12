@@ -1697,15 +1697,15 @@
       - wild_food_sources:
         - OntologyNode:
           examples:
-            - gather gathering wild foods
-            - forage
-            - foraging
+          - gather gathering wild foods
+          - forage
+          - foraging
           name: foraging_wild_foods
           polarity: 1
         - OntologyNode:
           examples:
-            - hunting
-            - trapping
+          - hunting
+          - trapping
           name: hunting
           polarity: 1
       - health_and_life:
@@ -1747,17 +1747,17 @@
             polarity: 1
           - OntologyNode:
             examples:
-              - food preparation
-              - cooking
-              - meal preparation
+            - food preparation
+            - cooking
+            - meal preparation
             name: food_preparation
             polarity: 1
           - OntologyNode:
             examples:
-              - food preference
-              - seed preference
-              - dietary preferences
-              - food taste choice
+            - food preference
+            - seed preference
+            - dietary preferences
+            - food taste choice
             name: food_preference
             polarity: 1
           - OntologyNode:
@@ -2014,8 +2014,8 @@
           polarity: 1
         - OntologyNode:
           examples:
-            - food production
-            - producing food
+          - food production
+          - producing food
           name: food_production
           polarity: 1
         - OntologyNode:
@@ -2024,6 +2024,11 @@
           - consumption of enough food
           name: food_utilization
           opposite: wm/concept/causal_factor/condition/food_insecurity/food_nonutilization
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - household food storage
+          name: household_food_storage
           polarity: 1
         - OntologyNode:
           examples:
