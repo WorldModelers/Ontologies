@@ -676,21 +676,6 @@
         - natural_resources:
           - OntologyNode:
             examples:
-            - area
-            - land
-            - mountain
-            - mt
-            - wetland
-            - sand
-            - flood plains
-            - greenbelt
-            - agricultural land
-            - arable land
-            - cultivated area
-            name: land
-            polarity: 1
-          - OntologyNode:
-            examples:
             - water
             - sea
             - river
@@ -1407,19 +1392,19 @@
             polarity: 1
         - conflict:
           - OntologyNode:
-          examples:
-          - political tension
-          - political tensions
-          - adversity
-          - political instability
-          - stress
-          - distress
-          - challenge
-          - hardship
-          - burden
-          - threatening
-          name: tension
-          polarity: 1
+            examples:
+            - political tension
+            - political tensions
+            - adversity
+            - political instability
+            - stress
+            - distress
+            - challenge
+            - hardship
+            - burden
+            - threatening
+            name: tension
+            polarity: 1
           - OntologyNode:
             examples:
             - conflict
@@ -1766,6 +1751,8 @@
           - OntologyNode:
             examples:
             - breast feeding
+            - breastfeeding
+            - breastfed
             name: breast_feeding
             polarity: 1
         - OntologyNode:
@@ -2057,6 +2044,21 @@
           opposite: wm/concept/causal_factor/condition/food_security/food_stability
           polarity: -1
     - entity:
+      - OntologyNode:
+        examples:
+          - area
+          - land
+          - mountain
+          - mt
+          - wetland
+          - sand
+          - flood plains
+          - greenbelt
+          - agricultural land
+          - arable land
+          - cultivated area
+        name: land
+        polarity: 1
       - OntologyNode:
         examples:
         - geographic location

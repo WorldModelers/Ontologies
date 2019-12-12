@@ -121,7 +121,6 @@
         - resource_management
         - forestry
         - natural_resources:
-          - land
           - water_bodies
           - land_availability
           - fossil_fuels
@@ -319,6 +318,7 @@
         - food_nonaccess
         - food_instability
     - entity:
+      - land
       - geo-location
       - organization
       - government_entity
