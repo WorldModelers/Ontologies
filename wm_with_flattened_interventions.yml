@@ -132,6 +132,7 @@
           - land_pollution
           - climate_change
       - crisis_and_disaster:
+        - famine
         - crisis
         - economic:
           - economic_crisis
@@ -248,6 +249,7 @@
           - crime
           - abduction
         - conflict:
+          - tension
           - hostility
           - demonstrate
           - war
@@ -304,26 +306,18 @@
           - medical:
             - ambulances
             - medical_facility
-        - water_access:
-          - water_insecurity
-          - water_management
-          - water_security
-          - water_commodity
-        - water_supply
-      - condition:
-        - tension
-        - trend
-        - famine
-        - food_security:
-          - food_availability
-          - food_utilization
-          - food_access
-          - food_stability
-        - food_insecurity:
-          - food_unavailability
-          - food_nonutilization
-          - food_nonaccess
-          - food_instability
+        - water_access
+      - trend
+      - food_security:
+        - food_availability
+        - food_utilization
+        - food_access
+        - food_stability
+      - food_insecurity:
+        - food_unavailability
+        - food_nonutilization
+        - food_nonaccess
+        - food_instability
     - entity:
       - geo-location
       - organization
