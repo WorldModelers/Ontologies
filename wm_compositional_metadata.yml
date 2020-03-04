@@ -129,7 +129,6 @@
           examples:
           - afforestation
           - agroforestry
-#              - forest management
           - reforestation
           - forestry
           - logging
@@ -740,12 +739,6 @@
               - topsoil
               name: soil
               polarity: 1.0
-              # AZ: didn't want to delete completely because of CauseEx comment
-            #          - OntologyNode:
-            #            examples:
-            #            - water management
-            #            name: water_management # CauseEx
-            #            polarity: 1.0
           - pollution:
             #AZ: what should be in air/land pollution, if kept separate?
             - OntologyNode:
@@ -1529,12 +1522,6 @@
               - drug rehabilitation
               name: alcohol drug and substance abuse
               polarity: 1.0
-#                - plant_disease:
-#                        - OntologyNode:
-#                          examples:
-#                            - pest infestation
-#                          name: pest_infestation
-#                          polarity: 1.0
             - OntologyNode:
               examples:
               - animal disease
@@ -1794,7 +1781,7 @@
               - lean season
               - planting season
               - sowing season
-              name: crop season
+              name: crop_season
               take_args: 0
               polarity: 1.0
             - OntologyNode:
@@ -1805,7 +1792,7 @@
               - spring
               - dry season
               - rainy season
-              - monsoon season
+              - monsoon_season
               name: season
               take_args: 1
               polarity: 1.0

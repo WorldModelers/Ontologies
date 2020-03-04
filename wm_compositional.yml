@@ -127,8 +127,6 @@
             - water_commodity
             - fossil_fuels
             - soil
-              # AZ: didn't want to delete completely because of CauseEx comment
-            #          - water_management # CauseEx
           - pollution:
             #AZ: what should be in air/land pollution, if kept separate?
             - air_pollution
@@ -236,8 +234,6 @@
             - human_disease
               # AZ: process w/ entity?
             - alcohol drug and substance abuse
-#                - plant_disease:
-#                        - pest_infestation
             - animal_disease
           - treatment:
             - health_treatment
@@ -278,5 +274,5 @@
           - food
         - time:
           - temporal:
-            - crop season
+            - crop_season
             - season
