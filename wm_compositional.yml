@@ -163,7 +163,7 @@
             - fire
         - economic_and_commerce:
           - poverty
-          - economic activity:
+          - economic_activity:
             - farming
             - currency
             - cross_border_trade:

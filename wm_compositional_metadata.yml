@@ -926,7 +926,7 @@
             - poor
             name: poverty
             polarity: 1.0
-          - economic activity:
+          - economic_activity:
             - OntologyNode:
               examples:
               - farming
