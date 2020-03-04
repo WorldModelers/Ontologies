@@ -30,6 +30,7 @@ class TestResources extends FlatSpec with Matchers {
 
   Seq(
     "./wm_metadata.yml",
-    "./wm_with_flattened_interventions_metadata.yml"
-  ).foreach(path => test(path))
+    "./wm_with_flattened_interventions_metadata.yml",
+    "./wm_compositional_metadata.yml"
+  ).foreach(test)
 }

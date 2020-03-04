@@ -12,7 +12,8 @@ libraryDependencies ++= Seq(
 
 mappings in (Compile, packageBin) ++= Seq(
   file("wm_metadata.yml") -> "org/clulab/wm/eidos/english/ontologies/wm_metadata.yml",
-  file("wm_with_flattened_interventions_metadata.yml") -> "org/clulab/wm/eidos/english/ontologies/wm_with_flattened_interventions_metadata.yml"
+  file("wm_with_flattened_interventions_metadata.yml") -> "org/clulab/wm/eidos/english/ontologies/wm_with_flattened_interventions_metadata.yml",
+  file("wm_compositional_metadata.yml") -> "org/clulab/wm/eidos/english/ontologies/wm_compositional_metadata.yml"
 )
 
 sourceGenerators in Compile += Def.task {
@@ -24,7 +25,8 @@ sourceGenerators in Compile += Def.task {
   val namespace = "com.github.worldModelers.ontologies"
   val files = Seq(
     "wm_metadata.yml",
-    "wm_with_flattened_interventions_metadata.yml"
+    "wm_with_flattened_interventions_metadata.yml",
+    "wm_compositional_metadata.yml"
   )
 
   // This reads and codes the versions.
