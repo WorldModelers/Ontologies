@@ -262,7 +262,7 @@
           - consumption
           - utilization
           name: utilization
-          opposite: wm/process/environment/economic/nonutilization
+          opposite: wm/process/economic/nonutilization
           polarity: 1
         - OntologyNode:
           examples:
@@ -271,7 +271,7 @@
           - wasting
           - wastage
           name: nonutilization
-          opposite: wm/process/environment/economic/utilization
+          opposite: wm/process/economic/utilization
           polarity: -1
         - OntologyNode:
           examples:
@@ -283,20 +283,20 @@
           examples:
           - access
           name: access
-          opposite: wm/process/environment/access/nonaccess
+          opposite: wm/process/access/nonaccess
           polarity: 1
         - OntologyNode:
           examples:
           - nonaccess
           name: nonaccess
-          opposite: wm/process/environment/access/access
+          opposite: wm/process/access/access
           polarity: -1
         - OntologyNode:
           examples:
           - availability
           - available
           name: availability
-          opposite: wm/process/environment/access/unavailability
+          opposite: wm/process/access/unavailability
           polarity: 1
         - OntologyNode:
           examples:
@@ -306,7 +306,7 @@
           - scarcity
           - deficits
           name: unavailability
-          opposite: wm/process/environment/access/availability
+          opposite: wm/process/access/availability
           polarity: -1
       - migration:
         - OntologyNode:
