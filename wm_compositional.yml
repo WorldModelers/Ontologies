@@ -89,7 +89,7 @@
       - causal_factor:
         - intervention:
           - humanitarian_assistance
-          - provision of goods and services:
+          - provision_of_goods_and_services:
             - education:
               - child_friendly_learning_spaces
             - health:
@@ -112,7 +112,7 @@
             - provide_moving_of_houseHolds
           - infrastructure
           - peacekeeping_and_security
-          - institutional support:
+          - institutional_support:
             - protection:
               - capacity_building_human_right
         - environmental:
