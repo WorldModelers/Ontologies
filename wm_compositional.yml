@@ -88,33 +88,33 @@
     - concept:
       - causal_factor:
         - intervention:
-          - humanitarian assistance
+          - humanitarian_assistance
           - provision of goods and services:
             - education:
-              - child friendly learning spaces
+              - child_friendly_learning_spaces
             - health:
-              - anti-retroviral treatment
-              - sexual violence management
-              - vector control
+              - anti-retroviral_treatment
+              - sexual_violence_management
+              - vector_control
             - nutrition:
-              - therapeutic feeding or treating
-            - provide hygiene tool
-            - provide delivery kit
-            - provide farming tool
-            - provide seed
-            - provide livestock feed
-            - provide veterinary service
-            - provide stationary
-            - provide fishing tool
-            - provide cash
-            - provide food
-            - provide veterinary drugs vaccines
-            - provide moving of houseHolds
+              - therapeutic_feeding_or_treating
+            - provide_hygiene_tool
+            - provide_delivery_kit
+            - provide_farming_tool
+            - provide_seed
+            - provide_livestock_feed
+            - provide_veterinary_service
+            - provide_stationary
+            - provide_fishing_tool
+            - provide_cash
+            - provide_food
+            - provide_veterinary_drugs_vaccines
+            - provide_moving_of_houseHolds
           - infrastructure
-          - peacekeeping and security
+          - peacekeeping_and_security
           - institutional support:
-              - protection:
-                  - capacity building human right
+            - protection:
+              - capacity_building_human_right
         - environmental:
           - climate_change
           - biodiversity
@@ -280,15 +280,3 @@
           - temporal:
             - crop season
             - season
-        # AZ: left everything after this as-is
-        - indicator_and_reported_property:
-          - weather:
-            - rainfall
-          - agriculture:
-            - Crop Production
-          - commerce:
-            - Cross Border Trade
-          - conflict:
-            - population displacement
-          - health:
-            - Global Acute Malnutrition (GAM) rate

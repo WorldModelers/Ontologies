@@ -525,99 +525,99 @@
             - intervention
             - rehabilitation
             - poverty alleviation
-            name: humanitarian assistance
+            name: humanitarian_assistance
             polarity: 1.0
           - provision of goods and services:
             - education:
               - OntologyNode:
                 examples:
                 - child friendly learning spaces
-                name: child friendly learning spaces
+                name: child_friendly_learning_spaces
                 polarity: 1.0
             - health:
               - OntologyNode:
                 examples:
                 - anti-retroviral treatment
-                name: anti-retroviral treatment
+                name: anti-retroviral_treatment
                 polarity: 1.0
               - OntologyNode:
                 examples:
                 - sexual violence management
-                name: sexual violence management
+                name: sexual_violence_management
                 polarity: 1.0
               - OntologyNode:
                 examples:
                 - vector control
-                name: vector control
+                name: vector_control
                 polarity: 1.0
             - nutrition:
               - OntologyNode:
                 examples:
                 - therapeutic feeding
                 - therapeutic treating
-                name: therapeutic feeding or treating
+                name: therapeutic_feeding_or_treating
                 polarity: 1.0
             - OntologyNode:
               examples:
               - provide hygiene tool
-              name: provide hygiene tool
+              name: provide_hygiene_tool
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide delivery kit
-              name: provide delivery kit
+              name: provide_delivery_kit
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide farming tool
-              name: provide farming tool
+              name: provide_farming_tool
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide seed
-              name: provide seed
+              name: provide_seed
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide livestock feed
-              name: provide livestock feed
+              name: provide_livestock_feed
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide veterinary service
-              name: provide veterinary service
+              name: provide_veterinary_service
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide stationary
-              name: provide stationary
+              name: provide_stationary
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide fishing tool
-              name: provide fishing tool
+              name: provide_fishing_tool
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide cash
               - provide money
               - provide loan
-              name: provide cash
+              name: provide_cash
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide food
-              name: provide food
+              name: provide_food
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide veterinary drugs vaccines
-              name: provide veterinary drugs vaccines
+              name: provide_veterinary_drugs_vaccines
               polarity: 1.0
             - OntologyNode:
               examples:
               - provide moving of houseHolds
-              name: provide moving of houseHolds
+              name: provide_moving_of_houseHolds
               polarity: 1.0
           - OntologyNode:
             pattern:
@@ -635,15 +635,15 @@
             - (formal\s+mediation)
             - (ceasefire|cease\s+fire)
             - (disarm|demobiliz|reintegrat)
-            name: peacekeeping and security
+            name: peacekeeping_and_security
             polarity: 1.0
           - institutional support:
-              - protection:
-                  - OntologyNode:
-                    examples:
-                    - capacity building human right
-                    name: capacity building human right
-                    polarity: 1.0
+            - protection:
+              - OntologyNode:
+                examples:
+                - capacity building human right
+                name: capacity_building_human_right
+                polarity: 1.0
         - environmental:
           - OntologyNode:
             examples:
@@ -1808,36 +1808,4 @@
               - monsoon season
               name: season
               take_args: 1
-              polarity: 1.0
-        # AZ: left everything after this as-is
-        - indicator_and_reported_property:
-          - weather:
-            - OntologyNode:
-              examples:
-              - rainfall
-              name: rainfall
-              polarity: 1.0
-          - agriculture:
-            - OntologyNode:
-              examples:
-              - Crop Production
-              name: Crop Production
-              polarity: 1.0
-          - commerce:
-            - OntologyNode:
-              examples:
-              - Cross Border Trade
-              name: Cross Border Trade
-              polarity: 1.0
-          - conflict:
-            - OntologyNode:
-              examples:
-              - population displacement
-              name: population displacement
-              polarity: 1.0
-          - health:
-            - OntologyNode:
-              examples:
-              - Global Acute Malnutrition (GAM) rate
-              name: Global Acute Malnutrition (GAM) rate
               polarity: 1.0
