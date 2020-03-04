@@ -1070,24 +1070,24 @@
             polarity: 1.0
           - population_group:
             - OntologyNode:
-            examples:
-            - population density
-            - local population
-            name: population_density
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - depopulation
-            - de-population
-            name: de-population
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - overcrowding
-            - over-crowding
-            - population density
-            name: overcrowding
-            polarity: 1
+              examples:
+              - population density
+              - local population
+              name: population_density
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - depopulation
+              - de-population
+              name: de-population
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - overcrowding
+              - over-crowding
+              - population density
+              name: overcrowding
+              polarity: 1
           - OntologyNode:
             examples:
             - humanitarian workers

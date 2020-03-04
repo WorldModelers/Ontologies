@@ -187,8 +187,8 @@
           - basic_services
           - population_group:
             - population_density
-          - de-population
-          - overcrowding
+            - de-population
+            - overcrowding
           - humanitarian_workers
           - educational:
             - education
