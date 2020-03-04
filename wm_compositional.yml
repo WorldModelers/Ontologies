@@ -30,46 +30,46 @@
         - erosion
         # new node below
         - forestry
-        - agriculture:
-          - planting
-          - cultivating
-          - harvesting
-          # new node below
-          # not sure if needs more specific to get 'crop failure'
-          # don't want ALL failures to ground here...
-          - failure
-        - conflict:
-          - raiding
-          - attack
-          - strike
-          - abduction
-          - exploitation
-        - economic:
-          - trade
-          - import
-          - export
-          - transaction
-          - inflation
-          - depreciation
-          - utilization
-          - nonutilization
-          - competition
-        - access:
-          - access
-          - nonaccess
-          - availability
-          - unavailability
-        - migration:
-          - migration
-          - seasonal_migration
-          - hosting
-          - emigration
-          - immigration
-          - displacement
-          - return
-        - transportation:
-          - transportation
-          - shipping
+      - agriculture:
+        - planting
+        - cultivating
+        - harvesting
+        # new node below
+        # not sure if needs more specific to get 'crop failure'
+        # don't want ALL failures to ground here...
+        - failure
+      - conflict:
+        - raiding
+        - attack
+        - strike
+        - abduction
+        - exploitation
+      - economic:
+        - trade
+        - import
+        - export
+        - transaction
+        - inflation
+        - depreciation
+        - utilization
+        - nonutilization
+        - competition
+      - access:
+        - access
+        - nonaccess
+        - availability
+        - unavailability
+      - migration:
+        - migration
+        - seasonal_migration
+        - hosting
+        - emigration
+        - immigration
+        - displacement
+        - return
+      - transportation:
+        - transportation
+        - shipping
     - property:
       - quality
       - condition
@@ -94,8 +94,8 @@
               - child friendly learning spaces
             - health:
               - anti-retroviral treatment
-                - sexual violence management
-                - vector control
+              - sexual violence management
+              - vector control
             - nutrition:
               - therapeutic feeding or treating
             - provide hygiene tool

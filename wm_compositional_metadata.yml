@@ -135,253 +135,253 @@
           - logging
           name: forestry
           polarity: 1.0
-        - agriculture:
-          - OntologyNode:
-            examples:
-            - planting
-            - plant
-            - horticulture
-            name: planting
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - cultivating
-            - cultivation
-            - cultivate
-            name: cultivating
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - harvesting
-            - harvest
-            name: harvesting
-            polarity: 1.0
-          # new node below
-          # not sure if needs more specific to get 'crop failure'
-          # don't want ALL failures to ground here...
-          - OntologyNode:
-            examples:
-            - failure
-            name: failure
-            polarity: 1.0
-        - conflict:
-          - OntologyNode:
-            examples:
-            - raiding
-            - steal livestock
-            name: raiding
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - bombard
-            - genocide
-            - clash
-            - attack
-            - assault
-            - combat
-            - fight
-            - battle
-            - attacking
-            - attacked
-            - attacks
-            - invaded
-            - shoots
-            - shooting
-            - crossfire
-            - invasion
-            - massacre
-            name: attack
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - bombard
-            - strike
-            - attack
-            - destroy
-            - bomb
-            - bombing
-            - explosion
-            name: strike
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - abduction
-            - kidnapping
-            - forced recruitment
-            - abducted
-            - kidnapped
-            name: abduction
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - exploitation
-            name: exploitation
-            polarity: 1.0
-        - economic:
-          - OntologyNode:
-            examples:
-            - trade
-            name: trade
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - import
-            name: import
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - export
-            name: export
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - transaction
-            - purchase
-            - purchasing
-            - buying
-            - selling
-            name: transaction
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - inflation
-            - hyperinflation
-            - inflationary pressure
-            name: inflation
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - depreciation
-            - depreciating
-            - devaluation
-            - decreased in value
-            name: depreciation
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - consumption
-            - utilization
-            name: utilization
-            opposite: wm/process/environment/economic/nonutilization
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - nonconsumption
-            - nonutilization
-            - wasting
-            - wastage
-            name: nonutilization
-            opposite: wm/process/environment/economic/utilization
-            polarity: -1
-          - OntologyNode:
-            examples:
-            - competition
-            name: competition
-            polarity: 1.0
-        - access:
-          - OntologyNode:
-            examples:
-            - access
-            name: access
-            opposite: wm/process/environment/access/nonaccess
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - nonaccess
-            name: nonaccess
-            opposite: wm/process/environment/access/access
-            polarity: -1
-          - OntologyNode:
-            examples:
-            - availability
-            - available
-            name: availability
-            opposite: wm/process/environment/access/unavailability
-            polarity: 1
-          - OntologyNode:
-            examples:
-            - shortage
-            - unavailability
-            - unavailable
-            - scarcity
-            - deficits
-            name: unavailability
-            opposite: wm/process/environment/access/availability
-            polarity: -1
-        - migration:
-          - OntologyNode:
-            examples:
-            - migration
-            - displacement
-            - movement
-            - relocate
-            - refugee migration
-            - residence move
-            - movement trends
-            name: migration
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - seasonal_migration
-            - cyclic migration
-            name: seasonal_migration
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - hosting
-            - host
-            name: hosting
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - emigration
-            - leaving
-            - leave
-            - flight
-            - flee
-            - fleeing
-            - fled
-            name: emigration
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - arrival
-            - arrive
-            - arrivals
-            - immigration
-            - immigrate
-            - choose to come
-            - influx
-            name: immigration
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - displacement
-            - displaced
-            - evicted
-            name: displacement
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - return
-            - repatriate
-            name: return
-            polarity: 1.0
-        - transportation:
-          - OntologyNode:
-            examples:
-            - transport
-            - transporting
-            - transportation
-            - delivery
-            name: transportation
-            polarity: 1.0
-          - OntologyNode:
-            examples:
-            - shipping
-            - trucking
-            name: shipping
-            polarity: 1.0
+      - agriculture:
+        - OntologyNode:
+          examples:
+          - planting
+          - plant
+          - horticulture
+          name: planting
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - cultivating
+          - cultivation
+          - cultivate
+          name: cultivating
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - harvesting
+          - harvest
+          name: harvesting
+          polarity: 1.0
+        # new node below
+        # not sure if needs more specific to get 'crop failure'
+        # don't want ALL failures to ground here...
+        - OntologyNode:
+          examples:
+          - failure
+          name: failure
+          polarity: 1.0
+      - conflict:
+        - OntologyNode:
+          examples:
+          - raiding
+          - steal livestock
+          name: raiding
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - bombard
+          - genocide
+          - clash
+          - attack
+          - assault
+          - combat
+          - fight
+          - battle
+          - attacking
+          - attacked
+          - attacks
+          - invaded
+          - shoots
+          - shooting
+          - crossfire
+          - invasion
+          - massacre
+          name: attack
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - bombard
+          - strike
+          - attack
+          - destroy
+          - bomb
+          - bombing
+          - explosion
+          name: strike
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - abduction
+          - kidnapping
+          - forced recruitment
+          - abducted
+          - kidnapped
+          name: abduction
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - exploitation
+          name: exploitation
+          polarity: 1.0
+      - economic:
+        - OntologyNode:
+          examples:
+          - trade
+          name: trade
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - import
+          name: import
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - export
+          name: export
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - transaction
+          - purchase
+          - purchasing
+          - buying
+          - selling
+          name: transaction
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - inflation
+          - hyperinflation
+          - inflationary pressure
+          name: inflation
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - depreciation
+          - depreciating
+          - devaluation
+          - decreased in value
+          name: depreciation
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - consumption
+          - utilization
+          name: utilization
+          opposite: wm/process/environment/economic/nonutilization
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - nonconsumption
+          - nonutilization
+          - wasting
+          - wastage
+          name: nonutilization
+          opposite: wm/process/environment/economic/utilization
+          polarity: -1
+        - OntologyNode:
+          examples:
+          - competition
+          name: competition
+          polarity: 1.0
+      - access:
+        - OntologyNode:
+          examples:
+          - access
+          name: access
+          opposite: wm/process/environment/access/nonaccess
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - nonaccess
+          name: nonaccess
+          opposite: wm/process/environment/access/access
+          polarity: -1
+        - OntologyNode:
+          examples:
+          - availability
+          - available
+          name: availability
+          opposite: wm/process/environment/access/unavailability
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - shortage
+          - unavailability
+          - unavailable
+          - scarcity
+          - deficits
+          name: unavailability
+          opposite: wm/process/environment/access/availability
+          polarity: -1
+      - migration:
+        - OntologyNode:
+          examples:
+          - migration
+          - displacement
+          - movement
+          - relocate
+          - refugee migration
+          - residence move
+          - movement trends
+          name: migration
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - seasonal_migration
+          - cyclic migration
+          name: seasonal_migration
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - hosting
+          - host
+          name: hosting
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - emigration
+          - leaving
+          - leave
+          - flight
+          - flee
+          - fleeing
+          - fled
+          name: emigration
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - arrival
+          - arrive
+          - arrivals
+          - immigration
+          - immigrate
+          - choose to come
+          - influx
+          name: immigration
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - displacement
+          - displaced
+          - evicted
+          name: displacement
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - return
+          - repatriate
+          name: return
+          polarity: 1.0
+      - transportation:
+        - OntologyNode:
+          examples:
+          - transport
+          - transporting
+          - transportation
+          - delivery
+          name: transportation
+          polarity: 1.0
+        - OntologyNode:
+          examples:
+          - shipping
+          - trucking
+          name: shipping
+          polarity: 1.0
     - property:
       - OntologyNode:
         pattern:
@@ -540,16 +540,16 @@
                 - anti-retroviral treatment
                 name: anti-retroviral treatment
                 polarity: 1.0
-                - OntologyNode:
-                  examples:
-                  - sexual violence management
-                  name: sexual violence management
-                  polarity: 1.0
-                - OntologyNode:
-                  examples:
-                  - vector control
-                  name: vector control
-                  polarity: 1.0
+              - OntologyNode:
+                examples:
+                - sexual violence management
+                name: sexual violence management
+                polarity: 1.0
+              - OntologyNode:
+                examples:
+                - vector control
+                name: vector control
+                polarity: 1.0
             - nutrition:
               - OntologyNode:
                 examples:
@@ -1411,8 +1411,8 @@
             - wheat
             - white maize
             - white sorghum
-              name: crop
-              polarity: 1.0
+            name: crop
+            polarity: 1.0
           - OntologyNode:
             examples:
             - livestock
