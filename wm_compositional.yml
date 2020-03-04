@@ -26,7 +26,7 @@
         - pollution
         - contamination
         - emission
-        - climate_change
+        - climate_change_process
         - erosion
         # new node below
         - forestry
@@ -259,7 +259,7 @@
           - bridge
           - construction_materials
           - travel
-          - shipping
+          - shipping_infrastructure
           - medical:
             - ambulances
             - medical_facility

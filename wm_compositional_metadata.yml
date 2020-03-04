@@ -116,7 +116,7 @@
           - deforestation
           - desertification
           - climate change
-          name: climate_change
+          name: climate_change_process
           polarity: 1.0
         - OntologyNode:
           examples:
@@ -1690,7 +1690,7 @@
             - freight
             - cargo
             - goods
-            name: shipping
+            name: shipping_infrastructure
             polarity: 1
           - medical:
             - OntologyNode:
