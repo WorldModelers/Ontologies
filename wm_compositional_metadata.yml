@@ -276,7 +276,7 @@
         - OntologyNode:
           examples:
           - competition
-          name: competition
+          name: competition_process
           polarity: 1.0
       - access:
         - OntologyNode:

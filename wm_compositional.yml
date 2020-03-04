@@ -53,7 +53,7 @@
         - depreciation
         - utilization
         - nonutilization
-        - competition
+        - competition_process
       - access:
         - access
         - nonaccess
