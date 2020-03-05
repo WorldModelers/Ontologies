@@ -1520,7 +1520,7 @@
               - alcohol drug and substance abuse
               - alcohol abuse
               - drug rehabilitation
-              name: alcohol drug and substance abuse
+              name: alcohol_drug_and_substance_abuse
               polarity: 1.0
             - OntologyNode:
               examples:

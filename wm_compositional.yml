@@ -233,7 +233,7 @@
           - disease:
             - human_disease
               # AZ: process w/ entity?
-            - alcohol drug and substance abuse
+            - alcohol_drug_and_substance_abuse
             - animal_disease
           - treatment:
             - health_treatment
