@@ -26,50 +26,50 @@
         - pollution
         - contamination
         - emission
-        - climate_change
+        - climate_change_process
         - erosion
         # new node below
         - forestry
-        - agriculture:
-          - planting
-          - cultivating
-          - harvesting
-          # new node below
-          # not sure if needs more specific to get 'crop failure'
-          # don't want ALL failures to ground here...
-          - failure
-        - conflict:
-          - raiding
-          - attack
-          - strike
-          - abduction
-          - exploitation
-        - economic:
-          - trade
-          - import
-          - export
-          - transaction
-          - inflation
-          - depreciation
-          - utilization
-          - nonutilization
-          - competition
-        - access:
-          - access
-          - nonaccess
-          - availability
-          - unavailability
-        - migration:
-          - migration
-          - seasonal_migration
-          - hosting
-          - emigration
-          - immigration
-          - displacement
-          - return
-        - transportation:
-          - transportation
-          - shipping
+      - agriculture:
+        - planting
+        - cultivating
+        - harvesting
+        # new node below
+        # not sure if needs more specific to get 'crop failure'
+        # don't want ALL failures to ground here...
+        - failure
+      - conflict:
+        - raiding
+        - attack
+        - strike
+        - abduction
+        - exploitation
+      - economic:
+        - trade
+        - import
+        - export
+        - transaction
+        - inflation
+        - depreciation
+        - utilization
+        - nonutilization
+        - competition_process
+      - access:
+        - access
+        - nonaccess
+        - availability
+        - unavailability
+      - migration:
+        - migration
+        - seasonal_migration
+        - hosting
+        - emigration
+        - immigration
+        - displacement
+        - return
+      - transportation:
+        - transportation
+        - shipping
     - property:
       - quality
       - condition
@@ -88,33 +88,33 @@
     - concept:
       - causal_factor:
         - intervention:
-          - humanitarian assistance
-          - provision of goods and services:
+          - humanitarian_assistance
+          - provision_of_goods_and_services:
             - education:
-              - child friendly learning spaces
+              - child_friendly_learning_spaces
             - health:
-              - anti-retroviral treatment
-                - sexual violence management
-                - vector control
+              - anti-retroviral_treatment
+              - sexual_violence_management
+              - vector_control
             - nutrition:
-              - therapeutic feeding or treating
-            - provide hygiene tool
-            - provide delivery kit
-            - provide farming tool
-            - provide seed
-            - provide livestock feed
-            - provide veterinary service
-            - provide stationary
-            - provide fishing tool
-            - provide cash
-            - provide food
-            - provide veterinary drugs vaccines
-            - provide moving of houseHolds
+              - therapeutic_feeding_or_treating
+            - provide_hygiene_tool
+            - provide_delivery_kit
+            - provide_farming_tool
+            - provide_seed
+            - provide_livestock_feed
+            - provide_veterinary_service
+            - provide_stationary
+            - provide_fishing_tool
+            - provide_cash
+            - provide_food
+            - provide_veterinary_drugs_vaccines
+            - provide_moving_of_houseHolds
           - infrastructure
-          - peacekeeping and security
-          - institutional support:
-              - protection:
-                  - capacity building human right
+          - peacekeeping_and_security
+          - institutional_support:
+            - protection:
+              - capacity_building_human_right
         - environmental:
           - climate_change
           - biodiversity
@@ -127,8 +127,6 @@
             - water_commodity
             - fossil_fuels
             - soil
-              # AZ: didn't want to delete completely because of CauseEx comment
-            #          - water_management # CauseEx
           - pollution:
             #AZ: what should be in air/land pollution, if kept separate?
             - air_pollution
@@ -163,7 +161,7 @@
             - fire
         - economic_and_commerce:
           - poverty
-          - economic activity:
+          - economic_activity:
             - farming
             - currency
             - cross_border_trade:
@@ -187,8 +185,8 @@
           - basic_services
           - population_group:
             - population_density
-          - de-population
-          - overcrowding
+            - de-population
+            - overcrowding
           - humanitarian_workers
           - educational:
             - education
@@ -235,9 +233,7 @@
           - disease:
             - human_disease
               # AZ: process w/ entity?
-            - alcohol drug and substance abuse
-#                - plant_disease:
-#                        - pest_infestation
+            - alcohol_drug_and_substance_abuse
             - animal_disease
           - treatment:
             - health_treatment
@@ -259,7 +255,7 @@
           - bridge
           - construction_materials
           - travel
-          - shipping
+          - shipping_infrastructure
           - medical:
             - ambulances
             - medical_facility
@@ -278,17 +274,5 @@
           - food
         - time:
           - temporal:
-            - crop season
+            - crop_season
             - season
-        # AZ: left everything after this as-is
-        - indicator_and_reported_property:
-          - weather:
-            - rainfall
-          - agriculture:
-            - Crop Production
-          - commerce:
-            - Cross Border Trade
-          - conflict:
-            - population displacement
-          - health:
-            - Global Acute Malnutrition (GAM) rate
