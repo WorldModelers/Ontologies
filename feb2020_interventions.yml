@@ -23,7 +23,7 @@
                 - biological # crop_rotation, cover_crop, integrated_pest_management (IPM), companion_planting
                 - chemical # glysophate, round-up, dicamba, DDT etc. 
                 - organic # vinegar, pine_oil, neem_oil, etc
-            - post-harvest:
+            - post_harvest:
               - processing_equipment # sorter, washer, drier, x-ray, laser_sorter, tarp, drier_racks, etc
               - packaging # packing_lines, branding, packaging_material, etc
               - warehousing # warehouse_receipt_system (WRS), storage, etc.
@@ -41,7 +41,7 @@
             - food_aid # food for work,food_for_assets, food_for_training, food_for_work, food_vouchers, free_food_distribution, school_feeding
             - nutrition_support # food_fortification, infant nutrition supplements, infant_and_young_child_feeding, micro_nutrient_supplementation, supplementary_feeding
             - water # water_trucking
-            - humanitarian_non-food_items: # (NFIs) household_hygiene_kit, household_NFI_package, educational_materials, tarp, bucket, soap, cooking_fuel, blanket, cooking_pots, sleeping_mat, jerry_can, sanitary_pads, mosquito_nets
+            - humanitarian_non_food_items: # (NFIs) household_hygiene_kit, household_NFI_package, educational_materials, tarp, bucket, soap, cooking_fuel, blanket, cooking_pots, sleeping_mat, jerry_can, sanitary_pads, mosquito_nets
               - shelter # tents, shelter kits
             - financial_assistance # cash, loans, cash_for_assets, cash_for_work, cash_transfer, once_off_cash_transfer_to_facilitate_return, grants, remittances, etc.
             - livelihood_assets # fishing_nets, boats, farming_equipment, bee-keeping_equipment, improved_chicken_breed, bicycle, cart, etc.
@@ -59,7 +59,7 @@
               - irrigation_infrastructure # canal, reservoir, water_tower
               - extension_offices # farmer_training_centers, demonstration plots, etc
               - greenhouse # nursery, high_tunnel, etc.
-              - post-harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
+              - post_harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
           - trade_infrastructure # factory, industrial_park, storage_facilities, warehouse, processing_facilities, etc.
           - educational_infrastructure # community_centers, child_friendly_learning_spaces, school_rehabilitation, gender_specific_bathrooms, etc.
           - shelter # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
@@ -73,7 +73,7 @@
             - production_practices: # Pasture_management, Herd_management, planting_practices, etc.
               - planting # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
               - pest_weed_control # IPM_practices (integrated pest management), etc
-              - post-harvest_practices # storage, processing, packaging, safety_and_hygiene, certifications, ISO, FDA, work_place_safety, etc.
+              - post_harvest_practices # storage, processing, packaging, safety_and_hygiene, certifications, ISO, FDA, work_place_safety, etc.
             - agriculture_information # digital_extension, famers_almanac, mobile_extension, SMS reminders,  Weather_information,  NMA_reports (national met agency), broadcast_weather_reports, 
           - medical_training: # capacity_assessments, community_health_workers (CHWs), 
             - assessment_and_triage_of_health_facilities
@@ -84,7 +84,7 @@
           - public_health_campaigns # behaviour change, campaigns, public information, hygiene_promotion, information_campaign, health_promoters, 
           - public_safety_campaigns # explosive_hazards
           - emergency_preparedness_training: # disaster risk management, resilience building, etc.
-            - surveillance_system_stregthening 
+            - surveillance_system_strengthening
             - humanitarian_certifications # SPHERE, core_standards, humanitarian_charter, etc.
         - secure: # protect, stabilize, defend, conserve, neutralize, preserve
           - livelihood_protections #  agricultural assets, cattle_raids,, supply chains, 
