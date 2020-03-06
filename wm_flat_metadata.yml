@@ -7,6 +7,348 @@
   - concept:
     - causal_factor:
       - interventions:
+        - provide: # (supply, distribute, deliver, vaccinate, give)
+          - agriculture_inputs: # agricultural_productivity
+            - livestock_production:
+              - OntologyNode:
+                examples:
+                - livestock feed
+                - hay
+                - CSB 
+                name: livestock_feed
+                polarity: 1
+              - OntologyNode: 
+                examples:
+                - veterinary services
+                - medicine
+                - birthing
+                - exam
+                - antibiotics
+                - vaccination
+                - vaccine
+                name: veterinary_services
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - livestock watering
+                name: livestock_watering
+                polarity: 1
+            - crop_production:
+              - OntologyNode:
+                examples: 
+                - farm equipment
+                - machinery
+                - tractor
+                - power tiller
+                - row planter
+                - plow
+                - winnower
+                name: farm_equipment
+                polarity: 1
+              - OntologyNode:
+                examples: 
+                - harvesting equipment
+                - baskets
+                - pickers
+                - ladders
+                - clippers
+                name: harvesting_equipment
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - seed
+                name: seed
+                polarity: 1
+              - irrigation:
+                - OntologyNode:
+                  examples:
+                  - water source
+                  - wells
+                  - bore-holes
+                  - irrigation ditch
+                  - canal
+                  name: water_source
+                  polarity: 1
+                - OntologyNode:
+                  examples:
+                  - pumps
+                  - treadle
+                  - electric
+                  - small scale
+                  name: pumps
+                  polarity: 1
+                - OntologyNode:
+                  examples:
+                  - field irrigation
+                  - drip
+                  - sprinklers
+                  name: field_irrigation
+                  polarity: 1
+              - soil_inputs:
+                - OntologyNode:
+                  examples:
+                  - fertilizer
+                  - DAP
+                  - urea
+                  - compost
+                  name: fertilizer
+                  polarity: 1
+                - OntologyNode:
+                  examples:
+                  - fertilizer subsidy
+                  - voucher
+                  - cash
+                  - price control
+                  - coupon
+                  name: fertilizer_subsidy
+                  polarity: 1
+              - weed_pest_control:
+                - OntologyNode:
+                  examples:
+                  - biological
+                  - crop rotation
+                  - cover crop
+                  - integrated pest management 
+                  - IPM
+                  - companion planting
+                  name: biological
+                  polarity: 1
+                - OntologyNode:
+                  examples:
+                  - chemical
+                  - glysophate
+                  - round-up
+                  - dicamba
+                  - DDT
+                  name: chemical
+                  polarity: 1
+                - OntologyNode:
+                  examples:
+                  - organic
+                  - vinegar
+                  - pine oil
+                  - neem oil
+                  name: organic
+                  polarity: 1
+            - post_harvest:
+              - OntologyNode:
+                examples:
+                - processing equipment
+                - sorter
+                - washer
+                - drier
+                - x-ray
+                - laser sorter
+                - tarp
+                - drier racks
+                name: processing_equipment
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - packaging
+                - packing lines
+                - branding
+                - packaging material
+                name: packaging
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - warehousing
+                - warehouse receipt system
+                - WRS
+                - storage
+                name: warehousing
+                polarity: 1
+          - information_services:
+            - OntologyNode:
+              examples:
+              - surveillance system
+              - early warning systems
+              - human disease
+              - epidemiological
+              - plant disease
+              - natural disaster
+              - earthquake monitoring
+              - river levels
+              - food security monitoring
+              - early warning analysis
+              - famine early warning system
+              - integrated phase classification
+              - IPC
+              - FEWS NET
+              - vulnerability analysis mapping
+              - VAM
+              name: surveillance_system
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - weather monitoring
+              name: weather_monitoring
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - price monitoring
+              name: price_monitoring
+              polarity: 1
+            - human_rights_monitoring:
+              - OntologyNode:
+                examples:
+                - victims
+                - children
+                - women
+                - refugees
+                - IDP
+                - ethnic minorities
+                name: victims
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - perpetrators
+                - militias
+                - gangs
+                - terrorist groups
+                - non state actors
+                name: perpetrators
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - violations
+                - war crimes
+                - gender based violence
+                - GBV
+                name: violations
+                polarity: 1
+            - statistics:
+              - OntologyNode:
+                examples:
+                - national survey
+                - Census
+                - DHS 
+                - demographic health surveys
+                - CFSVA
+                - comprehensive food security and vulnerability assessment
+                - AgSS 
+                - agricultural sample survey
+                name: national_survey
+                polarity: 1
+          - livelihood_support: 
+            - OntologyNode:
+              examples:
+              - food aid
+              - food for work
+              - food for assets
+              - food for training
+              - food vouchers
+              - free food distribution
+              - school feeding
+              name: food_aid
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - nutrition support
+              - food fortification
+              - infant nutrition supplements
+              - infant and young child feeding
+              - micro nutrient supplementation
+              - supplementary feeding
+              name: nutrition_support
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - water 
+              - water trucking
+              name: water
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - financial assistance
+              - cash
+              - loans
+              - cash for assets
+              - cash for work
+              - cash transfer
+              - once off cash transfer to facilitate return
+              - grants
+              - remittances
+              name: financial_assistance
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - livelihood assets
+              - fishing nets
+              - boats
+              - farming equipment
+              - bee keeping equipment
+              - improved chicken breed
+              - bicycle
+              - cart
+              name: livelihood_assets
+              polarity: 1
+            - humanitarian_non_food_items:
+              - OntologyNode:
+                examples:
+                - shelter
+                - tents
+                - shelter kits
+                name: shelter
+                polarity: 1
+          - medical_inputs:
+            - OntologyNode:
+              examples:
+              - vaccine
+              - immunization
+              - communicable disease outbreak control
+              - mass vaccination campaign
+              - polio
+              - measles
+              - meningitis
+              - yellow fever
+              - cholera
+              - hepatitis
+              name: vaccine
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - medical treatment
+              - anti retroviral treatment
+              - ART
+              - first aid
+              - basic medical care
+              - childhood essential health services
+              - obstetric and newborn care
+              - operation of mobile clinics
+              - therapeutic feeding 
+              - trauma and surgical care
+              - trauma and post operative rehabilitation
+              name: medical_treatment
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - prevention
+              - insecticide treated bednets
+              - malnutrition screening
+              name: prevention
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - psychological
+              - therapy
+              - clinical management of sexual violence
+              - psychological support
+              name: psychological
+              polarity: 1
+          - OntologyNode:
+            examples: 
+            - sanitation and hygiene input
+            - desludging
+            - toilet
+            - septic tank
+            - excreta container
+            - solid waste management
+            - point of use water treatment
+            - piped water supply treatment
+            name: sanitation_and_hygiene_inputs
+            polarity: 1
         - build: # (construct/repair)
           - agriculture_infrastructure:
             - livestock_production:
