@@ -402,7 +402,7 @@
                 - post-harvest
                 pattern:
                 - (tower|bunker|stave|grain)\s(silo)
-                name: post-harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
+                name: post_harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
                 polarity: 1
           - OntologyNode:
             examples:
@@ -541,7 +541,7 @@
                 - FDA
                 - workplace safety
                 - post-harvest practices
-                name: post-harvest_practices # storage, processing, packaging, safety_and_hygiene, certifications, ISO, FDA, work_place_safety, etc.
+                name: post_harvest_practices # storage, processing, packaging, safety_and_hygiene, certifications, ISO, FDA, work_place_safety, etc.
                 polarity: 1
             - OntologyNode:
               examples:
@@ -624,7 +624,7 @@
               examples:
               - surveillance system strengthening
               - surveillance system
-              name: surveillance_system_stregthening
+              name: surveillance_system_strengthening
               polarity: 1
             - OntologyNode:
               examples:
