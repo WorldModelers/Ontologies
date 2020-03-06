@@ -71,6 +71,7 @@
                 - canal
                 - reservoir
                 - water tower
+                - standpipe
                 - irrigation infrastructure
                 name: irrigation_infrastructure # canal, reservoir, water_tower
                 polarity: 1
@@ -94,9 +95,15 @@
                 examples:
                 - on-farm processing facility
                 - silo
+                - tower silo
+                - bunker silo
+                - stave silo
                 - grain silo
+                - grain elevator
                 - cooperative processing
                 - post-harvest
+                pattern:
+                - (tower|bunker|stave|grain)\s(silo)
                 name: post-harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
                 polarity: 1
           - OntologyNode:
@@ -116,6 +123,7 @@
             - school rehabilitation
             - gender-specific bathrooms
             - educational infrastructure
+            - school infrastructure
             name: educational_infrastructure # community_centers, child_friendly_learning_spaces, school_rehabilitation, gender_specific_bathrooms, etc.
             polarity: 1
           - OntologyNode:
@@ -126,6 +134,8 @@
             - housing provision
             - leasing or rental services
             - temporary communal settlement
+            - temporary shelter
+            - portable shelter
             - shelter
             name: shelter # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
             polarity: 1
@@ -139,6 +149,8 @@
             - permanent water point
             - borehole repair
             - WASH infrastructure
+            pattern:
+            - (WASH)
             name: WASH_infrastructure # sanitation facilities, latrines, washing_and_bathing_facilities, temporary_water_points, boreholes, permanent_water_points, borehole_repair, etc.
             polarity: 1
           - OntologyNode:
@@ -161,8 +173,8 @@
             - road rehabilitation
             - road repair
             - transportation infrastructure
-            patterns:
-            - \b(road|bridge|rail) repair
+            pattern:
+            - \b(road|bridge|rail)\s(repair)
             name: transportation_infrastructure # bridge, repair, all_weather_roads, railway_lines, temporary_roads, road_rehabilitation
             polarity: 1
           - OntologyNode:
@@ -207,6 +219,7 @@
                 - perennial planting
                 - conservation agriculture
                 - planting
+                - planting practices
                 name: planting # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
                 polarity: 1
               - OntologyNode:
@@ -215,6 +228,8 @@
                 - integrated pest management
                 - pest control
                 - weed control
+                pattern:
+                - (IPM)(\s(practices))?
                 name: pest_weed_control # IPM_practices (integrated pest management), etc
                 polarity: 1
               - OntologyNode:
@@ -240,7 +255,12 @@
               - weather information
               - NMA report
               - national met agency report
+              - national meteorological agency report
+              - NWS report
+              - national weather service report
               - agriculture information
+              pattern:
+              - (NMA)\s(reports?)
               name: agriculture_information # digital_extension, famers_almanac, mobile_extension, SMS reminders,  Weather_information,  NMA_reports (national met agency), broadcast_weather_reports,
               polarity: 1
           - medical_training: # capacity_assessments, community_health_workers (CHWs), 
@@ -337,8 +357,9 @@
               examples:
               - mine clearance
               - demining
-              - removing land mines
-              - clearing land mines
+              - remove land mines
+              - clear land mines
+              - neutralize land mines
               name: mine_clearance
               polarity: 1
             - OntologyNode:
@@ -421,6 +442,8 @@
             - price control
             - regulate prices
             - legislate prices
+            - price ceiling
+            - price floor
             name: control_prices
             polarity: 1
 
