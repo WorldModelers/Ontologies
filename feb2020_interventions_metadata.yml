@@ -400,7 +400,27 @@
             name: cultural_resources # landmark_designation, world_heritage_status, etc.
             polarity: 1
         - legislate: # regulate, control, tax,  subsidize, penalize, certify, ban, etc.
-          - subsidize
-          - tax
-          - control_prices
+          - OntologyNode:
+            examples:
+            - subsidize
+            - subsidies
+            - subsidy
+            name: subsidize
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - tax
+            - taxation
+            - taxes
+            - tax legislation
+            name: tax
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - control prices
+            - price control
+            - regulate prices
+            - legislate prices
+            name: control_prices
+            polarity: 1
 
