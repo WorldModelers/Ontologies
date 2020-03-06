@@ -74,17 +74,122 @@
                 - irrigation infrastructure
                 name: irrigation_infrastructure # canal, reservoir, water_tower
                 polarity: 1
-              - extension_offices # farmer_training_centers, demonstration plots, etc
-              - greenhouse # nursery, high_tunnel, etc.
-              - post-harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
-          - trade_infrastructure # factory, industrial_park, storage_facilities, warehouse, processing_facilities, etc.
-          - educational_infrastructure # community_centers, child_friendly_learning_spaces, school_rehabilitation, gender_specific_bathrooms, etc.
-          - shelter # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
-          - WASH_infrastructure # sanitation facilities, latrines, washing_and_bathing_facilities, temporary_water_points, boreholes, permanent_water_points, borehole_repair, etc.
-          - medical_infrastructure # hospitals, mobile clinics, field_hospitals, emergency treatment centers, medical supply chain facilities, etc.
-          - transportation_infrastructure # bridge, repair, all_weather_roads, railway_lines, temporary_roads, road_rehabilitation
-          - communication_infrastructure # cell-phone_towers, landlines, etc
-          - energy_infrastructure # dams, electricity_grids, micro-grids, solar_panels, wind_turbines, wind_farms, solar_farms, etc.
+              - OntologyNode:
+                examples:
+                - farmer training center
+                - demonstration plot
+                - extension office
+                name: extension_offices # farmer_training_centers, demonstration plots, etc
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - nursery
+                - plant nursery
+                - greenhouse
+                - high tunnel
+                - glasshouse
+                - hothouse
+                name: greenhouse # nursery, high_tunnel, etc.
+              - OntologyNode:
+                examples:
+                - on-farm processing facility
+                - silo
+                - grain silo
+                - cooperative processing
+                - post-harvest
+                name: post-harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
+                polarity: 1
+          - OntologyNode:
+            examples:
+            - factory
+            - industrial park
+            - storage facility
+            - warehouse
+            - processing facility
+            - trade infrastructure
+            name: trade_infrastructure # factory, industrial_park, storage_facilities, warehouse, processing_facilities, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - community center
+            - child friendly learning space
+            - school rehabilitation
+            - gender-specific bathrooms
+            - educational infrastructure
+            name: educational_infrastructure # community_centers, child_friendly_learning_spaces, school_rehabilitation, gender_specific_bathrooms, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - permanent house
+            - temporary housing
+            - refugee camp
+            - housing provision
+            - leasing or rental services
+            - temporary communal settlement
+            - shelter
+            name: shelter # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - sanitation facility
+            - latrine
+            - washing and bathing facility
+            - temporary water points
+            - borehole
+            - permanent water point
+            - borehole repair
+            - WASH infrastructure
+            name: WASH_infrastructure # sanitation facilities, latrines, washing_and_bathing_facilities, temporary_water_points, boreholes, permanent_water_points, borehole_repair, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - hospital
+            - mobile clinic
+            - field hospital
+            - emergency treatment center
+            - emergency treatment centre
+            - medical supply chain facility
+            - medical infrastructure
+            name: medical_infrastructure # hospitals, mobile clinics, field_hospitals, emergency treatment centers, medical supply chain facilities, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - bridge
+            - all weather roads
+            - railway lines
+            - temporary roads
+            - road rehabilitation
+            - road repair
+            - transportation infrastructure
+            patterns:
+            - \b(road|bridge|rail) repair
+            name: transportation_infrastructure # bridge, repair, all_weather_roads, railway_lines, temporary_roads, road_rehabilitation
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - cell-phone tower
+            - cell tower
+            - landline
+            - phone line
+            - telephone pole
+            - telepole
+            - communication infrastructure
+            name: communication_infrastructure # cell-phone_towers, landlines, etc
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - dam
+            - electricity grid
+            - electric grid
+            - power grid
+            - micro-grid
+            - solar panel
+            - wind turbine
+            - wind farm
+            - solar farm
+            - energy infrastructure
+            name: energy_infrastructure # dams, electricity_grids, micro-grids, solar_panels, wind_turbines, wind_farms, solar_farms, etc.
+            polarity: 1
         - train: # teach, capacity_building, educate, etc
           - agriculture_training: # extension, capacity_building, training_of_trainers, development_agents (ET specific name for extension workers), extension_workers
             - production_practices: # Pasture_management, Herd_management, planting_practices, etc.
