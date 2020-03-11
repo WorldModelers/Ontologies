@@ -48,7 +48,7 @@
             - water
             - financial_assistance
             - livelihood_assets
-            - humanitarian_non_food_items:
+            - humanitarian_nonfood_items:
               - shelter
           - medical_inputs:
             - vaccine

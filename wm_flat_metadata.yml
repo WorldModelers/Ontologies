@@ -22,14 +22,10 @@
                 polarity: 1
               - OntologyNode: 
                 examples:
-                - veterinary services
-                - veterinary medicine
+                - veterinary services medicine
                 - animal birthing
                 - antibiotics
                 - livestock vaccination
-                - heartworm
-                - rabies
-                - quarantine
                 name: veterinary_services
                 polarity: 1
               - OntologyNode:
@@ -179,12 +175,7 @@
               examples:
               - surveillance system
               - early warning systems
-              - human disease
-              - epidemiological
-              - plant disease
-              - natural disaster
               - earthquake monitoring
-              - river levels
               - food security monitoring
               - early warning analysis
               - famine early warning system
@@ -239,7 +230,7 @@
                 pattern:
                 - \b(census|AgSS|CFSVA)\b
                 examples:
-                - national survey
+                - survey
                 - Census
                 - DHS 
                 - demographic health surveys
@@ -302,7 +293,7 @@
               - cart
               name: livelihood_assets
               polarity: 1
-            - humanitarian_non_food_items:
+            - humanitarian_nonfood_items:
               - OntologyNode:
                 examples:
                 - shelter
@@ -313,19 +304,16 @@
           - medical_inputs:
             - OntologyNode:
               pattern:
-              - \b(vaccin(e|ate|ation)s?)\b
               - \b(immuniz(ations?|e))\b
               examples:
               - vaccine
+              - vaccination
               - immunization
               - communicable disease outbreak control
               - mass vaccination campaign
               - polio
               - measles
-              - meningitis
               - yellow fever
-              - cholera
-              - hepatitis
               name: vaccine
               polarity: 1
             - OntologyNode:
@@ -428,7 +416,7 @@
                 - cooperative processing
                 - post-harvest
                 pattern:
-                - (tower|bunker|stave|grain)\s(silo)
+                - \b(tower|bunker|stave|grain)\b\s(silo)
                 name: post_harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
                 polarity: 1
           - OntologyNode:
@@ -476,7 +464,7 @@
             - borehole repair
             - WASH infrastructure
             pattern:
-            - \b(WASH)\b
+            - \b(WASH)\binfrastructure
             name: WASH_infrastructure # sanitation facilities, latrines, washing_and_bathing_facilities, temporary_water_points, boreholes, permanent_water_points, borehole_repair, etc.
             polarity: 1
           - OntologyNode:
@@ -558,7 +546,7 @@
                 - training pest control
                 - weed control
                 pattern:
-                - (IPM)(\s(practices))?
+                - (\bIPM\b)(\s(practices))?
                 name: pest_weed_control # IPM_practices (integrated pest management), etc
                 polarity: 1
               - OntologyNode:
@@ -576,20 +564,12 @@
                 polarity: 1
             - OntologyNode:
               examples:
-              - digital extension
               - farmer's almanac
-              - farmers almanac
-              - mobile extension
-              - SMS remindners
               - weather information
-              - NMA report
-              - national met agency report
-              - national meteorological agency report
-              - NWS report
-              - national weather service report
+              - national weather service meteorological met
               - agriculture information
               pattern:
-              - (NMA)\s(reports?)
+              - (\bNM[AS]\b)\s(reports?)
               name: agriculture_information # digital_extension, famers_almanac, mobile_extension, SMS reminders,  Weather_information,  NMA_reports (national met agency), broadcast_weather_reports,
               polarity: 1
           - medical_training: # capacity_assessments, community_health_workers (CHWs),
@@ -628,7 +608,7 @@
             - provision of non-formal education
             - training community sourced temporary teachers
             - education systems
-            - capacity buidling of educational staff
+            - capacity building of educational staff
             - training education capacity building
             name: education_systems #  provision_of_non_formal_education, community_sourced_temporary_teachers
             polarity: 1
@@ -699,6 +679,9 @@
               name: temporary_policing_services
               polarity: 1
           - OntologyNode:
+            pattern:
+            - peace\s+(building|talks)
+            - conflict\s+resolution
             examples:
             - conflict mediation
             - political dialogue
@@ -726,27 +709,12 @@
             name: natural_resources # Water_rights, Land_rights, land_deeds, Biotechnology, etc.
             polarity: 1
           - OntologyNode:
+            pattern:
+            - \bUNESCO\b\sworld\sheritage\ssite
             examples:
-            - landmark designation
-            - world heritage status
-            - UNESCO world heritage site
-            - world heritage site
-            - landmark protections
-            - defend landmark
-            - protect landmark
-            - stabilize landmark
-            - conserve landmark
-            - neutralize threat to landmark
-            - preserve landmark
-            - secure landmark
+            - landmark designation conservation
+            - world heritage status site
             - cultural resources protections
-            - defend cultural resources
-            - protect cultural resources
-            - stabilize cultural resources
-            - conserve cultural resources
-            - neutralize threat to cultural_resources
-            - preserve cultural resources
-            - secure cultural resources
             name: cultural_resources # landmark_designation, world_heritage_status, etc.
             polarity: 1
         - legislate: # regulate, control, tax,  subsidize, penalize, certify, ban, etc.
@@ -1092,7 +1060,7 @@
               - OntologyNode:
                 examples:
                 - crop exports
-                - food export
+                - food exporters
                 - exported foods
                 - food exports
                 - exports of staples
@@ -1414,7 +1382,7 @@
             - taxation
             - tariffs
             - tariff
-            - export taxes
+            - exporters taxes
             - excise
             name: tax_duty
             polarity: 1
