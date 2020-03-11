@@ -1,0 +1,449 @@
+- wm:
+  - concept:
+    - causal_factor:
+      - interventions:
+#        - provide: # (supply, distribute, deliver, vaccinate, give)
+#          - agriculture_inputs: # agricultural_productivity
+#            - livestock_production: # stocking, destocking, feed, veterinary services
+#              - livestock_feed # hay, CSB, etc
+#              - veterinary_services # medicine, birthing, exam, antibiotics, vaccination, etc.
+#              - livestock_watering
+#            - crop_production: # horticulture, fertilizer, seeds, farm equipment, etc
+#              - farm_equipment # machinery, tractor, power_tiller, row_planter, plow, winnower
+#              - harvesting_equipment # baskets, pickers, ladders, clippers,  etc.
+#              - irrigation: # irrigation_schemes, etc
+#                - water_source # wells, bore-holes, irrigation_ditch, canal, etc
+#                - pumps # treadle, electric, small_scale, etc.
+#                - field_irrigation # drip, sprinklers, etc.
+#              - soil_inputs:
+#                - fertilizer #DAP, urea, compost
+#                - fertilizer_subsidy # voucher, cash, price_control, coupon, etc.
+#              - seed
+#              - weed_pest_control: # herbicide,  pesticide, insecticide, fungicide, arial_spraying, field_spraying
+#                - biological # crop_rotation, cover_crop, integrated_pest_management (IPM), companion_planting
+#                - chemical # glysophate, round-up, dicamba, DDT etc.
+#                - organic # vinegar, pine_oil, neem_oil, etc
+#            - post-harvest:
+#              - processing_equipment # sorter, washer, drier, x-ray, laser_sorter, tarp, drier_racks, etc
+#              - packaging # packing_lines, branding, packaging_material, etc
+#              - warehousing # warehouse_receipt_system (WRS), storage, etc.
+#          - information_services:
+#            - surveillance_system  # early_warning_systems, human_disease, epidemiological, plant_disease, natural_disaster, earthquake_monitoring, river_levels, food_security_monitoring, early_warning_analysis,  famine_early_warning_system, integrated_phase_classification (IPC), FEWS_NET, vulnerability_analysis_mapping (VAM), etc
+#            - human_rights_monitoring:  # reporting, investigation, verification
+#              - victims #children, women, refugees, IDPs, ethnic_minorities, etc
+#              - perpetrators # militias, gangs, terrorist_groups, non_state_actors, etc
+#              - violations # war_crimes, gender_based_violence (GBV), etc
+#            - statistics: # data_management, survey,
+#              - national_survey # Census, DHS (demographic health surveys), CFSVA (comprehensive food security and vulnerability assessment), AgSS (agricultural sample survey), etc
+#            - weather_monitoring
+#            - price_monitoring
+#          - livelihood_support: # food security, cash, food_aid, humanitarian_assistance, vouchers, equipment, business_support, private_sector_development
+#            - food_aid # food for work,food_for_assets, food_for_training, food_for_work, food_vouchers, free_food_distribution, school_feeding
+#            - nutrition_support # food_fortification, infant nutrition supplements, infant_and_young_child_feeding, micro_nutrient_supplementation, supplementary_feeding
+#            - water # water_trucking
+#            - humanitarian_non-food_items: # (NFIs) household_hygiene_kit, household_NFI_package, educational_materials, tarp, bucket, soap, cooking_fuel, blanket, cooking_pots, sleeping_mat, jerry_can, sanitary_pads, mosquito_nets
+#              - shelter # tents, shelter kits
+#            - financial_assistance # cash, loans, cash_for_assets, cash_for_work, cash_transfer, once_off_cash_transfer_to_facilitate_return, grants, remittances, etc.
+#            - livelihood_assets # fishing_nets, boats, farming_equipment, bee-keeping_equipment, improved_chicken_breed, bicycle, cart, etc.
+#          - medical_inputs:
+#            - vaccine # immunization, communicable_disease_outbreak_control, mass_vaccination_campaign, polio, measles, meningitis, yellow_fever, cholera, hepatitis, etc.
+#            - medical_treatment # anti_retroviral_treatment (ART), first_aid, basic_medical_care, childhood_essential_health_services, obstetric_and_newborn_care, operation_of_mobile_clinics, therapeutic_feeding, trauma_and_surgical_care, trauma_and_post_operative_rehabilitation
+#            - prevention # insecticide_treated_bednets, malnutrition_screening
+#            - psychological # therapy, clinical_management_of_sexual_violence, psychological_support, etc.
+#          - sanitation_and_hygiene_inputs # (WASH_inputs): desludging, toilets, septic_tanks, excreta_containers, solid_waste_management, point_of_use_water_treatment, piped_water_supply_treatment, etc
+        - build: # (construct/repair)
+          - agriculture_infrastructure:
+            - livestock_production:
+              - OntologyNode:
+                examples:
+                - enclosure
+                - barn
+                - pasture
+                - livestock shelter
+                - paddock
+                - chicken coop
+                - coop
+                name: livestock_shelter # enclosure, barn, pasture, etc
+                polarity: 1
+            - crop_production: #
+              - OntologyNode:
+                examples:
+                - canal
+                - reservoir
+                - water tower
+                - standpipe
+                - irrigation infrastructure
+                name: irrigation_infrastructure # canal, reservoir, water_tower
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - farmer training center
+                - demonstration plot
+                - extension office
+                name: extension_offices # farmer_training_centers, demonstration plots, etc
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - nursery
+                - plant nursery
+                - greenhouse
+                - high tunnel
+                - glasshouse
+                - hothouse
+                name: greenhouse # nursery, high_tunnel, etc.
+              - OntologyNode:
+                examples:
+                - on-farm processing facility
+                - silo
+                - tower silo
+                - bunker silo
+                - stave silo
+                - grain silo
+                - grain elevator
+                - cooperative processing
+                - post-harvest
+                pattern:
+                - (tower|bunker|stave|grain)\s(silo)
+                name: post-harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
+                polarity: 1
+          - OntologyNode:
+            examples:
+            - factory
+            - industrial park
+            - storage facility
+            - warehouse
+            - processing facility
+            - trade infrastructure
+            name: trade_infrastructure # factory, industrial_park, storage_facilities, warehouse, processing_facilities, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - community center
+            - child friendly learning space
+            - school rehabilitation
+            - gender-specific bathrooms
+            - educational infrastructure
+            - school infrastructure
+            name: educational_infrastructure # community_centers, child_friendly_learning_spaces, school_rehabilitation, gender_specific_bathrooms, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - permanent house
+            - temporary housing
+            - refugee camp
+            - housing provision
+            - leasing or rental services
+            - temporary communal settlement
+            - temporary shelter
+            - portable shelter
+            - shelter
+            name: shelter # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - sanitation facility
+            - latrine
+            - washing and bathing facility
+            - temporary water points
+            - borehole
+            - permanent water point
+            - borehole repair
+            - WASH infrastructure
+            pattern:
+            - (WASH)
+            name: WASH_infrastructure # sanitation facilities, latrines, washing_and_bathing_facilities, temporary_water_points, boreholes, permanent_water_points, borehole_repair, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - hospital
+            - mobile clinic
+            - field hospital
+            - emergency treatment center
+            - emergency treatment centre
+            - medical supply chain facility
+            - medical infrastructure
+            name: medical_infrastructure # hospitals, mobile clinics, field_hospitals, emergency treatment centers, medical supply chain facilities, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - bridge
+            - all weather roads
+            - railway lines
+            - temporary roads
+            - road rehabilitation
+            - road repair
+            - transportation infrastructure
+            pattern:
+            - \b(road|bridge|rail)\s(repair)
+            name: transportation_infrastructure # bridge, repair, all_weather_roads, railway_lines, temporary_roads, road_rehabilitation
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - cell-phone tower
+            - cell tower
+            - landline
+            - phone line
+            - telephone pole
+            - telepole
+            - communication infrastructure
+            name: communication_infrastructure # cell-phone_towers, landlines, etc
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - dam
+            - electricity grid
+            - electric grid
+            - power grid
+            - micro-grid
+            - solar panel
+            - wind turbine
+            - wind farm
+            - solar farm
+            - energy infrastructure
+            name: energy_infrastructure # dams, electricity_grids, micro-grids, solar_panels, wind_turbines, wind_farms, solar_farms, etc.
+            polarity: 1
+        - train: # teach, capacity_building, educate, etc
+          - agriculture_training: # extension, capacity_building, training_of_trainers, development_agents (ET specific name for extension workers), extension_workers
+            - production_practices: # Pasture_management, Herd_management, planting_practices, etc.
+              - OntologyNode:
+                examples:
+                - crop spacing
+                - planting times
+                - seed depth
+                - watering
+                - crop rotation
+                - cover cropping
+                - composting
+                - low till
+                - no till
+                - perennial planting
+                - conservation agriculture
+                - planting
+                - planting practices
+                name: planting # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - IPM practices
+                - integrated pest management
+                - pest control
+                - weed control
+                pattern:
+                - (IPM)(\s(practices))?
+                name: pest_weed_control # IPM_practices (integrated pest management), etc
+                polarity: 1
+              - OntologyNode:
+                examples:
+                - storage
+                - processing
+                - packaging
+                - safety and hygiene
+                - certifications
+                - ISO
+                - FDA
+                - workplace safety
+                - post-harvest practices
+                name: post-harvest_practices # storage, processing, packaging, safety_and_hygiene, certifications, ISO, FDA, work_place_safety, etc.
+                polarity: 1
+            - OntologyNode:
+              examples:
+              - digital extension
+              - farmer's almanac
+              - farmers almanac
+              - mobile extension
+              - SMS remindners
+              - weather information
+              - NMA report
+              - national met agency report
+              - national meteorological agency report
+              - NWS report
+              - national weather service report
+              - agriculture information
+              pattern:
+              - (NMA)\s(reports?)
+              name: agriculture_information # digital_extension, famers_almanac, mobile_extension, SMS reminders,  Weather_information,  NMA_reports (national met agency), broadcast_weather_reports,
+              polarity: 1
+          - medical_training: # capacity_assessments, community_health_workers (CHWs), 
+            - OntologyNode:
+              examples:
+              - medical training
+              - assessment of health facilities
+              - triage of health facilities
+              - community health workers
+              - CHWs
+              - medical capacity assessment
+              name: assessment_and_triage_of_health_facilities
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - capacity building of medical staff
+              - medical capacity building
+              name: capacity_building_of_medical_staff
+              polarity: 1
+          - OntologyNode:
+            examples:
+            - human rights training
+            name: human_rights_training #
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - provision of credit
+            - training for income generation
+            - credit provision
+            - income generation training
+            - financial management
+            name: financial_management # provision_of_credit_and_training_for_income_generation
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - provision of non-formal education
+            - community sourced temporary teachers
+            - education systems
+            - capacity buidling of educational staff
+            - education capacity building
+            name: education_systems #  provision_of_non_formal_education, community_sourced_temporary_teachers
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - behavior change campaign
+            - behaviour change campaign
+            - public health information
+            - hygiene promotion
+            - health information campaign
+            - health promotors
+            - health promotion
+            - public health campaigns
+            name: public_health_campaigns # behaviour change, campaigns, public information, hygiene_promotion, information_campaign, health_promoters,
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - explosive hazards campaign
+            - public safety campaigns
+            name: public_safety_campaigns # explosive_hazards
+            polarity: 1
+          - emergency_preparedness_training: # disaster risk management, resilience building, etc.
+            - OntologyNode:
+              examples:
+              - surveillance system strengthening
+              - surveillance system
+              name: surveillance_system_stregthening
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - SPHERE
+              - core standards
+              - humanitarian charter
+              - humanitarian certifications
+              name: humanitarian_certifications # SPHERE, core_standards, humanitarian_charter, etc.
+              polarity: 1
+        - secure: # protect, stabilize, defend, conserve, neutralize, preserve
+          - OntologyNode:
+            examples:
+            - agricultural assets
+            - cattle raid
+            - supply chain
+            - livelihood protections
+            - defend livelihood
+            - protect livelihood
+            - stabilize livelihood
+            - conserve livelihood
+            - neutralize threat to livelihood
+            - preserve livelihood
+            - secure livelihood
+            name: livelihood_protections #  agricultural assets, cattle_raids,, supply chains,
+            polarity: 1
+          - community_security: # policing, governance
+            - OntologyNode:
+              examples:
+              - mine clearance
+              - demining
+              - remove land mines
+              - clear land mines
+              - neutralize land mines
+              name: mine_clearance
+              polarity: 1
+            - OntologyNode:
+              examples:
+              - temporary policing services
+              - temporary police
+              - temporary security services
+              name: temporary_policing_services
+              polarity: 1
+          - OntologyNode:
+            examples:
+            - conflict mediation
+            - political dialogue
+            - disarmament
+            - demobilization
+            - reintegration
+            - family reunification
+            - rehabilitation of child soldiers
+            - conflict resolution
+            name: conflict_resolution # conflict_mediatio, political_dialogue, disarmament, demobilization, reintegration, family_reunification, rehabilitation_of_child_soldier
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - water rights
+            - land rights
+            - land deeds
+            - biotechnology
+            - defend natural resources
+            - protect natural resources
+            - stabilize natural resources
+            - conserve natural resources
+            - neutralize threat to natural resources
+            - preserve natural resources
+            - secure natural resources
+            name: natural_resources # Water_rights, Land_rights, land_deeds, Biotechnology, etc.
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - landmark designation
+            - world heritage status
+            - UNESCO world heritage site
+            - world heritage site
+            - landmark protections
+            - defend landmark
+            - protect landmark
+            - stabilize landmark
+            - conserve landmark
+            - neutralize threat to landmark
+            - preserve landmark
+            - secure landmark
+            - cultural resources protections
+            - defend cultural_resources
+            - protect cultural_resources
+            - stabilize cultural_resources
+            - conserve cultural_resources
+            - neutralize threat to cultural_resources
+            - preserve cultural_resources
+            - secure cultural_resources
+            name: cultural_resources # landmark_designation, world_heritage_status, etc.
+            polarity: 1
+        - legislate: # regulate, control, tax,  subsidize, penalize, certify, ban, etc.
+          - OntologyNode:
+            examples:
+            - subsidize
+            - subsidies
+            - subsidy
+            name: subsidize
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - tax
+            - taxation
+            - taxes
+            - tax legislation
+            name: tax
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - control prices
+            - price control
+            - regulate prices
+            - legislate prices
+            - price ceiling
+            - price floor
+            name: control_prices
+            polarity: 1
+
