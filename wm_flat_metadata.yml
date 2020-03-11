@@ -523,18 +523,18 @@
             - production_practices: # Pasture_management, Herd_management, planting_practices, etc.
               - OntologyNode:
                 examples:
-                # - crop spacing
-                # - planting times
-                # - seed depth
-                # - watering
-                # - crop rotation
-                # - cover cropping
-                # - composting
-                # - low till
-                # - no till
-                # - perennial planting
-                # - conservation agriculture
-                # - planting
+                - crop spacing
+                - planting times
+                - seed depth
+                - watering
+                - crop rotation
+                - cover cropping
+                - composting
+                - low till
+                - no till
+                - perennial planting
+                - conservation agriculture
+                - planting
                 - planting practices
                 - training 
                 name: planting # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
