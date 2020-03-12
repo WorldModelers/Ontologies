@@ -1297,7 +1297,41 @@
             - agricultural development
             name: development # being developed
             polarity: 1
+      - research_development:
+        - OntologyNode:
+          examples:
+          - novel new technology
+          - research innovation
+          - breakthrough technology
+          name: technology_and_innovation
+          polarity: 1
       - social_and_political:
+        - communication:
+          - OntologyNode:
+            examples:
+            - planning
+            - develop plans
+            name: planning
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - discussion
+            - debate
+            - communication
+            - discourse
+            - dialogue
+            name: discussion_debate
+            polarity: 1
+          - OntologyNode:
+            examples:
+            - collaboration
+            - collaborate
+            - partnership
+            - partner
+            - pact
+            - consortium
+            name: collaboration
+            polarity: 1
         - OntologyNode:
           examples:
           - basic services
