@@ -451,7 +451,7 @@
             - temporary shelter
             - portable shelter
             - shelter
-            name: shelter # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
+            name: shelter_housing # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
             polarity: 1
           - OntologyNode:
             examples:
@@ -527,7 +527,7 @@
                 - composting
                 - planting practices
                 - training 
-                name: planting # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
+                name: planting_training # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
                 polarity: 1
               - OntologyNode:
                 examples:
