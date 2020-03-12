@@ -207,7 +207,13 @@
             - food_stocks
           - competition # between? about?
           - development # being developed
+      - research_development:
+        - technology_and_innovation
       - social_and_political:
+        - communication:
+          - planning
+          - discussion_debate
+          - collaboration
         - basic_services
         - population_group:
           - population_density
