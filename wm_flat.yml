@@ -63,6 +63,7 @@
             - crop_production: #
               - irrigation_infrastructure # canal, reservoir, water_tower
               - extension_offices # farmer_training_centers, demonstration plots, etc
+              - greenhouse # nursery, high_tunnel, etc.
               - post_harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
           - trade_infrastructure # factory, industrial_park, storage_facilities, warehouse, processing_facilities, etc.
           - educational_infrastructure # community_centers, child_friendly_learning_spaces, school_rehabilitation, gender_specific_bathrooms, etc.

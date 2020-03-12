@@ -404,6 +404,7 @@
                 - glasshouse
                 - hothouse
                 name: greenhouse # nursery, high_tunnel, etc.
+                polarity: 1
               - OntologyNode:
                 examples:
                 - on-farm processing facility
