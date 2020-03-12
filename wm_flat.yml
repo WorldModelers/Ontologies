@@ -67,7 +67,7 @@
               - post_harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
           - trade_infrastructure # factory, industrial_park, storage_facilities, warehouse, processing_facilities, etc.
           - educational_infrastructure # community_centers, child_friendly_learning_spaces, school_rehabilitation, gender_specific_bathrooms, etc.
-          - shelter # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
+          - shelter_housing # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
           - WASH_infrastructure # sanitation facilities, latrines, washing_and_bathing_facilities, temporary_water_points, boreholes, permanent_water_points, borehole_repair, etc.
           - medical_infrastructure # hospitals, mobile clinics, field_hospitals, emergency treatment centers, medical supply chain facilities, etc.
           - transportation_infrastructure # bridge, repair, all_weather_roads, railway_lines, temporary_roads, road_rehabilitation
@@ -76,7 +76,7 @@
         - train: # teach, capacity_building, educate, etc
           - agriculture_training: # extension, capacity_building, training_of_trainers, development_agents (ET specific name for extension workers), extension_workers
             - production_practices: # Pasture_management, Herd_management, planting_practices, etc.
-              - planting # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
+              - planting_training # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
               - pest_weed_control # IPM_practices (integrated pest management), etc
               - post_harvest_practices # storage, processing, packaging, safety_and_hygiene, certifications, ISO, FDA, work_place_safety, etc.
             - agriculture_information # digital_extension, famers_almanac, mobile_extension, SMS reminders,  Weather_information,  NMA_reports (national met agency), broadcast_weather_reports,
