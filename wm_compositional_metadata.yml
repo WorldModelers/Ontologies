@@ -889,6 +889,7 @@
               - OntologyNode:
                 examples:
                 - drought
+                - the drought
                 - droughts
                 - low rainfall
                 name: drought
@@ -1532,6 +1533,12 @@
               - animal disease
               name: animal_disease
               polarity: 1.0
+          - OntologyNode:
+            examples:
+            - symptoms
+            - complications
+            name: symptoms_and_complications
+            polarity: 1.0
           - treatment:
             - OntologyNode:
               examples:

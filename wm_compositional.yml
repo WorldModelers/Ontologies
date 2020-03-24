@@ -235,6 +235,7 @@
               # AZ: process w/ entity?
             - alcohol_drug_and_substance_abuse
             - animal_disease
+          - symptoms_and_complications
           - treatment:
             - health_treatment
             - medical_procedure
