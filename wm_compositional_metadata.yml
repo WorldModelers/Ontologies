@@ -24,6 +24,8 @@
           - sustainable use
           - overexploitation
           - depletion
+          - sustaining
+          - sustain
           name: conservation
           polarity: 1.0
         - OntologyNode:
@@ -239,6 +241,7 @@
           - purchasing
           - buying
           - selling
+          - donation
           name: transaction
           polarity: 1.0
         - OntologyNode:
