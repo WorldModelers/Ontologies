@@ -24,6 +24,8 @@
           - sustainable use
           - overexploitation
           - depletion
+          - sustaining
+          - sustain
           name: conservation
           polarity: 1.0
         - OntologyNode:
@@ -239,6 +241,7 @@
           - purchasing
           - buying
           - selling
+          - donation
           name: transaction
           polarity: 1.0
         - OntologyNode:
@@ -406,7 +409,7 @@
         polarity: 1.0
       - OntologyNode:
         pattern:
-        - (supply|amount|level|stock|reserve|storage)
+        - (supply|amount|level|stock|reserve|storage|number|volume)
         examples:
         - supply
         - amount
@@ -452,7 +455,7 @@
         polarity: 1
       - OntologyNode:
         pattern:
-        - (instability|unstable)
+        - (instability|unstable|destabilize|erratic)
         examples:
         - instability
         - unstable
@@ -469,7 +472,7 @@
         polarity: 1.0
       - OntologyNode:
         pattern:
-        - (trend|increase|decrease|change|tendency|decline|improve)
+        - (trend|increase|decrease|change|tendency|decline|improve|increment|reduction)
         examples:
         - trend
         - trends
@@ -481,6 +484,8 @@
         - tendency
         - declined
         - improved
+        - increment
+        - reduction
         name: trend
         polarity: 1.0
       - OntologyNode:
@@ -884,6 +889,7 @@
               - OntologyNode:
                 examples:
                 - drought
+                - the drought
                 - droughts
                 - low rainfall
                 name: drought
@@ -1527,6 +1533,12 @@
               - animal disease
               name: animal_disease
               polarity: 1.0
+          - OntologyNode:
+            examples:
+            - symptoms
+            - complications
+            name: symptoms_and_complications
+            polarity: 1.0
           - treatment:
             - OntologyNode:
               examples:
