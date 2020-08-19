@@ -1726,6 +1726,67 @@
           name: animal_migration
           polarity: 1
       - agriculture:
+        - pests:
+            - locust_related:
+                - OntologyNode:
+                  examples:
+                    - locust eggs
+                  name: locust_eggs
+                  polarity: 1
+                - OntologyNode:
+                  examples:
+                    - locust breeding
+                    - breeding area locust
+                  name: locust_breeding
+                  polarity: 1
+                - OntologyNode:
+                  examples:
+                    - locust hatching
+                  name: locust_hatching
+                  polarity: 1
+                - solitary:
+                  - OntologyNode:
+                    examples:
+                      - solitarious hopper
+                      - solitary
+                      - hopper
+                      - immature
+                      - instar
+                    name: solitary_hopper
+                    polarity: 1
+                  - OntologyNode:
+                    examples:
+                      - solitary locust
+                      - solitarious adult locust
+                      - mature
+                    name: solitary_locust
+                    polarity: 1
+                - gregarious:
+                  - OntologyNode:
+                    examples:
+                      - bands of hoppers
+                      - locust hopper groups
+                      - hopper outbreak upsurge
+                      - immature
+                    name: hopper_band
+                    polarity: 1
+                  - OntologyNode:
+                    examples:
+                      - swarm
+                      - locust swarm
+                      - mature maturation
+                      - adult
+                      - locust infestation
+                      - locust outbreak
+                    name: locust_swarm
+                    polarity: 1
+                - OntologyNode:
+                  examples:
+                    - hopper
+                    - locust
+                  name: mature_locust
+                  polarity: 1
+                - immature_locust
         - OntologyNode:
           examples:
           - planting
