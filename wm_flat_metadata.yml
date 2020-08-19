@@ -898,6 +898,55 @@
             name: climate_change
             polarity: -1
       - crisis_and_disaster:
+        - health:
+          - OntologyNode:
+            examples:
+              - disease outbreak
+              - global pandemic
+              - pandemic
+              - epidemic
+            name: pandemic
+            polarity: -1
+          - mitigation:
+            - OntologyNode:
+              examples:
+                - sanitation
+                - hygiene materials
+                - soap
+                - wash hands
+              name: sanitation
+              polarity: 1
+            - OntologyNode:
+              patterns:
+                - (contact tracing)
+              examples:
+                - contact tracing
+              name: contact_tracing
+              polarity: 1
+            - OntologyNode:
+              patterns:
+                - (quarantin|shelter[- ]in[- ]place)
+              examples:
+                - quarantine
+                - shelter in place
+                - isolation
+                - restrict movements
+              name: quarantine
+              polarity: 1
+            - OntologyNode:
+              patterns:
+                - (social distancing)
+              examples:
+                - social distancing
+              name: social_distancing
+              polarity: 1
+            - OntologyNode:
+              examples:
+                - masks
+                - mask requirments
+                - wearing face coverings
+              name: masks
+              polarity: 1
         - OntologyNode:
           examples:
           - famine
@@ -1728,65 +1777,62 @@
       - agriculture:
         - pests:
             - locust_related:
+              - OntologyNode:
+                examples:
+                  - locust eggs
+                name: locust_eggs
+                polarity: -1
+              - OntologyNode:
+                examples:
+                  - locust breeding
+                  - breeding area locust
+                name: locust_breeding
+                polarity: -1
+              - OntologyNode:
+                examples:
+                  - locust hatching
+                name: locust_hatching
+                polarity: -1
+              - solitary:
                 - OntologyNode:
                   examples:
-                    - locust eggs
-                  name: locust_eggs
-                  polarity: 1
-                - OntologyNode:
-                  examples:
-                    - locust breeding
-                    - breeding area locust
-                  name: locust_breeding
-                  polarity: 1
-                - OntologyNode:
-                  examples:
-                    - locust hatching
-                  name: locust_hatching
-                  polarity: 1
-                - solitary:
-                  - OntologyNode:
-                    examples:
-                      - solitarious hopper
-                      - solitary
-                      - hopper
-                      - immature
-                      - instar
-                    name: solitary_hopper
-                    polarity: 1
-                  - OntologyNode:
-                    examples:
-                      - solitary locust
-                      - solitarious adult locust
-                      - mature
-                    name: solitary_locust
-                    polarity: 1
-                - gregarious:
-                  - OntologyNode:
-                    examples:
-                      - bands of hoppers
-                      - locust hopper groups
-                      - hopper outbreak upsurge
-                      - immature
-                    name: hopper_band
-                    polarity: 1
-                  - OntologyNode:
-                    examples:
-                      - swarm
-                      - locust swarm
-                      - mature maturation
-                      - adult
-                      - locust infestation
-                      - locust outbreak
-                    name: locust_swarm
-                    polarity: 1
-                - OntologyNode:
-                  examples:
+                    - solitarious hopper
+                    - solitary
                     - hopper
-                    - locust
-                  name: mature_locust
-                  polarity: 1
-                - immature_locust
+                    - immature
+                    - instar
+                  name: solitary_hopper
+                  polarity: -1
+                - OntologyNode:
+                  examples:
+                    - solitary locust
+                    - solitarious adult locust
+                    - mature
+                  name: solitary_locust
+                  polarity: -1
+              - gregarious:
+                - OntologyNode:
+                  patterns:
+                    - (hopper\s+band)|(bands?\s+of\s+hoppers)
+                  examples:
+                    - bands of hoppers
+                    - locust hopper groups
+                    - hopper outbreak upsurge
+                    - immature
+                  name: hopper_band
+                  polarity: -1
+                - OntologyNode:
+                  patterns:
+                    - (locust\s+swarm)|(swarms?\s+of\s+locust)
+                  examples:
+                    - swarm
+                    - locust swarm
+                    - mature maturation
+                    - adult
+                    - locust infestation
+                    - locust outbreak
+                  name: locust_swarm
+                  polarity: -1
         - OntologyNode:
           examples:
           - planting
@@ -2033,6 +2079,23 @@
         - disease:
           - OntologyNode:
             examples:
+              - transmission
+              - commnunity spread
+              - airborne
+              - virus
+            name: transmission
+            polarity: -1
+          - OntologyNode:
+            patterns:
+             - (COVID|covid)
+            examples:
+              - covid
+              - corona virus
+              - coronavirus
+            name: covid_virus
+            polarity: -1
+          - OntologyNode:
+            examples:
             - HIV
             - malaria
             - diabetes
@@ -2137,6 +2200,7 @@
             examples:
             - waste
             - sewage treatment
+            - sewage treatment
             - garbage removal
             name: waste
             polarity: 1
@@ -2192,9 +2256,19 @@
               - hospital
               - clinic
               - health post
+              - health post
               - healthcare facility availability
               - access to hospitals
               name: medical_facility
+              polarity: 1
+            - OntologyNode:
+              examples:
+                - medical workers
+                - health workers
+                - doctors
+                - nurses nursing staff
+                - first responders
+              name: medical_workers
               polarity: 1
         - OntologyNode:
           examples:
