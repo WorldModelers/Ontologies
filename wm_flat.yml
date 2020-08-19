@@ -126,6 +126,14 @@
           - land_pollution
           - climate_change
       - crisis_and_disaster:
+        - health:
+          - pandemic
+          - mitigation:
+            - sanitation
+            - contact_tracing
+            - quarantine
+            - social_distancing
+            - masks
         - famine
         - crisis
         - economic:
@@ -260,6 +268,17 @@
         - evacuate_humanitarian_workers
         - animal_migration
       - agriculture:
+        - pests:
+            - locust_related:
+              - locust_eggs
+              - locust_breeding
+              - locust_hatching
+              - solitary:
+                - solitary_hopper
+                - solitary_locust
+              - gregarious:
+                - hopper_band
+                - locust_swarm
         - planting
         - crop_storage
         - fertilization
@@ -287,6 +306,8 @@
           - breast_feeding
         - biometrics
         - disease:
+          - transmission
+          - covid_virus
           - human_disease
           - alcohol_drug_and_substance_abuse
         - treatment:
@@ -309,6 +330,7 @@
           - medical:
             - ambulances
             - medical_facility
+            - medical_workers
         - water_access
       - trend
       - food_security:
