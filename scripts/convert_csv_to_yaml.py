@@ -84,8 +84,8 @@ def main():
     ont_file = sys.argv[2]
 
     parent_to_child, child_to_examples = get_all_nodes(csv_file)
-    nested = nest_nodes("wm", parent_to_child, child_to_examples)
-    print(nested)
+    # Wrap in a list bc this is what we've been doing
+    nested = [nest_nodes("wm", parent_to_child, child_to_examples)]
 
     dump_yaml(nested, ont_file)
 
