@@ -13,7 +13,15 @@
       - pest:
         - army_worm
         - locust:
-          - locust_swarm
+          - locust_eggs
+          - locust_breeding
+          - locust_hatching
+          - solitary:
+            - solitary_hopper
+            - solitary_locust
+          - gregarious:
+            - hopper_band
+            - locust_swarm
     - crisis_or_disaster:
       - conflict:
         - crime
@@ -196,6 +204,8 @@
     - manage
     - medical:
       - quarantine
+      - contact_tracing
+      - social_distancing
     - mitigate
     - plan
     - population:

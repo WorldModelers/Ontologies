@@ -70,9 +70,60 @@
         - locust:
           - OntologyNode:
             examples:
-            - locust swarm
-            name: locust_swarm
-            polarity: -1.0
+            - locust eggs
+            name: locust_eggs
+            polarity: -1
+          - OntologyNode:
+            examples:
+            - locust breeding
+            - breeding area locust
+            name: locust_breeding
+            polarity: -1
+          - OntologyNode:
+            examples:
+            - locust hatching
+            name: locust_hatching
+            polarity: -1
+          - solitary:
+            - OntologyNode:
+              examples:
+              - solitarious hopper
+              - solitary
+              - hopper
+              - immature
+              - instar
+              name: solitary_hopper
+              polarity: -1
+            - OntologyNode:
+              examples:
+              - solitary locust
+              - solitarious adult locust
+              - mature
+              name: solitary_locust
+              polarity: -1
+          - gregarious:
+            - OntologyNode:
+              patterns:
+              - (hopper\s+band)|(bands?\s+of\s+hoppers)
+              examples:
+              - bands of hoppers
+              - locust hopper groups
+              - hopper outbreak upsurge
+              - immature
+              name: hopper_band
+              polarity: -1
+            - OntologyNode:
+              patterns:
+              - (locust\s+swarm)|(swarms?\s+of\s+locust)
+              examples:
+              - swarm
+              - locust swarm
+              - mature maturation
+              - adult
+              - locust infestation
+              - locust outbreak
+              name: locust_swarm
+              polarity: -1
     - crisis_or_disaster:
       - conflict:
         - OntologyNode:
@@ -149,6 +200,7 @@
       - OntologyNode:
         examples:
         - pandemic
+        - global pandemic
         - epidemic
         - disease outbreak
         name: disease_outbreak
@@ -540,6 +592,7 @@
           - (COVID|covid)
           examples:
           - COVID 19
+          - corona virus
           - coronavirus
           - COVID
           name: COVID
@@ -572,6 +625,9 @@
           - nurse
           - physicians assistant
           - health worker
+          - medical worker
+          - nursing staff
+          - first responders
           name: health_worker
           polarity: 1.0
       - OntologyNode:
@@ -1248,12 +1304,30 @@
       polarity: 1.0
     - medical:
       - OntologyNode:
+        patterns:
+        - (quarrantin|shelter[- ]in[- ]place)
         examples:
         - restriction
         - isolation
         - quarantine
+        - shelter in place
+        - restrict movements
         name: quarantine
         polarity: 1.0
+      - OntologyNode:
+        patterns:
+        - (contact tracing)
+        examples:
+        - contact tracing
+        name: contact_tracing
+        polarity: 1
+      - OntologyNode:
+        patterns:
+        - (social distanc)
+        examples:
+        - social distancing
+        name: social_distancing
+        polarity: 1
     - OntologyNode:
       examples:
       - mitigate
@@ -1379,8 +1453,11 @@
       examples:
       - disease transmission
       - transmission
+      - community spread
+      - airborne
+      - virus
       name: transmission
-      polarity: 1.0
+      polarity: -1.0
     - transport:
       - OntologyNode:
         examples:
