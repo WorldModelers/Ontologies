@@ -759,6 +759,7 @@
         - personal protective equipment
         - hygiene materials
         name: hygiene_materials
+        polarity: 1
     - humanitarian_assistance:
       - OntologyNode:
         examples:

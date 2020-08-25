@@ -113,6 +113,8 @@
         - preventative_treatment
         - psychological_services
       - vaccination
+      - hygiene_materials
+    - humanitarian_assistance:
       - food_aid
       - non_food_items
       - voucher_or_cash
