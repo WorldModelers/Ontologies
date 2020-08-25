@@ -749,6 +749,16 @@
         - vaccination
         name: vaccination
         polarity: 1.0
+      - OntologyNode:
+        examples:
+        - masks
+        - face covering
+        - hand sanitizer
+        - soap
+        - PPE
+        - personal protective equipment
+        - hygiene materials
+        name: hygiene_materials
     - humanitarian_assistance:
       - OntologyNode:
         examples:
