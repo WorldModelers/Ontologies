@@ -1513,10 +1513,7 @@
     - OntologyNode:
       examples:
       - cost
-      - cost of living
-      - crop price
-      - oil price
-      - price or cost
+      - price
       name: price_or_cost
       polarity: 1
     - OntologyNode:
