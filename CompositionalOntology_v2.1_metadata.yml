@@ -1362,8 +1362,8 @@
         polarity: 1
       - OntologyNode:
         examples:
-        - emmigrate
-        name: emmigrate
+        - emigrate
+        name: emigrate
         polarity: 1
       - OntologyNode:
         examples:
@@ -1402,11 +1402,6 @@
       - defend
       - secure
       name: secure
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - supply
-      name: supply
       polarity: 1
     - trade:
       - OntologyNode:
