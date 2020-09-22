@@ -126,14 +126,14 @@
       - communication
       - construction_materials
       - education_facilities
-      - electrical_infrastucture
-      - energy_infrastucture
-      - humanitarian_infrastucture
-      - irrigation_infrastucture
+      - electrical_infrastructure
+      - energy_infrastructure
+      - humanitarian_infrastructure
+      - irrigation_infrastructure
       - medical_facilities
-      - road_and_rail_infrastucture
+      - road_and_rail_infrastructure
       - WASH:
-        - sanitation_infrastucture
+        - sanitation_infrastructure
         - water_facilities
     - migration:
       - animal_migration

@@ -849,7 +849,7 @@
         examples:
         - electrical wiring
         - electricity
-        name: electrical_infrastucture
+        name: electrical_infrastructure
         polarity: 1
       - OntologyNode:
         examples:
@@ -861,20 +861,20 @@
         - power station
         - energy
         - power plant
-        name: energy_infrastucture
+        name: energy_infrastructure
         polarity: 1
       - OntologyNode:
         examples:
         - refugee camp
         - temporary housing
         - humanitarian
-        name: humanitarian_infrastucture
+        name: humanitarian_infrastructure
         polarity: 1
       - OntologyNode:
         examples:
         - canal
         - irrigation
-        name: irrigation_infrastucture
+        name: irrigation_infrastructure
         polarity: 1
       - OntologyNode:
         examples:
@@ -894,7 +894,7 @@
         - railroad
         - train
         - trucks
-        name: road_and_rail_infrastucture
+        name: road_and_rail_infrastructure
         polarity: 1
       - WASH:
         - OntologyNode:
@@ -903,7 +903,7 @@
           - toilets
           - handwashing station
           - sanitation
-          name: sanitation_infrastucture
+          name: sanitation_infrastructure
           polarity: 1
         - OntologyNode:
           examples:
