@@ -20,8 +20,7 @@
           - cabbage
           - carrots
           - beets
-          - horticulture
-          name: horticulture
+          name: vegetables
           polarity: 1
         - OntologyNode:
           examples:
@@ -1405,7 +1404,7 @@
       - OntologyNode:
         examples:
         - emigrate
-        name: emmigrate
+        name: emigrate
         polarity: 1
       - OntologyNode:
         examples:
@@ -1568,12 +1567,8 @@
       polarity: 1
     - OntologyNode:
       examples:
-      - safety
-      name: safety
-      polarity: 1
-    - OntologyNode:
-      examples:
       - security
+      - safety
       name: security
       polarity: 1
     - OntologyNode:
@@ -1601,14 +1596,6 @@
       examples:
       - artifact
       name: artifact
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - community
-      - society
-      - group
-      - village
-      name: community
       polarity: 1
     - OntologyNode:
       examples:
@@ -1651,13 +1638,17 @@
     - OntologyNode:
       examples:
       - person or group
+      - society
+      - village
+      - group
+      - community
       name: person_or_group
       polarity: 1
   - time:
     - OntologyNode:
       examples:
-      - lean
-      - crop
+      - lean season
+      - crop season
       - crop calendar
       - planting season
       - harvesting season
