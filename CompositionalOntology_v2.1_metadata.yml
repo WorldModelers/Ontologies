@@ -53,6 +53,7 @@
       - OntologyNode:
         examples:
         - cow
+        - cattle
         - chicken
         - pigs
         - sheep
@@ -71,17 +72,6 @@
             examples:
             - locust eggs
             name: locust_eggs
-            polarity: -1
-          - OntologyNode:
-            examples:
-            - locust breeding
-            - breeding area locust
-            name: locust_breeding
-            polarity: -1
-          - OntologyNode:
-            examples:
-            - locust hatching
-            name: locust_hatching
             polarity: -1
           - solitary:
             - OntologyNode:
@@ -107,7 +97,7 @@
               examples:
               - bands of hoppers
               - locust hopper groups
-              - hopper outbreak upsurge
+              - hopper upsurge
               - immature
               name: hopper_band
               polarity: -1
@@ -122,7 +112,6 @@
               - mature maturation
               - adult
               - locust infestation
-              - locust outbreak
               name: locust_swarm
               polarity: -1
     - crisis_or_disaster:
@@ -137,6 +126,7 @@
           - murdered
           - sexual abuse
           - assault
+          - steal
           - stealing
           - stolen
           - looted
@@ -165,7 +155,7 @@
           - raid
           - regional turmoil
           - violence
-          - outbreak of violence in the region
+          - violence in the region
           - hostility
           - insurgency
           - armed groups
@@ -203,8 +193,8 @@
         - pandemic
         - global pandemic
         - epidemic
-        - disease outbreak
-        name: disease_outbreak
+        - disease
+        name: disease
         polarity: -1
       - OntologyNode:
         examples:
@@ -286,6 +276,11 @@
         polarity: 1
       - OntologyNode:
         examples:
+          - economy
+        name: economy
+        polarity: 1
+      - OntologyNode:
+        examples:
         - finance
         - loan
         name: finance
@@ -318,7 +313,6 @@
       examples:
       - literacy
       - education
-      - access to education
       name: education
       polarity: 1
     - environment:
@@ -337,7 +331,6 @@
         examples:
         - afforestation
         - agroforestry
-        - forest management
         - reforestation
         - forestry
         - logging
@@ -391,11 +384,11 @@
           polarity: 1
         - OntologyNode:
           examples:
-          - pastoral conditions
-          - pasture conditions
-          - rangeland conditions
-          - vegetation conditions
-          - grazing conditions
+          - pastoral
+          - pasture
+          - rangeland
+          - vegetation
+          - grazing
           - pasture
           name: pasture
           polarity: 1
@@ -403,7 +396,6 @@
           examples:
           - soil types
           - soil
-          - soil quality
           - leaching into the soil
           name: soil
           polarity: 1
@@ -425,12 +417,6 @@
         - water pollution
         name: pollution
         polarity: -1
-    - OntologyNode:
-      examples:
-      - food security
-      - food availability
-      name: food_security
-      polarity: 1
     - goods:
       - agricultural:
         - OntologyNode:
@@ -514,6 +500,8 @@
       - OntologyNode:
         examples:
         - food
+        - diet
+        - dietary
         name: food
         polarity: 1
       - OntologyNode:
@@ -538,6 +526,7 @@
         - drugs
         - pharmaceuticals
         - antibiotics
+        - antivirals
         - medicine
         name: medicine
         polarity: 1
@@ -618,20 +607,6 @@
           - vector
           name: vector
           polarity: -1
-      - healthcare_system:
-        - OntologyNode:
-          examples:
-          - community health worker
-          - CHW
-          - doctor
-          - nurse
-          - physicians assistant
-          - health worker
-          - medical worker
-          - nursing staff
-          - first responders
-          name: health_worker
-          polarity: 1
       - OntologyNode:
         examples:
         - injury
@@ -653,17 +628,16 @@
           polarity: 1
         - OntologyNode:
           examples:
-          - food intake
-          - food consumption
+          - intake
+          - consumption
           - eating
           name: food_intake
           polarity: 1
         - OntologyNode:
           examples:
-          - food preference
-          - seed preference
-          - dietary preferences
-          - food taste choice
+          - preference
+          - preferences
+          - taste choice
           name: food_preference
           polarity: 1
         - OntologyNode:
@@ -938,12 +912,6 @@
     - migration:
       - OntologyNode:
         examples:
-        - animal migration
-        - livestock
-        name: animal_migration
-        polarity: 1
-      - OntologyNode:
-        examples:
         - human
         - migration
         - refugee camps
@@ -1200,14 +1168,6 @@
         polarity: -1
       - OntologyNode:
         examples:
-        - cattle raid
-        - livestock raid
-        - steal livestock
-        - cattle raiding
-        name: livestock_raid
-        polarity: -1
-      - OntologyNode:
-        examples:
         - treaty
         - agreement
         - peace deal
@@ -1246,7 +1206,6 @@
         - military aggression
         - invaded
         - warfare
-        - the outbreak of war
         name: war
         polarity: -1
     - OntologyNode:
@@ -1347,6 +1306,7 @@
       examples:
       - NRM
       - manage
+      - management
       - administrate
       name: manage
       polarity: 1
@@ -1382,6 +1342,11 @@
       polarity: 1
     - OntologyNode:
       examples:
+      - outbreak
+      name: outbreak
+      polarity: -1
+    - OntologyNode:
+      examples:
       - plan
       - strategy
       name: plan
@@ -1404,13 +1369,21 @@
       - OntologyNode:
         examples:
         - emigrate
+        - emigration
         name: emigrate
         polarity: 1
       - OntologyNode:
         examples:
         - immigrate
         - asylum
+        - immigration
         name: immigrate
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - migrate
+        - migration
+        name: migrate
         polarity: 1
     - OntologyNode:
       examples:
@@ -1510,7 +1483,6 @@
       polarity: 1
     - OntologyNode:
       examples:
-      - disease transmission
       - transmission
       - community spread
       - airborne
@@ -1539,12 +1511,22 @@
       polarity: 1
     - OntologyNode:
       examples:
+      - condition
+      - conditions
+      - quality
+      name: condition
+      polarity: 1
+    - OntologyNode:
+      examples:
       - diversity
       name: diversity
       polarity: 1
     - OntologyNode:
       examples:
       - insecurity
+      - insecure
+      - unsafe
+      - dangerous
       name: insecurity
       polarity: -1
     - OntologyNode:
@@ -1591,7 +1573,20 @@
       - variability
       name: variability
       polarity: 1
+    - OntologyNode:
+      examples:
+      - vulnerability
+      name: vulnerability
+      polarity: 1
   - entity:
+    - OntologyNode:
+      examples:
+      - animal
+      - critter
+      - creature
+      - beast
+      name: animal
+      polarity: 1
     - OntologyNode:
       examples:
       - artifact
@@ -1617,6 +1612,19 @@
       - nation
       - city
       name: geo-political_entity
+      polarity: 1
+    - OntologyNode:
+      examples:
+      - community health worker
+      - CHW
+      - doctor
+      - nurse
+      - physicians assistant
+      - health worker
+      - medical worker
+      - nursing staff
+      - first responders
+      name: health_worker
       polarity: 1
     - OntologyNode:
       pattern:
