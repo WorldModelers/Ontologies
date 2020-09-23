@@ -103,7 +103,7 @@
               polarity: -1
           - gregarious:
             - OntologyNode:
-              patterns:
+              pattern:
               - (hopper\s+band)|(bands?\s+of\s+hoppers)
               examples:
               - bands of hoppers
@@ -113,7 +113,9 @@
               name: hopper_band
               polarity: -1
             - OntologyNode:
-              patterns:
+              pattern:
+              - locust
+              - \bDL\b
               - (locust\s+swarm)|(swarms?\s+of\s+locust)
               examples:
               - swarm
@@ -237,6 +239,7 @@
       - OntologyNode:
         examples:
         - famine
+        - hunger
         name: famine
         polarity: -1
       - OntologyNode:
@@ -443,6 +446,8 @@
           name: farm_equipment
           polarity: 1
         - OntologyNode:
+          pattern:
+          - \b(manure|fertilizers?|nitrogen)\b
           examples:
           - DAP
           - urea
@@ -509,15 +514,14 @@
         polarity: 1
       - OntologyNode:
         examples:
-        - wild foods
-        - fresh food
-        - manufactured food
         - food
         name: food
         polarity: 1
       - OntologyNode:
         examples:
         - fuel
+        - gas
+        - oil
         name: fuel
         polarity: 1
       - OntologyNode:
@@ -563,7 +567,6 @@
         examples:
         - census
         - social security
-        - food stamps
         - program
         name: government_program
         polarity: 1
@@ -589,12 +592,12 @@
           polarity: -1
         - OntologyNode:
           pattern:
-          - (COVID|covid)
+          - (COVID|covid|SARS-CoV)
+          - corona(\s+)?virus
           examples:
-          - COVID 19
           - corona virus
           - coronavirus
-          - COVID
+          - virus
           name: COVID
           polarity: -1
         - OntologyNode:
@@ -670,6 +673,8 @@
           name: fortification
           polarity: 1
         - OntologyNode:
+          pattern:
+          - (malnutrition|stunting|undernourishment|malnourishment|undernutrition)
           examples:
           - malnutrition
           - stunting
@@ -784,6 +789,9 @@
         name: non_food_items
         polarity: 1
       - OntologyNode:
+        pattern:
+        - \bvouchers?\b
+        - \bcash\b
         examples:
         - food voucher
         - voucher or cash
@@ -807,6 +815,7 @@
           - processing equipment
           - packaging
           - post harvest infrastructure
+          - post harvest agriculture
           name: post_harvest_infrastructure
           polarity: 1
       - OntologyNode:
@@ -864,6 +873,9 @@
         name: energy_infrastructure
         polarity: 1
       - OntologyNode:
+        pattern:
+        - \brefugee\s+camps?\b
+        - \bcamps?\b
         examples:
         - refugee camp
         - temporary housing
@@ -871,12 +883,17 @@
         name: humanitarian_infrastructure
         polarity: 1
       - OntologyNode:
+        pattern:
+        - irrigation
         examples:
         - canal
         - irrigation
         name: irrigation_infrastructure
         polarity: 1
       - OntologyNode:
+        pattern:
+        - hospital
+        - \bclinics\b
         examples:
         - hosptial
         - clinic
@@ -898,6 +915,9 @@
         polarity: 1
       - WASH:
         - OntologyNode:
+          pattern:
+          - \blatrines?\b
+          - \btoilets?\b
           examples:
           - latrines
           - toilets
@@ -906,6 +926,8 @@
           name: sanitation_infrastructure
           polarity: 1
         - OntologyNode:
+          pattern:
+          - \bborehole
           examples:
           - boreholes
           - wells
@@ -918,28 +940,35 @@
       - OntologyNode:
         examples:
         - animal migration
+        - livestock
         name: animal_migration
         polarity: 1
       - OntologyNode:
         examples:
         - human
+        - migration
+        - refugee camps
         name: human_migration
         polarity: -1
       - OntologyNode:
         examples:
         - IDP
         - displaced persons
+        - refugee
+        - migrant
         name: IDP
         polarity: -1
       - OntologyNode:
         examples:
         - returnees
+        - refugee
         name: returnees
         polarity: 1
     - OntologyNode:
       examples:
       - physical market
-      - grocery
+      - grocery storage
+      - produce market
       name: physical_market
       polarity: 1
     - population:
@@ -952,6 +981,10 @@
         - OntologyNode:
           examples:
           - gender
+          - male
+          - female
+          - sex
+          - gender demographics
           name: gender
           polarity: 1
         - OntologyNode:
@@ -964,6 +997,8 @@
         - OntologyNode:
           examples:
           - de-population
+          - depopulation
+          - population decline
           name: de-population
           polarity: -1
         - OntologyNode:
@@ -986,7 +1021,9 @@
         polarity: 1
       - OntologyNode:
         examples:
-        - depression
+        - inflation
+        - depreciation
+        - economy
         - recession
         - economic security
         name: economic_security
@@ -1007,11 +1044,8 @@
       - information:
         - OntologyNode:
           examples:
-          - health
-          - nutrition
-          - food security
-          - price monitor
-          - weather
+          - track
+          - monitor
           - surveillance system
           name: surveillance_system
           polarity: 1
@@ -1025,26 +1059,26 @@
         polarity: 1
       - OntologyNode:
         examples:
-        - general storage facilities
+        - storage facilities
+        - storage
         name: general_storage_facilities
         polarity: 1
       - OntologyNode:
         examples:
         - household food storage
+        - storage
         name: household_food_storage
         polarity: 1
       - OntologyNode:
         examples:
-        - food
-        - health commodities
-        - fuel
-        - stockpile goods
+        - stockpile
         name: stockpile_goods
         polarity: 1
     - OntologyNode:
       examples:
       - demographics
-      - prices
+      - bias
+      - pattern
       - trend
       name: trend
       polarity: 1
@@ -1270,6 +1304,7 @@
     - OntologyNode:
       examples:
       - hatching
+      - hatch
       name: hatching
       polarity: 1
     - OntologyNode:
@@ -1278,6 +1313,8 @@
       name: hunt
       polarity: 1
     - OntologyNode:
+      pattern:
+      - \b[iI]nfest
       examples:
       - infest
       name: infest
@@ -1289,6 +1326,8 @@
       polarity: -1
     - legislate:
       - OntologyNode:
+        pattern:
+        - \b(regulations?|laws?)\b
         examples:
         - regulate
         - legislate
@@ -1302,7 +1341,6 @@
         polarity: 1
       - OntologyNode:
         examples:
-        - duty
         - tax
         name: tax
         polarity: 1
@@ -1315,28 +1353,27 @@
       polarity: 1
     - medical:
       - OntologyNode:
-        patterns:
-        - (quarrantin|shelter[- ]in[- ]place)
+        pattern:
+        - (quarantin|shelter[- ]in[- ]place)
+        - \b(restrict\s+movement)
         examples:
-        - restriction
         - isolation
         - quarantine
-        - shelter in place
-        - restrict movements
         name: quarantine
         polarity: 1
       - OntologyNode:
-        patterns:
+        pattern:
         - (contact tracing)
         examples:
         - contact tracing
         name: contact_tracing
         polarity: 1
       - OntologyNode:
-        patterns:
+        pattern:
         - (social distanc)
         examples:
         - social distancing
+        - curfew
         name: social_distancing
         polarity: 1
     - OntologyNode:
@@ -1347,15 +1384,20 @@
     - OntologyNode:
       examples:
       - plan
+      - strategy
       name: plan
       polarity: 1
     - population:
       - OntologyNode:
+        pattern:
+        - birth
         examples:
         - birth
         name: birth
         polarity: 1
       - OntologyNode:
+        pattern:
+        - death
         examples:
         - death
         name: death
@@ -1363,11 +1405,12 @@
       - OntologyNode:
         examples:
         - emigrate
-        name: emigrate
+        name: emmigrate
         polarity: 1
       - OntologyNode:
         examples:
         - immigrate
+        - asylum
         name: immigrate
         polarity: 1
     - OntologyNode:
@@ -1378,6 +1421,8 @@
       name: prepare
       polarity: 1
     - OntologyNode:
+      pattern:
+      - \b([pP]roduction|[yY]ields?)\b
       examples:
       - produce
       - create
@@ -1403,13 +1448,22 @@
       - secure
       name: secure
       polarity: 1
+    - OntologyNode:
+      examples:
+      - supply
+      name: supply
+      polarity: 1
     - trade:
       - OntologyNode:
+        pattern:
+        - \bexports?\b
         examples:
         - export
         name: export
         polarity: 1
       - OntologyNode:
+        pattern:
+        - \bimports?\b
         examples:
         - import
         name: import
@@ -1461,22 +1515,21 @@
       - transmission
       - community spread
       - airborne
-      - virus
       name: transmission
       polarity: -1
     - transport:
       - OntologyNode:
         examples:
-        - vacation
-        - migration
         - public transport
-        - commercial
+        - commercial transportation
+        - air travel
         name: commercial_transportation
         polarity: 1
       - OntologyNode:
         examples:
         - personal transportation
         - commute
+        - taxi
         name: personal_transportation
         polarity: 1
   - property:
@@ -1506,6 +1559,8 @@
       name: nonutilization
       polarity: -1
     - OntologyNode:
+      pattern:
+      - \b([Cc]osts?|[Pp]rices?)\b 
       examples:
       - cost
       - price
@@ -1577,6 +1632,8 @@
       name: geo-political_entity
       polarity: 1
     - OntologyNode:
+      pattern:
+      - household
       examples:
       - household
       - family
