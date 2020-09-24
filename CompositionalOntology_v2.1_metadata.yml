@@ -167,15 +167,6 @@
           polarity: -1
         - OntologyNode:
           examples:
-          - insecurity
-          - instability
-          - physical insecurity
-          - perceived security
-          - dangerous
-          name: physical_insecurity
-          polarity: -1
-        - OntologyNode:
-          examples:
           - political tension
           - political tensions
           - adversity
@@ -202,8 +193,7 @@
         - recession
         - economic crisis
         - financial crisis
-        - economic volatility
-        name: economic_crisis
+        name: depression_recession
         polarity: -1
       - environmental:
         - OntologyNode:
@@ -266,13 +256,6 @@
         - stock market
         - employment
         name: domestic_market
-        polarity: 1
-      - OntologyNode:
-        examples:
-        - economic development
-        - investment
-        - growth of the economy
-        name: economic_development
         polarity: 1
       - OntologyNode:
         examples:
@@ -615,8 +598,17 @@
         polarity: -1
       - OntologyNode:
         examples:
-        - living condition
-        name: living_condition
+        - life
+        - lives
+        - living
+        name: life
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - health
+        - healthcare
+        - medical
+        name: healthcare
         polarity: 1
       - nutrition:
         - OntologyNode:
@@ -625,20 +617,6 @@
           - lactation
           - weening
           name: breast_feeding
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - intake
-          - consumption
-          - eating
-          name: food_intake
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - preference
-          - preferences
-          - taste choice
-          name: food_preference
           polarity: 1
         - OntologyNode:
           examples:
@@ -1054,6 +1032,13 @@
       - water
       name: water
       polarity: 1
+    - OntologyNode:
+      examples:
+      - workforce
+      - worker
+      - staff
+      name: workforce
+      polarity: 1
   - process:
     - OntologyNode:
       examples:
@@ -1219,6 +1204,21 @@
       - devaluation
       name: depreciate
       polarity: -1
+    - OntologyNode:
+      examples:
+      - development
+      - develop
+      - grow
+      - growth
+      name: develop
+      polarity: 1
+    - OntologyNode:
+      examples:
+      - intake
+      - consumption
+      - eating
+      name: intake
+      polarity: 1
     - OntologyNode:
       examples:
       - manufacturing
@@ -1540,6 +1540,14 @@
       name: nonutilization
       polarity: -1
     - OntologyNode:
+      examples:
+      - preference
+      - preferences
+      - taste
+      - choice
+      name: preference
+      polarity: 1
+    - OntologyNode:
       pattern:
       - \b([Cc]osts?|[Pp]rices?)\b 
       examples:
@@ -1562,6 +1570,12 @@
       examples:
       - unavailability
       name: unavailability
+      polarity: -1
+    - OntologyNode:
+      examples:
+      - uncertainty
+      - volatility
+      name: uncertainty
       polarity: -1
     - OntologyNode:
       examples:
@@ -1620,9 +1634,9 @@
       - doctor
       - nurse
       - physicians assistant
-      - health worker
-      - medical worker
-      - nursing staff
+      - medic
+      - nurse
+      - nursing
       - first responders
       name: health_worker
       polarity: 1

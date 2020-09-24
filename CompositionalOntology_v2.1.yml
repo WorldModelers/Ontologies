@@ -24,10 +24,9 @@
       - conflict:
         - crime
         - hostility
-        - physical_insecurity
         - tension
       - disease
-      - economic_crisis
+      - depression_recession
       - environmental:
         - drought
         - flood
@@ -40,7 +39,6 @@
       - competition
       - currency
       - domestic_market
-      - economic_development
       - economy
       - finance
       - income
@@ -91,11 +89,10 @@
         - malaria
         - vector
       - injury
-      - living_condition
+      - life
+      - healthcare
       - nutrition:
         - breast_feeding
-        - food_intake
-        - food_preference
         - fortification
         - malnutrition
         - supplementary_feeding:
@@ -160,6 +157,7 @@
       - stockpile_goods
     - trend
     - water
+    - workforce
   - process:
     - access
     - adapt
@@ -181,6 +179,8 @@
       - war
     - demand
     - depreciate
+    - develop
+    - intake
     - processing
     - farming:
       - harvesting
@@ -237,10 +237,12 @@
     - insecurity
     - instability
     - nonutilization
+    - preference
     - price_or_cost
     - security
     - stability
     - unavailability
+    - uncertainty
     - utilization
     - variability
     - vulnerability
