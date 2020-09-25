@@ -638,7 +638,6 @@
           - undernourishment
           - nutritional deficiency
           - vitamin deficiencies
-          - food riots
           name: malnutrition
           polarity: -1
         - supplementary_feeding:
