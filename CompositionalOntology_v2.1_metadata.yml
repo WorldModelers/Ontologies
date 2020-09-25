@@ -554,13 +554,25 @@
         - DNA
         name: biometrics
         polarity: 1
+      - OntologyNode:
+        pattern:
+        - \b(case\s+volume)\b
+        - \b(new\s+cases)\b
+        examples:
+        - disease cases
+        - new cases
+        name: case_volume
+        polarity: -1
+      - OntologyNode:
+        examples:
+        - water
+        - mosquitos
+        - excrement
+        - vector
+        - transmission
+        name: vector
+        polarity: -1
       - disease:
-        - OntologyNode:
-          examples:
-          - disease cases
-          - new cases
-          name: case_volume
-          polarity: -1
         - OntologyNode:
           pattern:
           - (COVID|covid|SARS-CoV)
@@ -581,14 +593,6 @@
           examples:
           - malaria
           name: malaria
-          polarity: -1
-        - OntologyNode:
-          examples:
-          - water
-          - mosquitos
-          - excrement
-          - vector
-          name: vector
           polarity: -1
       - OntologyNode:
         examples:
