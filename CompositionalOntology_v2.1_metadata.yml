@@ -97,7 +97,6 @@
               examples:
               - bands of hoppers
               - locust hopper groups
-              - hopper upsurge
               - immature
               name: hopper_band
               polarity: -1

@@ -82,12 +82,12 @@
       - sanction
     - health:
       - biometrics
+      - case_volume
+      - vector
       - disease:
-        - case_volume
         - COVID
         - flu
         - malaria
-        - vector
       - injury
       - life
       - healthcare
@@ -115,8 +115,6 @@
     - infrastructure:
       - agriculture:
         - farm_infrastructure
-        - post_harvest_infrastructure
-      - bridge
       - communication
       - construction_materials
       - education_facilities
@@ -125,7 +123,10 @@
       - humanitarian_infrastucture
       - irrigation_infrastucture
       - medical_facilities
-      - road_and_rail_infrastucture
+      - transportation_infrastructure:
+        - road_infrastucture
+        - rail_infrastucture
+        - bridge
       - WASH:
         - sanitation_infrastucture
         - water_facilities
