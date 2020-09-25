@@ -766,18 +766,9 @@
           - barn
           - greenhouse
           - nursery
-          - silos
           - farm infrastructure
-          name: farm_infrastructure
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - warehouse
-          - processing equipment
-          - packaging
           - post harvest infrastructure
-          - post harvest agriculture
-          name: post_harvest_infrastructure
+          name: farm_infrastructure
           polarity: 1
       - OntologyNode:
         examples:
@@ -1010,12 +1001,14 @@
         - silo
         - granary
         - agricultural storage
+        - warehouse
         name: agricultural_storage
         polarity: 1
       - OntologyNode:
         examples:
         - storage facilities
         - storage
+        - warehouse
         name: general_storage_facilities
         polarity: 1
       - OntologyNode:
