@@ -3,7 +3,7 @@
     - agriculture:
       - crop:
         - cereals
-        - horticulture
+        - vegetables
         - pulses
         - tubers
       - disease:
@@ -14,8 +14,6 @@
         - army_worm
         - locust:
           - locust_eggs
-          - locust_breeding
-          - locust_hatching
           - solitary:
             - solitary_hopper
             - solitary_locust
@@ -26,10 +24,9 @@
       - conflict:
         - crime
         - hostility
-        - physical_insecurity
         - tension
-      - disease_outbreak
-      - economic_crisis
+      - disease
+      - depression_recession
       - environmental:
         - drought
         - flood
@@ -42,7 +39,7 @@
       - competition
       - currency
       - domestic_market
-      - economic_development
+      - economy
       - finance
       - income
       - livelihoods:
@@ -64,7 +61,6 @@
         - soil
         - water_bodies
       - pollution
-    - food_security
     - goods:
       - agricultural:
         - farm_equipment
@@ -86,20 +82,17 @@
       - sanction
     - health:
       - biometrics
+      - case_volume
+      - vector
       - disease:
-        - case_volume
         - COVID
         - flu
         - malaria
-        - vector
-      - healthcare_system:
-        - health_worker
       - injury
-      - living_condition
+      - life
+      - healthcare
       - nutrition:
         - breast_feeding
-        - food_intake
-        - food_preference
         - fortification
         - malnutrition
         - supplementary_feeding:
@@ -113,6 +106,7 @@
         - preventative_treatment
         - psychological_services
       - vaccination
+      - welfare
       - hygiene_materials
     - humanitarian_assistance:
       - food_aid
@@ -121,8 +115,6 @@
     - infrastructure:
       - agriculture:
         - farm_infrastructure
-        - post_harvest_infrastructure
-      - bridge
       - communication
       - construction_materials
       - education_facilities
@@ -131,12 +123,14 @@
       - humanitarian_infrastructure
       - irrigation_infrastructure
       - medical_facilities
-      - road_and_rail_infrastructure
+      - transportation_infrastructure:
+        - road_infrastucture
+        - rail_infrastucture
+        - bridge
       - WASH:
         - sanitation_infrastructure
         - water_facilities
     - migration:
-      - animal_migration
       - human_migration
       - IDP
       - returnees
@@ -165,6 +159,7 @@
       - stockpile_goods
     - trend
     - water
+    - workforce
   - process:
     - access
     - adapt
@@ -180,13 +175,14 @@
       - demonstrate
       - disarmament
       - exploit
-      - livestock_raid
       - resolution
       - terrorism
       - threat
       - war
     - demand
     - depreciate
+    - develop
+    - intake
     - processing
     - farming:
       - harvesting
@@ -208,12 +204,14 @@
       - contact_tracing
       - social_distancing
     - mitigate
+    - outbreak
     - plan
     - population:
       - birth
       - death
-      - emmigrate
+      - emigrate
       - immigrate
+      - migrate
     - prepare
     - produce
     - provide
@@ -236,23 +234,27 @@
       - personal_transportation
   - property:
     - availability
+    - condition
     - diversity
     - insecurity
     - instability
     - nonutilization
+    - preference
     - price_or_cost
-    - safety
     - security
     - stability
     - unavailability
+    - uncertainty
     - utilization
     - variability
+    - vulnerability
   - entity:
+    - animal
     - artifact
-    - community
     - geo-location
     - government_entity
     - geo-political_entity
+    - health_worker
     - household
     - organization
     - person_or_group
