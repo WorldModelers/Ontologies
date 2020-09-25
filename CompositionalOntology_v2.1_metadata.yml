@@ -669,8 +669,8 @@
         polarity: 1
       - OntologyNode:
         examples:
-        - alcohol
-        - drugs
+        - alcohol abuse
+        - drugs abuse
         - prescription drug abuse
         - narcotics
         - cocaine
