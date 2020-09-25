@@ -707,6 +707,12 @@
         polarity: 1
       - OntologyNode:
         examples:
+        - welfare
+        - living condition
+        name: welfare
+        polarity: 1
+      - OntologyNode:
+        examples:
         - masks
         - face covering
         - hand sanitizer
