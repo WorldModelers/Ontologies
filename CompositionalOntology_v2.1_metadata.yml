@@ -772,11 +772,6 @@
           polarity: 1
       - OntologyNode:
         examples:
-        - bridge
-        name: bridge
-        polarity: 1
-      - OntologyNode:
-        examples:
         - communication
         - media
         - telephone
@@ -802,7 +797,6 @@
         - lecture hall
         - child friendly learning spaces
         - community centers
-        - school rehabilitation
         - education facilities
         name: education_facilities
         polarity: 1
@@ -856,15 +850,27 @@
         - medical facilities
         name: medical_facilities
         polarity: 1
-      - OntologyNode:
-        examples:
-        - road and rail
-        - highway
-        - railroad
-        - train
-        - trucks
-        name: road_and_rail_infrastucture
-        polarity: 1
+      - transportation_infrastructure:
+        - OntologyNode:
+          examples:
+          - road
+          - highway
+          - trucks
+          - trucking
+          name: road_infrastucture
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - rail
+          - railroad
+          - train
+          name: rail_infrastucture
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - bridge
+          name: bridge
+          polarity: 1
       - WASH:
         - OntologyNode:
           pattern:
