@@ -118,17 +118,17 @@
       - communication
       - construction_materials
       - education_facilities
-      - electrical_infrastucture
-      - energy_infrastucture
-      - humanitarian_infrastucture
-      - irrigation_infrastucture
+      - electrical_infrastructure
+      - energy_infrastructure
+      - humanitarian_infrastructure
+      - irrigation_infrastructure
       - medical_facilities
       - transportation_infrastructure:
         - road_infrastucture
         - rail_infrastucture
         - bridge
       - WASH:
-        - sanitation_infrastucture
+        - sanitation_infrastructure
         - water_facilities
     - migration:
       - human_migration
