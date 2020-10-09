@@ -9,7 +9,7 @@
       - interventions:
         - provide: # (supply, distribute, deliver, vaccinate, give)
           - agriculture_inputs: # agricultural_productivity
-            - livestock_production:
+            - livestock_production_inputs:
               - OntologyNode:
                 examples:
                 - livestock feed
@@ -33,7 +33,7 @@
                 - livestock watering
                 name: livestock_watering
                 polarity: 1
-            - crop_production:
+            - crop_production_equipment:
               - OntologyNode:
                 examples: 
                 - farm equipment
@@ -60,7 +60,7 @@
                 - planting
                 name: seed
                 polarity: 1
-              - irrigation:
+              - irrigation_equipment:
                 - OntologyNode:
                   examples:
                   - water source
@@ -137,7 +137,7 @@
                   - neem oil
                   name: organic
                   polarity: 1
-            - post_harvest:
+            - post_harvest_inputs:
               - OntologyNode:
                 examples:
                 - harvest processing equipment
@@ -364,7 +364,7 @@
             polarity: 1
         - build: # (construct/repair)
           - agriculture_infrastructure:
-            - livestock_production:
+            - livestock_production_infrastructure:
               - OntologyNode:
                 examples:
                 - enclosure
@@ -376,7 +376,7 @@
                 - coop
                 name: livestock_shelter # enclosure, barn, pasture, etc
                 polarity: 1
-            - crop_production: #
+            - crop_production_infrastructure: #
               - OntologyNode:
                 examples:
                 - canal
@@ -418,7 +418,7 @@
                 - post-harvest
                 pattern:
                 - \b(tower|bunker|stave|grain)\b\s(silo)
-                name: post_harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
+                name: post_harvest_infrastructure # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
                 polarity: 1
           - OntologyNode:
             examples:
@@ -697,7 +697,7 @@
             - neutralize threat to natural resources
             - preserve natural resources
             - secure natural resources
-            name: natural_resources # Water_rights, Land_rights, land_deeds, Biotechnology, etc.
+            name: secure_natural_resources # Water_rights, Land_rights, land_deeds, Biotechnology, etc.
             polarity: 1
           - OntologyNode:
             pattern:
