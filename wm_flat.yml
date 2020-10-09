@@ -9,15 +9,15 @@
       - interventions:
         - provide: # (supply, distribute, deliver, vaccinate, give)
           - agriculture_inputs: # agricultural_productivity
-            - livestock_production:
+            - livestock_production_inputs:
               - livestock_feed
               - veterinary_services
               - livestock_watering
-            - crop_production:
+            - crop_production_equipment:
               - farm_equipment
               - harvesting_equipment
               - seed
-              - irrigation:
+              - irrigation_equipment:
                 - water_source
                 - pumps
                 - field_irrigation
@@ -28,7 +28,7 @@
                 - biological
                 - chemical
                 - organic
-            - post_harvest:
+            - post_harvest_inputs:
               - processing_equipment
               - packaging
               - warehousing
@@ -58,13 +58,13 @@
           - sanitation_and_hygiene_inputs
         - build: # (construct/repair)
           - agriculture_infrastructure:
-            - livestock_production:
+            - livestock_production_infrastructure:
               - livestock_shelter # enclosure, barn, pasture, etc
-            - crop_production: #
+            - crop_production_infrastructure: #
               - irrigation_infrastructure # canal, reservoir, water_tower
               - extension_offices # farmer_training_centers, demonstration plots, etc
               - greenhouse # nursery, high_tunnel, etc.
-              - post_harvest # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
+              - post_harvest_infrastructure # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
           - trade_infrastructure # factory, industrial_park, storage_facilities, warehouse, processing_facilities, etc.
           - educational_infrastructure # community_centers, child_friendly_learning_spaces, school_rehabilitation, gender_specific_bathrooms, etc.
           - shelter_housing # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
@@ -97,7 +97,7 @@
             - mine_clearance
             - temporary_policing_services
           - conflict_resolution # conflict_mediatio, political_dialogue, disarmament, demobilization, reintegration, family_reunification, rehabilitation_of_child_soldier
-          - natural_resources # Water_rights, Land_rights, land_deeds, Biotechnology, etc.
+          - secure_natural_resources # Water_rights, Land_rights, land_deeds, Biotechnology, etc.
           - cultural_resources # landmark_designation, world_heritage_status, etc.
         - legislate: # regulate, control, tax,  subsidize, penalize, certify, ban, etc.
           - subsidize
