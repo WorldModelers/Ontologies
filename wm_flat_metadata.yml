@@ -95,7 +95,7 @@
                   - manure
                   - nitrogen
                   - potassium
-                  - phospherous
+                  - phosphorous
                   name: fertilizer
                   polarity: 1
                 - OntologyNode:
@@ -649,7 +649,7 @@
             - neutralize threat to livelihood
             - preserve livelihood
             - secure livelihood
-            name: livelihood_protections #  agricultural assets, cattle_raids,, supply chains,
+            name: livelihood_protections #  agricultural assets, cattle_raids, supply chains,
             polarity: 1
           - community_security: # policing, governance
             - OntologyNode:
@@ -682,7 +682,7 @@
             - family reunification
             - rehabilitation of child soldiers
             - conflict resolution
-            name: conflict_resolution # conflict_mediatio, political_dialogue, disarmament, demobilization, reintegration, family_reunification, rehabilitation_of_child_soldier
+            name: conflict_resolution # conflict_mediation, political_dialogue, disarmament, demobilization, reintegration, family_reunification, rehabilitation_of_child_soldier
             polarity: 1
           - OntologyNode:
             examples:
@@ -943,7 +943,7 @@
             - OntologyNode:
               examples:
                 - masks
-                - mask requirments
+                - mask requirements
                 - wearing face coverings
               name: masks
               polarity: 1
@@ -1506,7 +1506,7 @@
             - flee
             - fled
             - relocate
-            - micrate
+            - migrate
             - refugee migration
             - residence move
             - movement trends
@@ -2080,7 +2080,7 @@
           - OntologyNode:
             examples:
               - transmission
-              - commnunity spread
+              - community spread
               - airborne
               - virus
             name: transmission
@@ -2136,7 +2136,7 @@
             - medication
             - health treatments
             - medical therapy
-            - theraputic treatment
+            - therapeutic treatment
             - cure
             - surgery
             name: health_treatment
@@ -2326,7 +2326,7 @@
           examples:
           - food availability
           - food security
-          - good demestic food supply
+          - good domestic food supply
           - availability of foods
           name: food_availability
           opposite: wm/concept/causal_factor/food_insecurity/food_unavailability
