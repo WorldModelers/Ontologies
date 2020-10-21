@@ -388,7 +388,7 @@
           - pond
           - ocean
           - water bodies
-          - resevoir
+          - reservoir
           - aqueduct
           name: water_bodies
           polarity: 1
@@ -422,7 +422,7 @@
           - compost
           - manure
           - potassium
-          - phospherous
+          - phosphorous
           - fertilizer
           name: fertilizer
           polarity: 1
@@ -652,7 +652,7 @@
             pattern:
             - (RUTF|rutf)
             examples:
-            - ready to use theraputic foods
+            - ready to use therapeutic foods
             - rutf
             name: rutf
             polarity: 1
@@ -839,7 +839,7 @@
         - hospital
         - \bclinics\b
         examples:
-        - hosptial
+        - hospital
         - clinic
         - health post
         - doctors office
@@ -855,14 +855,14 @@
           - highway
           - trucks
           - trucking
-          name: road_infrastucture
+          name: road_infrastructure
           polarity: 1
         - OntologyNode:
           examples:
           - rail
           - railroad
           - train
-          name: rail_infrastucture
+          name: rail_infrastructure
           polarity: 1
         - OntologyNode:
           examples:
