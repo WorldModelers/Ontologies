@@ -7,6 +7,13 @@
 
 <sup>2</sup>It is furthermore connected to jitPack so that build tools like gradle, maven, sbt, or leiningen can retrieve their dependencies directly from GitHub.  Click on the jitPack icon for configuration instructions.
 
+## Note
+
+* The current flat ontology is contained in wm_flat.yml and its companion wm_flat_metadata.yml.
+* The current compositional ontology is contained in CompositionalOntology_v2.1.yaml and its companion CompositionalOntology_v2.1_metadata.yml.
+
+All other ontologies have been moved to the deprecated directory. 
+
 ## Procedure
 
 When working on these files with other programs, please follow these steps:
