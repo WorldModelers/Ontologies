@@ -92,11 +92,11 @@
             - surveillance_system_strengthening
             - humanitarian_certifications # SPHERE, core_standards, humanitarian_charter, etc.
         - secure: # protect, stabilize, defend, conserve, neutralize, preserve
-          - livelihood_protections #  agricultural assets, cattle_raids,, supply chains,
+          - livelihood_protections #  agricultural assets, cattle_raids, supply chains,
           - community_security: # policing, governance
             - mine_clearance
             - temporary_policing_services
-          - conflict_resolution # conflict_mediatio, political_dialogue, disarmament, demobilization, reintegration, family_reunification, rehabilitation_of_child_soldier
+          - conflict_resolution # conflict_mediation, political_dialogue, disarmament, demobilization, reintegration, family_reunification, rehabilitation_of_child_soldier
           - secure_natural_resources # Water_rights, Land_rights, land_deeds, Biotechnology, etc.
           - cultural_resources # landmark_designation, world_heritage_status, etc.
         - legislate: # regulate, control, tax,  subsidize, penalize, certify, ban, etc.
