@@ -241,6 +241,7 @@
     - nonutilization
     - preference
     - price_or_cost
+    - quantity
     - security
     - stability
     - unavailability

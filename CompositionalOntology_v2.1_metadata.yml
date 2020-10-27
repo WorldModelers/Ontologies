@@ -265,6 +265,8 @@
         examples:
         - finance
         - loan
+        - funding
+        - financial support
         name: finance
         polarity: 1
       - OntologyNode:
@@ -836,7 +838,7 @@
         polarity: 1
       - OntologyNode:
         pattern:
-        - hospital
+        - \bhospital\b
         - \bclinics\b
         examples:
         - hospital
@@ -1369,6 +1371,8 @@
       - OntologyNode:
         pattern:
         - death
+        - casualty
+        - casualties
         examples:
         - death
         name: death
@@ -1561,6 +1565,15 @@
       - cost
       - price
       name: price_or_cost
+      polarity: 1
+    - OntologyNode:
+      examples:
+      - quantity
+      - amount
+      - level
+      - measure
+      - number
+      name: quantity
       polarity: 1
     - OntologyNode:
       examples:
