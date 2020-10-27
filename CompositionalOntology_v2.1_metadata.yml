@@ -838,7 +838,7 @@
         polarity: 1
       - OntologyNode:
         pattern:
-        - \bhospital\b
+        - \bhospitals?\b
         - \bclinics\b
         examples:
         - hospital
