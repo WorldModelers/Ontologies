@@ -1568,15 +1568,6 @@
       polarity: 1
     - OntologyNode:
       examples:
-      - quantity
-      - amount
-      - level
-      - measure
-      - number
-      name: quantity
-      polarity: 1
-    - OntologyNode:
-      examples:
       - security
       - safety
       name: security
