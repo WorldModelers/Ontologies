@@ -150,6 +150,24 @@
       - household_food_storage
       - stockpile_goods
     - trend
+    - entity:
+      - animal
+      - artifact
+      - location
+      - government_entity
+      - geo-political_entity
+      - organization
+      - people:
+        - migration:
+          - human_migration
+          - IDP
+          - returnees
+        - health_worker
+        - household
+        - person_or_group
+        - taskforce
+    - time:
+      - season
   - process:
     - access
     - adapt
@@ -240,21 +258,3 @@
     - utilization
     - variability
     - vulnerability
-  - entity:
-    - animal
-    - artifact
-    - location
-    - government_entity
-    - geo-political_entity
-    - organization
-    - people:
-      - migration:
-        - refugees
-        - IDP
-        - returnees
-      - health_worker
-      - household
-      - person_or_group
-      - taskforce
-  - time:
-    - season

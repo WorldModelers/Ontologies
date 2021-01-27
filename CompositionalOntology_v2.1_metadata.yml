@@ -1014,6 +1014,121 @@
       - trend
       name: trend
       polarity: 1
+    - entity:
+      - OntologyNode:
+        examples:
+        - animal
+        - critter
+        - creature
+        - beast
+        name: animal
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - artifact
+        name: artifact
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - location
+        - geo-location
+        - country
+        - city
+        name: location
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - agency
+        - institution
+        - government entity
+        name: government_entity
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - GPE
+        - nation
+        - city
+        name: geo-political_entity
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - NGO
+        - cooperative
+        - community group
+        - community based organization
+        - organization
+        name: organization
+        polarity: 1
+      - people:
+        - migration:
+          - OntologyNode:
+            examples:
+            - human
+            - migration
+            - refugee camps
+            name: human_migration
+            polarity: -1
+          - OntologyNode:
+            examples:
+            - IDP
+            - displaced persons
+            - refugee
+            - migrant
+            name: IDP
+            polarity: -1
+          - OntologyNode:
+            examples:
+            - returnees
+            - refugee
+            name: returnees
+            polarity: 1
+        - OntologyNode:
+          examples:
+          - community health worker
+          - CHW
+          - doctor
+          - nurse
+          - physicians assistant
+          - medic
+          - nurse
+          - nursing
+          - first responders
+          name: health_worker
+          polarity: 1
+        - OntologyNode:
+          pattern:
+          - household
+          examples:
+          - household
+          - family
+          name: household
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - person or group
+          - society
+          - village
+          - group
+          - community
+          name: person_or_group
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - taskforce
+          - task force
+          name: taskforce
+          polarity: 1
+    - time:
+      - OntologyNode:
+        examples:
+        - lean season
+        - crop season
+        - crop calendar
+        - planting season
+        - harvesting season
+        - season
+        name: season
+        polarity: 1
   - process:
     - OntologyNode:
       examples:
@@ -1574,119 +1689,4 @@
       examples:
       - vulnerability
       name: vulnerability
-      polarity: 1
-  - entity:
-    - OntologyNode:
-      examples:
-      - animal
-      - critter
-      - creature
-      - beast
-      name: animal
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - artifact
-      name: artifact
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - location
-      - geo-location
-      - country
-      - city
-      name: location
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - agency
-      - institution
-      - government entity
-      name: government_entity
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - GPE
-      - nation
-      - city
-      name: geo-political_entity
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - NGO
-      - cooperative
-      - community group
-      - community based organization
-      - organization
-      name: organization
-      polarity: 1
-    - people:
-      - migration:
-        - OntologyNode:
-          examples:
-          - human
-          - migration
-          - refugee camps
-          name: refugees
-          polarity: -1
-        - OntologyNode:
-          examples:
-          - IDP
-          - displaced persons
-          - refugee
-          - migrant
-          name: IDP
-          polarity: -1
-        - OntologyNode:
-          examples:
-          - returnees
-          - refugee
-          name: returnees
-          polarity: 1
-      - OntologyNode:
-        examples:
-        - community health worker
-        - CHW
-        - doctor
-        - nurse
-        - physicians assistant
-        - medic
-        - nurse
-        - nursing
-        - first responders
-        name: health_worker
-        polarity: 1
-      - OntologyNode:
-        pattern:
-        - household
-        examples:
-        - household
-        - family
-        name: household
-        polarity: 1
-      - OntologyNode:
-        examples:
-        - person or group
-        - society
-        - village
-        - group
-        - community
-        name: person_or_group
-        polarity: 1
-      - OntologyNode:
-        examples:
-        - taskforce
-        - task force
-        name: taskforce
-        polarity: 1
-  - time:
-    - OntologyNode:
-      examples:
-      - lean season
-      - crop season
-      - crop calendar
-      - planting season
-      - harvesting season
-      - season
-      name: season
       polarity: 1
