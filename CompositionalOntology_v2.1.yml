@@ -195,6 +195,7 @@
     - processing
     - farming:
       - harvesting
+      - irrigation
       - planting
       - tilling
       - weeding

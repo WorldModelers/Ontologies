@@ -1335,6 +1335,13 @@
         polarity: 1
       - OntologyNode:
         examples:
+        - irrigate
+        - irrigation
+        - irrigating
+        name: irrigation
+        polarity: 1
+      - OntologyNode:
+        examples:
         - planting
         - sow
         name: planting
