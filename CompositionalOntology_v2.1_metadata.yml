@@ -868,14 +868,14 @@
           - highway
           - trucks
           - trucking
-          name: roads
+          name: road_infrastructure
           polarity: 1
         - OntologyNode:
           examples:
           - rail
           - railroad
-          - train
-          name: railroads
+          - trainq
+          name: railroad_infrastructure
           polarity: 1
         - OntologyNode:
           examples:

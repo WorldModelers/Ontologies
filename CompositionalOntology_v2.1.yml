@@ -125,8 +125,8 @@
       - irrigation_infrastructure
       - medical_facilities
       - transportation:
-        - roads
-        - railroads
+        - road_infrastructure
+        - railroad_infrastructure
         - bridge
       - sanitation_infrastructure
       - water_facilities
