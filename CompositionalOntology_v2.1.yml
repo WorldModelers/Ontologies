@@ -121,7 +121,7 @@
       - education_facilities
       - electrical_infrastructure
       - energy_infrastructure
-      - humanitarian_infrastructure
+      - refugee_camps
       - irrigation_infrastructure
       - medical_facilities
       - transportation:
@@ -159,9 +159,7 @@
       - organization
       - people:
         - migration:
-          - human_migration
-          - IDP
-          - returnees
+          - migrant
         - health_worker
         - household
         - person_or_group

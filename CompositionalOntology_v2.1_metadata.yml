@@ -836,8 +836,7 @@
         examples:
         - refugee camp
         - temporary housing
-        - humanitarian
-        name: humanitarian_infrastructure
+        name: refugee_camps
         polarity: 1
       - OntologyNode:
         pattern:
@@ -1063,25 +1062,13 @@
         - migration:
           - OntologyNode:
             examples:
-            - human
-            - migration
-            - refugee camps
-            name: human_migration
-            polarity: -1
-          - OntologyNode:
-            examples:
             - IDP
             - displaced persons
             - refugee
             - migrant
-            name: IDP
+            - returnee
+            name: migrant
             polarity: -1
-          - OntologyNode:
-            examples:
-            - returnees
-            - refugee
-            name: returnees
-            polarity: 1
         - OntologyNode:
           examples:
           - community health worker
