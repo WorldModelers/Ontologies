@@ -1,4 +1,4 @@
-- wm_compositional:
+- wm:
   - concept:
     - agriculture:
       - crop:
@@ -25,26 +25,26 @@
         - crime
         - hostility
         - tension
-      - disease
-      - depression_recession
+      - epidemic
+      - recession
       - environmental:
         - drought
         - flood
-      - evacuation
       - famine
-      - taskforce
     - economy:
       - assets
       - budget
       - competition
       - currency
-      - domestic_market
+      - commerce
       - economy
       - finance
       - income
-      - livelihoods:
-        - rural_livelihoods
-        - urban_livelihoods
+      - livelihood:
+        - rural_livelihood
+        - urban_livelihood
+      - marketplace
+      - workforce
     - education
     - environment:
       - climate
@@ -69,11 +69,13 @@
         - livestock_feed
         - pesticide
         - seed
+      - construction_materials
       - education_supplies
       - food
       - fuel
       - medical_supplies
       - medicine
+      - water
     - government:
       - corruption
       - election
@@ -116,30 +118,22 @@
       - agriculture:
         - farm_infrastructure
       - communication
-      - construction_materials
       - education_facilities
       - electrical_infrastructure
       - energy_infrastructure
-      - humanitarian_infrastructure
+      - refugee_camps
       - irrigation_infrastructure
       - medical_facilities
-      - transportation_infrastructure:
+      - transportation:
         - road_infrastructure
-        - rail_infrastructure
+        - railroad_infrastructure
         - bridge
-      - WASH:
-        - sanitation_infrastructure
-        - water_facilities
-    - migration:
-      - human_migration
-      - IDP
-      - returnees
-    - physical_market
+      - sanitation_infrastructure
+      - water_facilities
     - population:
-      - demographics:
-        - age
-        - gender
-        - race_or_ethnicity
+      - age
+      - gender
+      - race_or_ethnicity
       - density:
         - de-population
         - overcrowding
@@ -149,17 +143,29 @@
       - economic_security
       - environmental_security
       - national_security
-    - service:
-      - information:
-        - surveillance_system
+      - surveillance_system
     - storage:
       - agricultural_storage
       - general_storage_facilities
       - household_food_storage
       - stockpile_goods
     - trend
-    - water
-    - workforce
+    - entity:
+      - animal
+      - artifact
+      - location
+      - government_entity
+      - geo-political_entity
+      - organization
+      - people:
+        - migration:
+          - migrant
+        - health_worker
+        - household
+        - person_or_group
+        - taskforce
+    - time:
+      - season
   - process:
     - access
     - adapt
@@ -182,10 +188,12 @@
     - demand
     - depreciate
     - develop
+    - evacuation
     - intake
     - processing
     - farming:
       - harvesting
+      - irrigation
       - planting
       - tilling
       - weeding
@@ -209,9 +217,10 @@
     - population:
       - birth
       - death
-      - emigrate
-      - immigrate
-      - migrate
+      - migrate:
+        - migrate
+        - emigrate
+        - immigrate
     - prepare
     - produce
     - provide
@@ -221,7 +230,7 @@
     - trade:
       - export
       - import
-    - train_or_educate:
+    - train:
       - agriculture_training
       - financial_training
       - humanitarian_training:
@@ -248,15 +257,3 @@
     - utilization
     - variability
     - vulnerability
-  - entity:
-    - animal
-    - artifact
-    - geo-location
-    - government_entity
-    - geo-political_entity
-    - health_worker
-    - household
-    - organization
-    - person_or_group
-  - time:
-    - season

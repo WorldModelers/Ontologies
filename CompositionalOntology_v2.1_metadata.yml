@@ -1,4 +1,4 @@
-- wm_compositional:
+- wm:
   - concept:
     - agriculture:
       - crop:
@@ -184,7 +184,7 @@
         - global pandemic
         - epidemic
         - disease
-        name: disease
+        name: epidemic
         polarity: -1
       - OntologyNode:
         examples:
@@ -192,7 +192,7 @@
         - recession
         - economic crisis
         - financial crisis
-        name: depression_recession
+        name: recession
         polarity: -1
       - environmental:
         - OntologyNode:
@@ -211,20 +211,10 @@
           polarity: -1
       - OntologyNode:
         examples:
-        - evacuation
-        name: evacuation
-        polarity: 1
-      - OntologyNode:
-        examples:
         - famine
         - hunger
         name: famine
         polarity: -1
-      - OntologyNode:
-        examples:
-        - taskforce
-        name: taskforce
-        polarity: 1
     - economy:
       - OntologyNode:
         examples:
@@ -254,7 +244,7 @@
         - GNP
         - stock market
         - employment
-        name: domestic_market
+        name: commerce
         polarity: 1
       - OntologyNode:
         examples:
@@ -280,19 +270,33 @@
         - wages
         name: income
         polarity: 1
-      - livelihoods:
+      - livelihood:
         - OntologyNode:
           examples:
-          - rural livelihoods
+          - rural livelihood
           - employment
-          name: rural_livelihoods
+          name: rural_livelihood
           polarity: 1
         - OntologyNode:
           examples:
           - employment
-          - urban livelihoods
-          name: urban_livelihoods
+          - urban livelihood
+          name: urban_livelihood
           polarity: 1
+      - OntologyNode:
+        examples:
+        - physical market
+        - grocery storage
+        - produce market
+        name: marketplace
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - workforce
+        - worker
+        - staff
+        name: workforce
+        polarity: 1
     - OntologyNode:
       examples:
       - literacy
@@ -473,6 +477,13 @@
           polarity: 1
       - OntologyNode:
         examples:
+        - construction materials
+        - lumber
+        - concrete cement
+        name: construction_materials
+        polarity: 1
+      - OntologyNode:
+        examples:
         - chalkboard
         - pencil
         - notebook
@@ -513,6 +524,13 @@
         - antivirals
         - medicine
         name: medicine
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - water
+        - H20
+        - aqua
+        name: water
         polarity: 1
     - government:
       - OntologyNode:
@@ -783,13 +801,6 @@
         polarity: 1
       - OntologyNode:
         examples:
-        - construction materials
-        - lumber
-        - concrete cement
-        name: construction_materials
-        polarity: 1
-      - OntologyNode:
-        examples:
         - school
         - college
         - university
@@ -825,8 +836,7 @@
         examples:
         - refugee camp
         - temporary housing
-        - humanitarian
-        name: humanitarian_infrastructure
+        name: refugee_camps
         polarity: 1
       - OntologyNode:
         pattern:
@@ -850,7 +860,7 @@
         - medical facilities
         name: medical_facilities
         polarity: 1
-      - transportation_infrastructure:
+      - transportation:
         - OntologyNode:
           examples:
           - road
@@ -863,88 +873,57 @@
           examples:
           - rail
           - railroad
-          - train
-          name: rail_infrastructure
+          - trainq
+          name: railroad_infrastructure
           polarity: 1
         - OntologyNode:
           examples:
           - bridge
           name: bridge
           polarity: 1
-      - WASH:
-        - OntologyNode:
-          pattern:
-          - \blatrines?\b
-          - \btoilets?\b
-          examples:
-          - latrines
-          - toilets
-          - handwashing station
-          - sanitation
-          name: sanitation_infrastructure
-          polarity: 1
-        - OntologyNode:
-          pattern:
-          - \bborehole
-          examples:
-          - boreholes
-          - wells
-          - water point
-          - water treatment center
-          - water facilities
-          name: water_facilities
-          polarity: 1
-    - migration:
       - OntologyNode:
+        pattern:
+        - \blatrines?\b
+        - \btoilets?\b
         examples:
-        - human
-        - migration
-        - refugee camps
-        name: human_migration
-        polarity: -1
-      - OntologyNode:
-        examples:
-        - IDP
-        - displaced persons
-        - refugee
-        - migrant
-        name: IDP
-        polarity: -1
-      - OntologyNode:
-        examples:
-        - returnees
-        - refugee
-        name: returnees
+        - latrines
+        - toilets
+        - handwashing station
+        - sanitation
+        name: sanitation_infrastructure
         polarity: 1
-    - OntologyNode:
-      examples:
-      - physical market
-      - grocery storage
-      - produce market
-      name: physical_market
-      polarity: 1
+      - OntologyNode:
+        pattern:
+        - \bborehole
+        examples:
+        - boreholes
+        - wells
+        - water point
+        - water treatment center
+        - water facilities
+        name: water_facilities
+        polarity: 1
     - population:
-      - demographics:
-        - OntologyNode:
-          examples:
-          - age
-          name: age
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - gender
-          - male
-          - female
-          - sex
-          - gender demographics
-          name: gender
-          polarity: 1
-        - OntologyNode:
-          examples:
-          - race
-          - ethnicity
-          name: race_or_ethnicity
-          polarity: 1
+      - OntologyNode:
+        examples:
+        - age
+        name: age
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - gender
+        - male
+        - female
+        - sex
+        - gender demographics
+        name: gender
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - race
+        - ethnicity
+        name: race_or_ethnicity
+        polarity: 1
       - density:
         - OntologyNode:
           examples:
@@ -992,15 +971,13 @@
         - national security
         name: national_security
         polarity: 1
-    - service:
-      - information:
-        - OntologyNode:
-          examples:
-          - track
-          - monitor
-          - surveillance system
-          name: surveillance_system
-          polarity: 1
+      - OntologyNode:
+        examples:
+        - track
+        - monitor
+        - surveillance system
+        name: surveillance_system
+        polarity: 1
     - storage:
       - OntologyNode:
         examples:
@@ -1036,18 +1013,109 @@
       - trend
       name: trend
       polarity: 1
-    - OntologyNode:
-      examples:
-      - water
-      name: water
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - workforce
-      - worker
-      - staff
-      name: workforce
-      polarity: 1
+    - entity:
+      - OntologyNode:
+        examples:
+        - animal
+        - critter
+        - creature
+        - beast
+        name: animal
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - artifact
+        name: artifact
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - location
+        - geo-location
+        - country
+        - city
+        name: location
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - agency
+        - institution
+        - government entity
+        name: government_entity
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - GPE
+        - nation
+        - city
+        name: geo-political_entity
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - NGO
+        - cooperative
+        - community group
+        - community based organization
+        - organization
+        name: organization
+        polarity: 1
+      - people:
+        - migration:
+          - OntologyNode:
+            examples:
+            - IDP
+            - displaced persons
+            - refugee
+            - migrant
+            - returnee
+            name: migrant
+            polarity: -1
+        - OntologyNode:
+          examples:
+          - community health worker
+          - CHW
+          - doctor
+          - nurse
+          - physicians assistant
+          - medic
+          - nurse
+          - nursing
+          - first responders
+          name: health_worker
+          polarity: 1
+        - OntologyNode:
+          pattern:
+          - household
+          examples:
+          - household
+          - family
+          name: household
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - person or group
+          - society
+          - village
+          - group
+          - community
+          name: person_or_group
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - taskforce
+          - task force
+          name: taskforce
+          polarity: 1
+    - time:
+      - OntologyNode:
+        examples:
+        - lean season
+        - crop season
+        - crop calendar
+        - planting season
+        - harvesting season
+        - season
+        name: season
+        polarity: 1
   - process:
     - OntologyNode:
       examples:
@@ -1223,6 +1291,11 @@
       polarity: 1
     - OntologyNode:
       examples:
+      - evacuation
+      name: evacuation
+      polarity: 1
+    - OntologyNode:
+      examples:
       - intake
       - consumption
       - eating
@@ -1246,6 +1319,13 @@
         - harvest
         - reap
         name: harvesting
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - irrigate
+        - irrigation
+        - irrigating
+        name: irrigation
         polarity: 1
       - OntologyNode:
         examples:
@@ -1377,25 +1457,26 @@
         - death
         name: death
         polarity: 1
-      - OntologyNode:
-        examples:
-        - emigrate
-        - emigration
-        name: emigrate
-        polarity: 1
-      - OntologyNode:
-        examples:
-        - immigrate
-        - asylum
-        - immigration
-        name: immigrate
-        polarity: 1
-      - OntologyNode:
-        examples:
-        - migrate
-        - migration
-        name: migrate
-        polarity: 1
+      - migrate:
+        - OntologyNode:
+          examples:
+          - migrate
+          - migration
+          name: migrate
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - emigrate
+          - emigration
+          name: emigrate
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - immigrate
+          - asylum
+          - immigration
+          name: immigrate
+          polarity: 1
     - OntologyNode:
       examples:
       - prepare
@@ -1451,7 +1532,7 @@
         - import
         name: import
         polarity: 1
-    - train_or_educate:
+    - train:
       - OntologyNode:
         examples:
         - production practices
@@ -1602,89 +1683,4 @@
       examples:
       - vulnerability
       name: vulnerability
-      polarity: 1
-  - entity:
-    - OntologyNode:
-      examples:
-      - animal
-      - critter
-      - creature
-      - beast
-      name: animal
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - artifact
-      name: artifact
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - geo-location
-      - country
-      - city
-      name: geo-location
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - agency
-      - institution
-      - government entity
-      name: government_entity
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - GPE
-      - nation
-      - city
-      name: geo-political_entity
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - community health worker
-      - CHW
-      - doctor
-      - nurse
-      - physicians assistant
-      - medic
-      - nurse
-      - nursing
-      - first responders
-      name: health_worker
-      polarity: 1
-    - OntologyNode:
-      pattern:
-      - household
-      examples:
-      - household
-      - family
-      name: household
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - NGO
-      - cooperative
-      - community group
-      - community based organization
-      - organization
-      name: organization
-      polarity: 1
-    - OntologyNode:
-      examples:
-      - person or group
-      - society
-      - village
-      - group
-      - community
-      name: person_or_group
-      polarity: 1
-  - time:
-    - OntologyNode:
-      examples:
-      - lean season
-      - crop season
-      - crop calendar
-      - planting season
-      - harvesting season
-      - season
-      name: season
       polarity: 1
