@@ -10,7 +10,7 @@
           - barley
           - sorghum
           - cereals
-          definition:
+          definition: A grass cultivated for the edible parts of its grain.
           name: cereals
           polarity: 1
         - OntologyNode:
@@ -65,7 +65,7 @@
         - sheep
         - goats
         - livestock
-        definition:
+        definition: Domesticated animals raised for their labor or to produce commodities such as milk, meat, eggs, fur, leather, or wool.
         name: livestock
         polarity: 1
       - pest:
@@ -200,7 +200,7 @@
         - global pandemic
         - epidemic
         - disease
-        definition:
+        definition: The rapid spread of disease to a large population in a short amount of time.
         name: epidemic
         polarity: -1
       - OntologyNode:
@@ -218,7 +218,7 @@
           - drought
           - droughts
           - low rainfall
-          definition:
+          definition: A prolonged shortage in the water supply.
           name: drought
           polarity: -1
         - OntologyNode:
@@ -390,7 +390,7 @@
           - snow
           - humid
           - storm
-          definition:
+          definition: The state of the atmosphere, describing the degree to which it is hot or cold, wet or dry, calm or stormy, clear or cloudy.
           name: weather
           polarity: 1
       - natural_resources:
@@ -401,7 +401,7 @@
           - carbon
           - natural gas
           - crude oil
-          definition:
+          definition: Fuels formed from natural processes, containing organic molecules, that release energy in combustion.
           name: fossil_fuels
           polarity: 1
         - OntologyNode:
@@ -420,7 +420,7 @@
           - vegetation
           - grazing
           - pasture
-          definition:
+          definition: Land used for grazing by domesticated livestock.
           name: pasture
           polarity: 1
         - OntologyNode:
@@ -626,7 +626,7 @@
       - OntologyNode:
         examples:
         - sanction
-        definition:
+        definition: A restriction on trade, or measures by a country on a state or individual intended to elicit a change in their behavior.
         name: sanction
         polarity: -1
     - health:
@@ -655,7 +655,7 @@
         - excrement
         - vector
         - transmission
-        definition:
+        definition: An agent that carries or transmits an infectious pathogen into another living organism.
         name: vector
         polarity: -1
       - disease:
@@ -1251,7 +1251,7 @@
     - OntologyNode:
       examples:
       - access
-      definition:
+      definition: The ability or right to approach, enter, exit, make use of, or communicate with something.
       name: access
       polarity: 1
     - OntologyNode:
@@ -1368,7 +1368,7 @@
       - OntologyNode:
         examples:
         - exploit
-        definition:
+        definition: To make use of (sometimes unfairly) to one's own advantage.
         name: exploit
         polarity: -1
       - OntologyNode:
@@ -1479,7 +1479,7 @@
         - irrigate
         - irrigation
         - irrigating
-        definition:
+        definition: The process of applying controlled amounts of water to plants.
         name: irrigation
         polarity: 1
       - OntologyNode:
@@ -1684,7 +1684,7 @@
     - OntologyNode:
       examples:
       - research
-      definition:
+      definition: The collection, organization, and analysis of information to increase understanding of a topic or issue.
       name: research
       polarity: 1
     - OntologyNode:
@@ -1859,7 +1859,7 @@
     - OntologyNode:
       examples:
       - stability
-      definition: 
+      definition: Being unlikely to move or change.
       name: stability
       polarity: 1
     - OntologyNode:
@@ -1872,7 +1872,7 @@
       examples:
       - uncertainty
       - volatility
-      definition: 
+      definition: An epistemic situation involving imperfect or unknown information.
       name: uncertainty
       polarity: -1
     - OntologyNode:
