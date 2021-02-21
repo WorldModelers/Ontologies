@@ -10,6 +10,7 @@
           - barley
           - sorghum
           - cereals
+          definition: A grass cultivated for the edible parts of its grain.
           name: cereals
           polarity: 1
         - OntologyNode:
@@ -20,6 +21,7 @@
           - cabbage
           - carrots
           - beets
+          definition:
           name: vegetables
           polarity: 1
         - OntologyNode:
@@ -28,6 +30,7 @@
           - beans
           - peas
           - pulses
+          definition:
           name: pulses
           polarity: 1
         - OntologyNode:
@@ -36,6 +39,7 @@
           - cassava
           - sweet potato
           - tubers
+          definition:
           name: tubers
           polarity: 1
       - disease:
@@ -43,11 +47,13 @@
           examples:
           - blight
           - crop disease
+          definition:
           name: crop_disease
           polarity: -1
         - OntologyNode:
           examples:
           - livestock disease
+          definition:
           name: livestock_disease
           polarity: -1
       - OntologyNode:
@@ -59,18 +65,21 @@
         - sheep
         - goats
         - livestock
+        definition: Domesticated animals raised for their labor or to produce commodities such as milk, meat, eggs, fur, leather, or wool.
         name: livestock
         polarity: 1
       - pest:
         - OntologyNode:
           examples:
           - army worm
+          definition:
           name: army_worm
           polarity: -1
         - locust:
           - OntologyNode:
             examples:
             - locust eggs
+            definition:
             name: locust_eggs
             polarity: -1
           - solitary:
@@ -81,6 +90,7 @@
               - hopper
               - immature
               - instar
+              definition:
               name: solitary_hopper
               polarity: -1
             - OntologyNode:
@@ -88,6 +98,7 @@
               - solitary locust
               - solitarious adult locust
               - mature
+              definition:
               name: solitary_locust
               polarity: -1
           - gregarious:
@@ -98,6 +109,7 @@
               - bands of hoppers
               - locust hopper groups
               - immature
+              definition:
               name: hopper_band
               polarity: -1
             - OntologyNode:
@@ -111,6 +123,7 @@
               - mature maturation
               - adult
               - locust infestation
+              definition:
               name: locust_swarm
               polarity: -1
     - crisis_or_disaster:
@@ -136,6 +149,7 @@
           - violent crime
           - lawlessness
           - illegal
+          definition:
           name: crime
           polarity: -1
         - OntologyNode:
@@ -162,6 +176,7 @@
           - sabotage
           - vandalized
           - army mobilization
+          definition:
           name: hostility
           polarity: -1
         - OntologyNode:
@@ -176,6 +191,7 @@
           - hardship
           - burden
           - threatening
+          definition:
           name: tension
           polarity: -1
       - OntologyNode:
@@ -184,6 +200,7 @@
         - global pandemic
         - epidemic
         - disease
+        definition: The rapid spread of disease to a large population in a short amount of time.
         name: epidemic
         polarity: -1
       - OntologyNode:
@@ -192,6 +209,7 @@
         - recession
         - economic crisis
         - financial crisis
+        definition:
         name: recession
         polarity: -1
       - environmental:
@@ -200,6 +218,7 @@
           - drought
           - droughts
           - low rainfall
+          definition: A prolonged shortage in the water supply.
           name: drought
           polarity: -1
         - OntologyNode:
@@ -207,12 +226,14 @@
           - flood
           - flooding
           - flash flood
+          definition:
           name: flood
           polarity: -1
       - OntologyNode:
         examples:
         - famine
         - hunger
+        definition:
         name: famine
         polarity: -1
     - economy:
@@ -220,21 +241,25 @@
         examples:
         - assets
         - land property assets
+        definition:
         name: assets
         polarity: 1
       - OntologyNode:
         examples:
         - budget
+        definition:
         name: budget
         polarity: 1
       - OntologyNode:
         examples:
         - competition
+        definition:
         name: competition
         polarity: 1
       - OntologyNode:
         examples:
         - currency
+        definition:
         name: currency
         polarity: 1
       - OntologyNode:
@@ -244,11 +269,13 @@
         - GNP
         - stock market
         - employment
+        definition:
         name: commerce
         polarity: 1
       - OntologyNode:
         examples:
           - economy
+        definition:
         name: economy
         polarity: 1
       - OntologyNode:
@@ -257,6 +284,7 @@
         - loan
         - funding
         - financial support
+        definition:
         name: finance
         polarity: 1
       - OntologyNode:
@@ -268,6 +296,7 @@
         - paycheck
         - compensation
         - wages
+        definition:
         name: income
         polarity: 1
       - livelihood:
@@ -275,12 +304,14 @@
           examples:
           - rural livelihood
           - employment
+          definition:
           name: rural_livelihood
           polarity: 1
         - OntologyNode:
           examples:
           - employment
           - urban livelihood
+          definition:
           name: urban_livelihood
           polarity: 1
       - OntologyNode:
@@ -288,6 +319,7 @@
         - physical market
         - grocery storage
         - produce market
+        definition:
         name: marketplace
         polarity: 1
       - OntologyNode:
@@ -295,24 +327,28 @@
         - workforce
         - worker
         - staff
+        definition:
         name: workforce
         polarity: 1
     - OntologyNode:
       examples:
       - literacy
       - education
+      definition:
       name: education
       polarity: 1
     - environment:
       - OntologyNode:
         examples:
         - climate
+        definition:
         name: climate
         polarity: 1
       - OntologyNode:
         examples:
         - climate change
         - global warming
+        definition:
         name: climate_change
         polarity: 1
       - OntologyNode:
@@ -322,6 +358,7 @@
         - reforestation
         - forestry
         - logging
+        definition:
         name: forestry
         polarity: 1
       - meteorology:
@@ -331,11 +368,13 @@
           - storm
           - precipitation
           - rain
+          definition:
           name: precipitation
           polarity: 1
         - OntologyNode:
           examples:
           - temperature
+          definition:
           name: temperature
           polarity: 1
         - OntologyNode:
@@ -351,6 +390,7 @@
           - snow
           - humid
           - storm
+          definition: The state of the atmosphere, describing the degree to which it is hot or cold, wet or dry, calm or stormy, clear or cloudy.
           name: weather
           polarity: 1
       - natural_resources:
@@ -361,6 +401,7 @@
           - carbon
           - natural gas
           - crude oil
+          definition: Fuels formed from natural processes, containing organic molecules, that release energy in combustion.
           name: fossil_fuels
           polarity: 1
         - OntologyNode:
@@ -368,6 +409,7 @@
           - land
           - acreage
           - plot
+          definition:
           name: land
           polarity: 1
         - OntologyNode:
@@ -378,6 +420,7 @@
           - vegetation
           - grazing
           - pasture
+          definition: Land used for grazing by domesticated livestock.
           name: pasture
           polarity: 1
         - OntologyNode:
@@ -385,6 +428,7 @@
           - soil types
           - soil
           - leaching into the soil
+          definition:
           name: soil
           polarity: 1
         - OntologyNode:
@@ -396,6 +440,7 @@
           - water bodies
           - reservoir
           - aqueduct
+          definition:
           name: water_bodies
           polarity: 1
       - OntologyNode:
@@ -403,6 +448,7 @@
         - air pollution
         - land pollution
         - water pollution
+        definition:
         name: pollution
         polarity: -1
     - goods:
@@ -416,6 +462,7 @@
           - row planter
           - plow
           - winnower
+          definition:
           name: farm_equipment
           polarity: 1
         - OntologyNode:
@@ -430,6 +477,7 @@
           - potassium
           - phosphorous
           - fertilizer
+          definition:
           name: fertilizer
           polarity: 1
         - OntologyNode:
@@ -443,6 +491,7 @@
           - small scale irrigation pump
           - field irrigation
           - sprinklers
+          definition:
           name: irrigation_equipment
           polarity: 1
         - OntologyNode:
@@ -453,17 +502,19 @@
           - silage
           - corn meal
           - soybean hulls
+          definition:
           name: livestock_feed
           polarity: 1
         - OntologyNode:
           pattern:
-          - \b(DDT|dicamba|round-up)\b 
+          - \b(DDT|dicamba|round-up)\b
           examples:
           - organic
           - chemical
           - pesticide
-          - integrated pest management 
+          - integrated pest management
           - IPM
+          definition:
           name: pesticide
           polarity: 1
         - OntologyNode:
@@ -473,6 +524,7 @@
           - heirloom seed
           - organic seed
           - seed
+          definition:
           name: seed
           polarity: 1
       - OntologyNode:
@@ -480,6 +532,7 @@
         - construction materials
         - lumber
         - concrete cement
+        definition:
         name: construction_materials
         polarity: 1
       - OntologyNode:
@@ -490,6 +543,7 @@
         - smartboard
         - textbooks
         - education supplies
+        definition:
         name: education_supplies
         polarity: 1
       - OntologyNode:
@@ -497,6 +551,7 @@
         - food
         - diet
         - dietary
+        definition:
         name: food
         polarity: 1
       - OntologyNode:
@@ -504,6 +559,7 @@
         - fuel
         - gas
         - oil
+        definition:
         name: fuel
         polarity: 1
       - OntologyNode:
@@ -514,6 +570,7 @@
         - blood
         - bandages
         - medical supplies
+        definition:
         name: medical_supplies
         polarity: 1
       - OntologyNode:
@@ -523,6 +580,7 @@
         - antibiotics
         - antivirals
         - medicine
+        definition:
         name: medicine
         polarity: 1
       - OntologyNode:
@@ -530,12 +588,14 @@
         - water
         - H20
         - aqua
+        definition:
         name: water
         polarity: 1
     - government:
       - OntologyNode:
         examples:
         - corruption
+        definition:
         name: corruption
         polarity: -1
       - OntologyNode:
@@ -543,6 +603,7 @@
         - election
         - voting
         - ballot
+        definition:
         name: election
         polarity: 1
       - OntologyNode:
@@ -551,6 +612,7 @@
         - politics
         - laws
         - reforms
+        definition:
         name: political_system
         polarity: 1
       - OntologyNode:
@@ -558,11 +620,13 @@
         - census
         - social security
         - program
+        definition:
         name: government_program
         polarity: 1
       - OntologyNode:
         examples:
         - sanction
+        definition: A restriction on trade, or measures by a country on a state or individual intended to elicit a change in their behavior.
         name: sanction
         polarity: -1
     - health:
@@ -571,6 +635,7 @@
         - biometrics
         - fingerprint
         - DNA
+        definition:
         name: biometrics
         polarity: 1
       - OntologyNode:
@@ -580,6 +645,7 @@
         examples:
         - disease cases
         - new cases
+        definition:
         name: case_volume
         polarity: -1
       - OntologyNode:
@@ -589,6 +655,7 @@
         - excrement
         - vector
         - transmission
+        definition: An agent that carries or transmits an infectious pathogen into another living organism.
         name: vector
         polarity: -1
       - disease:
@@ -600,23 +667,27 @@
           - corona virus
           - coronavirus
           - virus
+          definition:
           name: COVID
           polarity: -1
         - OntologyNode:
           examples:
           - flu
           - influenza
+          definition:
           name: flu
           polarity: -1
         - OntologyNode:
           examples:
           - malaria
+          definition:
           name: malaria
           polarity: -1
       - OntologyNode:
         examples:
         - injury
         - wound
+        definition:
         name: injury
         polarity: -1
       - OntologyNode:
@@ -624,6 +695,7 @@
         - life
         - lives
         - living
+        definition:
         name: life
         polarity: 1
       - OntologyNode:
@@ -631,6 +703,7 @@
         - health
         - healthcare
         - medical
+        definition:
         name: healthcare
         polarity: 1
       - nutrition:
@@ -639,11 +712,13 @@
           - breast feeding
           - lactation
           - weening
+          definition:
           name: breast_feeding
           polarity: 1
         - OntologyNode:
           examples:
           - fortification
+          definition:
           name: fortification
           polarity: 1
         - OntologyNode:
@@ -657,6 +732,7 @@
           - undernourishment
           - nutritional deficiency
           - vitamin deficiencies
+          definition:
           name: malnutrition
           polarity: -1
         - supplementary_feeding:
@@ -666,6 +742,7 @@
             examples:
             - infant and young child feeding
             - iycf
+            definition:
             name: iycf
             polarity: 1
           - OntologyNode:
@@ -674,16 +751,19 @@
             examples:
             - ready to use therapeutic foods
             - rutf
+            definition:
             name: rutf
             polarity: 1
       - OntologyNode:
         examples:
         - public health
+        definition:
         name: public_health
         polarity: 1
       - OntologyNode:
         examples:
         - public safety
+        definition:
         name: public_safety
         polarity: 1
       - OntologyNode:
@@ -695,12 +775,14 @@
         - cocaine
         - heroin
         - substance abuse
+        definition:
         name: substance_abuse
         polarity: -1
       - treatment:
         - OntologyNode:
           examples:
           - intensive care
+          definition:
           name: intensive_care
           polarity: 1
         - OntologyNode:
@@ -709,6 +791,7 @@
           - vaccine
           - prophylactic
           - well visit
+          definition:
           name: preventative_treatment
           polarity: 1
         - OntologyNode:
@@ -718,6 +801,7 @@
           - anti-depressant
           - counseling
           - psychiatrist
+          definition:
           name: psychological_services
           polarity: 1
       - OntologyNode:
@@ -725,12 +809,14 @@
         - immunization
         - vaccine
         - vaccination
+        definition:
         name: vaccination
         polarity: 1
       - OntologyNode:
         examples:
         - welfare
         - living condition
+        definition:
         name: welfare
         polarity: 1
       - OntologyNode:
@@ -742,6 +828,7 @@
         - PPE
         - personal protective equipment
         - hygiene materials
+        definition:
         name: hygiene_materials
         polarity: 1
     - humanitarian_assistance:
@@ -753,6 +840,7 @@
         - food for work
         - free food distribution
         - school feeding
+        definition:
         name: food_aid
         polarity: 1
       - OntologyNode:
@@ -765,6 +853,7 @@
         - pans
         - jerry can
         - non food items
+        definition:
         name: non_food_items
         polarity: 1
       - OntologyNode:
@@ -774,6 +863,7 @@
         examples:
         - food voucher
         - voucher or cash
+        definition:
         name: voucher_or_cash
         polarity: 1
     - infrastructure:
@@ -786,6 +876,7 @@
           - nursery
           - farm infrastructure
           - post harvest infrastructure
+          definition:
           name: farm_infrastructure
           polarity: 1
       - OntologyNode:
@@ -797,6 +888,7 @@
         - television
         - news
         - social media
+        definition:
         name: communication
         polarity: 1
       - OntologyNode:
@@ -809,12 +901,14 @@
         - child friendly learning spaces
         - community centers
         - education facilities
+        definition:
         name: education_facilities
         polarity: 1
       - OntologyNode:
         examples:
         - electrical wiring
         - electricity
+        definition:
         name: electrical_infrastructure
         polarity: 1
       - OntologyNode:
@@ -827,6 +921,7 @@
         - power station
         - energy
         - power plant
+        definition:
         name: energy_infrastructure
         polarity: 1
       - OntologyNode:
@@ -836,6 +931,7 @@
         examples:
         - refugee camp
         - temporary housing
+        definition:
         name: refugee_camps
         polarity: 1
       - OntologyNode:
@@ -844,6 +940,7 @@
         examples:
         - canal
         - irrigation
+        definition:
         name: irrigation_infrastructure
         polarity: 1
       - OntologyNode:
@@ -858,6 +955,7 @@
         - mobile clinics
         - field hospitals
         - medical facilities
+        definition:
         name: medical_facilities
         polarity: 1
       - transportation:
@@ -867,6 +965,7 @@
           - highway
           - trucks
           - trucking
+          definition:
           name: road_infrastructure
           polarity: 1
         - OntologyNode:
@@ -874,11 +973,13 @@
           - rail
           - railroad
           - trainq
+          definition:
           name: railroad_infrastructure
           polarity: 1
         - OntologyNode:
           examples:
           - bridge
+          definition:
           name: bridge
           polarity: 1
       - OntologyNode:
@@ -890,6 +991,7 @@
         - toilets
         - handwashing station
         - sanitation
+        definition:
         name: sanitation_infrastructure
         polarity: 1
       - OntologyNode:
@@ -901,12 +1003,14 @@
         - water point
         - water treatment center
         - water facilities
+        definition:
         name: water_facilities
         polarity: 1
     - population:
       - OntologyNode:
         examples:
         - age
+        definition:
         name: age
         polarity: 1
       - OntologyNode:
@@ -916,12 +1020,14 @@
         - female
         - sex
         - gender demographics
+        definition:
         name: gender
         polarity: 1
       - OntologyNode:
         examples:
         - race
         - ethnicity
+        definition:
         name: race_or_ethnicity
         polarity: 1
       - density:
@@ -930,16 +1036,19 @@
           - de-population
           - depopulation
           - population decline
+          definition:
           name: de-population
           polarity: -1
         - OntologyNode:
           examples:
           - overcrowding
+          definition:
           name: overcrowding
           polarity: -1
     - OntologyNode:
       examples:
       - poverty
+      definition:
       name: poverty
       polarity: -1
     - security:
@@ -948,6 +1057,7 @@
         - policing
         - mine clearance
         - community
+        definition:
         name: community_security
         polarity: 1
       - OntologyNode:
@@ -957,11 +1067,13 @@
         - economy
         - recession
         - economic security
+        definition:
         name: economic_security
         polarity: 1
       - OntologyNode:
         examples:
         - environmental security
+        definition:
         name: environmental_security
         polarity: 1
       - OntologyNode:
@@ -969,6 +1081,7 @@
         - military
         - diplomacy
         - national security
+        definition:
         name: national_security
         polarity: 1
       - OntologyNode:
@@ -976,6 +1089,7 @@
         - track
         - monitor
         - surveillance system
+        definition:
         name: surveillance_system
         polarity: 1
     - storage:
@@ -985,6 +1099,7 @@
         - granary
         - agricultural storage
         - warehouse
+        definition:
         name: agricultural_storage
         polarity: 1
       - OntologyNode:
@@ -992,17 +1107,20 @@
         - storage facilities
         - storage
         - warehouse
+        definition:
         name: general_storage_facilities
         polarity: 1
       - OntologyNode:
         examples:
         - household food storage
         - storage
+        definition:
         name: household_food_storage
         polarity: 1
       - OntologyNode:
         examples:
         - stockpile
+        definition:
         name: stockpile_goods
         polarity: 1
     - OntologyNode:
@@ -1011,6 +1129,7 @@
       - bias
       - pattern
       - trend
+      definition:
       name: trend
       polarity: 1
     - entity:
@@ -1020,11 +1139,13 @@
         - critter
         - creature
         - beast
+        definition:
         name: animal
         polarity: 1
       - OntologyNode:
         examples:
         - artifact
+        definition:
         name: artifact
         polarity: 1
       - OntologyNode:
@@ -1033,6 +1154,7 @@
         - geo-location
         - country
         - city
+        definition:
         name: location
         polarity: 1
       - OntologyNode:
@@ -1040,6 +1162,7 @@
         - agency
         - institution
         - government entity
+        definition:
         name: government_entity
         polarity: 1
       - OntologyNode:
@@ -1047,6 +1170,7 @@
         - GPE
         - nation
         - city
+        definition:
         name: geo-political_entity
         polarity: 1
       - OntologyNode:
@@ -1056,6 +1180,7 @@
         - community group
         - community based organization
         - organization
+        definition:
         name: organization
         polarity: 1
       - people:
@@ -1067,6 +1192,7 @@
             - refugee
             - migrant
             - returnee
+            definition:
             name: migrant
             polarity: -1
         - OntologyNode:
@@ -1080,6 +1206,7 @@
           - nurse
           - nursing
           - first responders
+          definition:
           name: health_worker
           polarity: 1
         - OntologyNode:
@@ -1088,6 +1215,7 @@
           examples:
           - household
           - family
+          definition:
           name: household
           polarity: 1
         - OntologyNode:
@@ -1097,12 +1225,14 @@
           - village
           - group
           - community
+          definition:
           name: person_or_group
           polarity: 1
         - OntologyNode:
           examples:
           - taskforce
           - task force
+          definition:
           name: taskforce
           polarity: 1
     - time:
@@ -1114,17 +1244,20 @@
         - planting season
         - harvesting season
         - season
+        definition:
         name: season
         polarity: 1
   - process:
     - OntologyNode:
       examples:
       - access
+      definition: The ability or right to approach, enter, exit, make use of, or communicate with something.
       name: access
       polarity: 1
     - OntologyNode:
       examples:
       - adapt
+      definition:
       name: adapt
       polarity: 1
     - OntologyNode:
@@ -1132,6 +1265,7 @@
       - breeding
       - breed
       - reproduce
+      definition:
       name: breeding
       polarity: 1
     - OntologyNode:
@@ -1140,6 +1274,7 @@
       - build
       - construct
       - establish
+      definition:
       name: build
       polarity: 1
     - OntologyNode:
@@ -1147,6 +1282,7 @@
       - collaborate
       - cooperate
       - partner
+      definition:
       name: collaborate
       polarity: 1
     - communicate:
@@ -1155,6 +1291,7 @@
         - campaign
         - promote
         - advocate
+        definition:
         name: campaign
         polarity: 1
       - OntologyNode:
@@ -1162,6 +1299,7 @@
         - debate
         - disagree
         - discuss
+        definition:
         name: debate
         polarity: 1
     - conflict:
@@ -1173,6 +1311,7 @@
         - forced recruitment
         - abducted
         - kidnapped
+        definition:
         name: abduct
         polarity: -1
       - OntologyNode:
@@ -1201,6 +1340,7 @@
         - airstrike
         - offense
         - attack
+        definition:
         name: attack
         polarity: -1
       - OntologyNode:
@@ -1216,16 +1356,19 @@
         - turmoil
         - demands
         - riot
+        definition:
         name: demonstrate
         polarity: -1
       - OntologyNode:
         examples:
         - disarmament
+        definition:
         name: disarmament
         polarity: 1
       - OntologyNode:
         examples:
         - exploit
+        definition: To make use of (sometimes unfairly) to one's own advantage.
         name: exploit
         polarity: -1
       - OntologyNode:
@@ -1234,6 +1377,7 @@
         - agreement
         - peace deal
         - resolution
+        definition:
         name: resolution
         polarity: 1
       - OntologyNode:
@@ -1244,11 +1388,13 @@
         - terrorist activity
         - roadside bombing
         - bomb threat
+        definition:
         name: terrorism
         polarity: -1
       - OntologyNode:
         examples:
         - threat
+        definition:
         name: threat
         polarity: -1
       - OntologyNode:
@@ -1268,17 +1414,20 @@
         - military aggression
         - invaded
         - warfare
+        definition:
         name: war
         polarity: -1
     - OntologyNode:
       examples:
       - demand
+      definition:
       name: demand
       polarity: 1
     - OntologyNode:
       examples:
       - depreciate
       - devaluation
+      definition:
       name: depreciate
       polarity: -1
     - OntologyNode:
@@ -1287,11 +1436,13 @@
       - develop
       - grow
       - growth
+      definition:
       name: develop
       polarity: 1
     - OntologyNode:
       examples:
       - evacuation
+      definition:
       name: evacuation
       polarity: 1
     - OntologyNode:
@@ -1299,6 +1450,7 @@
       - intake
       - consumption
       - eating
+      definition:
       name: intake
       polarity: 1
     - OntologyNode:
@@ -1310,6 +1462,7 @@
       - packing
       - shipping
       - processing
+      definition:
       name: processing
       polarity: 1
     - farming:
@@ -1318,6 +1471,7 @@
         - harvesting
         - harvest
         - reap
+        definition:
         name: harvesting
         polarity: 1
       - OntologyNode:
@@ -1325,38 +1479,45 @@
         - irrigate
         - irrigation
         - irrigating
+        definition: The process of applying controlled amounts of water to plants.
         name: irrigation
         polarity: 1
       - OntologyNode:
         examples:
         - planting
         - sow
+        definition:
         name: planting
         polarity: 1
       - OntologyNode:
         examples:
         - tilling
+        definition:
         name: tilling
         polarity: 1
       - OntologyNode:
         examples:
         - weeding
+        definition:
         name: weeding
         polarity: 1
     - OntologyNode:
       examples:
       - forage
+      definition:
       name: forage
       polarity: 1
     - OntologyNode:
       examples:
       - hatching
       - hatch
+      definition:
       name: hatching
       polarity: 1
     - OntologyNode:
       examples:
       - hunt
+      definition:
       name: hunt
       polarity: 1
     - OntologyNode:
@@ -1364,11 +1525,13 @@
       - \b[iI]nfest
       examples:
       - infest
+      definition:
       name: infest
       polarity: -1
     - OntologyNode:
       examples:
       - inflation
+      definition:
       name: inflation
       polarity: -1
     - legislate:
@@ -1379,16 +1542,19 @@
         - regulate
         - legislate
         - mandate
+        definition:
         name: regulate
         polarity: 1
       - OntologyNode:
         examples:
         - subsidize
+        definition:
         name: subsidize
         polarity: 1
       - OntologyNode:
         examples:
         - tax
+        definition:
         name: tax
         polarity: 1
     - OntologyNode:
@@ -1397,6 +1563,7 @@
       - manage
       - management
       - administrate
+      definition:
       name: manage
       polarity: 1
     - medical:
@@ -1407,6 +1574,7 @@
         examples:
         - isolation
         - quarantine
+        definition:
         name: quarantine
         polarity: 1
       - OntologyNode:
@@ -1414,6 +1582,7 @@
         - (contact tracing)
         examples:
         - contact tracing
+        definition:
         name: contact_tracing
         polarity: 1
       - OntologyNode:
@@ -1422,22 +1591,26 @@
         examples:
         - social distancing
         - curfew
+        definition:
         name: social_distancing
         polarity: 1
     - OntologyNode:
       examples:
       - mitigate
+      definition:
       name: mitigate
       polarity: 1
     - OntologyNode:
       examples:
       - outbreak
+      definition:
       name: outbreak
       polarity: -1
     - OntologyNode:
       examples:
       - plan
       - strategy
+      definition:
       name: plan
       polarity: 1
     - population:
@@ -1446,6 +1619,7 @@
         - birth
         examples:
         - birth
+        definition:
         name: birth
         polarity: 1
       - OntologyNode:
@@ -1455,6 +1629,7 @@
         - casualties
         examples:
         - death
+        definition:
         name: death
         polarity: 1
       - migrate:
@@ -1462,12 +1637,14 @@
           examples:
           - migrate
           - migration
+          definition:
           name: migrate
           polarity: 1
         - OntologyNode:
           examples:
           - emigrate
           - emigration
+          definition:
           name: emigrate
           polarity: 1
         - OntologyNode:
@@ -1475,6 +1652,7 @@
           - immigrate
           - asylum
           - immigration
+          definition:
           name: immigrate
           polarity: 1
     - OntologyNode:
@@ -1482,6 +1660,7 @@
       - prepare
       - plan
       - organize
+      definition:
       name: prepare
       polarity: 1
     - OntologyNode:
@@ -1491,6 +1670,7 @@
       - produce
       - create
       - production
+      definition:
       name: produce
       polarity: 1
     - OntologyNode:
@@ -1498,11 +1678,13 @@
       - distribute
       - provide
       - give
+      definition:
       name: provide
       polarity: 1
     - OntologyNode:
       examples:
       - research
+      definition: The collection, organization, and analysis of information to increase understanding of a topic or issue.
       name: research
       polarity: 1
     - OntologyNode:
@@ -1510,11 +1692,13 @@
       - protect
       - defend
       - secure
+      definition:
       name: secure
       polarity: 1
     - OntologyNode:
       examples:
       - supply
+      definition:
       name: supply
       polarity: 1
     - trade:
@@ -1523,6 +1707,7 @@
         - \bexports?\b
         examples:
         - export
+        definition:
         name: export
         polarity: 1
       - OntologyNode:
@@ -1530,6 +1715,7 @@
         - \bimports?\b
         examples:
         - import
+        definition:
         name: import
         polarity: 1
     - train:
@@ -1540,26 +1726,30 @@
         - pest control
         - post harvest
         - agriculture training
+        definition:
         name: agriculture_training
         polarity: 1
       - OntologyNode:
         examples:
         - financial training
+        definition:
         name: financial_training
         polarity: 1
       - humanitarian_training:
         - OntologyNode:
-          pattern: 
+          pattern:
           - (SPHERE)
           examples:
           - humanitarian certifications
           - SPHERE
           - emergency preparedness training
+          definition:
           name: emergency_preparedness_training
           polarity: 1
       - OntologyNode:
         examples:
         - medical training
+        definition: 
         name: medical_training
         polarity: 1
     - OntologyNode:
@@ -1571,6 +1761,7 @@
       - oil transaction
       - food transaction
       - transaction
+      definition: 
       name: transaction
       polarity: 1
     - OntologyNode:
@@ -1578,6 +1769,7 @@
       - transmission
       - community spread
       - airborne
+      definition: 
       name: transmission
       polarity: -1
     - transport:
@@ -1586,6 +1778,7 @@
         - public transport
         - commercial transportation
         - air travel
+        definition: 
         name: commercial_transportation
         polarity: 1
       - OntologyNode:
@@ -1593,12 +1786,14 @@
         - personal transportation
         - commute
         - taxi
+        definition: 
         name: personal_transportation
         polarity: 1
   - property:
     - OntologyNode:
       examples:
       - availability
+      definition: 
       name: availability
       polarity: 1
     - OntologyNode:
@@ -1606,11 +1801,13 @@
       - condition
       - conditions
       - quality
+      definition: 
       name: condition
       polarity: 1
     - OntologyNode:
       examples:
       - diversity
+      definition: 
       name: diversity
       polarity: 1
     - OntologyNode:
@@ -1619,16 +1816,19 @@
       - insecure
       - unsafe
       - dangerous
+      definition: 
       name: insecurity
       polarity: -1
     - OntologyNode:
       examples:
       - instability
+      definition: 
       name: instability
       polarity: -1
     - OntologyNode:
       examples:
       - nonutilization
+      definition: 
       name: nonutilization
       polarity: -1
     - OntologyNode:
@@ -1637,6 +1837,7 @@
       - preferences
       - taste
       - choice
+      definition: 
       name: preference
       polarity: 1
     - OntologyNode:
@@ -1645,42 +1846,50 @@
       examples:
       - cost
       - price
+      definition: 
       name: price_or_cost
       polarity: 1
     - OntologyNode:
       examples:
       - security
       - safety
+      definition: 
       name: security
       polarity: 1
     - OntologyNode:
       examples:
       - stability
+      definition: Being unlikely to move or change.
       name: stability
       polarity: 1
     - OntologyNode:
       examples:
       - unavailability
+      definition: 
       name: unavailability
       polarity: -1
     - OntologyNode:
       examples:
       - uncertainty
       - volatility
+      definition: An epistemic situation involving imperfect or unknown information.
       name: uncertainty
       polarity: -1
     - OntologyNode:
       examples:
       - utilization
+      definition: 
       name: utilization
       polarity: 1
     - OntologyNode:
       examples:
       - variability
+      definition: 
       name: variability
       polarity: 1
     - OntologyNode:
       examples:
       - vulnerability
+      definition: 
       name: vulnerability
       polarity: 1
