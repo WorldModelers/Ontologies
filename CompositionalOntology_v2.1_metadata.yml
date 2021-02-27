@@ -136,6 +136,14 @@
           - violent crime
           - lawlessness
           - illegal
+          - extortion
+          - burglary
+          - trafficing
+          - trafficking
+          - embezzlement
+          - racketeering
+          - laundering
+          - smuggling
           name: crime
           polarity: -1
         - OntologyNode:
@@ -162,6 +170,8 @@
           - sabotage
           - vandalized
           - army mobilization
+          - feud
+          - skirmish
           name: hostility
           polarity: -1
         - OntologyNode:
@@ -176,6 +186,11 @@
           - hardship
           - burden
           - threatening
+          - polarizoation
+          - rivalry
+          - feuds
+          - factions
+          - stalemates
           name: tension
           polarity: -1
       - OntologyNode:
@@ -204,10 +219,27 @@
           polarity: -1
         - OntologyNode:
           examples:
+          - earthquake
+          - earthquakes
+          - tremor
+          - tremors
+          - aftershock
+          name: earthquake
+          polarity: -1
+        - OntologyNode:
+          examples:
           - flood
           - flooding
           - flash flood
+          - storm surge
+          - tsunami
           name: flood
+          polarity: -1
+        - OntologyNode:
+          examples:
+          - wildfire
+          - wild fire
+          name: wildfire
           polarity: -1
       - OntologyNode:
         examples:
@@ -220,6 +252,9 @@
         examples:
         - assets
         - land property assets
+        - holdings
+        - property
+        - parcels
         name: assets
         polarity: 1
       - OntologyNode:
@@ -235,6 +270,10 @@
       - OntologyNode:
         examples:
         - currency
+        - cash
+        - money
+        - dollar
+        - usd
         name: currency
         polarity: 1
       - OntologyNode:
@@ -257,6 +296,16 @@
         - loan
         - funding
         - financial support
+        - debt
+        - lending
+        - invest
+        - investment
+        - banking
+        - credit
+        - grant
+        - award
+        - donation
+        - endowment
         name: finance
         polarity: 1
       - OntologyNode:
@@ -268,6 +317,8 @@
         - paycheck
         - compensation
         - wages
+        - salary
+        - earnings
         name: income
         polarity: 1
       - livelihood:
@@ -275,11 +326,15 @@
           examples:
           - rural livelihood
           - employment
+          - career
+          - occupation
           name: rural_livelihood
           polarity: 1
         - OntologyNode:
           examples:
           - employment
+          - career
+          - occupation
           - urban livelihood
           name: urban_livelihood
           polarity: 1
@@ -288,6 +343,13 @@
         - physical market
         - grocery storage
         - produce market
+        - marketplaces
+        - retailers
+        - vendor
+        - bazaar
+        - stalls
+        - shops
+        - stores
         name: marketplace
         polarity: 1
       - OntologyNode:
@@ -295,12 +357,21 @@
         - workforce
         - worker
         - staff
+        - professionals
+        - labor
         name: workforce
         polarity: 1
     - OntologyNode:
       examples:
       - literacy
       - education
+      - schooling
+      - instruction
+      - mentorship
+      - trainings
+      - tutoring
+      - curriculum
+      - lessons
       name: education
       polarity: 1
     - environment:
@@ -322,6 +393,7 @@
         - reforestation
         - forestry
         - logging
+        - timber
         name: forestry
         polarity: 1
       - meteorology:
@@ -368,6 +440,9 @@
           - land
           - acreage
           - plot
+          - farmland
+          - arable land
+          - forestland
           name: land
           polarity: 1
         - OntologyNode:
@@ -523,6 +598,7 @@
         - antibiotics
         - antivirals
         - medicine
+        - medication
         name: medicine
         polarity: 1
       - OntologyNode:
@@ -536,6 +612,7 @@
       - OntologyNode:
         examples:
         - corruption
+        - bribery
         name: corruption
         polarity: -1
       - OntologyNode:
@@ -543,6 +620,9 @@
         - election
         - voting
         - ballot
+        - referendum
+        - caucus
+        - campaign
         name: election
         polarity: 1
       - OntologyNode:
@@ -551,6 +631,10 @@
         - politics
         - laws
         - reforms
+        - regime
+        - reign
+        - imperialism
+        - dictatorship
         name: political_system
         polarity: 1
       - OntologyNode:
@@ -558,6 +642,7 @@
         - census
         - social security
         - program
+        - policy
         name: government_program
         polarity: 1
       - OntologyNode:
@@ -593,6 +678,12 @@
         polarity: -1
       - disease:
         - OntologyNode:
+          examples:
+          - aids
+          - hiv
+          name: AIDS
+          polarity: -1
+        - OntologyNode:
           pattern:
           - (COVID|covid|SARS-CoV)
           - corona(\s+)?virus
@@ -613,6 +704,13 @@
           - malaria
           name: malaria
           polarity: -1
+        - OntologyNode:
+          examples:
+          - cancer
+          - tb
+          - tuberculosis
+          - illness
+          - sickness
       - OntologyNode:
         examples:
         - injury
@@ -718,6 +816,7 @@
           - anti-depressant
           - counseling
           - psychiatrist
+          - psychotherapy
           name: psychological_services
           polarity: 1
       - OntologyNode:
@@ -797,6 +896,15 @@
         - television
         - news
         - social media
+        - booklet
+        - pamphlet
+        - newspaper
+        - magazine
+        - poster
+        - advertisement
+        - article
+        - publication
+        - speech
         name: communication
         polarity: 1
       - OntologyNode:
@@ -809,6 +917,11 @@
         - child friendly learning spaces
         - community centers
         - education facilities
+        - classroom
+        - kindergarten
+        - campus
+        - faculty
+        - institute
         name: education_facilities
         polarity: 1
       - OntologyNode:
@@ -939,6 +1052,14 @@
           polarity: -1
     - OntologyNode:
       examples:
+      - racism
+      - inequality
+      - exclusion
+      - discrimination
+      name: discrimination
+      polarity: -1
+    - OntologyNode:
+      examples:
       - poverty
       name: poverty
       polarity: -1
@@ -1067,6 +1188,7 @@
             - refugee
             - migrant
             - returnee
+            - asylum seeker
             name: migrant
             polarity: -1
         - OntologyNode:
@@ -1104,6 +1226,27 @@
           - taskforce
           - task force
           name: taskforce
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - landholder
+          - landlord
+          - landowner
+          name: landowner
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - researcher
+          - academic
+          - professor
+          - specialist
+          - faculty
+          - scientist
+          - expert
+          - intellectual
+          - analyst
+          - student
+          name: academic
           polarity: 1
     - time:
       - OntologyNode:
@@ -1147,6 +1290,10 @@
       - collaborate
       - cooperate
       - partner
+      - ally
+      - allied
+      - alliance
+      - partnership
       name: collaborate
       polarity: 1
     - communicate:
@@ -1155,13 +1302,21 @@
         - campaign
         - promote
         - advocate
+        - persuade
+        - convince
+        - encourage
+        - lobbying
         name: campaign
         polarity: 1
       - OntologyNode:
         examples:
+        - argue
+        - assert
+        - contend
         - debate
         - disagree
         - discuss
+        - espouse
         name: debate
         polarity: 1
     - conflict:
@@ -1173,6 +1328,8 @@
         - forced recruitment
         - abducted
         - kidnapped
+        - ransomed
+        - hostage taking
         name: abduct
         polarity: -1
       - OntologyNode:
@@ -1200,7 +1357,7 @@
         - strike
         - airstrike
         - offense
-        - attack
+        - ambush
         name: attack
         polarity: -1
       - OntologyNode:
@@ -1221,11 +1378,16 @@
       - OntologyNode:
         examples:
         - disarmament
+        - ceasefire
         name: disarmament
         polarity: 1
       - OntologyNode:
         examples:
         - exploit
+        - manipulate
+        - intimidate
+        - lure
+        - coerce
         name: exploit
         polarity: -1
       - OntologyNode:
@@ -1234,6 +1396,15 @@
         - agreement
         - peace deal
         - resolution
+        - peacebuilding
+        - peacekeeping
+        - rapprochement
+        - pact
+        - accord
+        - treaty
+        - pledge
+        - deal
+        - compromise
         name: resolution
         polarity: 1
       - OntologyNode:
@@ -1244,6 +1415,7 @@
         - terrorist activity
         - roadside bombing
         - bomb threat
+        - guerilla
         name: terrorism
         polarity: -1
       - OntologyNode:
@@ -1268,6 +1440,7 @@
         - military aggression
         - invaded
         - warfare
+        - assault
         name: war
         polarity: -1
     - OntologyNode:
@@ -1287,6 +1460,10 @@
       - develop
       - grow
       - growth
+      - cultivate
+      - expand
+      - extend
+      - broaden
       name: develop
       polarity: 1
     - OntologyNode:
@@ -1357,6 +1534,9 @@
     - OntologyNode:
       examples:
       - hunt
+      - fishing
+      - preying
+      - poaching
       name: hunt
       polarity: 1
     - OntologyNode:
@@ -1379,6 +1559,12 @@
         - regulate
         - legislate
         - mandate
+        - ban
+        - prohibit
+        - criminalize
+        - outlaw
+        - restrict
+        - repeal
         name: regulate
         polarity: 1
       - OntologyNode:
@@ -1426,7 +1612,20 @@
         polarity: 1
     - OntologyNode:
       examples:
+      - alleviate
+      - counteract
+      - diffuse
       - mitigate
+      - neutralize
+      - overcome
+      - resolve
+      - solve
+      - suppress
+      - curb
+      - deter
+      - thwart
+      - curtail
+      - dampen
       name: mitigate
       polarity: 1
     - OntologyNode:
@@ -1453,6 +1652,10 @@
         - death
         - casualty
         - casualties
+        - fatality
+        - fatalities
+        - killings
+        - murder
         examples:
         - death
         name: death
@@ -1462,12 +1665,16 @@
           examples:
           - migrate
           - migration
+          - flee
+          - relocate
           name: migrate
           polarity: 1
         - OntologyNode:
           examples:
           - emigrate
           - emigration
+          - deport
+          - expell
           name: emigrate
           polarity: 1
         - OntologyNode:
@@ -1475,6 +1682,7 @@
           - immigrate
           - asylum
           - immigration
+          - invade
           name: immigrate
           polarity: 1
     - OntologyNode:
@@ -1571,6 +1779,9 @@
       - oil transaction
       - food transaction
       - transaction
+      - repayment
+      - selling
+      - gift
       name: transaction
       polarity: 1
     - OntologyNode:
@@ -1578,6 +1789,9 @@
       - transmission
       - community spread
       - airborne
+      - spread
+      - infectious
+      - exposure
       name: transmission
       polarity: -1
     - transport:
@@ -1595,6 +1809,22 @@
         - taxi
         name: personal_transportation
         polarity: 1
+    - OntologyNode:
+      examples:
+      - travel
+      - visit
+      - journey
+      - trip
+      name: travel
+      polarity: 1
+    - OntologyNode:
+      examples:
+      - settle
+      - reside
+      - live
+      - inhabit
+      name: inhabit
+      polarity: 1
   - property:
     - OntologyNode:
       examples:
@@ -1661,6 +1891,10 @@
     - OntologyNode:
       examples:
       - unavailability
+      - scarce
+      - scant
+      - sparse
+      - lack
       name: unavailability
       polarity: -1
     - OntologyNode:

@@ -29,7 +29,9 @@
       - recession
       - environmental:
         - drought
+        - earthquake
         - flood
+        - wildfire
       - famine
     - economy:
       - assets
@@ -87,10 +89,11 @@
       - case_volume
       - vector
       - disease:
+        - AIDS
         - COVID
         - flu
         - malaria
-      - injury
+        - injury
       - life
       - healthcare
       - nutrition:
@@ -137,6 +140,7 @@
       - density:
         - de-population
         - overcrowding
+    - discrimination
     - poverty
     - security:
       - community_security
@@ -164,6 +168,8 @@
         - household
         - person_or_group
         - taskforce
+        - landowner
+        - academic
     - time:
       - season
   - process:
@@ -241,6 +247,8 @@
     - transport:
       - commercial_transportation
       - personal_transportation
+    - travel
+    - inhabit
   - property:
     - availability
     - condition
