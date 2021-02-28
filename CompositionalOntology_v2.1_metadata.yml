@@ -781,6 +781,9 @@
           - tuberculosis
           - illness
           - sickness
+          definition:
+          name: illness
+          polarity: -1
       - OntologyNode:
         examples:
         - injury
