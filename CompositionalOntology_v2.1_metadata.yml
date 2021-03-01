@@ -201,11 +201,11 @@
           - hardship
           - burden
           - threatening
-          - polarizoation
+          - polarization
           - rivalry
-          - feuds
-          - factions
-          - stalemates
+          - feud
+          - faction
+          - stalemate
           definition:
           name: tension
           polarity: -1
@@ -2015,8 +2015,6 @@
     - OntologyNode:
       examples:
       - hunt
-      - fishing
-      - preying
       - poaching
       definition:
       name: hunt
@@ -2359,7 +2357,7 @@
       examples:
       - chronic
       - rampant
-      - perrenial
+      - perennial
       - persistant
       - endemic
       - systemic
