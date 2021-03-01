@@ -40,8 +40,11 @@
       - currency
       - commerce
       - economy
+      - expense
       - finance
       - income
+      - payment
+      - taxes
       - livelihood:
         - rural_livelihood
         - urban_livelihood
@@ -81,6 +84,7 @@
     - government:
       - corruption
       - election
+      - judicial_system
       - political_system
       - government_program
       - sanction
@@ -118,6 +122,10 @@
       - food_aid
       - non_food_items
       - voucher_or_cash
+    - human_rights
+    - information:
+      - misinformation
+      - rumor
     - infrastructure:
       - agriculture:
         - farm_infrastructure
@@ -143,6 +151,7 @@
         - overcrowding
     - discrimination
     - poverty
+    - ritual
     - security:
       - community_security
       - economic_security
@@ -162,16 +171,26 @@
       - government_entity
       - geo-political_entity
       - organization
+      - religious_entity
       - people:
         - migration:
           - migrant
+        - criminal
+        - elites
         - health_worker
+        - military_personnel
+        - newsmedia
         - household
+        - children
+        - adults
         - person_or_group
+        - detainee
         - taskforce
         - landowner
         - academic
+        - extremist
     - time:
+      - delay
       - season
   - process:
     - access
@@ -182,8 +201,14 @@
     - communicate:
       - campaign
       - debate
+      - discriminate
+      - mediate
+      - meeting
+      - negotiate
+      - oppose
     - conflict:
       - abduct
+      - abuse
       - attack
       - demonstrate
       - disarmament
@@ -196,7 +221,11 @@
     - depreciate
     - develop
     - evacuation
+    - imprison_or_detain
     - intake
+    - judicial:
+      - charge_or_prosecute
+      - convict_or_sentence
     - processing
     - farming:
       - harvesting
@@ -253,9 +282,11 @@
   - property:
     - availability
     - condition
+    - chronic
     - diversity
     - insecurity
     - instability
+    - legality
     - nonutilization
     - preference
     - price_or_cost
