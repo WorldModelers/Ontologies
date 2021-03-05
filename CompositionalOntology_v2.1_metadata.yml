@@ -21,7 +21,7 @@
           - cabbage
           - carrots
           - beets
-          definition:
+          definition: vegetable crops and food
           name: vegetables
           polarity: 1
         - OntologyNode:
