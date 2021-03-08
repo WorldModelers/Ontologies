@@ -390,8 +390,6 @@
           examples:
           - rural livelihood
           - employment
-          - career
-          - occupation
           definition:
           name: rural_livelihood
           polarity: 1
@@ -1680,17 +1678,6 @@
         polarity: 1
       - OntologyNode:
         examples:
-        - discriminate
-        - stigmatize
-        - marginalize
-        - exclude
-        - profile
-        - segregate
-        definition:
-        name: discriminate
-        polarity: -1
-      - OntologyNode:
-        examples:
         - mediate
         - broker
         - arbitrate
@@ -1803,6 +1790,17 @@
         - riot
         definition:
         name: demonstrate
+        polarity: -1
+      - OntologyNode:
+        examples:
+        - discriminate
+        - stigmatize
+        - marginalize
+        - exclude
+        - profile
+        - segregate
+        definition:
+        name: discriminate
         polarity: -1
       - OntologyNode:
         examples:
@@ -2110,7 +2108,6 @@
       - resolve
       - solve
       - suppress
-      - curb
       - deter
       - thwart
       - curtail
