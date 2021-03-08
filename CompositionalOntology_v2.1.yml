@@ -83,7 +83,7 @@
       - fuel
       - medical_supplies
       - medicine
-      - mining_goods
+      - minerals
       - water
     - government:
       - corruption
@@ -95,6 +95,7 @@
     - health:
       - biometrics
       - case_volume
+      - pathogen
       - vector
       - disease:
         - AIDS
@@ -175,6 +176,7 @@
       - geo-political_entity
       - organization
       - religious_entity
+      - vehicle
       - people:
         - migration:
           - migrant
@@ -182,6 +184,7 @@
         - criminal
         - elites
         - farm_worker
+        - government_worker
         - health_worker
         - military_personnel
         - newsmedia
@@ -252,8 +255,10 @@
     - manage
     - medical:
       - quarantine
+      - lockdown
       - contact_tracing
       - social_distancing
+      - sanitize
     - mitigate
     - outbreak
     - plan

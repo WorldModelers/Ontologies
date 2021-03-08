@@ -64,6 +64,14 @@
         - pigs
         - sheep
         - goats
+        - bull
+        - ox
+        - oxen
+        - calf
+        - calves
+        - horse
+        - donkey
+        - camel
         - livestock
         definition: Domesticated animals raised for their labor or to produce commodities such as milk, meat, eggs, fur, leather, or wool.
         name: livestock
@@ -157,6 +165,16 @@
           - racketeering
           - laundering
           - smuggling
+          - robbery
+          - kidnap
+          - kidnapping
+          - theft
+          - abduction
+          - corruption
+          - vandalism
+          - terrorism
+          - harrassment
+          - rape
           definition:
           name: crime
           polarity: -1
@@ -429,13 +447,18 @@
         - physical market
         - grocery storage
         - produce market
-        - marketplac
+        - marketplace
         - retailers
         - vendor
         - bazaar
         - stall
         - shop
         - store
+        - supermarket
+        - grocery
+        - grocer
+        - shopping
+        - retailer
         definition:
         name: marketplace
         polarity: 1
@@ -724,20 +747,33 @@
         - antivirals
         - medicine
         - medication
+        - paracetamol
+        - aspirine
+        - antimicrobial
+        - corticosteroid
+        - antiretroviral
+        - therapeutic
+        - antiviral
+        - penicillin
+        - steroid
         definition:
         name: medicine
         polarity: 1
       - OntologyNode:
         examples:
+        - mineral
+        - metal
         - gold
         - silver
         - copper
+        - aluminum
+        - aluminium
+        - zinc
+        - cobalt
         - diamond
-        - minerals
-        - gas
         - ore
         definition:
-        name: mining_goods
+        name: minerals
         polarity: 1
       - OntologyNode:
         examples:
@@ -822,6 +858,19 @@
         - new cases
         definition:
         name: case_volume
+        polarity: -1
+      - OntologyNode:
+        examples:
+        - pathogen
+        - virus
+        - parasite
+        - bacterium
+        - bacteria
+        - microbe
+        - fungus
+        - fungal
+        definition:
+        name: pathogen
         polarity: -1
       - OntologyNode:
         examples:
@@ -1159,6 +1208,12 @@
         examples:
         - electrical wiring
         - electricity
+        - generator
+        - lighting
+        - solar panel
+        - power grid
+        - power line
+        -
         definition:
         name: electrical_infrastructure
         polarity: 1
@@ -1472,6 +1527,28 @@
         definition:
         name: religious_entity
         polarity: 1
+      - OntologyNode:
+        examples:
+        - vehicle
+        - car
+        - bus
+        - automobile
+        - truck
+        - bicycle
+        - motorcycle
+        - bike
+        - tractor
+        - train
+        - boat
+        - helicopter
+        - airplane
+        - aeroplane
+        - ambulance
+        - van
+        - SUV
+        definition:
+        name: vehicle
+        polarity: 1
       - people:
         - migration:
           - OntologyNode:
@@ -1536,6 +1613,24 @@
           polarity: 1
         - OntologyNode:
           examples:
+          - government worker
+          - politician
+          - diplomat
+          - ambassador
+          - minister
+          - president
+          - senator
+          - consul
+          - bureaucrat
+          - envoy
+          - congressman
+          - congresswoman
+          - congressperson
+          definition:
+          name: government_worker
+          polarity: 1
+        - OntologyNode:
+          examples:
           - community health worker
           - CHW
           - doctor
@@ -1557,9 +1652,12 @@
           - colonel
           - officer
           - lieutenant
+          - admiral
           - troops
           - battalion
           - regiment
+          - militants
+          - militia
           definition:
           name: military_personnel
           polarity: 1
@@ -1570,6 +1668,9 @@
           - reporter
           - anchor
           - blogger
+          - correspondent
+          - broadcaster
+          - news anchor
           definition:
           name: newsmedia
           polarity: 1
@@ -1651,6 +1752,12 @@
           - intellectual
           - analyst
           - student
+          - pupil
+          - sophomore
+          - freshman
+          - schoolchildren
+          - classmate
+          - scholar
           name: academic
           polarity: 1
         - OntologyNode:
@@ -2001,9 +2108,12 @@
       polarity: 1
     - OntologyNode:
       examples:
+      - arrest
       - imprison
       - detain
+      - detention
       - capture
+      - captivity
       - incarcerate
       - enslave
       definition:
@@ -2176,6 +2286,12 @@
         name: quarantine
         polarity: 1
       - OntologyNode:
+        examples:
+        - lockdown
+        definition:
+        name: lockdown
+        polarity: 1
+      - OntologyNode:
         pattern:
         - (contact tracing)
         examples:
@@ -2191,6 +2307,13 @@
         - curfew
         definition:
         name: social_distancing
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - sanitize
+        - disinfect
+        definition:
+        name: sanitize
         polarity: 1
     - OntologyNode:
       examples:
