@@ -349,7 +349,6 @@
         polarity: 1
       - OntologyNode:
         examples:
-        - farm
         - household
         - income
         - revenue
@@ -404,16 +403,35 @@
           polarity: 1
       - OntologyNode:
         examples:
+        - business
+        - company
+        - corporation
+        - commercial enterprise
+        definition:
+        name: commercial_enterprise
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - farm
+        - ranch
+        - feedlot
+        - orchard
+        - plantation
+        definition:
+        name: farm
+        polarity: 1
+      - OntologyNode:
+        examples:
         - physical market
         - grocery storage
         - produce market
-        - marketplaces
+        - marketplac
         - retailers
         - vendor
         - bazaar
-        - stalls
-        - shops
-        - stores
+        - stall
+        - shop
+        - store
         definition:
         name: marketplace
         polarity: 1
@@ -1456,6 +1474,21 @@
           - monarch
           definition:
           name: elites
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - farmer
+          - farmhand
+          - farm worker
+          - rancher
+          - grazier
+          - stockmen
+          - shepherd
+          - goatherd
+          - cowherd
+          - sharecropper
+          definition:
+          name: farm_worker
           polarity: 1
         - OntologyNode:
           examples:

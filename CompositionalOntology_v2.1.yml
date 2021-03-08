@@ -48,6 +48,8 @@
       - livelihood:
         - rural_livelihood
         - urban_livelihood
+      - commercial_enterprise
+      - farm
       - marketplace
       - workforce
     - education
@@ -177,6 +179,7 @@
           - migrant
         - criminal
         - elites
+        - farm_worker
         - health_worker
         - military_personnel
         - newsmedia
