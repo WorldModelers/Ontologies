@@ -56,6 +56,7 @@
     - environment:
       - climate
       - climate_change
+      - ecology
       - forestry
       - meteorology:
         - precipitation
@@ -82,6 +83,7 @@
       - fuel
       - medical_supplies
       - medicine
+      - mining_goods
       - water
     - government:
       - corruption
@@ -138,8 +140,7 @@
       - refugee_camps
       - irrigation_infrastructure
       - medical_facilities
-      - transportation:
-        - road_infrastructure
+      - road_infrastructure
         - railroad_infrastructure
         - bridge
       - sanitation_infrastructure
@@ -177,6 +178,7 @@
       - people:
         - migration:
           - migrant
+        - adviser
         - criminal
         - elites
         - farm_worker
@@ -204,6 +206,7 @@
     - communicate:
       - campaign
       - debate
+      - describe
       - mediate
       - meeting
       - negotiate
@@ -229,6 +232,7 @@
     - judicial:
       - charge_or_prosecute
       - convict_or_sentence
+    - mining
     - processing
     - farming:
       - harvesting
@@ -295,6 +299,7 @@
     - price_or_cost
     - security
     - stability
+    - support
     - unavailability
     - uncertainty
     - utilization

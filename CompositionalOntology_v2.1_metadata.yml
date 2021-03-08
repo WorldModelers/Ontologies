@@ -206,6 +206,10 @@
           - feud
           - faction
           - stalemate
+          - resentment
+          - discontent
+          - mistrust
+          - frustration
           definition:
           name: tension
           polarity: -1
@@ -475,6 +479,17 @@
         polarity: 1
       - OntologyNode:
         examples:
+        - ecology
+        - ecosystem
+        - wildlife
+        - habitat
+        - biodiversity
+        - riparian
+        definition:
+        name: ecology
+        polarity: 1
+      - OntologyNode:
+        examples:
         - afforestation
         - agroforestry
         - reforestation
@@ -574,6 +589,8 @@
         - air pollution
         - land pollution
         - water pollution
+        - greenhouse gas
+        - contamination
         definition:
         name: pollution
         polarity: -1
@@ -709,6 +726,18 @@
         - medication
         definition:
         name: medicine
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - gold
+        - silver
+        - copper
+        - diamond
+        - minerals
+        - gas
+        - ore
+        definition:
+        name: mining_goods
         polarity: 1
       - OntologyNode:
         examples:
@@ -1180,6 +1209,12 @@
         definition:
         name: medical_facilities
         polarity: 1
+      - OntologyNode:
+        examples:
+        - mine
+        - mineshaft
+        definition:
+        name: mining_infrastructure
       - transportation:
         - OntologyNode:
           examples:
@@ -1452,6 +1487,15 @@
             polarity: -1
         - OntologyNode:
           examples:
+          - advisor
+          - adviser
+          - consultant
+          - confidant
+          definition:
+          name: adviser
+          polarity: 1
+        - OntologyNode:
+          examples:
           - criminal
           - syndicate
           - cartel
@@ -1708,6 +1752,16 @@
         - espouse
         definition:
         name: debate
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - describe
+        - discuss
+        - outline
+        - summarize
+        - illustrate
+        definition:
+        name: describe
         polarity: 1
       - OntologyNode:
         examples:
@@ -1984,6 +2038,14 @@
         polarity: 1
     - OntologyNode:
       examples:
+      - mining
+      - drilling
+      - fracking
+      definition:
+      name: mining
+      polarity: 1
+    - OntologyNode:
+      examples:
       - manufacturing
       - cleaning
       - sorting
@@ -2241,6 +2303,10 @@
     - OntologyNode:
       examples:
       - research
+      - study
+      - survey
+      - observe
+      - experiment
       definition: The collection, organization, and analysis of information to increase understanding of a topic or issue.
       name: research
       polarity: 1
@@ -2249,6 +2315,8 @@
       - protect
       - defend
       - secure
+      - conserve
+      - preserve
       definition:
       name: secure
       polarity: 1
@@ -2394,6 +2462,10 @@
       - widespread
       - prevalent
       - prevalence
+      - protracted
+      - longstanding
+      - pervasive
+      - recurrent
       definition:
       name: chronic
       polarity: 1
@@ -2466,6 +2538,17 @@
       polarity: 1
     - OntologyNode:
       examples:
+      - support
+      - empathy
+      - goodwill
+      - camraderie
+      - solidarity
+      - affinity
+      definition:
+      name: support
+      polarity: 1
+    - OntologyNode:
+      examples:
       - unavailability
       - scarce
       - scant
@@ -2490,12 +2573,22 @@
     - OntologyNode:
       examples:
       - variability
+      - variable
+      - volatility
+      - volatile
+      - tumultuous
+      - tumult
+      - precarious
       definition: 
       name: variability
       polarity: 1
     - OntologyNode:
       examples:
       - vulnerability
+      - vulnerable
+      - fragility
+      - fragile
+      - tenuous
       definition: 
       name: vulnerability
       polarity: 1
