@@ -64,6 +64,14 @@
         - pigs
         - sheep
         - goats
+        - bull
+        - ox
+        - oxen
+        - calf
+        - calves
+        - horse
+        - donkey
+        - camel
         - livestock
         definition: Domesticated animals raised for their labor or to produce commodities such as milk, meat, eggs, fur, leather, or wool.
         name: livestock
@@ -149,6 +157,24 @@
           - violent crime
           - lawlessness
           - illegal
+          - extortion
+          - burglary
+          - trafficing
+          - trafficking
+          - embezzlement
+          - racketeering
+          - laundering
+          - smuggling
+          - robbery
+          - kidnap
+          - kidnapping
+          - theft
+          - abduction
+          - corruption
+          - vandalism
+          - terrorism
+          - harrassment
+          - rape
           definition:
           name: crime
           polarity: -1
@@ -176,6 +202,8 @@
           - sabotage
           - vandalized
           - army mobilization
+          - feud
+          - skirmish
           definition:
           name: hostility
           polarity: -1
@@ -191,6 +219,15 @@
           - hardship
           - burden
           - threatening
+          - polarization
+          - rivalry
+          - feud
+          - faction
+          - stalemate
+          - resentment
+          - discontent
+          - mistrust
+          - frustration
           definition:
           name: tension
           polarity: -1
@@ -223,16 +260,34 @@
           polarity: -1
         - OntologyNode:
           examples:
+          - earthquake
+          - earthquakes
+          - tremor
+          - tremors
+          - aftershock
+          name: earthquake
+          polarity: -1
+        - OntologyNode:
+          examples:
           - flood
           - flooding
           - flash flood
+          - storm surge
+          - tsunami
           definition:
           name: flood
+          polarity: -1
+        - OntologyNode:
+          examples:
+          - wildfire
+          - wild fire
+          name: wildfire
           polarity: -1
       - OntologyNode:
         examples:
         - famine
         - hunger
+        - starvation
         definition:
         name: famine
         polarity: -1
@@ -241,6 +296,9 @@
         examples:
         - assets
         - land property assets
+        - holdings
+        - property
+        - parcels
         definition:
         name: assets
         polarity: 1
@@ -259,6 +317,10 @@
       - OntologyNode:
         examples:
         - currency
+        - cash
+        - money
+        - dollar
+        - usd
         definition:
         name: currency
         polarity: 1
@@ -280,24 +342,69 @@
         polarity: 1
       - OntologyNode:
         examples:
+        - expense
+        - payment
+        - rent
+        - fee
+        - charge
+        definition:
+        name: expense
+        polarity: 1
+      - OntologyNode:
+        examples:
         - finance
         - loan
         - funding
         - financial support
+        - debt
+        - lending
+        - invest
+        - investment
+        - banking
+        - credit
+        - grant
+        - award
+        - donation
+        - endowment
         definition:
         name: finance
         polarity: 1
       - OntologyNode:
         examples:
-        - farm
         - household
         - income
         - revenue
         - paycheck
         - compensation
         - wages
+        - salary
+        - earnings
+        - royalties
         definition:
         name: income
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - payment
+        - disbursement
+        - remittance
+        - drawdown
+        - stipend
+        - payout
+        definition:
+        name: payment
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - tax
+        - taxes
+        - tarrif
+        - subsidy
+        - subsidies
+        - revenue
+        - duties
+        definition:
+        name: taxes
         polarity: 1
       - livelihood:
         - OntologyNode:
@@ -310,15 +417,48 @@
         - OntologyNode:
           examples:
           - employment
+          - career
+          - occupation
           - urban livelihood
           definition:
           name: urban_livelihood
           polarity: 1
       - OntologyNode:
         examples:
+        - business
+        - company
+        - corporation
+        - commercial enterprise
+        definition:
+        name: commercial_enterprise
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - farm
+        - ranch
+        - feedlot
+        - orchard
+        - plantation
+        definition:
+        name: farm
+        polarity: 1
+      - OntologyNode:
+        examples:
         - physical market
         - grocery storage
         - produce market
+        - marketplace
+        - retailers
+        - vendor
+        - bazaar
+        - stall
+        - shop
+        - store
+        - supermarket
+        - grocery
+        - grocer
+        - shopping
+        - retailer
         definition:
         name: marketplace
         polarity: 1
@@ -327,6 +467,8 @@
         - workforce
         - worker
         - staff
+        - professionals
+        - labor
         definition:
         name: workforce
         polarity: 1
@@ -334,6 +476,13 @@
       examples:
       - literacy
       - education
+      - schooling
+      - instruction
+      - mentorship
+      - trainings
+      - tutoring
+      - curriculum
+      - lessons
       definition:
       name: education
       polarity: 1
@@ -353,11 +502,23 @@
         polarity: 1
       - OntologyNode:
         examples:
+        - ecology
+        - ecosystem
+        - wildlife
+        - habitat
+        - biodiversity
+        - riparian
+        definition:
+        name: ecology
+        polarity: 1
+      - OntologyNode:
+        examples:
         - afforestation
         - agroforestry
         - reforestation
         - forestry
         - logging
+        - timber
         definition:
         name: forestry
         polarity: 1
@@ -409,6 +570,9 @@
           - land
           - acreage
           - plot
+          - farmland
+          - arable land
+          - forestland
           definition:
           name: land
           polarity: 1
@@ -448,6 +612,8 @@
         - air pollution
         - land pollution
         - water pollution
+        - greenhouse gas
+        - contamination
         definition:
         name: pollution
         polarity: -1
@@ -580,8 +746,34 @@
         - antibiotics
         - antivirals
         - medicine
+        - medication
+        - paracetamol
+        - aspirine
+        - antimicrobial
+        - corticosteroid
+        - antiretroviral
+        - therapeutic
+        - antiviral
+        - penicillin
+        - steroid
         definition:
         name: medicine
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - mineral
+        - metal
+        - gold
+        - silver
+        - copper
+        - aluminum
+        - aluminium
+        - zinc
+        - cobalt
+        - diamond
+        - ore
+        definition:
+        name: minerals
         polarity: 1
       - OntologyNode:
         examples:
@@ -595,6 +787,7 @@
       - OntologyNode:
         examples:
         - corruption
+        - bribery
         definition:
         name: corruption
         polarity: -1
@@ -603,8 +796,21 @@
         - election
         - voting
         - ballot
+        - referendum
+        - caucus
+        - campaign
         definition:
         name: election
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - judicial
+        - judiciary
+        - tribunal
+        - courthouse
+        - court system
+        definition:
+        name: judicial_system
         polarity: 1
       - OntologyNode:
         examples:
@@ -612,6 +818,10 @@
         - politics
         - laws
         - reforms
+        - regime
+        - reign
+        - imperialism
+        - dictatorship
         definition:
         name: political_system
         polarity: 1
@@ -620,6 +830,7 @@
         - census
         - social security
         - program
+        - policy
         definition:
         name: government_program
         polarity: 1
@@ -650,6 +861,19 @@
         polarity: -1
       - OntologyNode:
         examples:
+        - pathogen
+        - virus
+        - parasite
+        - bacterium
+        - bacteria
+        - microbe
+        - fungus
+        - fungal
+        definition:
+        name: pathogen
+        polarity: -1
+      - OntologyNode:
+        examples:
         - water
         - mosquitos
         - excrement
@@ -659,6 +883,12 @@
         name: vector
         polarity: -1
       - disease:
+        - OntologyNode:
+          examples:
+          - aids
+          - hiv
+          name: AIDS
+          polarity: -1
         - OntologyNode:
           pattern:
           - (COVID|covid|SARS-CoV)
@@ -682,6 +912,16 @@
           - malaria
           definition:
           name: malaria
+          polarity: -1
+        - OntologyNode:
+          examples:
+          - cancer
+          - tb
+          - tuberculosis
+          - illness
+          - sickness
+          definition:
+          name: illness
           polarity: -1
       - OntologyNode:
         examples:
@@ -801,6 +1041,7 @@
           - anti-depressant
           - counseling
           - psychiatrist
+          - psychotherapy
           definition:
           name: psychological_services
           polarity: 1
@@ -866,6 +1107,37 @@
         definition:
         name: voucher_or_cash
         polarity: 1
+    - OntologyNode:
+      examples:
+      - human rights
+      - liberties
+      - liberty
+      - freedoms
+      - freedom
+      definition:
+      name: human_rights
+      polarity: 1
+    - information:
+      - OntologyNode:
+        examples:
+        - misinformation
+        - misconception
+        - falsehood
+        - disinformation
+        definition:
+        name: misinformation
+        polarity: -1
+      - OntologyNode:
+        examples:
+        - rumor
+        - rumour
+        - narrative
+        - myth
+        - allegation
+        - speculation
+        definition:
+        name: rumor
+        polarity: 1
     - infrastructure:
       - agriculture:
         - OntologyNode:
@@ -888,6 +1160,29 @@
         - television
         - news
         - social media
+        - booklet
+        - pamphlet
+        - newspaper
+        - magazine
+        - poster
+        - advertisement
+        - article
+        - publication
+        - speech
+        - website
+        - blog
+        - forum
+        - email
+        - facebook
+        - twitter
+        - newsgroup
+        - channel
+        - intranet
+        - cyberspace
+        - bandwidth
+        - online
+        - networking
+        - web
         definition:
         name: communication
         polarity: 1
@@ -901,6 +1196,11 @@
         - child friendly learning spaces
         - community centers
         - education facilities
+        - classroom
+        - kindergarten
+        - campus
+        - faculty
+        - institute
         definition:
         name: education_facilities
         polarity: 1
@@ -908,6 +1208,12 @@
         examples:
         - electrical wiring
         - electricity
+        - generator
+        - lighting
+        - solar panel
+        - power grid
+        - power line
+        -
         definition:
         name: electrical_infrastructure
         polarity: 1
@@ -958,6 +1264,12 @@
         definition:
         name: medical_facilities
         polarity: 1
+      - OntologyNode:
+        examples:
+        - mine
+        - mineshaft
+        definition:
+        name: mining_infrastructure
       - transportation:
         - OntologyNode:
           examples:
@@ -1047,10 +1359,31 @@
           polarity: -1
     - OntologyNode:
       examples:
+      - racism
+      - inequality
+      - exclusion
+      - discrimination
+      name: discrimination
+      polarity: -1
+    - OntologyNode:
+      examples:
       - poverty
       definition:
       name: poverty
       polarity: -1
+    - OntologyNode:
+      examples:
+      - ritual
+      - celebration
+      - ceremony
+      - festival
+      - holiday
+      - observance
+      - funeral
+      - commemoration
+      definiton:
+      name: ritual
+      polarity: 1
     - security:
       - OntologyNode:
         examples:
@@ -1089,6 +1422,8 @@
         - track
         - monitor
         - surveillance system
+        - spy
+        - informant
         definition:
         name: surveillance_system
         polarity: 1
@@ -1183,6 +1518,37 @@
         definition:
         name: organization
         polarity: 1
+      - OntologyNode:
+        examples:
+        - church
+        - seminary
+        - parish
+        - congregation
+        definition:
+        name: religious_entity
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - vehicle
+        - car
+        - bus
+        - automobile
+        - truck
+        - bicycle
+        - motorcycle
+        - bike
+        - tractor
+        - train
+        - boat
+        - helicopter
+        - airplane
+        - aeroplane
+        - ambulance
+        - van
+        - SUV
+        definition:
+        name: vehicle
+        polarity: 1
       - people:
         - migration:
           - OntologyNode:
@@ -1192,9 +1558,77 @@
             - refugee
             - migrant
             - returnee
+            - asylum seeker
             definition:
             name: migrant
             polarity: -1
+        - OntologyNode:
+          examples:
+          - advisor
+          - adviser
+          - consultant
+          - confidant
+          definition:
+          name: adviser
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - criminal
+          - syndicate
+          - cartel
+          - pirate
+          - warlord
+          - mafia
+          - mafioso
+          - smuggler
+          definition:
+          name: criminal
+          polarity: -1
+        - OntologyNode:
+          examples:
+          - elite
+          - aristocracy
+          - aristocrat
+          - lord
+          - king
+          - queen
+          - monarch
+          definition:
+          name: elites
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - farmer
+          - farmhand
+          - farm worker
+          - rancher
+          - grazier
+          - stockmen
+          - shepherd
+          - goatherd
+          - cowherd
+          - sharecropper
+          definition:
+          name: farm_worker
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - government worker
+          - politician
+          - diplomat
+          - ambassador
+          - minister
+          - president
+          - senator
+          - consul
+          - bureaucrat
+          - envoy
+          - congressman
+          - congresswoman
+          - congressperson
+          definition:
+          name: government_worker
+          polarity: 1
         - OntologyNode:
           examples:
           - community health worker
@@ -1210,6 +1644,37 @@
           name: health_worker
           polarity: 1
         - OntologyNode:
+          examples:
+          - soldier
+          - army
+          - armies
+          - general
+          - colonel
+          - officer
+          - lieutenant
+          - admiral
+          - troops
+          - battalion
+          - regiment
+          - militants
+          - militia
+          definition:
+          name: military_personnel
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - newsmedia
+          - journalist
+          - reporter
+          - anchor
+          - blogger
+          - correspondent
+          - broadcaster
+          - news anchor
+          definition:
+          name: newsmedia
+          polarity: 1
+        - OntologyNode:
           pattern:
           - household
           examples:
@@ -1217,6 +1682,28 @@
           - family
           definition:
           name: household
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - adolescent
+          - youth
+          - teenage
+          - teenager
+          - juvenile
+          - child
+          - children
+          - minor
+          definition:
+          name: children
+          polarity: 1
+        - OntologyNode:
+          examples:
+            - adult
+            - elder
+            - elderly
+            - senior citizen
+          definition:
+          name: adults
           polarity: 1
         - OntologyNode:
           examples:
@@ -1230,12 +1717,70 @@
           polarity: 1
         - OntologyNode:
           examples:
+          - detainee
+          - prisoner
+          - inmate
+          - slave
+          - hostage
+          - captive
+          definition:
+          name: detainee
+          polarity: -1
+        - OntologyNode:
+          examples:
           - taskforce
           - task force
           definition:
           name: taskforce
           polarity: 1
+        - OntologyNode:
+          examples:
+          - landholder
+          - landlord
+          - landowner
+          name: landowner
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - researcher
+          - academic
+          - professor
+          - specialist
+          - faculty
+          - scientist
+          - expert
+          - intellectual
+          - analyst
+          - student
+          - pupil
+          - sophomore
+          - freshman
+          - schoolchildren
+          - classmate
+          - scholar
+          name: academic
+          polarity: 1
+        - OntologyNode:
+          examples:
+          - sepratist
+          - vigilante
+          - supremacist
+          - jihadist
+          - islamist
+          - crusader
+          name: extremist
+          polarity: 1
     - time:
+      - OntologyNode:
+        examples:
+        - delay
+        - postpone
+        - suspend
+        - halt
+        - stall
+        definition:
+        name: delay
+        polarity: -1
       - OntologyNode:
         examples:
         - lean season
@@ -1282,6 +1827,10 @@
       - collaborate
       - cooperate
       - partner
+      - ally
+      - allied
+      - alliance
+      - partnership
       definition:
       name: collaborate
       polarity: 1
@@ -1291,16 +1840,80 @@
         - campaign
         - promote
         - advocate
+        - persuade
+        - convince
+        - encourage
+        - lobbying
+        - endorse
         definition:
         name: campaign
         polarity: 1
       - OntologyNode:
         examples:
+        - argue
+        - assert
+        - contend
         - debate
         - disagree
         - discuss
+        - espouse
         definition:
         name: debate
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - describe
+        - discuss
+        - outline
+        - summarize
+        - illustrate
+        definition:
+        name: describe
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - mediate
+        - broker
+        - arbitrate
+        - referee
+        definition:
+        name: mediate
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - meeting
+        - summit
+        - seminar
+        - conference
+        - assembly
+        - workshop
+        - convene
+        - roundtable
+        - forum
+        definition:
+        name: meeting
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - negotiate
+        - bargain
+        definition:
+        name: negotiate
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - oppose
+        - condemn
+        - reject
+        - denounce
+        - challenge
+        - refute
+        - dismiss
+        - subvert
+        - renounce
+        - debunk
+        definition:
+        name: oppose
         polarity: 1
     - conflict:
       - OntologyNode:
@@ -1311,8 +1924,20 @@
         - forced recruitment
         - abducted
         - kidnapped
+        - ransomed
+        - hostage taking
         definition:
         name: abduct
+        polarity: -1
+      - OntologyNode:
+        examples:
+        - abuse
+        - harrass
+        - violate
+        - persecute
+        - neglect
+        definition:
+        name: abuse
         polarity: -1
       - OntologyNode:
         examples:
@@ -1339,6 +1964,7 @@
         - strike
         - airstrike
         - offense
+        - ambush
         - attack
         definition:
         name: attack
@@ -1361,13 +1987,30 @@
         polarity: -1
       - OntologyNode:
         examples:
+        - discriminate
+        - stigmatize
+        - marginalize
+        - exclude
+        - profile
+        - segregate
+        definition:
+        name: discriminate
+        polarity: -1
+      - OntologyNode:
+        examples:
         - disarmament
+        - ceasefire
         definition:
         name: disarmament
         polarity: 1
       - OntologyNode:
         examples:
         - exploit
+        - manipulate
+        - intimidate
+        - lure
+        - coerce
+        - cheat
         definition: To make use of (sometimes unfairly) to one's own advantage.
         name: exploit
         polarity: -1
@@ -1377,6 +2020,18 @@
         - agreement
         - peace deal
         - resolution
+        - peacebuilding
+        - peacekeeping
+        - rapprochement
+        - pact
+        - accord
+        - treaty
+        - pledge
+        - deal
+        - compromise
+        - accords
+        - conciliation
+        - cessation
         definition:
         name: resolution
         polarity: 1
@@ -1388,6 +2043,7 @@
         - terrorist activity
         - roadside bombing
         - bomb threat
+        - guerilla
         definition:
         name: terrorism
         polarity: -1
@@ -1414,6 +2070,7 @@
         - military aggression
         - invaded
         - warfare
+        - assault
         definition:
         name: war
         polarity: -1
@@ -1436,6 +2093,10 @@
       - develop
       - grow
       - growth
+      - cultivate
+      - expand
+      - extend
+      - broaden
       definition:
       name: develop
       polarity: 1
@@ -1447,11 +2108,51 @@
       polarity: 1
     - OntologyNode:
       examples:
+      - arrest
+      - imprison
+      - detain
+      - detention
+      - capture
+      - captivity
+      - incarcerate
+      - enslave
+      definition:
+      name: imprison_or_detain
+      polarity: -1
+    - OntologyNode:
+      examples:
       - intake
       - consumption
       - eating
       definition:
       name: intake
+      polarity: 1
+    - judicial:
+      - OntologyNode:
+        examples:
+        - prosecute
+        - charge
+        - indict
+        definition:
+        name: charge_or_prosecute
+        polarity: 1
+      - OntologyNode:
+        examples:
+        - convict
+        - punish
+        - jail
+        - fine
+        - sentence
+        definition:
+        name: convict_or_sentence
+        polarity: 1
+    - OntologyNode:
+      examples:
+      - mining
+      - drilling
+      - fracking
+      definition:
+      name: mining
       polarity: 1
     - OntologyNode:
       examples:
@@ -1517,6 +2218,7 @@
     - OntologyNode:
       examples:
       - hunt
+      - poaching
       definition:
       name: hunt
       polarity: 1
@@ -1542,6 +2244,12 @@
         - regulate
         - legislate
         - mandate
+        - ban
+        - prohibit
+        - criminalize
+        - outlaw
+        - restrict
+        - repeal
         definition:
         name: regulate
         polarity: 1
@@ -1578,6 +2286,12 @@
         name: quarantine
         polarity: 1
       - OntologyNode:
+        examples:
+        - lockdown
+        definition:
+        name: lockdown
+        polarity: 1
+      - OntologyNode:
         pattern:
         - (contact tracing)
         examples:
@@ -1594,9 +2308,28 @@
         definition:
         name: social_distancing
         polarity: 1
+      - OntologyNode:
+        examples:
+        - sanitize
+        - disinfect
+        definition:
+        name: sanitize
+        polarity: 1
     - OntologyNode:
       examples:
+      - alleviate
+      - counteract
+      - diffuse
       - mitigate
+      - neutralize
+      - overcome
+      - resolve
+      - solve
+      - suppress
+      - deter
+      - thwart
+      - curtail
+      - dampen
       definition:
       name: mitigate
       polarity: 1
@@ -1627,6 +2360,10 @@
         - death
         - casualty
         - casualties
+        - fatality
+        - fatalities
+        - killings
+        - murder
         examples:
         - death
         definition:
@@ -1637,6 +2374,8 @@
           examples:
           - migrate
           - migration
+          - flee
+          - relocate
           definition:
           name: migrate
           polarity: 1
@@ -1644,6 +2383,8 @@
           examples:
           - emigrate
           - emigration
+          - deport
+          - expell
           definition:
           name: emigrate
           polarity: 1
@@ -1652,6 +2393,7 @@
           - immigrate
           - asylum
           - immigration
+          - invade
           definition:
           name: immigrate
           polarity: 1
@@ -1684,6 +2426,10 @@
     - OntologyNode:
       examples:
       - research
+      - study
+      - survey
+      - observe
+      - experiment
       definition: The collection, organization, and analysis of information to increase understanding of a topic or issue.
       name: research
       polarity: 1
@@ -1692,6 +2438,8 @@
       - protect
       - defend
       - secure
+      - conserve
+      - preserve
       definition:
       name: secure
       polarity: 1
@@ -1761,6 +2509,9 @@
       - oil transaction
       - food transaction
       - transaction
+      - repayment
+      - selling
+      - gift
       definition: 
       name: transaction
       polarity: 1
@@ -1769,6 +2520,9 @@
       - transmission
       - community spread
       - airborne
+      - spread
+      - infectious
+      - exposure
       definition: 
       name: transmission
       polarity: -1
@@ -1789,6 +2543,22 @@
         definition: 
         name: personal_transportation
         polarity: 1
+    - OntologyNode:
+      examples:
+      - travel
+      - visit
+      - journey
+      - trip
+      name: travel
+      polarity: 1
+    - OntologyNode:
+      examples:
+      - settle
+      - reside
+      - live
+      - inhabit
+      name: inhabit
+      polarity: 1
   - property:
     - OntologyNode:
       examples:
@@ -1803,6 +2573,24 @@
       - quality
       definition: 
       name: condition
+      polarity: 1
+    - OntologyNode:
+      examples:
+      - chronic
+      - rampant
+      - perennial
+      - persistant
+      - endemic
+      - systemic
+      - widespread
+      - prevalent
+      - prevalence
+      - protracted
+      - longstanding
+      - pervasive
+      - recurrent
+      definition:
+      name: chronic
       polarity: 1
     - OntologyNode:
       examples:
@@ -1825,6 +2613,15 @@
       definition: 
       name: instability
       polarity: -1
+    - OntologyNode:
+      examples:
+      - legality
+      - legal
+      - constitutional
+      - constitutionality
+      definition:
+      name: legality
+      polarity: 1
     - OntologyNode:
       examples:
       - nonutilization
@@ -1864,7 +2661,22 @@
       polarity: 1
     - OntologyNode:
       examples:
+      - support
+      - empathy
+      - goodwill
+      - camraderie
+      - solidarity
+      - affinity
+      definition:
+      name: support
+      polarity: 1
+    - OntologyNode:
+      examples:
       - unavailability
+      - scarce
+      - scant
+      - sparse
+      - lack
       definition: 
       name: unavailability
       polarity: -1
@@ -1884,12 +2696,22 @@
     - OntologyNode:
       examples:
       - variability
+      - variable
+      - volatility
+      - volatile
+      - tumultuous
+      - tumult
+      - precarious
       definition: 
       name: variability
       polarity: 1
     - OntologyNode:
       examples:
       - vulnerability
+      - vulnerable
+      - fragility
+      - fragile
+      - tenuous
       definition: 
       name: vulnerability
       polarity: 1

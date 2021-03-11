@@ -29,7 +29,9 @@
       - recession
       - environmental:
         - drought
+        - earthquake
         - flood
+        - wildfire
       - famine
     - economy:
       - assets
@@ -38,17 +40,23 @@
       - currency
       - commerce
       - economy
+      - expense
       - finance
       - income
+      - payment
+      - taxes
       - livelihood:
         - rural_livelihood
         - urban_livelihood
+      - commercial_enterprise
+      - farm
       - marketplace
       - workforce
     - education
     - environment:
       - climate
       - climate_change
+      - ecology
       - forestry
       - meteorology:
         - precipitation
@@ -75,21 +83,26 @@
       - fuel
       - medical_supplies
       - medicine
+      - minerals
       - water
     - government:
       - corruption
       - election
+      - judicial_system
       - political_system
       - government_program
       - sanction
     - health:
       - biometrics
       - case_volume
+      - pathogen
       - vector
       - disease:
+        - AIDS
         - COVID
         - flu
         - malaria
+        - illness
       - injury
       - life
       - healthcare
@@ -114,6 +127,10 @@
       - food_aid
       - non_food_items
       - voucher_or_cash
+    - human_rights
+    - information:
+      - misinformation
+      - rumor
     - infrastructure:
       - agriculture:
         - farm_infrastructure
@@ -124,8 +141,7 @@
       - refugee_camps
       - irrigation_infrastructure
       - medical_facilities
-      - transportation:
-        - road_infrastructure
+      - road_infrastructure
         - railroad_infrastructure
         - bridge
       - sanitation_infrastructure
@@ -137,7 +153,9 @@
       - density:
         - de-population
         - overcrowding
+    - discrimination
     - poverty
+    - ritual
     - security:
       - community_security
       - economic_security
@@ -157,14 +175,30 @@
       - government_entity
       - geo-political_entity
       - organization
+      - religious_entity
+      - vehicle
       - people:
         - migration:
           - migrant
+        - adviser
+        - criminal
+        - elites
+        - farm_worker
+        - government_worker
         - health_worker
+        - military_personnel
+        - newsmedia
         - household
+        - children
+        - adults
         - person_or_group
+        - detainee
         - taskforce
+        - landowner
+        - academic
+        - extremist
     - time:
+      - delay
       - season
   - process:
     - access
@@ -175,10 +209,17 @@
     - communicate:
       - campaign
       - debate
+      - describe
+      - mediate
+      - meeting
+      - negotiate
+      - oppose
     - conflict:
       - abduct
+      - abuse
       - attack
       - demonstrate
+      - discriminate
       - disarmament
       - exploit
       - resolution
@@ -189,7 +230,12 @@
     - depreciate
     - develop
     - evacuation
+    - imprison_or_detain
     - intake
+    - judicial:
+      - charge_or_prosecute
+      - convict_or_sentence
+    - mining
     - processing
     - farming:
       - harvesting
@@ -209,8 +255,10 @@
     - manage
     - medical:
       - quarantine
+      - lockdown
       - contact_tracing
       - social_distancing
+      - sanitize
     - mitigate
     - outbreak
     - plan
@@ -241,17 +289,22 @@
     - transport:
       - commercial_transportation
       - personal_transportation
+    - travel
+    - inhabit
   - property:
     - availability
     - condition
+    - chronic
     - diversity
     - insecurity
     - instability
+    - legality
     - nonutilization
     - preference
     - price_or_cost
     - security
     - stability
+    - support
     - unavailability
     - uncertainty
     - utilization
