@@ -141,7 +141,7 @@
       - refugee_camps
       - irrigation_infrastructure
       - medical_facilities
-      - road_infrastructure
+      - road_infrastructure:
         - railroad_infrastructure
         - bridge
       - sanitation_infrastructure
