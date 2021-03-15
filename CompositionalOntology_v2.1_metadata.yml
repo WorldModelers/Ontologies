@@ -1213,7 +1213,6 @@
         - solar panel
         - power grid
         - power line
-        -
         definition:
         name: electrical_infrastructure
         polarity: 1
