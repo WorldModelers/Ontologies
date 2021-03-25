@@ -60,6 +60,10 @@ class Versioner(versions: Versions, codebase: File, resourcebase: File, codeName
   protected def mkFilename(codebase: File, namespace: String): String =
       codebase.getCanonicalPath + "/" + namespace.replace('.', '/') + "/"
 
+  protected def extensionless(filename: String): String =
+      if (filename.contains('.')) filename.substring(0, filename.lastIndexOf('.'))
+      else filename
+
   def versionCode(): Seq[File] = {
     val filename = mkFilename(codebase, codeNamespace) + "Versions.scala"
     val file = new File(filename)
@@ -93,7 +97,7 @@ class Versioner(versions: Versions, codebase: File, resourcebase: File, codeName
     val filename = mkFilename(resourcebase, resourceNamespace)
     // Skip the HEAD.
     val files = versions.versions.tail.map { version =>
-      val file = new File(filename + version._1 + ".properties")
+      val file = new File(extensionless(filename + version._1) + ".properties")
       val properties = version._2.properties
 
       IO.write(file, properties)
