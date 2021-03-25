@@ -21,39 +21,27 @@ mappings in (Compile, packageBin) ++= Seq(
 
 lazy val versionTaskImpl = Def.task {
   import Versioner._
-  // These values need to be collected in a task in order have them forwarded to Scala functions.
-  val versioner = Versioner(git.runner.value, git.gitCurrentBranch.value, baseDirectory.value,
-    (sourceManaged in Compile).value, (resourceManaged in Compile).value)
+  // The user should set these values.  They should be coordinated with the mappings above.
+  val namespace = "com.github.worldModelers.ontologies"
+  val files = Seq(
+    "CompositionalOntology_v2.1_metadata.yml",
+    "wm_flat_metadata.yml"
+  )
+  val versioner = Versioner(
+    git.runner.value, git.gitCurrentBranch.value, baseDirectory.value,
+    (sourceManaged in Compile).value, (resourceManaged in Compile).value,
+    namespace, files
+  )
 
   versioner
 }
 
 sourceGenerators in Compile += Def.task {
-  val versioner = versionTaskImpl.value
-
-  // The user should set these values.
-  val namespace = "com.github.worldModelers.ontologies"
-  val files = Seq(
-    "CompositionalOntology_v2.1_metadata.yml",
-    "wm_flat_metadata.yml"
-  )
-
-  // This reads and codes the versions.
-  versioner.versionCode(namespace, files)
+  versionTaskImpl.value.versionCode()
 }.taskValue
 
 resourceGenerators in Compile += Def.task {
-  val versioner = versionTaskImpl.value
-
-  // The user should set these values.
-  val namespace = "com.github.worldModelers.ontologies"
-  val files = Seq(
-    "CompositionalOntology_v2.1_metadata.yml",
-    "wm_flat_metadata.yml"
-  )
-
-  // This reads and codes the versions.
-  versioner.versionResources(namespace, files)
+  versionTaskImpl.value.versionResources()
 }.taskValue
 
 lazy val root = project in file(".")
