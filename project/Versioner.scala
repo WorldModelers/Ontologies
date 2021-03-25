@@ -55,21 +55,20 @@ case class Versions(versions: Seq[(String, Version)]) {
   }
 }
 
-class Versioner(versions: Versions, codebase: File, resourcebase: File, namespace: String, files: Seq[String]) {
+class Versioner(versions: Versions, codebase: File, resourcebase: File, codeNamespace: String, resourceNamespace: String, filenames: Seq[String]) {
 
   protected def mkFilename(codebase: File, namespace: String): String =
       codebase.getCanonicalPath + "/" + namespace.replace('.', '/') + "/"
 
   def versionCode(): Seq[File] = {
-    val filename = mkFilename(codebase, namespace) + "Versions.scala"
+    val filename = mkFilename(codebase, codeNamespace) + "Versions.scala"
     val file = new File(filename)
     val versionCode = versions.versions.head._2.code // This should be the HEAD
     val versionsCode = Versions(versions.versions.tail).code
-
     val code = s"""
       |/* This code is automatically generated during project compilation. */
       |
-      |package $namespace
+      |package $codeNamespace
       |
       |import java.time.ZonedDateTime
       |
@@ -91,13 +90,10 @@ class Versioner(versions: Versions, codebase: File, resourcebase: File, namespac
   }
 
   def versionResources(): Seq[File] = {
-    val filename = mkFilename(resourcebase, namespace)
-    println("Running codeProperties")
-    println(s"filename is $filename")
+    val filename = mkFilename(resourcebase, resourceNamespace)
     // Skip the HEAD.
     val files = versions.versions.tail.map { version =>
       val file = new File(filename + version._1 + ".properties")
-      println(s"One file is ${file.getAbsolutePath}")
       val properties = version._2.properties
 
       IO.write(file, properties)
@@ -136,9 +132,9 @@ object Versioner {
   }
 
   def apply(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File,
-      codebase: File, resourcebase: File, namespace: String, files: Seq[String]): Versioner = {
-    val versions = readVersions(gitRunner, gitCurrentBranch, baseDirectory, "HEAD" +: files)
+      codebase: File, resourcebase: File, codeNamespace: String, resourceNamespace: String, filenames: Seq[String]): Versioner = {
+    val versions = readVersions(gitRunner, gitCurrentBranch, baseDirectory, "HEAD" +: filenames)
 
-    new Versioner(versions, codebase, resourcebase, namespace, files)
+    new Versioner(versions, codebase, resourcebase, codeNamespace, resourceNamespace, filenames)
   }
 }
