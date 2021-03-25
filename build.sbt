@@ -10,16 +10,26 @@ libraryDependencies ++= Seq(
   "org.yaml" % "snakeyaml" % "1.14"
 )
 
+// This copies the files to their correct places for compilation and packaging.
+// In the meantime they can be placed where it's easy to edit them.
 mappings in (Compile, packageBin) ++= Seq(
   file("CompositionalOntology_v2.1_metadata.yml") -> "org/clulab/wm/eidos/english/ontologies/CompositionalOntology_v2.1_metadata.yml",
   file("wm_flat_metadata.yml") -> "org/clulab/wm/eidos/english/ontologies/wm_flat_metadata.yml"
 )
 
-sourceGenerators in Compile += Def.task {
+//lazy val versionTask = taskKey[Versioner]("Retrieve version numbers of ontologies.")
+
+lazy val versionTaskImpl = Def.task {
   import Versioner._
   // These values need to be collected in a task in order have them forwarded to Scala functions.
   val versioner = Versioner(git.runner.value, git.gitCurrentBranch.value, baseDirectory.value,
-      (sourceManaged in Compile).value, (resourceManaged in Compile).value)
+    (sourceManaged in Compile).value, (resourceManaged in Compile).value)
+
+  versioner
+}
+
+sourceGenerators in Compile += Def.task {
+  val versioner = versionTaskImpl.value
 
   // The user should set these values.
   val namespace = "com.github.worldModelers.ontologies"
@@ -33,10 +43,7 @@ sourceGenerators in Compile += Def.task {
 }.taskValue
 
 resourceGenerators in Compile += Def.task {
-  import Versioner._
-  // These values need to be collected in a task in order have them forwarded to Scala functions.
-  val versioner = Versioner(git.runner.value, git.gitCurrentBranch.value, baseDirectory.value,
-    (sourceManaged in Compile).value, (resourceManaged in Compile).value)
+  val versioner = versionTaskImpl.value
 
   // The user should set these values.
   val namespace = "com.github.worldModelers.ontologies"
