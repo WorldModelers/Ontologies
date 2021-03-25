@@ -9,13 +9,21 @@ import scala.util.Try
 
 protected class Versioner(
   readVersions: Seq[String] => Seq[(String, Versioner.Version)],
-  codeVersions: (String, Seq[(String, Versioner.Version)]) => Seq[File]
+  codeVersions: (String, Seq[(String, Versioner.Version)]) => Seq[File],
+  resourceVersions: (String, Seq[(String, Versioner.Version)]) => Seq[File]
 ) {
 
-  def version(namespace: String, files: Seq[String]): Seq[File] = {
+  // just put all versions here, headVersion, fileVersions
+  def versionCode(namespace: String, files: Seq[String]): Seq[File] = {
     val versions = readVersions("HEAD" +: files)
 
     codeVersions(namespace, versions)
+  }
+
+  def versionResources(namespace: String, files: Seq[String]): Seq[File] = {
+    val versions = readVersions(files)
+
+    resourceVersions(namespace, versions)
   }
 }
 
@@ -84,8 +92,32 @@ object Versioner {
     versions
   }
 
-  protected def codeVersionsBase(codebase: File)(namespace: String, versions: Seq[(String, Version)]): Seq[File] = {
-    val filename = codebase.getCanonicalPath + "/" + namespace.replace('.', '/') + "/Versions.scala"
+  protected def mkFilename(codebase: File, namespace: String): String =
+      codebase.getCanonicalPath + "/" + namespace.replace('.', '/') + "/"
+
+  protected def codeProperties(codebase: File, namespace: String, versions: Seq[(String, Version)]): Seq[File] = {
+    val filename = mkFilename(codebase, namespace)
+    println("Running codeProperties")
+    println(s"filename is $filename")
+    val files = versions.tail.map { version =>
+      val file = new File(filename + version._1 + ".properties")
+      println(s"One file is ${file.getAbsolutePath}")
+      val versionOpt = version._2.version
+      val code = versionOpt.map { version =>
+        s"""
+          |hash = ${version._1}
+          |date = ${version._2}
+          |""".stripMargin.trim + "\n"
+      }.getOrElse("")
+
+      IO.write(file, code)
+      file
+    }
+    files
+  }
+
+  protected def codeScalaVersionsBase(codebase: File)(namespace: String, versions: Seq[(String, Version)]): Seq[File] = {
+    val filename = mkFilename(codebase, namespace) + "Versions.scala"
     val file = new File(filename)
     val versionCode = versions.head._2.code // This should be the HEAD
     val versionsCode = Versions(versions.tail).code
@@ -114,11 +146,34 @@ object Versioner {
     Seq(file)
   }
 
-  def apply(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File, codebase: File): Versioner = {
+  protected def codePropertiesVersionsBase(resourcebase: File)(namespace: String, versions: Seq[(String, Version)]): Seq[File] = {
+    val filename = mkFilename(resourcebase, namespace)
+    println("Running codeProperties")
+    println(s"filename is $filename")
+    val files = versions.tail.map { version =>
+      val file = new File(filename + version._1 + ".properties")
+      println(s"One file is ${file.getAbsolutePath}")
+      val versionOpt = version._2.version
+      val code = versionOpt.map { version =>
+        s"""
+          |hash = ${version._1}
+          |date = ${version._2}
+          |""".stripMargin.trim + "\n"
+      }.getOrElse("")
+
+      IO.write(file, code)
+      file
+    }
+    files
+  }
+
+  def apply(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File,
+      codebase: File, resourcebase: File): Versioner = {
 
     val readVersions = readVersionsBase(gitRunner, gitCurrentBranch, baseDirectory) _
-    val codeVersions = codeVersionsBase(codebase) _
+    val codeScalaVersions = codeScalaVersionsBase(codebase) _
+    val codePropertiesVersions = codePropertiesVersionsBase(resourcebase) _
 
-    new Versioner(readVersions, codeVersions)
+    new Versioner(readVersions, codeScalaVersions, codePropertiesVersions)
   }
 }
