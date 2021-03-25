@@ -11,7 +11,7 @@ import org.clulab.wm.eidos.utils.Closer.AutoCloser
 import org.scalatest._
 
 class TestVersioner extends FlatSpec with Matchers {
-  val now = ZonedDateTime.now
+  val now: ZonedDateTime = ZonedDateTime.now
   // This has to be coordinated with the build file.
   val resourceBase = "/org/clulab/wm/eidos/english/ontologies/"
 
