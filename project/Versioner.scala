@@ -7,59 +7,110 @@ import sbt.IO
 
 import scala.util.Try
 
-protected class Versioner(
-  readVersions: Seq[String] => Seq[(String, Versioner.Version)],
-  codeVersions: (String, Seq[(String, Versioner.Version)]) => Seq[File]
-) {
+case class Version(versionOpt: Option[(String, ZonedDateTime)]) {
 
-  def version(namespace: String, files: Seq[String]): Seq[File] = {
-    val versions = readVersions("HEAD" +: files)
+  def code: String = {
+    val text = versionOpt match {
+      case Some((hash: String, date: ZonedDateTime)) => s"""Some(Version("$hash", ZonedDateTime.parse("$date")))"""
+      case None => "None"
+    }
 
-    codeVersions(namespace, versions)
+    text
+  }
+
+  def properties: String = {
+    val text = versionOpt.map { version =>
+      s"""
+         |hash = ${version._1}
+         |date = ${version._2}
+         |""".stripMargin.trim + "\n"
+    }.getOrElse("")
+
+    text
+  }
+}
+
+object Version {
+
+  // The date is in ISO 8601 format.
+  def apply(hash: Option[String], date: Option[String]): Version = {
+    if (hash.isDefined && date.isDefined) {
+      Try {
+        Version(Some(hash.get, ZonedDateTime.parse(date.get)))
+      }.getOrElse(Version(None))
+    }
+    else
+      Version(None)
+  }
+}
+
+case class Versions(versions: Seq[(String, Version)]) {
+
+  def code: String = {
+    val text = versions.map { case (file, version) =>
+      s""""$file" -> ${version.code}"""
+    }.mkString(",\n    ")
+
+    text
+  }
+}
+
+class Versioner(versions: Versions, codebase: File, resourcebase: File, codeNamespace: String, resourceNamespace: String, filenames: Seq[String]) {
+
+  protected def mkFilename(codebase: File, namespace: String): String =
+      codebase.getCanonicalPath + "/" + namespace.replace('.', '/') + "/"
+
+  protected def extensionless(filename: String): String =
+      if (filename.contains('.')) filename.substring(0, filename.lastIndexOf('.'))
+      else filename
+
+  def versionCode(): Seq[File] = {
+    val filename = mkFilename(codebase, codeNamespace) + "Versions.scala"
+    val file = new File(filename)
+    val versionCode = versions.versions.head._2.code // This should be the HEAD
+    val versionsCode = Versions(versions.versions.tail).code
+    val code = s"""
+      |/* This code is automatically generated during project compilation. */
+      |
+      |package $codeNamespace
+      |
+      |import java.time.ZonedDateTime
+      |
+      |case class Version(commit: String, date: ZonedDateTime)
+      |
+      |object Versions {
+      |  // This first value applies to the entire repository.
+      |  val version: Option[Version] = $versionCode
+      |
+      |  // These values are for individual files.
+      |  val versions: Map[String, Option[Version]] = Map(
+      |    $versionsCode
+      |  )
+      |}
+      |""".stripMargin.trim + "\n"
+
+    IO.write(file, code)
+    Seq(file)
+  }
+
+  def versionResources(): Seq[File] = {
+    val filename = mkFilename(resourcebase, resourceNamespace)
+    // Skip the HEAD.
+    val files = versions.versions.tail.map { version =>
+      val file = new File(extensionless(filename + version._1) + ".properties")
+      val properties = version._2.properties
+
+      IO.write(file, properties)
+      file
+    }
+    files
   }
 }
 
 object Versioner {
 
-  protected case class Version(version: Option[(String, ZonedDateTime)]) {
-
-    def code: String = {
-      val text = version match {
-        case Some((hash: String, date: ZonedDateTime)) => s"""Some(Version("$hash", ZonedDateTime.parse("$date")))"""
-        case None => "None"
-      }
-
-      text
-    }
-  }
-
-  protected object Version {
-
-    // In this version of the constructor, the date is in ISO 8601 format.
-    def apply(hash: Option[String], date: Option[String]): Version = {
-      if (hash.isDefined && date.isDefined) {
-        Try {
-          Version(Some(hash.get, ZonedDateTime.parse(date.get)))
-        }.getOrElse(Version(None))
-      }
-      else
-        Version(None)
-    }
-  }
-
-  protected case class Versions(versions: Seq[(String, Version)]) {
-
-    def code: String = {
-      val text = versions.map { case (file, version) =>
-        s""""$file" -> ${version.code}"""
-      }.mkString(",\n    ")
-
-      text
-    }
-  }
-
-  protected def readVersionsBase(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File)
-      (files: Seq[String]): Seq[(String, Version)] = {
+  protected def readVersions(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File,
+      files: Seq[String]): Versions = {
     val versions = files.map { file =>
       val gitArgs = Seq("rev-list", "--timestamp", "-1", gitCurrentBranch, file)
       // val gitArgs = Seq("log", """--format="%at %H"""", "--max-count=1", gitCurrentBranch, file)
@@ -81,44 +132,13 @@ object Versioner {
       }
     }
 
-    versions
+    Versions(versions)
   }
 
-  protected def codeVersionsBase(codebase: File)(namespace: String, versions: Seq[(String, Version)]): Seq[File] = {
-    val filename = codebase.getCanonicalPath + "/" + namespace.replace('.', '/') + "/Versions.scala"
-    val file = new File(filename)
-    val versionCode = versions.head._2.code // This should be the HEAD
-    val versionsCode = Versions(versions.tail).code
+  def apply(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File,
+      codebase: File, resourcebase: File, codeNamespace: String, resourceNamespace: String, filenames: Seq[String]): Versioner = {
+    val versions = readVersions(gitRunner, gitCurrentBranch, baseDirectory, "HEAD" +: filenames)
 
-    val code = s"""
-      |/* This code is automatically generated during project compilation. */
-      |
-      |package $namespace
-      |
-      |import java.time.ZonedDateTime
-      |
-      |case class Version(commit: String, date: ZonedDateTime)
-      |
-      |object Versions {
-      |  // This first value applies to the entire repository.
-      |  val version: Option[Version] = $versionCode
-      |
-      |  // These values are for individual files.
-      |  val versions: Map[String, Option[Version]] = Map(
-      |    $versionsCode
-      |  )
-      |}
-      |""".stripMargin.trim + "\n"
-
-    IO.write(file, code)
-    Seq(file)
-  }
-
-  def apply(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File, codebase: File): Versioner = {
-
-    val readVersions = readVersionsBase(gitRunner, gitCurrentBranch, baseDirectory) _
-    val codeVersions = codeVersionsBase(codebase) _
-
-    new Versioner(readVersions, codeVersions)
+    new Versioner(versions, codebase, resourcebase, codeNamespace, resourceNamespace, filenames)
   }
 }
