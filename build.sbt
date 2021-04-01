@@ -10,7 +10,7 @@ libraryDependencies ++= Seq(
   "org.yaml"       % "snakeyaml" % "1.14"
 )
 
-def getOntologies(): (String, String, Seq[String]) = (
+val ontologies: (String, String, Seq[String]) = (
   "com.github.worldModelers.ontologies", // version package
   "org.clulab.wm.eidos.english.ontologies", // ontology package
   Seq(
@@ -23,7 +23,7 @@ def getOntologies(): (String, String, Seq[String]) = (
 // This copies the files to their correct places for compilation and packaging.
 // In the meantime they can be placed where it's easy to edit them.
 mappings in (Compile, packageBin) ++= {
-  val (_, resourceNamespace, filenames) = getOntologies()
+  val (_, resourceNamespace, filenames) = ontologies
   val basedir = resourceNamespace.replace('.', '/') + "/"
 
   filenames.map { filename =>
@@ -32,12 +32,13 @@ mappings in (Compile, packageBin) ++= {
 }
 
 lazy val versionTask = Def.task {
-  val (codeNamespace, resourceNamespace, filenames) = getOntologies()
+  val (codeNamespace, resourceNamespace, filenames) = ontologies
   val versioner = Versioner(
-    git.runner.value, git.gitCurrentBranch.value, baseDirectory.value,
-    (sourceManaged in Compile).value, (resourceManaged in Compile).value,
+    git.runner.value, git.gitCurrentBranch.value,
+    baseDirectory.value, (sourceManaged in Compile).value, (resourceManaged in Compile).value,
     codeNamespace, resourceNamespace,
-    filenames
+    // Turn off rethrow to complete even in the presence of an error.
+    filenames, streams.value.log, rethrow = true
   )
 
   versioner
