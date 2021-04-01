@@ -2,9 +2,12 @@ import java.io.File
 import java.time.Instant
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
-
 import sbt.IO
+import sbt.util.Logger
 
+import java.io.PrintWriter
+import java.io.StringWriter
+import java.util.function.Supplier
 import scala.util.Try
 
 case class Version(versionOpt: Option[(String, ZonedDateTime)]) {
@@ -109,8 +112,8 @@ class Versioner(versions: Versions, codebase: File, resourcebase: File, codeName
 
 object Versioner {
 
-  protected def readVersions(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File,
-      files: Seq[String]): Versions = {
+  protected def readVersions(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String,
+      baseDirectory: File, files: Seq[String], logger: Logger, rethrow: Boolean): Versions = {
     val versions = files.map { file =>
       val gitArgs = Seq("rev-list", "--timestamp", "-1", gitCurrentBranch, file)
       // val gitArgs = Seq("log", """--format="%at %H"""", "--max-count=1", gitCurrentBranch, file)
@@ -122,12 +125,26 @@ object Versioner {
         val instant = Instant.ofEpochSecond(integerTime)
         val zonedDateTime = ZonedDateTime.ofInstant(instant, ZoneOffset.UTC)
 
+        logger.info(s"Version($file) = ($hash, $zonedDateTime)")
         (file, Version(Some((hash, zonedDateTime))))
       }
       catch {
         case throwable: Throwable =>
-          println(s"Warning: Couldn't get version for $file.")
-          throwable.printStackTrace()
+          val supplier: Supplier[String] = new Supplier[String]() {
+            override def get(): String = {
+              val stringWriter =  new StringWriter()
+              val printWriter = new PrintWriter(stringWriter)
+
+              printWriter.println(s"The version for $file couldn't be retrieved.")
+              throwable.printStackTrace(printWriter)
+              printWriter.close
+              stringWriter.toString
+            }
+          }
+
+          logger.error(supplier)
+          if (rethrow)
+            throw throwable
           (file, Version(None))
       }
     }
@@ -135,9 +152,11 @@ object Versioner {
     Versions(versions)
   }
 
-  def apply(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String, baseDirectory: File,
-      codebase: File, resourcebase: File, codeNamespace: String, resourceNamespace: String, filenames: Seq[String]): Versioner = {
-    val versions = readVersions(gitRunner, gitCurrentBranch, baseDirectory, "HEAD" +: filenames)
+  def apply(gitRunner: com.typesafe.sbt.git.GitRunner, gitCurrentBranch: String,
+      baseDirectory: File, codebase: File, resourcebase: File,
+      codeNamespace: String, resourceNamespace: String,
+      filenames: Seq[String], logger: Logger, rethrow: Boolean): Versioner = {
+    val versions = readVersions(gitRunner, gitCurrentBranch, baseDirectory, "HEAD" +: filenames, logger, rethrow)
 
     new Versioner(versions, codebase, resourcebase, codeNamespace, resourceNamespace, filenames)
   }
