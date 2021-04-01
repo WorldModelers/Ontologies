@@ -126,7 +126,6 @@ object Versioner {
         val zonedDateTime = ZonedDateTime.ofInstant(instant, ZoneOffset.UTC)
 
         logger.info(s"Version($file) = ($hash, $zonedDateTime)")
-        throw new Exception("Keith was here")
         (file, Version(Some((hash, zonedDateTime))))
       }
       catch {
