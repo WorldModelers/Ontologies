@@ -2733,7 +2733,7 @@
       - OntologyNode:
         examples:
         - medical training
-        definition: 
+        definition:
         name: medical_training
         polarity: 1
         semantic type: event
@@ -2749,7 +2749,7 @@
       - repayment
       - selling
       - gift
-      definition: 
+      definition:
       name: transaction
       polarity: 1
       semantic type: event
@@ -2761,7 +2761,7 @@
       - spread
       - infectious
       - exposure
-      definition: 
+      definition:
       name: transmission
       polarity: -1
       semantic type: event
@@ -2771,7 +2771,7 @@
         - public transport
         - commercial transportation
         - air travel
-        definition: 
+        definition:
         name: commercial_transportation
         polarity: 1
         semantic type: event
@@ -2780,7 +2780,7 @@
         - personal transportation
         - commute
         - taxi
-        definition: 
+        definition:
         name: personal_transportation
         polarity: 1
         semantic type: event
@@ -2806,7 +2806,7 @@
     - OntologyNode:
       examples:
       - availability
-      definition: 
+      definition:
       name: availability
       polarity: 1
       semantic type: property
@@ -2815,7 +2815,7 @@
       - condition
       - conditions
       - quality
-      definition: 
+      definition:
       name: condition
       polarity: 1
       semantic type: property
@@ -2841,7 +2841,7 @@
     - OntologyNode:
       examples:
       - diversity
-      definition: 
+      definition:
       name: diversity
       polarity: 1
       semantic type: property
@@ -2851,14 +2851,14 @@
       - insecure
       - unsafe
       - dangerous
-      definition: 
+      definition:
       name: insecurity
       polarity: -1
       semantic type: property
     - OntologyNode:
       examples:
       - instability
-      definition: 
+      definition:
       name: instability
       polarity: -1
       semantic type: property
@@ -2875,7 +2875,7 @@
     - OntologyNode:
       examples:
       - nonutilization
-      definition: 
+      definition:
       name: nonutilization
       polarity: -1
       semantic type: property
@@ -2885,17 +2885,17 @@
       - preferences
       - taste
       - choice
-      definition: 
+      definition:
       name: preference
       polarity: 1
       semantic type: property
     - OntologyNode:
       pattern:
-      - \b([Cc]osts?|[Pp]rices?)\b 
+      - \b([Cc]osts?|[Pp]rices?)\b
       examples:
       - cost
       - price
-      definition: 
+      definition:
       name: price_or_cost
       polarity: 1
       semantic type: property
@@ -2903,7 +2903,7 @@
       examples:
       - security
       - safety
-      definition: 
+      definition:
       name: security
       polarity: 1
       semantic type: property
@@ -2933,7 +2933,7 @@
       - scant
       - sparse
       - lack
-      definition: 
+      definition:
       name: unavailability
       polarity: -1
       semantic type: property
@@ -2948,7 +2948,7 @@
     - OntologyNode:
       examples:
       - utilization
-      definition: 
+      definition:
       name: utilization
       polarity: 1
       semantic type: property
@@ -2961,7 +2961,7 @@
       - tumultuous
       - tumult
       - precarious
-      definition: 
+      definition:
       name: variability
       polarity: 1
       semantic type: property
@@ -2972,7 +2972,7 @@
       - fragility
       - fragile
       - tenuous
-      definition: 
+      definition:
       name: vulnerability
       polarity: 1
       semantic type: property
