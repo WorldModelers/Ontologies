@@ -1,9 +1,8 @@
 - wm:
   - concept:
     - clusters:
-      - semantic type: event
+      - OntologyNode:
         name: african_governments
-        OntologyNode:
         examples:
         - african countries
         - african governments
@@ -12,7 +11,9 @@
         - african societies
         - african states
         polarity: 1
-      - examples:
+        semantic type: event
+      - OntologyNode:
+        examples:
         - aftermath
         - fallout
         - following
@@ -20,58 +21,57 @@
         - result
         - trauma
         - wake
-        OntologyNode:
-        semantic type: event
         name: aftermath
         polarity: 1
+        semantic type: event
       - OntologyNode:
         examples:
         - crackdown
         name: crackdown
-        semantic type: event
         polarity: 1
-      - OntologyNode:
         semantic type: event
+      - OntologyNode:
         examples:
         - debt
         - deficit
         - public debt
         name: debt
         polarity: 1
-      - examples:
+        semantic type: event
+      - OntologyNode:
+        examples:
         - caloric needs
         - diet
         - diet quality
         - diets
         - healthy diet
         - healthy diets
-        semantic type: event
-        OntologyNode:
         name: diet
         polarity: 1
+        semantic type: event
       - OntologyNode:
         examples:
         - foreign affairs
         - international affairs
         - international relations
         - international security
-        semantic type: event
         name: diplomatic_relations
         polarity: 1
-      - examples:
+        semantic type: event
+      - OntologyNode:
+        examples:
         - dry season
         name: dry_season
-        OntologyNode:
-        semantic type: event
         polarity: 1
-      - OntologyNode:
         semantic type: event
+      - OntologyNode:
         examples:
         - election fraud
         - electoral fraud
         - voter fraud
         name: election_fraud
         polarity: 1
+        semantic type: event
       - OntologyNode:
         examples:
         - election cycle
@@ -82,25 +82,24 @@
         - electoral processes
         - electoral system
         - electoral systems
-        semantic type: event
         name: election_process
         polarity: 1
-      - name: environmental_degradation
         semantic type: event
+      - OntologyNode:
+        name: environmental_degradation
         examples:
         - environmental degradation
         - environmental stress
-        OntologyNode:
         polarity: 1
-      - semantic type: event
-        OntologyNode:
+        semantic type: event
+      - OntologyNode:
         examples:
         - environmental impacts
         name: environmental_impacts
         polarity: 1
-      - name: ethnic_conflict
-        OntologyNode:
         semantic type: event
+      - OntologyNode:
+        name: ethnic_conflict
         examples:
         - ethnic conflict
         - ethnic conflicts
@@ -112,8 +111,8 @@
         - ethnic violence
         - historical conflict
         polarity: 1
-      - semantic type: event
-        OntologyNode:
+        semantic type: event
+      - OntologyNode:
         examples:
         - ethnic identities
         - ethnic identity
@@ -122,36 +121,36 @@
         - identity groups
         name: ethnic_identity
         polarity: 1
-      - examples:
+        semantic type: event
+      - OntologyNode:
+        examples:
         - discovery
         - experimentation
         - exploration
         - findings
         - investigation
-        OntologyNode:
         name: exploration
-        semantic type: event
         polarity: 1
-      - name: fairness
-        OntologyNode:
         semantic type: event
+      - OntologyNode:
+        name: fairness
         examples:
         - equality
         - equity
         - fairness
         - integrity
         polarity: 1
-      - name: farmland
         semantic type: event
+      - OntologyNode:
+        name: farmland
         examples:
         - agricultural land
         - arable land
         - farmland
-        OntologyNode:
         polarity: 1
-      - name: field_reports
         semantic type: event
-        OntologyNode:
+      - OntologyNode:
+        name: field_reports
         examples:
         - chirps
         - climate information
@@ -168,14 +167,14 @@
         - satellite
         - weather data
         polarity: 1
-      - semantic type: event
-        OntologyNode:
+        semantic type: event
+      - OntologyNode:
         examples:
         - groundwater
         name: groundwater
         polarity: 1
-      - OntologyNode:
         semantic type: event
+      - OntologyNode:
         examples:
         - grazing
         - herders
@@ -183,9 +182,9 @@
         - herds
         name: herding
         polarity: 1
+        semantic type: event
       - OntologyNode:
         name: higher_temperatures
-        semantic type: event
         examples:
         - climate changes
         - degrees
@@ -202,9 +201,9 @@
         - temperatures
         - warmer temperatures
         polarity: 1
-      - semantic type: event
+        semantic type: event
+      - OntologyNode:
         name: humanitarian_assistance
-        OntologyNode:
         examples:
         - development assistance
         - emergency aid
@@ -216,7 +215,9 @@
         - international aid
         - urgent assistance
         polarity: 1
-      - examples:
+        semantic type: event
+      - OntologyNode:
+        examples:
         - global community
         - international agencies
         - international institutions
@@ -224,28 +225,28 @@
         - international organizations
         - ngo
         - ngos
-        OntologyNode:
         name: international_organizations
-        semantic type: event
         polarity: 1
-      - semantic type: event
+        semantic type: event
+      - OntologyNode:
         examples:
         - maize
         - maize grain
         - maize meal
         - white maize
         - yellow maize
-        OntologyNode:
         name: maize
         polarity: 1
+        semantic type: event
       - OntologyNode:
         name: natural_disaster
-        semantic type: event
         examples:
         - natural disaster
         - natural disasters
         polarity: 1
-      - examples:
+        semantic type: event
+      - OntologyNode:
+        examples:
         - peace building
         - peace negotiations
         - peace talks
@@ -260,11 +261,9 @@
         - stabilization efforts
         - statebuilding
         name: peacebuilding_efforts
-        OntologyNode:
-        semantic type: event
         polarity: 1
-      - OntologyNode:
         semantic type: event
+      - OntologyNode:
         name: poor_childrens_health
         examples:
         - child mortality
@@ -273,9 +272,9 @@
         - lbw
         - stunting
         polarity: 1
-      - semantic type: event
+        semantic type: event
+      - OntologyNode:
         name: potable_water
-        OntologyNode:
         examples:
         - clean water
         - drinking water
@@ -283,43 +282,45 @@
         - safe water
         - water quality
         polarity: 1
-      - OntologyNode:
         semantic type: event
+      - OntologyNode:
         name: public_transportation
         examples:
         - public transport
         - public transportation
         polarity: 1
-      - semantic type: event
-        OntologyNode:
+        semantic type: event
+      - OntologyNode:
         examples:
         - purchasing power
         name: purchasing_power
         polarity: 1
-      - name: risk
         semantic type: event
+      - OntologyNode:
+        name: risk
         examples:
         - risk
-        OntologyNode:
         polarity: 1
-      - examples:
+        semantic type: event
+      - OntologyNode:
+        examples:
         - social interactions
         - social structure
         - social systems
         name: social_structure
-        OntologyNode:
-        semantic type: event
         polarity: 1
+        semantic type: event
       - OntologyNode:
         name: sorghum
-        semantic type: event
         examples:
         - red sorghum
         - sorghum
         - sorghum crops
         - white sorghum
         polarity: 1
-      - name: state_power
+        semantic type: event
+      - OntologyNode:
+        name: state_power
         examples:
         - central authority
         - state authority
@@ -327,9 +328,8 @@
         - state control
         - state institutions
         - state power
-        OntologyNode:
-        semantic type: event
         polarity: 1
+        semantic type: event
     - agriculture:
       - crop:
         - OntologyNode:
@@ -408,6 +408,8 @@
         - horse
         - donkey
         - camel
+        - herds
+        - poultry
         - livestock
         definition: Domesticated animals raised for their labor or to produce commodities such as milk, meat, eggs, fur, leather, or wool.
         name: livestock
@@ -1549,6 +1551,13 @@
       - freedom
       definition:
       name: human_rights
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - freedom
+      definition:
+      name: freedom
       polarity: 1
       semantic type: event
     - information:
