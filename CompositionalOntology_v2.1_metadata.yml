@@ -11,7 +11,7 @@
         - african societies
         - african states
         polarity: 1
-        semantic type: event
+        semantic type: entity
       - OntologyNode:
         examples:
         - aftermath
@@ -23,13 +23,13 @@
         - wake
         name: aftermath
         polarity: 1
-        semantic type: event
+        semantic type: property
       - OntologyNode:
         examples:
         - crackdown
         name: crackdown
         polarity: 1
-        semantic type: event
+        semantic type: property
       - OntologyNode:
         examples:
         - debt
@@ -121,7 +121,7 @@
         - identity groups
         name: ethnic_identity
         polarity: 1
-        semantic type: event
+        semantic type: entity
       - OntologyNode:
         examples:
         - discovery
@@ -148,7 +148,7 @@
         - arable land
         - farmland
         polarity: 1
-        semantic type: event
+        semantic type: entity
       - OntologyNode:
         name: field_reports
         examples:
@@ -167,7 +167,7 @@
         - satellite
         - weather data
         polarity: 1
-        semantic type: event
+        semantic type: entity
       - OntologyNode:
         examples:
         - groundwater
@@ -227,7 +227,7 @@
         - ngos
         name: international_organizations
         polarity: 1
-        semantic type: event
+        semantic type: entity
       - OntologyNode:
         examples:
         - maize
@@ -237,7 +237,7 @@
         - yellow maize
         name: maize
         polarity: 1
-        semantic type: event
+        semantic type: entity
       - OntologyNode:
         name: natural_disaster
         examples:
@@ -282,7 +282,7 @@
         - safe water
         - water quality
         polarity: 1
-        semantic type: event
+        semantic type: entity
       - OntologyNode:
         name: public_transportation
         examples:
@@ -301,7 +301,7 @@
         examples:
         - risk
         polarity: 1
-        semantic type: event
+        semantic type: property
       - OntologyNode:
         examples:
         - social interactions
@@ -318,7 +318,7 @@
         - sorghum crops
         - white sorghum
         polarity: 1
-        semantic type: event
+        semantic type: entity
       - OntologyNode:
         name: state_power
         examples:
