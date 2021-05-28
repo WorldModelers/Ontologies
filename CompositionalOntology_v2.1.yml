@@ -1,5 +1,39 @@
 - wm:
   - concept:
+    - clusters:
+      - african_governments
+      - aftermath
+      - crackdown
+      - debt
+      - diet
+      - diplomatic_relations
+      - dry_season
+      - election_fraud
+      - election_process
+      - environmental_degradation
+      - environmental_impacts
+      - ethnic_conflict
+      - ethnic_identity
+      - exploration
+      - fairness
+      - farmland
+      - field_reports
+      - groundwater
+      - herding
+      - higher_temperatures
+      - humanitarian_assistance
+      - international_organizations
+      - maize
+      - natural_disaster
+      - peacebuilding_efforts
+      - poor_childrens_health
+      - potable_water
+      - public_transportation
+      - purchasing_power
+      - risk
+      - social_structure
+      - sorghum
+      - state_power
     - agriculture:
       - crop:
         - cereals
@@ -128,6 +162,7 @@
       - non_food_items
       - voucher_or_cash
     - human_rights
+    - freedom
     - information:
       - misinformation
       - rumor
@@ -141,7 +176,9 @@
       - refugee_camps
       - irrigation_infrastructure
       - medical_facilities
-      - road_infrastructure:
+      - mining_infrastructure
+      - transportation:
+        - road_infrastructure
         - railroad_infrastructure
         - bridge
       - sanitation_infrastructure

@@ -13,7 +13,7 @@ def main():
 		# todo: script assumes that the OntNode metadata will end with `polarity` -- we should adjust this if 
 		#       we change format!
 		polarity = False
-		rPolarity = re.compile(r'\w*(polarity:)\w*')
+		rPolarity = re.compile(r'\w*(semantic type:)\w*')
 		wrong_line = 0
 		wmLines = []
 		error = False
