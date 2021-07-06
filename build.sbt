@@ -15,7 +15,7 @@ val ontologies: (String, String, Seq[String]) = (
   "org.clulab.wm.eidos.english.ontologies", // ontology package
   Seq(
     // The user should set these values.
-    "CompositionalOntology_v2.1_metadata.yml",
+    "CompositionalOntology_metadata.yml",
     "wm_flat_metadata.yml"
   )
 )
