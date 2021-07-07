@@ -10,7 +10,7 @@
 ## Note
 
 * The current flat ontology is contained in wm_flat.yml and its companion wm_flat_metadata.yml.
-* The current compositional ontology is contained in CompositionalOntology_v2.1.yaml and its companion CompositionalOntology_v2.1_metadata.yml.
+* The current compositional ontology is contained in CompositionalOntology.yaml and its companion CompositionalOntology_metadata.yml.
 
 All other ontologies have been moved to the deprecated directory. 
 
