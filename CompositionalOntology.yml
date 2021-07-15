@@ -1,108 +1,143 @@
 - wm:
   - concept:
-    - clusters:
-      - african_governments
-      - aftermath
-      - crackdown
-      - debt
-      - diet
-      - diplomatic_relations
-      - dry_season
-      - election_fraud
-      - election_process
-      - environmental_degradation
-      - environmental_impacts
-      - ethnic_conflict
-      - ethnic_identity
-      - exploration
-      - fairness
-      - farmland
-      - field_reports
-      - groundwater
-      - herding
-      - higher_temperatures
-      - humanitarian_assistance
-      - international_organizations
-      - maize
-      - natural_disaster
-      - peacebuilding_efforts
-      - poor_childrens_health
-      - potable_water
-      - public_transportation
-      - purchasing_power
-      - risk
-      - social_structure
-      - sorghum
-      - state_power
     - agriculture:
       - crop:
         - cereals
-        - vegetables
+        - fodder
+        - maize
         - pulses
+        - sorghum
         - tubers
+        - vegetables
       - disease:
         - crop_disease
         - livestock_disease
+        - veterinary_care
       - livestock
       - pest:
         - army_worm
         - locust:
+          - gregarious:
+            - hopper_band
+            - locust_swarm
           - locust_eggs
           - solitary:
             - solitary_hopper
             - solitary_locust
-          - gregarious:
-            - hopper_band
-            - locust_swarm
+    - civil_liberties
     - crisis_or_disaster:
       - conflict:
         - crime
+        - discontent
         - hostility
         - tension
-      - epidemic
-      - recession
       - environmental:
         - drought
+        - environmental_degradation
         - earthquake
         - flood
+        - natural_disaster
+        - storm
+        - volcanic_eruption
         - wildfire
+      - epidemic
       - famine
+      - recession
+    - cultural_norms
+    - curfew
+    - discrimination
     - economy:
       - assets
       - budget
+      - commerce
+      - commercial_enterprise
       - competition
       - currency
-      - commerce
+      - debt
       - economy
       - expense
+      - farm
       - finance
       - income
-      - payment
-      - taxes
-      - livelihood:
-        - rural_livelihood
-        - urban_livelihood
-      - commercial_enterprise
-      - farm
+      - livelihood
       - marketplace
+      - payment
+      - purchasing_power
+      - small_businesses
+      - taxes
       - workforce
     - education
+    - entity:
+      - african_governments
+      - al-shabaab
+      - animal
+      - artifact
+      - field_reports
+      - gangs
+      - geo-political_entity
+      - government_entity
+      - hamas
+      - indigenous_communities
+      - international_organizations
+      - isil
+      - location
+      - lord's_resistance_army
+      - military_power
+      - muslim_communities
+      - nonstate_actors
+      - opposition_party
+      - organization
+      - people:
+        - academic
+        - activist
+        - adults
+        - adviser
+        - children
+        - citizen
+        - criminal
+        - detainee
+        - elites
+        - extremist
+        - farm_worker
+        - government_worker
+        - health_worker
+        - household
+        - landowner
+        - law_enforcement_officials
+        - migration:
+          - migrant
+        - military_personnel
+        - newsmedia
+        - observer
+        - person_or_group
+        - rebels
+        - taskforce
+        - voter
+      - religious_entity
+      - ruling_party
+      - vehicle
+      - weapons
     - environment:
       - climate
       - climate_change
       - ecology
+      - environmental_impacts
       - forestry
+      - higher_temperatures
       - meteorology:
         - precipitation
         - temperature
         - weather
       - natural_resources:
         - fossil_fuels
+        - groundwater
         - land
         - pasture
         - soil
         - water_bodies
       - pollution
+    - ethnic_diversity
+    - freedom
     - goods:
       - agricultural:
         - farm_equipment
@@ -118,35 +153,52 @@
       - medical_supplies
       - medicine
       - minerals
+      - potable_water
       - water
     - government:
-      - corruption
+      - corruption:
+        - corrupt_policy:
+          - cronyism
+          - illicit_political_financing
+          - parliamentary_corruption
+        - election_manipulation
+        - government_corruption
+      - decentralization
+      - diplomatic_relations
       - election
-      - judicial_system
-      - political_system
+      - election_process
       - government_program
+      - judicial_system
+      - political_power
+      - political_system
+      - polling_stations
       - sanction
+      - state_collapse
+      - state_power
+      - transition_of_power
     - health:
       - biometrics
       - case_volume
-      - pathogen
-      - vector
       - disease:
         - AIDS
         - COVID
         - flu
-        - malaria
         - illness
+        - malaria
+      - healthcare
+      - hygiene_materials
       - injury
       - life
-      - healthcare
       - nutrition:
         - breast_feeding
+        - diet
         - fortification
         - malnutrition
         - supplementary_feeding:
           - iycf
           - rutf
+      - pathogen
+      - poor_childrens_health
       - public_health
       - public_safety
       - substance_abuse
@@ -155,42 +207,56 @@
         - preventative_treatment
         - psychological_services
       - vaccination
+      - vector
       - welfare
-      - hygiene_materials
+    - homelessness
+    - human_rights
     - humanitarian_assistance:
       - food_aid
+      - humanitarian_assistance
       - non_food_items
       - voucher_or_cash
-    - human_rights
-    - freedom
     - information:
+      - information_technology
       - misinformation
       - rumor
     - infrastructure:
       - agriculture:
         - farm_infrastructure
+        - farmland
       - communication
       - education_facilities
       - electrical_infrastructure
+      - energy
       - energy_infrastructure
-      - refugee_camps
+      - flood_mitigation_infrastructure
+      - housing
       - irrigation_infrastructure
       - medical_facilities
       - mining_infrastructure
-      - transportation:
-        - road_infrastructure
-        - railroad_infrastructure
-        - bridge
+      - refugee_camps
       - sanitation_infrastructure
+      - transportation:
+        - bridge
+        - public_transportation
+        - railroad_infrastructure
+        - road_infrastructure
       - water_facilities
-    - population:
+    - innovation
+    - literacy
+    - perception
+    - policy_making
+    - population_demographics:
       - age
+      - ethnic_identity
       - gender
-      - race_or_ethnicity
-      - density:
+      - population_density:
         - de-population
         - overcrowding
-    - discrimination
+        - population_growth
+      - race_or_ethnicity
+      - religion
+      - tribe
     - poverty
     - ritual
     - security:
@@ -199,83 +265,84 @@
       - environmental_security
       - national_security
       - surveillance_system
+    - social_structure
     - storage:
       - agricultural_storage
       - general_storage_facilities
       - household_food_storage
       - stockpile_goods
-    - trend
-    - entity:
-      - animal
-      - artifact
-      - location
-      - government_entity
-      - geo-political_entity
-      - organization
-      - religious_entity
-      - vehicle
-      - people:
-        - migration:
-          - migrant
-        - adviser
-        - criminal
-        - elites
-        - farm_worker
-        - government_worker
-        - health_worker
-        - military_personnel
-        - newsmedia
-        - household
-        - children
-        - adults
-        - person_or_group
-        - detainee
-        - taskforce
-        - landowner
-        - academic
-        - extremist
     - time:
       - delay
+      - dry_season
+      - prolonged
       - season
+    - turnout
+    - trend
+    - urbanization
   - process:
     - access
     - adapt
+    - assess
+    - assist
+    - attempt
     - breeding
     - build
+    - censorship
+    - clean
     - collaborate
+    - fishing
+    - eviction
     - communicate:
+      - ask:
+        - poll
+        - question
       - campaign
+      - commit
       - debate
+      - deceive
       - describe
+      - endorse
+      - inform
       - mediate
       - meeting
       - negotiate
       - oppose
+      - suggest
+      - warn
     - conflict:
       - abduct
       - abuse
+      - assassinate
       - attack
+      - crackdown
+      - defeat
       - demonstrate
-      - discriminate
       - disarmament
+      - discriminate
+      - ethnic_conflict
       - exploit
+      - harass_or_persecute
+      - peacebuilding
+      - police_brutality
       - resolution
+      - retaliation
       - terrorism
       - threat
+      - torture
       - war
+    - consume
+    - decide
     - demand
     - depreciate
+    - destabilize
+    - destroy
+    - detect
     - develop
     - evacuation
-    - imprison_or_detain
-    - intake
-    - judicial:
-      - charge_or_prosecute
-      - convict_or_sentence
-    - mining
-    - processing
+    - exploration
     - farming:
       - harvesting
+      - herding
       - irrigation
       - planting
       - tilling
@@ -283,35 +350,60 @@
     - forage
     - hatching
     - hunt
+    - imprison_or_detain
     - infest
     - inflation
+    - inhabit
+    - intake
+    - intensify
+    - invest
+    - investigate
+    - judicial:
+      - charge_or_prosecute
+      - convict_or_sentence
     - legislate:
       - regulate
       - subsidize
       - tax
     - manage
+    - manipulate
     - medical:
-      - quarantine
-      - lockdown
       - contact_tracing
-      - social_distancing
+      - lockdown
+      - quarantine
       - sanitize
+      - social_distancing
+    - mining
     - mitigate
+    - modify
+    - nomination
+    - observe
     - outbreak
     - plan
     - population:
       - birth
       - death
       - migrate:
-        - migrate
         - emigrate
         - immigrate
+        - migrate
     - prepare
+    - prevent
+    - processing
     - produce
+    - prohibit
     - provide
+    - radicalization
+    - react
+    - remediate
+    - repair
     - research
     - secure
+    - select
+    - stabilize
+    - strengthen
     - supply
+    - tabulate
     - trade:
       - export
       - import
@@ -322,28 +414,53 @@
         - emergency_preparedness_training
       - medical_training
     - transaction
+    - transform
     - transmission
     - transport:
       - commercial_transportation
       - personal_transportation
     - travel
-    - inhabit
+    - vote
+    - weaken
   - property:
+    - accountability
+    - affordability
+    - aftermath
+    - allegiance
     - availability
-    - condition
     - chronic
+    - common_understanding
+    - condition
     - diversity
+    - efficiency
+    - fairness
+    - geographic_resolution:
+      - global
+      - international
+      - local
+      - national
+      - sub-national
+    - hydroponic
     - insecurity
     - instability
     - legality
     - nonutilization
+    - peaceful
     - preference
     - price_or_cost
+    - private
+    - public
+    - resilience
+    - risk
     - security
     - stability
     - support
+    - sustainable
+    - temporary
+    - transparency
     - unavailability
     - uncertainty
     - utilization
     - variability
+    - violent
     - vulnerability
