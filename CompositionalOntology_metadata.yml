@@ -201,7 +201,7 @@
           - embezzlement
           - exploitation
           - extortion
-          - harrassment
+          - harassment
           - homicide
           - illegal
           - illegal activities
@@ -938,7 +938,7 @@
           - islamist
           - jihadist
           - militant
-          - sepratist
+          - separatist
           - supremacist
           - vigilante
           name: extremist
@@ -1473,7 +1473,7 @@
         - antiretroviral
         - antiviral
         - antivirals
-        - aspirine
+        - aspirin
         - corticosteroid
         - drugs
         - medication
@@ -2837,7 +2837,7 @@
       - OntologyNode:
         examples:
         - abuse
-        - harrass
+        - harass
         - neglect
         - persecute
         - violate
@@ -3494,7 +3494,7 @@
           - deport
           - emigrate
           - emigration
-          - expell
+          - expel
           name: emigrate
           polarity: 1
           semantic type: event
@@ -3836,7 +3836,7 @@
       - endemic
       - longstanding
       - perennial
-      - persistant
+      - persistent
       - pervasive
       - prevalence
       - prevalent
@@ -4027,7 +4027,7 @@
     - OntologyNode:
       examples:
       - affinity
-      - camraderie
+      - camaraderie
       - empathy
       - goodwill
       - solidarity
