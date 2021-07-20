@@ -109,7 +109,12 @@
           name: crops
           polarity: 1
           semantic type: entity
-        - crop_lands: []
+        - OntologyNode:
+          examples:
+          - crop land
+          name: crop_land
+          polarity: 1
+          semantic type: entity
         - OntologyNode:
           examples:
           - fodder
@@ -126,8 +131,18 @@
           name: maize
           polarity: 1
           semantic type: entity
-        - major_crops: []
-        - other_crops: []
+        - OntologyNode:
+          examples:
+          - major crops
+          name: major_crops
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
+          - other crops
+          name: other_crops
+          polarity: 1
+          semantic type: entity
         - OntologyNode:
           examples:
           - beans
@@ -146,9 +161,24 @@
           name: sorghum
           polarity: 1
           semantic type: entity
-        - standing_crops: []
-        - staple_crops: []
-        - tree_crops: []
+        - OntologyNode:
+          examples:
+          - standing crops
+          name: standing_crops
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
+          - staple crops
+          name: staple_crops
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
+          - tree crops
+          name: tree_crops
+          polarity: 1
+          semantic type: entity
         - OntologyNode:
           examples:
           - cassava
@@ -293,7 +323,12 @@
           polarity: -1
           semantic type: event
         - locust:
-          - desert_locust: []
+          - OntologyNode:
+            examples:
+            - desert locust
+            name: desert_locust
+            polarity: 1
+            semantic type: entity
           - gregarious:
             - OntologyNode:
               examples:
@@ -325,7 +360,6 @@
             name: locust_eggs
             polarity: -1
             semantic type: event
-          - locusts: []
           - solitary:
             - OntologyNode:
               examples:

@@ -6,16 +6,16 @@
       - crop:
         - cereals
         - crops
-        - crop_lands: []
+        - crop_land
         - fodder
         - maize
-        - major_crops: []
-        - other_crops: []
+        - major_crops
+        - other_crops
         - pulses
         - sorghum
-        - standing_crops: []
-        - staple_crops: []
-        - tree_crops: []
+        - standing_crops
+        - staple_crops
+        - tree_crops
         - tubers
         - vegetables
       - dairy
@@ -29,12 +29,11 @@
         - animal_pests
         - army_worm
         - locust:
-          - desert_locust: []
+          - desert_locust
           - gregarious:
             - hopper_band
             - locust_swarm
           - locust_eggs
-          - locusts: []
           - solitary:
             - solitary_hopper
             - solitary_locust
