@@ -1,22 +1,35 @@
 - wm:
   - concept:
     - agriculture:
+      - animal_feed
+      - animal_science
       - crop:
         - cereals
+        - crops
+        - crop_land
         - fodder
         - maize
+        - major_crops
+        - other_crops
         - pulses
         - sorghum
+        - standing_crops
+        - staple_crops
+        - tree_crops
         - tubers
         - vegetables
+      - dairy
       - disease:
+        - chicken_disease
         - crop_disease
         - livestock_disease
         - veterinary_care
-      - livestock
+      - livestock_nonpoultry
       - pest:
+        - animal_pests
         - army_worm
         - locust:
+          - desert_locust
           - gregarious:
             - hopper_band
             - locust_swarm
@@ -24,17 +37,36 @@
           - solitary:
             - solitary_hopper
             - solitary_locust
+      - poultry:
+        - backyard_poultry
+        - bird_condition_healthy
+        - bird_condition_sick
+        - broiler_chickens
+        - chicks
+        - chicken_flocks
+        - chicken_meat
+        - chicken_parts
+        - cockerel
+        - egg_marketing
+        - egg_production
+        - fowl
+        - indigenous_breeds
+        - laying_hens
+        - poultry
+        - poultry_sector
     - civil_liberties
     - crisis_or_disaster:
       - conflict:
+        - armed_conflict
         - crime
         - discontent
         - hostility
         - tension
+      - early_warning
       - environmental:
         - drought
-        - environmental_degradation
         - earthquake
+        - environmental_degradation
         - flood
         - natural_disaster
         - storm
@@ -43,6 +75,7 @@
       - epidemic
       - famine
       - recession
+      - shocks
     - cultural_norms
     - curfew
     - discrimination
@@ -51,19 +84,23 @@
       - budget
       - commerce
       - commercial_enterprise
+      - commercial_farmers
       - competition
       - currency
       - debt
       - economy
+      - exchange_rate
       - expense
-      - farm
       - finance
       - income
+      - labor
       - livelihood
+      - marketing
       - marketplace
       - payment
       - purchasing_power
       - small_businesses
+      - small_farmers
       - taxes
       - workforce
     - education
@@ -77,12 +114,16 @@
       - geo-political_entity
       - government_entity
       - hamas
+      - humanitarian_actors
       - indigenous_communities
       - international_organizations
       - isil
-      - location
+      - locations:
+        - city
+        - location
       - lord's_resistance_army
       - military_power
+      - multilateral_system
       - muslim_communities
       - nonstate_actors
       - opposition_party
@@ -104,6 +145,7 @@
         - household
         - landowner
         - law_enforcement_officials
+        - men
         - migration:
           - migrant
         - military_personnel
@@ -113,14 +155,18 @@
         - rebels
         - taskforce
         - voter
+        - women
       - religious_entity
       - ruling_party
+      - rural_households
+      - urban_households
       - vehicle
       - weapons
     - environment:
       - climate
       - climate_change
       - ecology
+      - emissions
       - environmental_impacts
       - forestry
       - higher_temperatures
@@ -144,6 +190,7 @@
         - fertilizer
         - irrigation_equipment
         - livestock_feed
+        - meat
         - pesticide
         - seed
       - construction_materials
@@ -154,6 +201,7 @@
       - medicine
       - minerals
       - potable_water
+      - protein_foods
       - water
     - government:
       - corruption:
@@ -167,8 +215,10 @@
       - diplomatic_relations
       - election
       - election_process
+      - foreign_policy
       - government_program
       - judicial_system
+      - legislation
       - political_power
       - political_system
       - polling_stations
@@ -177,6 +227,7 @@
       - state_power
       - transition_of_power
     - health:
+      - antibody
       - biometrics
       - case_volume
       - disease:
@@ -185,20 +236,19 @@
         - flu
         - illness
         - malaria
+      - gene
       - healthcare
       - hygiene_materials
       - injury
+      - laboratory_testing
       - life
-      - nutrition:
-        - breast_feeding
-        - diet
-        - fortification
-        - malnutrition
-        - supplementary_feeding:
-          - iycf
-          - rutf
+      - malnutrition
+      - morbidity
+      - nutrients
+      - nutrition
       - pathogen
       - poor_childrens_health
+      - protein
       - public_health
       - public_safety
       - substance_abuse
@@ -206,8 +256,10 @@
         - intensive_care
         - preventative_treatment
         - psychological_services
+        - supplemental_feed
       - vaccination
       - vector
+      - weight_gain
       - welfare
     - homelessness
     - human_rights
@@ -224,6 +276,7 @@
       - agriculture:
         - farm_infrastructure
         - farmland
+        - slaughterhouse
       - communication
       - education_facilities
       - electrical_infrastructure
@@ -243,8 +296,11 @@
         - road_infrastructure
       - water_facilities
     - innovation
+    - intervention
     - literacy
+    - microbiology
     - perception
+    - plan
     - policy_making
     - population_demographics:
       - age
@@ -258,7 +314,10 @@
       - religion
       - tribe
     - poverty
+    - regulations
     - ritual
+    - safety_net
+    - scavenging_system
     - security:
       - community_security
       - economic_security
@@ -276,8 +335,9 @@
       - dry_season
       - prolonged
       - season
-    - turnout
+      - wet_season
     - trend
+    - turnout
     - urbanization
   - process:
     - access
@@ -290,8 +350,6 @@
     - censorship
     - clean
     - collaborate
-    - fishing
-    - eviction
     - communicate:
       - ask:
         - poll
@@ -339,6 +397,7 @@
     - detect
     - develop
     - evacuation
+    - eviction
     - exploration
     - farming:
       - harvesting
@@ -347,10 +406,12 @@
       - planting
       - tilling
       - weeding
+    - fishing
     - forage
     - hatching
     - hunt
     - imprison_or_detain
+    - incubation
     - infest
     - inflation
     - inhabit
@@ -379,7 +440,7 @@
     - nomination
     - observe
     - outbreak
-    - plan
+    - planning
     - population:
       - birth
       - death
@@ -413,6 +474,7 @@
       - humanitarian_training:
         - emergency_preparedness_training
       - medical_training
+      - train
     - transaction
     - transform
     - transmission
@@ -431,7 +493,9 @@
     - chronic
     - common_understanding
     - condition
+    - coping_capacities
     - diversity
+    - drug_resistance
     - efficiency
     - fairness
     - geographic_resolution:
@@ -441,17 +505,21 @@
       - national
       - sub-national
     - hydroponic
+    - improved_breeds
     - insecurity
     - instability
     - legality
     - nonutilization
     - peaceful
     - preference
+    - preparedness
     - price_or_cost
     - private
+    - productivity
     - public
     - resilience
     - risk
+    - seasonality
     - security
     - stability
     - support
