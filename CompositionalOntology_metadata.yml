@@ -1153,7 +1153,7 @@
         - commercial farm
         - commercial farming
         - commercial operations
-        - commerical producers
+        - commercial producers
         - contract farmers
         - contract growers
         - enterprises
@@ -1518,7 +1518,7 @@
         - critter
         - dogs
         - mammals
-        - moce
+        - mice
         - pets
         - rats
         - rodents
@@ -1991,7 +1991,7 @@
           - displaced households
           - families
           - family
-          - family combound
+          - family compound
           - household
           - individual households
           - large households
@@ -5776,7 +5776,7 @@
       semantic type: property
     - OntologyNode:
       examples:
-      - commecial breeds
+      - commercial breeds
       - crossbred
       - crossbred chickens
       - crossbreeds
