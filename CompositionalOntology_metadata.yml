@@ -4417,18 +4417,6 @@
         semantic type: event
       - OntologyNode:
         examples:
-        - criticize
-        - criticise
-        - critique
-        - question
-        - challenge
-        - mock
-        - dispute
-        name: criticize
-        polarity: -1
-        semantic type: event
-      - OntologyNode:
-        examples:
         - argue
         - assert
         - contend
@@ -4527,10 +4515,16 @@
         examples:
         - challenge
         - condemn
+        - criticise
+        - criticize
+        - critique
         - debunk
         - denounce
         - dismiss
+        - dispute
+        - mock
         - oppose
+        - question
         - refute
         - reject
         - renounce
@@ -4627,7 +4621,11 @@
         - coup
         - defeat
         - demise
+        - depose
+        - exile
         - dissolution
+        - topple
+        - oust
         - overthrow
         name: defeat
         polarity: -1
@@ -5090,20 +5088,6 @@
       semantic type: event
     - OntologyNode:
       examples:
-      - increase
-      - spike
-      - double
-      - rise
-      - rose
-      - grow
-      - escalate
-      - surge
-      - jump
-      name: increase # az: do we want 'increase' as a process, or are increases captured by other components?
-      polarity: 1
-      semantic type: event
-    - OntologyNode:
-      examples:
       - artificial incubation
       - brooder
       - brooders
@@ -5351,15 +5335,6 @@
       - watch
       name: observe
       polarity: 1
-      semantic type: event
-    - OntologyNode:
-      examples:
-      - oust
-      - exile
-      - depose
-      - topple
-      name: oust
-      polarity: -1
       semantic type: event
     - OntologyNode:
       examples:
