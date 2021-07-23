@@ -4337,7 +4337,9 @@
       examples:
       - clean
       - clean up
+      - cleanse
       - sanitize
+      - wash
       name: clean
       polarity: 1
       semantic type: event
@@ -4352,6 +4354,27 @@
       - partner
       - partnership
       name: collaborate
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - collect
+      - gather
+      - compile
+      - hoard
+      name: collect
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - combine
+      - merge
+      - link
+      - integrate
+      - incorporate
+      - couple
+      - mix
+      name: combine
       polarity: 1
       semantic type: event
     - communicate:
@@ -4394,6 +4417,18 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - criticize
+        - criticise
+        - critique
+        - question
+        - challenge
+        - mock
+        - dispute
+        name: criticize
+        polarity: -1
+        semantic type: event
+      - OntologyNode:
+        examples:
         - argue
         - assert
         - contend
@@ -4432,6 +4467,15 @@
         - espouse
         - support
         name: endorse
+        polarity: 1
+        semantic type: event
+      - OntologyNode:
+        examples:
+        - highlight
+        - emphasize
+        - emphasise
+        - distinguish
+        name: highlight
         polarity: 1
         semantic type: event
       - OntologyNode:
@@ -4628,6 +4672,16 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - enlist
+        - marshal
+        - draft
+        - recruit
+        - muster
+        name: enlist
+        polarity: 1
+        semantic type: event
+      - OntologyNode:
+        examples:
         - ethnic conflict
         - ethnic conflicts
         - ethnic differences
@@ -4783,6 +4837,14 @@
       semantic type: event
     - OntologyNode:
       examples:
+      - damage
+      - devastate
+      - ravage
+      name: damage
+      polarity: -1
+      semantic type: event
+    - OntologyNode:
+      examples:
       - conclude
       - decide
       name: decide
@@ -4794,6 +4856,13 @@
       - petition
       - request
       name: demand
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - deploy
+      - dispatch
+      name: deploy
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -4840,7 +4909,33 @@
       semantic type: event
     - OntologyNode:
       examples:
+      - disguise
+      - hide
+      - evade
+      - stealth
+      - mask
+      - conceal
+      - shield
+      name: disguise
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      - enhance
+      - enhancement
+      - improve
+      - improvement
+      - supplement
+      - enrich
+      - enrichment
+      - upgrade
+      - boost
+      name: enhance
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
       - evacuation
+      - evacuate
       name: evacuation
       polarity: 1
       semantic type: event
@@ -4859,6 +4954,17 @@
       - findings
       - investigation
       name: exploration
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - extract
+      - derive
+      - synthesize
+      - compose
+      - isolate
+      - source
+      name: extract
       polarity: 1
       semantic type: event
     - farming:
@@ -4919,8 +5025,28 @@
       semantic type: event
     - OntologyNode:
       examples:
+      - flow
+      - diffuse
+      - diffusion
+      - trickle
+      name: flow
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
       - forage
       name: forage
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - group
+      - cluster
+      - classify
+      - subdivide
+      - band
+      - categorize
+      name: group
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -4961,6 +5087,20 @@
       - incarcerate
       name: imprison_or_detain
       polarity: -1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - increase
+      - spike
+      - double
+      - rise
+      - rose
+      - grow
+      - escalate
+      - surge
+      - jump
+      name: increase # az: do we want 'increase' as a process, or are increases captured by other components?
+      polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
@@ -5089,8 +5229,10 @@
       examples:
       - NRM
       - administrate
+      - command
       - manage
       - management
+      - oversee
       name: manage
       polarity: 1
       semantic type: event
@@ -5176,7 +5318,24 @@
       semantic type: event
     - OntologyNode:
       examples:
+      - motivate
+      - prompt
+      - trigger
+      - initiate
+      - spark
+      - invoke
+      - prompt
+      - drive
+      - drove
+      - spurred
+      - ignite
+      name: motivate
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
       - nomination
+      - nominate
       name: nomination
       polarity: 1
       semantic type: event
@@ -5184,9 +5343,23 @@
       examples:
       - observe
       - oversee
+      - detect
+      - monitor
+      - sense
+      - surveil
+      - survey
       - watch
       name: observe
       polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - oust
+      - exile
+      - depose
+      - topple
+      name: oust
+      polarity: -1
       semantic type: event
     - OntologyNode:
       examples:
@@ -5267,6 +5440,15 @@
           semantic type: event
     - OntologyNode:
       examples:
+      - predict
+      - forecast
+      - project
+      - anticipate
+      name: predict
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
       - organize
       - plan
       - prepare
@@ -5320,7 +5502,21 @@
       - distribute
       - give
       - provide
+      - supply
+      - deliver
+      - administer
       name: provide
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - publish
+      - broadcast
+      - release
+      - write
+      - print
+      - reprint
+      name: publish
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5343,6 +5539,8 @@
       - remediate
       - resolve
       - solve
+      - settle
+      - reconcile
       name: remediate
       polarity: -1
       semantic type: event
@@ -5375,6 +5573,9 @@
       - preserve
       - protect
       - secure
+      - safeguard
+      - guard
+      - ward
       name: secure
       polarity: 1
       semantic type: event
@@ -5389,6 +5590,35 @@
       examples:
       - stabilize
       name: stabilize
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - stall
+      - delay
+      - shorten
+      - limit
+      - hamper
+      - temper
+      name: stall
+      polarity: -1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - start
+      - begin
+      - commence
+      - initiate
+      name: start
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - stay
+      - remain
+      - continue
+      - exist
+      name: stay
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5591,6 +5821,7 @@
     - OntologyNode:
       examples:
       - weaken
+      - undermine
       name: weaken
       polarity: -1
       semantic type: event
