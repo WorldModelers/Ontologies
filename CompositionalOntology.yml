@@ -350,6 +350,8 @@
     - censorship
     - clean
     - collaborate
+    - collect
+    - combine
     - communicate:
       - ask:
         - poll
@@ -360,6 +362,7 @@
       - deceive
       - describe
       - endorse
+      - highlight
       - inform
       - mediate
       - meeting
@@ -377,6 +380,7 @@
       - demonstrate
       - disarmament
       - discriminate
+      - enlist
       - ethnic_conflict
       - exploit
       - harass_or_persecute
@@ -389,16 +393,21 @@
       - torture
       - war
     - consume
+    - damage
     - decide
     - demand
+    - deploy
     - depreciate
     - destabilize
     - destroy
     - detect
     - develop
+    - disguise
+    - enhance
     - evacuation
     - eviction
     - exploration
+    - extract
     - farming:
       - harvesting
       - herding
@@ -407,7 +416,9 @@
       - tilling
       - weeding
     - fishing
+    - flow
     - forage
+    - group
     - hatching
     - hunt
     - imprison_or_detain
@@ -437,6 +448,7 @@
     - mining
     - mitigate
     - modify
+    - motivate
     - nomination
     - observe
     - outbreak
@@ -448,12 +460,14 @@
         - emigrate
         - immigrate
         - migrate
+    - predict
     - prepare
     - prevent
     - processing
     - produce
     - prohibit
     - provide
+    - publish
     - radicalization
     - react
     - remediate
@@ -462,6 +476,9 @@
     - secure
     - select
     - stabilize
+    - stall
+    - start
+    - stay
     - strengthen
     - supply
     - tabulate
