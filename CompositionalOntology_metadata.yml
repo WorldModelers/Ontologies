@@ -88,6 +88,12 @@
           semantic type: entity
         - OntologyNode:
           examples:
+          - crop land
+          name: crop_land
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
           - cereals
           - crop
           - crop production
@@ -107,12 +113,6 @@
           - staple crops
           - tree crops
           name: crops
-          polarity: 1
-          semantic type: entity
-        - OntologyNode:
-          examples:
-          - crop land
-          name: crop_land
           polarity: 1
           semantic type: entity
         - OntologyNode:
@@ -227,13 +227,6 @@
       - disease:
         - OntologyNode:
           examples:
-          - colibacillosis
-          - coryza
-          name: chicken_disease
-          polarity: 1
-          semantic type: event
-        - OntologyNode:
-          examples:
           - blight
           - crop disease
           name: crop_disease
@@ -247,10 +240,19 @@
           semantic type: event
         - OntologyNode:
           examples:
+          - chicken disease
+          - colibacillosis
+          - coryza
+          - poultry disease
+          name: poultry_disease
+          polarity: 1
+          semantic type: event
+        - OntologyNode:
+          examples:
           - veterinarian
-          - veterinary care
           - veterinarians
           - veterinary authorities
+          - veterinary care
           - veterinary clinics
           - veterinary department
           - veterinary journal
@@ -290,29 +292,28 @@
       - pest:
         - OntologyNode:
           examples:
+          - few swarms
           - fleas
           - flies
+          - fly
           - fomites
           - infestations
+          - insect
+          - insects
+          - larvae
           - lice
           - microbes
           - mites
           - mosquito
           - mosquitoes
+          - new swarms
           - parasites
           - pests
-          - ticks
-          - worms
-          - few swarms
-          - flies
-          - fly
-          - insect
-          - insects
-          - larvae
-          - new swarms
           - small groups
           - small swarms
           - swarms
+          - ticks
+          - worms
           name: animal_pests
           polarity: 1
           semantic type: entity
@@ -407,7 +408,7 @@
           - traditional system
           - traditional systems
           - yard
-          name: backyard_poultry
+          name: backyard_poultry_farming
           polarity: 1
           semantic type: entity
         - OntologyNode:
@@ -459,22 +460,50 @@
           semantic type: event
         - OntologyNode:
           examples:
+          - cock
+          - cockerel
+          - cockerels
+          - cocks
+          - male chicken
+          - rooster
+          - stud
+          name: cockerel
+          polarity: 1
+          semantic type: event
+        - OntologyNode:
+          examples:
+          - DOC
           - babies
           - baby chicks
           - broiler chicks
           - chick
           - chick mortality
           - chicks
+          - day old chicks
           - embryo
           - hatcheries
           - nests
           - offspring
-          - old chicks
-          - pullets
-          - young birds
-          - young chickens
-          - young chicks
-          name: chicks
+          name: day_old_chicks
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
+          - clutch
+          - egg clutch
+          - egg number
+          - egg offtake
+          - egg size
+          - egg weight
+          - eggs
+          - embryo
+          - hatchability
+          - high egg
+          - shell
+          - shell thickness
+          - total egg
+          - yolk
+          name: egg
           polarity: 1
           semantic type: entity
         - OntologyNode:
@@ -495,139 +524,7 @@
           - small flock
           - small flocks
           - whole flock
-          name: chicken_flocks
-          polarity: 1
-          semantic type: event
-        - OntologyNode:
-          examples:
-          - breast
-          - carcass weight
-          - fowl meat
-          - leg
-          - neck
-          - skin
-          - tail
-          name: chicken_meat
-          polarity: 1
-          semantic type: entity
-        - OntologyNode:
-          examples:
-          - blood
-          - brain
-          - breast
-          - comb
-          - digestion
-          - eye
-          - eyes
-          - faeces
-          - feather
-          - feather colour
-          - feathers
-          - feces
-          - gizzard
-          - gut
-          - heart
-          - intestine
-          - intestines
-          - kidney
-          - liver
-          - lung
-          - lungs
-          - mouth
-          - plumage colour
-          - skin
-          - small intestine
-          - swine
-          - wattles
-          - wing
-          - wings
-          name: chicken_parts
-          polarity: 1
-          semantic type: entity
-        - OntologyNode:
-          examples:
-          - cock
-          - cockerel
-          - cockerels
-          - cocks
-          - male chicken
-          - rooster
-          - stud
-          name: cockerel
-          polarity: 1
-          semantic type: event
-        - OntologyNode:
-          examples:
-          - boxes
-          - crates
-          - egg
-          - egg crates
-          - egg marketing
-          - egg offtake
-          - egg producers
-          - egg productivity
-          - egg products
-          - egg sales
-          - egg traders
-          - egg trays
-          - egg yolk
-          - eggs
-          - hatcheries
-          - high egg
-          - homemade
-          - packaging
-          - poultry producers
-          - processing
-          - shells
-          - tails
-          - total egg
-          name: egg_marketing
-          polarity: 1
-          semantic type: event
-        - OntologyNode:
-          examples:
-          - arrival
-          - average weight
-          - band
-          - band formation
-          - brood
-          - broodiness
-          - brooding
-          - chick survival
-          - clutch
-          - clutches
-          - collected
-          - density
-          - duration
-          - egg
-          - egg number
-          - egg offtake
-          - egg productivity
-          - egg size
-          - egg weight
-          - eggs
-          - embryo
-          - floor
-          - growth rate
-          - hatchability
-          - high egg
-          - ing
-          - larvae
-          - laying
-          - live
-          - low egg
-          - nest
-          - offspring
-          - offtake
-          - producing
-          - shape
-          - shell
-          - shell thickness
-          - size
-          - total egg
-          - weight loss
-          - yolk
-          name: egg_production
+          name: flock_size
           polarity: 1
           semantic type: event
         - OntologyNode:
@@ -739,6 +636,12 @@
       name: civil_liberties
       polarity: 1
       semantic type: entity
+    - OntologyNode:
+      examples:
+      - civil society
+      name: civil_society
+      polarity: 1
+      semantic type: entity
     - crisis_or_disaster:
       - conflict:
         - OntologyNode:
@@ -762,7 +665,6 @@
           - intra
           - jihadism
           - killing
-          - militias
           - proliferation
           - terrorists
           - threats
@@ -840,7 +742,6 @@
           - rejection
           - resentment
           - sentiments
-          - tension
           - unrest
           name: discontent
           polarity: -1
@@ -879,7 +780,6 @@
           - adversity
           - burden
           - challenge
-          - discontent
           - distress
           - faction
           - feud
@@ -938,11 +838,11 @@
           semantic type: event
         - OntologyNode:
           examples:
-          - environmental degradation
-          - environmental stress
           - acidification
           - deltas
           - desertification
+          - environmental degradation
+          - environmental stress
           - erosion
           - evaporation
           - extraction
@@ -966,8 +866,6 @@
           semantic type: event
         - OntologyNode:
           examples:
-          - natural disaster
-          - natural disasters
           - cyclones
           - episodes
           - event
@@ -976,6 +874,8 @@
           - heavy
           - landslides
           - monsoon
+          - natural disaster
+          - natural disasters
           - rain
           - strong winds
           - tropical cyclones
@@ -1074,15 +974,7 @@
       examples:
       - discrimination
       - exclusion
-      - inequality
       - racism
-      - discrepancies
-      - disparities
-      - disparity
-      - imbalance
-      - imbalances
-      - inequalities
-      - intergenerational mobility
       - stratification
       name: discrimination
       polarity: -1
@@ -1110,15 +1002,14 @@
         examples:
         - GDP
         - GNP
-        - domestic market
-        - employment
-        - stock market
         - administrations
         - banks
         - counterparts
         - customs
+        - domestic market
         - domestic markets
         - downstream markets
+        - employment
         - formal markets
         - holders
         - main market
@@ -1135,6 +1026,7 @@
         - open markets
         - other markets
         - several markets
+        - stock market
         - urban markets
         name: commerce
         polarity: 1
@@ -1196,9 +1088,10 @@
         semantic type: event
       - OntologyNode:
         examples:
-        - economy
         - comparative advantages
+        - economic benefits
         - economic consequences
+        - economic costs
         - economic damage
         - economic effects
         - economic empowerment
@@ -1208,11 +1101,15 @@
         - economic impact
         - economic impacts
         - economic implications
+        - economic importance
         - economic incentives
+        - economic opportunities
         - economic reasons
+        - economic shocks
         - economic situation
         - economic system
         - economists
+        - economy
         - elasticity
         - monetary impact
         - moral hazard
@@ -1220,11 +1117,6 @@
         - potential benefits
         - social benefits
         - social value
-        - economic benefits
-        - economic costs
-        - economic importance
-        - economic opportunities
-        - economic shocks
         name: economy
         polarity: 1
         semantic type: event
@@ -1261,21 +1153,9 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - assets
         - award
         - banking
-        - credit
-        - debt
-        - donation
-        - endowment
-        - finance
-        - financial support
-        - funding
-        - grant
-        - invest
-        - investment
-        - lending
-        - loan
-        - assets
         - banks
         - borrowing
         - capital
@@ -1286,6 +1166,9 @@
         - cover
         - credit
         - creditors
+        - debt
+        - donation
+        - endowment
         - finance
         - financial
         - financial capacity
@@ -1295,9 +1178,16 @@
         - financial resources
         - financial sector
         - financial services
+        - financial support
         - fiscal space
+        - funding
+        - grant
+        - invest
+        - investment
         - lenders
+        - lending
         - liquidity
+        - loan
         - microfinance
         - natural capital
         - physical capital
@@ -1328,8 +1218,8 @@
         - hard work
         - hired labour
         - job activities
-        - labour
         - labor
+        - labour
         - labour force
         - labour market
         - wage
@@ -1349,10 +1239,12 @@
         semantic type: entity
       - OntologyNode:
         examples:
+        - boxes
         - brands
         - butchers
         - collectors
         - cooperatives
+        - crates
         - dealers
         - distributors
         - exporters
@@ -1361,10 +1253,13 @@
         - larger producers
         - marketers
         - outlets
+        - packaging
+        - processing
         - processors
         - producers
         - restaurants
         - retailers
+        - sales
         - sellers
         - supermarkets
         - suppliers
@@ -1391,8 +1286,8 @@
         - stall
         - store
         - supermarket
-        - wet market
         - vendor
+        - wet market
         name: marketplace
         polarity: 1
         semantic type: event
@@ -1463,6 +1358,12 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - unemployment
+        name: unemployment
+        polarity: -1
+        semantic type: event
+      - OntologyNode:
+        examples:
         - labor
         - professionals
         - staff
@@ -1512,26 +1413,20 @@
       - OntologyNode:
         examples:
         - animal
-        - bats
-        - beast
-        - creature
-        - critter
-        - dogs
-        - mammals
-        - mice
-        - pets
-        - rats
-        - rodents
-        - animal
         - animal resources
         - animals
+        - bats
+        - beast
         - buffalo
         - buffaloes
         - bulls
         - bush
         - camel
         - camels
+        - creature
+        - critter
         - dead animals
+        - dogs
         - domestic animals
         - donkeys
         - goats
@@ -1544,10 +1439,14 @@
         - larger animals
         - long distances
         - mammals
+        - mice
         - mules
         - other animals
+        - pets
         - piglets
         - pork
+        - rats
+        - rodents
         - sick animals
         - small animals
         - turkeys
@@ -1561,6 +1460,25 @@
         examples:
         - artifact
         name: artifact
+        polarity: 1
+        semantic type: entity
+      - OntologyNode:
+        examples:
+        - border
+        - land border
+        name: border
+        polarity: 1
+        semantic type: entity
+      - OntologyNode:
+        examples:
+        - drone
+        - drones
+        - uas
+        - uav
+        - unmanned aerial vehicle
+        - unmanned air system
+        - unmanned air vehicle
+        name: drone
         polarity: 1
         semantic type: entity
       - OntologyNode:
@@ -1599,19 +1517,8 @@
         semantic type: entity
       - OntologyNode:
         examples:
-        - administrations
-        - agency
-        - departments
-        - directorate
-        - government entity
-        - governorate
-        - implementing agencies
-        - institution
-        - line ministries
-        - ministry
-        - offices
-        - prefecturates
         - administration
+        - administrations
         - agency
         - association
         - authority
@@ -1619,11 +1526,20 @@
         - center
         - commission
         - council
+        - departments
         - directorate
+        - government entity
+        - governorate
+        - implementing agencies
         - institute
         - institutes
+        - institution
+        - line ministries
+        - ministry
         - office
+        - offices
         - organisation
+        - prefecturates
         name: government_entity
         polarity: 1
         semantic type: entity
@@ -1675,7 +1591,6 @@
         examples:
         - indigenous communities
         - indigenous people
-        - tribe
         name: indigenous_communities
         polarity: 1
         semantic type: entity
@@ -1724,6 +1639,13 @@
           name: location
           polarity: 1
           semantic type: entity
+        - OntologyNode:
+          examples:
+          - neighbor
+          - neighboring country
+          name: neighboring_country
+          polarity: 1
+          semantic type: entity
       - OntologyNode:
         examples:
         - lord's resistance army
@@ -1732,6 +1654,14 @@
         name: lord's_resistance_army
         polarity: 1
         semantic type: entity
+      - OntologyNode:
+        examples:
+        - military exercise
+        - military game
+        - military maneuvers
+        name: military_exercise
+        polarity: 1
+        semantic type: event
       - OntologyNode:
         examples:
         - military
@@ -1848,9 +1778,9 @@
           examples:
           - adviser
           - advisor
+          - analysts
           - confidant
           - consultant
-          - analysts
           - consultants
           - expert
           - experts
@@ -1870,14 +1800,13 @@
           - adolescent
           - child
           - children
-          - infant
           - juvenile
           - minor
           - teenage
           - teenager
           - young people
           - youth
-          name: children
+          name: child_or_youth
           polarity: 1
           semantic type: entity
         - OntologyNode:
@@ -1924,13 +1853,16 @@
           semantic type: entity
         - OntologyNode:
           examples:
+          - VEO
           - crusader
           - islamist
           - jihadist
           - militant
           - separatist
           - supremacist
+          - terrorist
           - vigilante
+          - violent extremist organization
           name: extremist
           polarity: 1
           semantic type: entity
@@ -2008,6 +1940,14 @@
           semantic type: entity
         - OntologyNode:
           examples:
+          - baby
+          - infant
+          - newborn
+          name: infant
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
           - landholder
           - landlord
           - landowner
@@ -2028,6 +1968,14 @@
           semantic type: entity
         - OntologyNode:
           examples:
+          - maternal
+          - mother
+          - mothers
+          name: maternal
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
           - husband
           - man
           - men
@@ -2038,14 +1986,25 @@
           - OntologyNode:
             examples:
             - IDP
-            - asylum seeker
-            - displaced persons
-            - migrant
-            - refugee
+            - displaced person
             - returnee
-            - stateless person
+            name: displaced_person
+            polarity: 1
+            semantic type: entity
+          - OntologyNode:
+            examples:
+            - economic migrant
+            - migrant
             name: migrant
             polarity: -1
+            semantic type: entity
+          - OntologyNode:
+            examples:
+            - asylum seeker
+            - refugee
+            - returnee
+            name: refugee
+            polarity: 1
             semantic type: entity
         - OntologyNode:
           examples:
@@ -2060,12 +2019,17 @@
           - lieutenant
           - militants
           - military
-          - militia
           - officer
           - regiment
           - soldier
           - troops
           name: military_personnel
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
+          - militia
+          name: militia
           polarity: 1
           semantic type: entity
         - OntologyNode:
@@ -2102,7 +2066,6 @@
           examples:
           - insurgents
           - militant group
-          - militia
           - rebel group
           name: rebels
           polarity: 1
@@ -2126,12 +2089,21 @@
           - female farmers
           - females
           - girls
+          - mothers
           - wife
           - wives
           - woman
           - women
           - women farmers
           name: women
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
+          - young adults
+          - young men
+          - young women
+          name: young_adults
           polarity: 1
           semantic type: entity
       - OntologyNode:
@@ -2239,8 +2211,6 @@
         semantic type: event
       - OntologyNode:
         examples:
-        - climate change
-        - global warming
         - changing climate
         - climate
         - climate action
@@ -2311,10 +2281,6 @@
         examples:
         - afforestation
         - agroforestry
-        - forestry
-        - logging
-        - reforestation
-        - timber
         - biodiversity
         - deforestation
         - forest
@@ -2323,10 +2289,14 @@
         - forest degradation
         - forest products
         - forest resources
+        - forestry
         - forests
+        - logging
         - mangroves
         - protected areas
+        - reforestation
         - terrestrial ecosystems
+        - timber
         - tree
         - vegetation
         name: forestry
@@ -2474,6 +2444,17 @@
       - agricultural:
         - OntologyNode:
           examples:
+          - compound feed
+          - compound poultry feed
+          - concentrate feed
+          - micronutrients
+          - oil cakes
+          - supplemental feed
+          name: compound_feed
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
           - farm equipment
           - machinery
           - plow
@@ -2482,6 +2463,18 @@
           - tractor
           - winnower
           name: farm_equipment
+          polarity: 1
+          semantic type: entity
+        - OntologyNode:
+          examples:
+          - CSB
+          - corn meal
+          - hay
+          - livestock feed
+          - poultry feed
+          - silage
+          - soybean hulls
+          name: feed
           polarity: 1
           semantic type: entity
         - OntologyNode:
@@ -2515,17 +2508,6 @@
           semantic type: entity
         - OntologyNode:
           examples:
-          - CSB
-          - corn meal
-          - hay
-          - livestock feed
-          - silage
-          - soybean hulls
-          name: livestock_feed
-          polarity: 1
-          semantic type: entity
-        - OntologyNode:
-          examples:
           - animal production
           - beef
           - bone meal
@@ -2533,7 +2515,11 @@
           - broiler meat
           - capita meat
           - carcass weight
+          - chicken breast
+          - chicken feet
+          - chicken leg
           - chicken meat
+          - chicken thigh
           - commercial sector
           - concept meat
           - cultured meat
@@ -2623,16 +2609,16 @@
         semantic type: entity
       - OntologyNode:
         examples:
-        - diet
-        - dietary
-        - food
         - bread
         - breakfast
         - broken rice
         - butter
         - cooking
+        - diet
+        - dietary
         - dish
         - dishes
+        - food
         - garlic
         - herbs
         - meals
@@ -2693,6 +2679,7 @@
         - penicillin
         - pharmaceuticals
         - steroid
+        - tetracycline
         - therapeutic
         name: medicine
         polarity: 1
@@ -2728,10 +2715,14 @@
         examples:
         - alfalfa
         - bean
+        - dairy
+        - eggs
         - fishmeal
         - groundnut
         - groundnuts
         - legume
+        - meat
+        - milk
         - sorghum
         - soy
         - soya
@@ -3052,28 +3043,28 @@
           - anaemia
           - cancer
           - chikunguya
+          - congestion
           - diarrhea
+          - episodes
+          - gross lesions
           - illness
+          - inflammation
+          - lesions
           - measles
           - mers
+          - organs
+          - pathology
           - pox
           - salmonella
           - sars
           - sickness
+          - survivors
           - tb
+          - tissue
           - tsetse
           - tuberculosis
-          - zika
-          - congestion
-          - episodes
-          - gross lesions
-          - inflammation
-          - lesions
-          - organs
-          - pathology
-          - survivors
-          - tissue
           - vessels
+          - zika
           name: illness
           polarity: -1
           semantic type: event
@@ -3177,12 +3168,21 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - acute malnutrition
         - gam
         - gam whz
+        - global acute malnutrition
         - haz
+        - hdds
+        - height for age
         - hhs
+        - household dietary diversity score
+        - household hunger scale
+        - hunger
         - malnourished
+        - stunting
         - wasting
+        - weight for height
         - whz
         name: malnutrition
         polarity: -1
@@ -3266,10 +3266,14 @@
         - bovine brucellosis
         - brucellosis
         - contagions
+        - cysts
         - echinococcosis
+        - external parasites
         - fomites
         - fungal
         - fungus
+        - germplasm
+        - germs
         - microbe
         - mycobacterium
         - mycoplasmosis
@@ -3280,14 +3284,9 @@
         - salmonella
         - salmonellosis
         - toxins
+        - trypanosomes
         - virus
         - zoonotic pathogens
-        - cysts
-        - external parasites
-        - fomites
-        - germplasm
-        - germs
-        - trypanosomes
         name: pathogen
         polarity: -1
         semantic type: event
@@ -3304,13 +3303,12 @@
       - OntologyNode:
         examples:
         - crude protein
-        - digestibility
         - protein
         - protein content
         - protein requirements
         - protein source
         - protein sources
-        name: protein
+        name: protein_nutrient
         polarity: 1
         semantic type: entity
       - OntologyNode:
@@ -3385,11 +3383,9 @@
           semantic type: event
       - OntologyNode:
         examples:
-        - immunization
-        - vaccination
-        - vaccine
         - cell
         - covax
+        - immunization
         - inoculation
         - ndv vaccines
         - recombinant vaccines
@@ -3512,6 +3508,16 @@
         - \bvouchers?\b
         polarity: 1
         semantic type: event
+    - OntologyNode:
+      examples:
+      - discrepancy
+      - disparity
+      - imbalance
+      - inequality
+      - inequity
+      name: inequality
+      polarity: -1
+      semantic type: event
     - information:
       - OntologyNode:
         examples:
@@ -3519,6 +3525,23 @@
         - digital technologies
         - information technology
         name: information_technology
+        polarity: 1
+        semantic type: entity
+      - OntologyNode:
+        examples:
+        - intelligence
+        - intelligence analysis
+        - intelligence information
+        name: intelligence_information
+        polarity: 1
+        semantic type: entity
+      - OntologyNode:
+        examples:
+        - internet
+        - mobile internet
+        - web
+        - world wide web
+        name: internet
         polarity: 1
         semantic type: entity
       - OntologyNode:
@@ -3544,6 +3567,15 @@
         name: rumor
         polarity: 1
         semantic type: event
+      - OntologyNode:
+        examples:
+        - facebook
+        - instagram
+        - social media
+        - twitter
+        name: social_media
+        polarity: 1
+        semantic type: entity
     - infrastructure:
       - agriculture:
         - OntologyNode:
@@ -3777,6 +3809,16 @@
           semantic type: entity
       - OntologyNode:
         examples:
+        - ballot boxes
+        - polling booths
+        - voting locations
+        - voting systems
+        - voting tools
+        name: voting_infrastructure
+        polarity: 1
+        semantic type: entity
+      - OntologyNode:
+        examples:
         - boreholes
         - water facilities
         - water point
@@ -3789,22 +3831,22 @@
         semantic type: entity
     - OntologyNode:
       examples:
+      - appropriate technologies
       - different approaches
+      - existing technologies
+      - improved technologies
       - innovations
       - innovative approaches
+      - modern technologies
       - new approach
       - new approaches
       - new ideas
-      - new technologies
-      - new technology
-      - new ways
-      - appropriate technologies
-      - existing technologies
-      - improved technologies
-      - modern technologies
       - new markets
       - new practices
+      - new technologies
+      - new technology
       - new tools
+      - new ways
       - technologies
       name: innovation
       polarity: 1
@@ -3920,6 +3962,13 @@
         semantic type: entity
       - OntologyNode:
         examples:
+        - clan
+        - family
+        name: clan
+        polarity: 1
+        semantic type: entity
+      - OntologyNode:
+        examples:
         - ethnic identities
         - ethnic identity
         - identities
@@ -3930,19 +3979,19 @@
         semantic type: entity
       - OntologyNode:
         examples:
-        - female
-        - gender
-        - gender demographics
-        - male
-        - sex
         - empowerment
         - equal opportunities
+        - female
+        - gender
         - gender analysis
+        - gender demographics
         - gender dimensions
         - gender equality
         - gender focus
         - gender issues
         - inclusiveness
+        - male
+        - sex
         - sexes
         - social determinants
         name: gender
@@ -3984,6 +4033,7 @@
         semantic type: entity
       - OntologyNode:
         examples:
+        - ethnicity
         - tribal
         - tribe
         name: tribe
@@ -3991,7 +4041,6 @@
         semantic type: entity
     - OntologyNode:
       examples:
-      - poverty
       - poor communities
       - poor consumers
       - poor countries
@@ -3999,6 +4048,7 @@
       - poor households
       - poorer households
       - poorest households
+      - poverty
       name: poverty
       polarity: -1
       semantic type: event
@@ -4100,9 +4150,6 @@
     - OntologyNode:
       examples:
       - cultural factors
-      - social interactions
-      - social structure
-      - social systems
       - individual characteristics
       - marital status
       - personal relationships
@@ -4111,6 +4158,7 @@
       - social cohesion
       - social factors
       - social groups
+      - social interactions
       - social networks
       - social practices
       - social relations
@@ -4118,9 +4166,11 @@
       - social sciences
       - social scientists
       - social status
+      - social structure
+      - social systems
       - symbolic boundaries
       - ties
-      name: social_structure
+      name: social_structure_or_relationship
       polarity: 1
       semantic type: event
     - storage:
@@ -4242,8 +4292,20 @@
     - OntologyNode:
       examples:
       - adapt
+      - adaptability
+      - adaptation
       - flexibility
       name: adapt
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - aid
+      - assist
+      - assistance
+      - help
+      - support
+      name: aid_or_assistance
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -4252,16 +4314,7 @@
       - assess
       - critique
       - evaluate
-      name: assess
-      polarity: 1
-      semantic type: event
-    - OntologyNode:
-      examples:
-      - aid
-      - assist
-      - help
-      - support
-      name: assist
+      name: assessment
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -4280,16 +4333,28 @@
       - breed
       - breeder
       - breeding
+      - brooder
+      - broodiness
+      - brooding
+      - chick survival
       - cocks
       - crossbred
       - crossbreed
       - crossbreeding
       - domestication
+      - egg offtake
+      - egg size
       - generation
       - grandparent stock
       - growing phase
+      - hatchability
       - hatchery
+      - hatching
       - inbreeding
+      - laying
+      - laying hens
+      - mating
+      - maturation
       - next generation
       - offspring
       - parent stock
@@ -4297,34 +4362,11 @@
       - progeny
       - rearers
       - rearing
-      - reproduce
       - reproductive stages
       - roosters
       - semen
       - stud
-      - brooder
-      - broodiness
-      - brooding
-      - chick survival
-      - egg offtake
-      - egg size
-      - hatchability
-      - hatching
-      - laying
-      - laying hens
-      - mating
-      - maturation
-      - reproduction
       name: breeding
-      polarity: 1
-      semantic type: property
-    - OntologyNode:
-      examples:
-      - build
-      - construct
-      - establish
-      - shelter
-      name: build
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -4338,6 +4380,7 @@
       - clean
       - clean up
       - cleanse
+      - sanitization
       - sanitize
       - wash
       name: clean
@@ -4350,34 +4393,37 @@
       - ally
       - coalition
       - collaborate
+      - collaboration
       - cooperate
       - partner
       - partnership
-      name: collaborate
+      name: collaboration
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
       - collect
-      - gather
+      - collecting
+      - collection
       - compile
+      - gather
       - hoard
-      name: collect
+      name: collecting
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
       - combine
-      - merge
-      - link
-      - integrate
-      - incorporate
       - couple
+      - incorporate
+      - integrate
+      - link
+      - merge
       - mix
-      name: combine
+      name: combining
       polarity: 1
       semantic type: event
-    - communicate:
+    - communication:
       - ask:
         - OntologyNode:
           examples:
@@ -4409,10 +4455,11 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - commit
         - commitment
         - pledge
         - promise
-        name: commit
+        name: commitment
         polarity: 1
         semantic type: event
       - OntologyNode:
@@ -4430,21 +4477,23 @@
       - OntologyNode:
         examples:
         - deceive
+        - deception
         - deceptive
         - 'false'
         - misinform
-        name: deceive
+        name: deception
         polarity: -1
         semantic type: event
       - OntologyNode:
         examples:
         - describe
+        - description
         - discuss
         - illustrate
         - outline
         - report
         - summarize
-        name: describe
+        name: description
         polarity: 1
         semantic type: event
       - OntologyNode:
@@ -4452,18 +4501,19 @@
         - advocate
         - approve
         - endorse
+        - endorsement
         - espouse
         - support
-        name: endorse
+        name: endorsement
         polarity: 1
         semantic type: event
       - OntologyNode:
         examples:
-        - highlight
-        - emphasize
-        - emphasise
         - distinguish
-        name: highlight
+        - emphasise
+        - emphasize
+        - highlight
+        name: highlighting
         polarity: 1
         semantic type: event
       - OntologyNode:
@@ -4474,7 +4524,7 @@
         - say
         - speak
         - tell
-        name: inform
+        name: informing
         polarity: 1
         semantic type: event
       - OntologyNode:
@@ -4482,8 +4532,9 @@
         - arbitrate
         - broker
         - mediate
+        - mediation
         - referee
-        name: mediate
+        name: mediation
         polarity: 1
         semantic type: event
       - OntologyNode:
@@ -4508,7 +4559,8 @@
         examples:
         - bargain
         - negotiate
-        name: negotiate
+        - negotiation
+        name: negotiation
         polarity: 1
         semantic type: event
       - OntologyNode:
@@ -4524,25 +4576,30 @@
         - dispute
         - mock
         - oppose
+        - opposition
         - question
         - refute
         - reject
         - renounce
         - subvert
-        name: oppose
+        name: opposition
         polarity: -1
         semantic type: event
       - OntologyNode:
         examples:
         - recommend
-        name: suggest
+        - recommendation
+        - suggest
+        - suggestion
+        name: suggestion
         polarity: 1
         semantic type: event
       - OntologyNode:
         examples:
         - caution
         - warn
-        name: warn
+        - warning
+        name: warning
         polarity: 1
         semantic type: event
     - conflict:
@@ -4556,7 +4613,7 @@
         - kidnapped
         - kidnapping
         - ransomed
-        name: abduct
+        name: abduction
         polarity: -1
         semantic type: event
       - OntologyNode:
@@ -4573,7 +4630,7 @@
         examples:
         - assassinate
         - assassination
-        name: assassinate
+        name: assassination
         polarity: 1
         semantic type: event
       - OntologyNode:
@@ -4607,6 +4664,14 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - clan conflict
+        - clan differences
+        - clan tensions
+        name: clan_conflict
+        polarity: 1
+        semantic type: entity
+      - OntologyNode:
+        examples:
         - crackdown
         - crush
         - overreact
@@ -4622,32 +4687,12 @@
         - defeat
         - demise
         - depose
-        - exile
         - dissolution
-        - topple
+        - exile
         - oust
         - overthrow
+        - topple
         name: defeat
-        polarity: -1
-        semantic type: event
-      - OntologyNode:
-        examples:
-        - assemble
-        - boycott
-        - civil unrest
-        - clash
-        - crowd
-        - demands
-        - gather
-        - peaceful assembly
-        - picket
-        - protest
-        - rally
-        - riot
-        - social unrest
-        - strikes
-        - turmoil
-        name: demonstrate
         polarity: -1
         semantic type: event
       - OntologyNode:
@@ -4670,28 +4715,13 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - draft
         - enlist
         - marshal
-        - draft
-        - recruit
         - muster
+        - recruit
         name: enlist
         polarity: 1
-        semantic type: event
-      - OntologyNode:
-        examples:
-        - ethnic conflict
-        - ethnic conflicts
-        - ethnic differences
-        - ethnic divisions
-        - ethnic hatred
-        - ethnic lines
-        - ethnic tensions
-        - ethnic violence
-        - historical conflict
-        - intergroup conflict
-        name: ethnic_conflict
-        polarity: -1
         semantic type: event
       - OntologyNode:
         definition: To make use of (sometimes unfairly) to one's own advantage.
@@ -4716,6 +4746,14 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - insurgency
+        - 'revolt '
+        - uprising
+        name: insurgency
+        polarity: 1
+        semantic type: event
+      - OntologyNode:
+        examples:
         - conflict prevention
         - conflict resolution
         - diplomacy
@@ -4729,8 +4767,6 @@
         - peacebuilding efforts
         - peacebuilding initiatives
         - peacebuilding processes
-        - peacekeepers
-        - peacekeeping
         - peacemaking
         - stabilization activities
         - stabilization efforts
@@ -4741,9 +4777,36 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - peacekeepers
+        - peacekeeping
+        name: peacekeeping
+        polarity: 1
+        semantic type: event
+      - OntologyNode:
+        examples:
         - police brutality
         name: police_brutality
         polarity: 1
+        semantic type: event
+      - OntologyNode:
+        examples:
+        - assemble
+        - boycott
+        - civil unrest
+        - clash
+        - crowd
+        - demands
+        - gather
+        - peaceful assembly
+        - picket
+        - protest
+        - rally
+        - riot
+        - social unrest
+        - strikes
+        - turmoil
+        name: protest_or_demonstration
+        polarity: -1
         semantic type: event
       - OntologyNode:
         examples:
@@ -4806,19 +4869,31 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - ethnic conflict
+        - ethnic conflicts
+        - ethnic differences
+        - ethnic divisions
+        - ethnic hatred
+        - ethnic lines
+        - ethnic tensions
+        - ethnic violence
+        - historical conflict
+        - intergroup conflict
+        - tribal conflict
+        name: tribal_conflict
+        polarity: -1
+        semantic type: event
+      - OntologyNode:
+        examples:
         - assault
         - attack
         - bombard
         - civil war
         - clash
         - genocide
-        - insurgency
         - invaded
         - military aggression
-        - militia
         - rebel
-        - revolt
-        - uprising
         - war
         - warfare
         - warlord
@@ -4827,10 +4902,22 @@
         semantic type: event
     - OntologyNode:
       examples:
+      - build
+      - building
+      - construct
+      - construction
+      - establish
+      name: construction
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
       - consume
       - consumption
+      - household consumption
+      - own consumption
       - use
-      name: consume
+      name: consumption
       polarity: -1
       semantic type: event
     - OntologyNode:
@@ -4845,7 +4932,8 @@
       examples:
       - conclude
       - decide
-      name: decide
+      - decision
+      name: decision
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -4859,37 +4947,41 @@
     - OntologyNode:
       examples:
       - deploy
+      - deployment
       - dispatch
-      name: deploy
+      name: deployment
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
       - depreciate
       - devaluation
-      name: depreciate
+      name: depreciation
       polarity: -1
       semantic type: event
     - OntologyNode:
       examples:
       - destabilize
-      name: destabilize
+      name: destabilization
       polarity: -1
       semantic type: event
     - OntologyNode:
       examples:
       - destroy
-      name: destroy
+      - destruction
+      - ruin
+      name: destruction
       polarity: -1
       semantic type: event
     - OntologyNode:
       examples:
       - clinical signs
       - detect
+      - detection
       - diagnose
       - diagnostics
       - signs
-      name: detect
+      name: detection
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -4902,38 +4994,39 @@
       - extend
       - grow
       - growth
-      name: develop
+      name: development
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - disguise
-      - hide
-      - evade
-      - stealth
-      - mask
       - conceal
+      - disguise
+      - evade
+      - hide
+      - mask
       - shield
+      - stealth
       name: disguise
       polarity: 1
       semantic type: event
     - OntologyNode:
+      examples:
+      - boost
       - enhance
       - enhancement
+      - enrich
+      - enrichment
       - improve
       - improvement
       - supplement
-      - enrich
-      - enrichment
       - upgrade
-      - boost
-      name: enhance
+      name: enhancement
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - evacuation
       - evacuate
+      - evacuation
       name: evacuation
       polarity: 1
       semantic type: event
@@ -4956,13 +5049,13 @@
       semantic type: event
     - OntologyNode:
       examples:
-      - extract
-      - derive
-      - synthesize
       - compose
+      - derive
+      - extract
       - isolate
       - source
-      name: extract
+      - synthesize
+      name: extraction
       polarity: 1
       semantic type: event
     - farming:
@@ -5023,9 +5116,9 @@
       semantic type: event
     - OntologyNode:
       examples:
-      - flow
       - diffuse
       - diffusion
+      - flow
       - trickle
       name: flow
       polarity: 1
@@ -5033,30 +5126,30 @@
     - OntologyNode:
       examples:
       - forage
-      name: forage
+      name: foraging
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - group
-      - cluster
-      - classify
-      - subdivide
       - band
       - categorize
-      name: group
+      - classify
+      - cluster
+      - group
+      - subdivide
+      name: grouping
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - hatch
-      - hatching
       - abundance
       - chick survival
       - egg productivity
       - fitness
       - growth performance
       - growth rate
+      - hatch
+      - hatching
       - mortality
       - reproductive performance
       - survival
@@ -5069,7 +5162,7 @@
       examples:
       - hunt
       - poaching
-      name: hunt
+      name: hunting
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5082,8 +5175,9 @@
       - detention
       - enslave
       - imprison
+      - imprisonment
       - incarcerate
-      name: imprison_or_detain
+      name: imprisonment_or_detention
       polarity: -1
       semantic type: event
     - OntologyNode:
@@ -5108,7 +5202,8 @@
     - OntologyNode:
       examples:
       - infest
-      name: infest
+      - infestation
+      name: infestation
       pattern:
       - \b[iI]nfest
       polarity: -1
@@ -5123,9 +5218,10 @@
       examples:
       - inhabit
       - live
+      - occupancy
       - reside
       - settle
-      name: inhabit
+      name: inhabiting_or_occupancy
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5141,15 +5237,7 @@
       - amplify
       - escalate
       - intensify
-      name: intensify
-      polarity: 1
-      semantic type: event
-    - OntologyNode:
-      examples:
-      - fund
-      - invest
-      - spend
-      name: invest
+      name: intensification
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5161,28 +5249,41 @@
       name: investigate
       polarity: 1
       semantic type: event
+    - OntologyNode:
+      examples:
+      - FDI
+      - foreign direct investment
+      - fund
+      - invest
+      - investment
+      - spend
+      name: investment
+      polarity: 1
+      semantic type: event
     - judicial:
       - OntologyNode:
         examples:
         - charge
         - indict
         - prosecute
-        name: charge_or_prosecute
+        name: charge_or_prosecution
         polarity: 1
         semantic type: event
       - OntologyNode:
         examples:
         - convict
+        - conviction
         - fine
         - jail
         - penalize
         - penalty
         - punish
         - sentence
-        name: convict_or_sentence
+        - sentencing
+        name: conviction_or_sentencing
         polarity: 1
         semantic type: event
-    - legislate:
+    - legislation:
       - OntologyNode:
         examples:
         - control
@@ -5192,7 +5293,7 @@
         - regulatory framework
         - repeal
         - restrict
-        name: regulate
+        name: regulation
         pattern:
         - \b(regulations?|laws?)\b
         polarity: 1
@@ -5200,13 +5301,18 @@
       - OntologyNode:
         examples:
         - subsidize
-        name: subsidize
+        - subsidy
+        name: subsidization
         polarity: 1
         semantic type: event
       - OntologyNode:
         examples:
+        - duty
+        - levy
+        - tariff
         - tax
-        name: tax
+        - taxation
+        name: taxation
         polarity: 1
         semantic type: event
     - OntologyNode:
@@ -5217,7 +5323,7 @@
       - manage
       - management
       - oversee
-      name: manage
+      name: management
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5226,7 +5332,7 @@
       - exploit
       - influence
       - manipulate
-      name: manipulate
+      name: manipulation
       polarity: 1
       semantic type: event
     - medical:
@@ -5256,9 +5362,12 @@
         semantic type: event
       - OntologyNode:
         examples:
+        - cleaning
         - disinfect
+        - disinfection
+        - sanitization
         - sanitize
-        name: sanitize
+        name: sanitization
         polarity: 1
         semantic type: event
       - OntologyNode:
@@ -5288,52 +5397,50 @@
       - deter
       - diffuse
       - mitigate
+      - mitigation
       - neutralize
       - overcome
-      name: mitigate
+      name: mitigation
       polarity: -1
       semantic type: event
     - OntologyNode:
       examples:
       - change
       - modify
-      name: modify
+      name: modification
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - motivate
-      - prompt
-      - trigger
-      - initiate
-      - spark
-      - invoke
-      - prompt
       - drive
       - drove
-      - spurred
       - ignite
-      name: motivate
+      - initiate
+      - invoke
+      - motivate
+      - prompt
+      - spark
+      - spurred
+      - trigger
+      name: motivation
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - nomination
       - nominate
+      - nomination
       name: nomination
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
+      - detect
       - observe
       - oversee
-      - detect
-      - monitor
       - sense
-      - surveil
       - survey
       - watch
-      name: observe
+      name: observation
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5364,9 +5471,6 @@
         semantic type: event
       - OntologyNode:
         examples:
-        - death
-        name: death
-        pattern:
         - burial
         - casualties
         - casualty
@@ -5375,14 +5479,15 @@
         - deaths
         - fatalities
         - fatality
+        - infant mortality
         - killings
-        - mortalities
         - mortality
         - mortality rate
         - mortality risks
         - murder
         - new deaths
         - total deaths
+        name: death
         polarity: 1
         semantic type: event
       - migrate:
@@ -5415,11 +5520,13 @@
           semantic type: event
     - OntologyNode:
       examples:
-      - predict
-      - forecast
-      - project
       - anticipate
-      name: predict
+      - forecast
+      - predict
+      - prediction
+      - project
+      - projection
+      name: prediction
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5427,7 +5534,7 @@
       - organize
       - plan
       - prepare
-      name: prepare
+      name: preparation
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5437,7 +5544,7 @@
       - prevent
       - suppress
       - thwart
-      name: prevent
+      name: prevention
       polarity: -1
       semantic type: event
     - OntologyNode:
@@ -5458,7 +5565,7 @@
       - create
       - produce
       - production
-      name: produce
+      name: production
       pattern:
       - \b([pP]roduction|[yY]ields?)\b
       polarity: 1
@@ -5469,29 +5576,30 @@
       - criminalize
       - outlaw
       - prohibit
-      name: prohibit
+      name: prohibition
       polarity: -1
       semantic type: event
     - OntologyNode:
       examples:
+      - administer
+      - deliver
       - distribute
       - give
       - provide
       - supply
-      - deliver
-      - administer
-      name: provide
+      name: provision
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - publish
       - broadcast
-      - release
-      - write
       - print
+      - publication
+      - publish
+      - release
       - reprint
-      name: publish
+      - write
+      name: publication
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5503,20 +5611,29 @@
     - OntologyNode:
       examples:
       - react
+      - reaction
       - respond
-      name: react
+      - response
+      name: reaction_or_response
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - forgiveness
+      - relief
+      name: relief
       polarity: 1
       semantic type: event
     - OntologyNode:
       definition: provide a remedy for; redress or make right; restore by reversing
         or stopping environmental damage
       examples:
+      - reconcile
       - remediate
       - resolve
-      - solve
       - settle
-      - reconcile
-      name: remediate
+      - solve
+      name: remediation
       polarity: -1
       semantic type: event
     - OntologyNode:
@@ -5525,6 +5642,16 @@
       - repair
       - restore
       name: repair
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - hens
+      - laying hens
+      - reproduce
+      - reproduction
+      - rooster
+      name: reproduction
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5545,68 +5672,79 @@
       examples:
       - conserve
       - defend
+      - guard
       - preserve
       - protect
-      - secure
       - safeguard
-      - guard
+      - secure
       - ward
-      name: secure
+      name: securing
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
       - choose
       - select
-      name: select
+      - selection
+      name: selection
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
+      - share
+      - sharing
+      name: sharing
+      polarity: 1
+      semantic type: event
+    - OntologyNode:
+      examples:
+      - stabilization
       - stabilize
-      name: stabilize
+      name: stabilization
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - stall
       - delay
-      - shorten
-      - limit
       - hamper
+      - limit
+      - shorten
+      - stall
       - temper
-      name: stall
+      name: stalling
       polarity: -1
       semantic type: event
     - OntologyNode:
       examples:
-      - start
       - begin
       - commence
       - initiate
+      - start
       name: start
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - stay
-      - remain
       - continue
       - exist
-      name: stay
+      - remain
+      - stay
+      name: stay_or_remain
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
       - prop up
+      - shore up
       - strengthen
-      name: strengthen
+      name: strengthening
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - supply
-      name: supply
+      - monitor
+      - surveil
+      name: surveilance
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5614,7 +5752,7 @@
       - count
       - enumerate
       - tabulate
-      name: tabulate
+      name: tabulation
       polarity: 1
       semantic type: event
     - trade:
@@ -5634,7 +5772,7 @@
         - \bimports?\b
         polarity: 1
         semantic type: event
-    - train:
+    - training:
       - OntologyNode:
         examples:
         - agriculture training
@@ -5680,6 +5818,7 @@
         - course
         - curricula
         - direction
+        - educate
         - exercises
         - expertise
         - extension services
@@ -5722,7 +5861,7 @@
         - training programs
         - training session
         - vocational training
-        name: train
+        name: training
         polarity: 1
         semantic type: event
     - OntologyNode:
@@ -5745,7 +5884,7 @@
       - modernize
       - reform
       - transform
-      name: transform
+      name: transformation
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -5759,7 +5898,7 @@
       name: transmission
       polarity: -1
       semantic type: event
-    - transport:
+    - transportation:
       - OntologyNode:
         examples:
         - air travel
@@ -5790,14 +5929,14 @@
       - cast ballot
       - elect
       - vote
-      name: vote
+      name: voting
       polarity: 1
       semantic type: event
     - OntologyNode:
       examples:
-      - weaken
       - undermine
-      name: weaken
+      - weaken
+      name: weakening
       polarity: -1
       semantic type: event
   - property:
@@ -5861,6 +6000,15 @@
       polarity: 1
       semantic type: property
     - OntologyNode:
+      definition: relating to ordinary citizens and their concerns
+      examples:
+      - citizen
+      - civic
+      - civil
+      name: civic
+      polarity: 1
+      semantic type: property
+    - OntologyNode:
       examples:
       - awareness
       - clarity
@@ -5875,7 +6023,6 @@
       examples:
       - condition
       - conditions
-      - quality
       name: condition
       polarity: 1
       semantic type: property
@@ -5897,11 +6044,18 @@
       - vulnerability
       name: coping_capacities
       polarity: 1
-      semantic type: property # ?
+      semantic type: property
     - OntologyNode:
       examples:
       - diversity
       name: diversity
+      polarity: 1
+      semantic type: property
+    - OntologyNode:
+      examples:
+      - domestic
+      - internal
+      name: domestic
       polarity: 1
       semantic type: property
     - OntologyNode:
@@ -5929,11 +6083,28 @@
       semantic type: property
     - OntologyNode:
       examples:
+      - exotic breeds
+      name: exotic_breeds
+      polarity: 1
+      semantic type: property
+    - OntologyNode:
+      examples:
       - equality
       - equity
       - fairness
       - integrity
       name: fairness
+      polarity: 1
+      semantic type: property
+    - OntologyNode:
+      examples:
+      - 'bilateral '
+      - external aid
+      - foreign
+      - foreign aid
+      - multilateral
+      - overseas
+      name: foreign
       polarity: 1
       semantic type: property
     - geographic_resolution:
@@ -5961,6 +6132,7 @@
       - OntologyNode:
         examples:
         - nation
+        - national
         - state
         name: national
         polarity: 1
@@ -5976,18 +6148,12 @@
         semantic type: property
     - OntologyNode:
       examples:
-      - hydroponic
-      name: hydroponic
-      polarity: 1
-      semantic type: property
-    - OntologyNode:
-      examples:
       - commercial breeds
       - crossbred
       - crossbred chickens
       - crossbreeds
-      - exotic breeds
       - horro
+      - hybrid breeds
       - hybrids
       - improved breed
       - improved breeds
@@ -5997,7 +6163,13 @@
       - improved stock
       - kuroiler
       - new breeds
-      name: improved_breeds
+      name: hybrid_breeds
+      polarity: 1
+      semantic type: property
+    - OntologyNode:
+      examples:
+      - hydroponic
+      name: hydroponic
       polarity: 1
       semantic type: property
     - OntologyNode:
@@ -6070,8 +6242,6 @@
       semantic type: property
     - OntologyNode:
       examples:
-      - cost
-      - price
       - additional costs
       - capital costs
       - cost
@@ -6084,6 +6254,7 @@
       - input costs
       - operating costs
       - opportunity costs
+      - price
       - recurrent costs
       - social costs
       name: price_or_cost
@@ -6099,8 +6270,10 @@
       semantic type: property
     - OntologyNode:
       examples:
-      - productivity
+      - egg productivity
       - performance
+      - poultry meat productivity
+      - productivity
       name: productivity
       polarity: 1
       semantic type: property
@@ -6112,10 +6285,25 @@
       semantic type: property
     - OntologyNode:
       examples:
+      - feed quality
+      - quality
+      name: quality
+      polarity: 1
+      semantic type: property
+    - OntologyNode:
+      examples:
       - resilience
       - resiliency
       - robustness
       name: resilience
+      polarity: 1
+      semantic type: property
+    - OntologyNode:
+      examples:
+      - land rights
+      - land tenure
+      - right to use
+      name: right_to_use
       polarity: 1
       semantic type: property
     - OntologyNode:
@@ -6155,6 +6343,12 @@
       polarity: 1
       semantic type: property
     - OntologyNode:
+      examples:
+      - social
+      name: social
+      polarity: 1
+      semantic type: property
+    - OntologyNode:
       definition: Being unlikely to move or change.
       examples:
       - order
@@ -6171,6 +6365,17 @@
       - solidarity
       - support
       name: support
+      polarity: 1
+      semantic type: property
+    - OntologyNode:
+      examples:
+      - agricultural surplus
+      - egg surplus
+      - excess
+      - marketable surplus
+      - meat surplus
+      - surplus
+      name: surplus
       polarity: 1
       semantic type: property
     - OntologyNode:
