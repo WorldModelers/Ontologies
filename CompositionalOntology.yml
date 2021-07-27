@@ -5,8 +5,8 @@
       - animal_science
       - crop:
         - cereals
-        - crops
         - crop_land
+        - crops
         - fodder
         - maize
         - major_crops
@@ -20,9 +20,9 @@
         - vegetables
       - dairy
       - disease:
-        - chicken_disease
         - crop_disease
         - livestock_disease
+        - poultry_disease
         - veterinary_care
       - livestock_nonpoultry
       - pest:
@@ -38,23 +38,21 @@
             - solitary_hopper
             - solitary_locust
       - poultry:
-        - backyard_poultry
+        - backyard_poultry_farming
         - bird_condition_healthy
         - bird_condition_sick
         - broiler_chickens
-        - chicks
-        - chicken_flocks
-        - chicken_meat
-        - chicken_parts
         - cockerel
-        - egg_marketing
-        - egg_production
+        - day_old_chicks
+        - egg
+        - flock_size
         - fowl
         - indigenous_breeds
         - laying_hens
         - poultry
         - poultry_sector
     - civil_liberties
+    - civil_society
     - crisis_or_disaster:
       - conflict:
         - armed_conflict
@@ -102,6 +100,7 @@
       - small_businesses
       - small_farmers
       - taxes
+      - unemployment
       - workforce
     - education
     - entity:
@@ -109,6 +108,8 @@
       - al-shabaab
       - animal
       - artifact
+      - border
+      - drone
       - field_reports
       - gangs
       - geo-political_entity
@@ -121,7 +122,9 @@
       - locations:
         - city
         - location
+        - neighboring_country
       - lord's_resistance_army
+      - military_exercise
       - military_power
       - multilateral_system
       - muslim_communities
@@ -133,7 +136,7 @@
         - activist
         - adults
         - adviser
-        - children
+        - child_or_youth
         - citizen
         - criminal
         - detainee
@@ -143,12 +146,17 @@
         - government_worker
         - health_worker
         - household
+        - infant
         - landowner
         - law_enforcement_officials
+        - maternal
         - men
         - migration:
+          - displaced_person
           - migrant
+          - refugee
         - military_personnel
+        - militia
         - newsmedia
         - observer
         - person_or_group
@@ -156,6 +164,7 @@
         - taskforce
         - voter
         - women
+        - young_adults
       - religious_entity
       - ruling_party
       - rural_households
@@ -186,10 +195,11 @@
     - freedom
     - goods:
       - agricultural:
+        - compound_feed
         - farm_equipment
+        - feed
         - fertilizer
         - irrigation_equipment
-        - livestock_feed
         - meat
         - pesticide
         - seed
@@ -248,7 +258,7 @@
       - nutrition
       - pathogen
       - poor_childrens_health
-      - protein
+      - protein_nutrient
       - public_health
       - public_safety
       - substance_abuse
@@ -268,10 +278,14 @@
       - humanitarian_assistance
       - non_food_items
       - voucher_or_cash
+    - inequality
     - information:
       - information_technology
+      - intelligence_information
+      - internet
       - misinformation
       - rumor
+      - social_media
     - infrastructure:
       - agriculture:
         - farm_infrastructure
@@ -294,6 +308,7 @@
         - public_transportation
         - railroad_infrastructure
         - road_infrastructure
+      - voting_infrastructure
       - water_facilities
     - innovation
     - intervention
@@ -304,6 +319,7 @@
     - policy_making
     - population_demographics:
       - age
+      - clan
       - ethnic_identity
       - gender
       - population_density:
@@ -324,7 +340,7 @@
       - environmental_security
       - national_security
       - surveillance_system
-    - social_structure
+    - social_structure_or_relationship
     - storage:
       - agricultural_storage
       - general_storage_facilities
@@ -342,72 +358,75 @@
   - process:
     - access
     - adapt
-    - assess
-    - assist
+    - aid_or_assistance
+    - assessment
     - attempt
     - breeding
-    - build
     - censorship
     - clean
-    - collaborate
-    - collect
-    - combine
-    - communicate:
+    - collaboration
+    - collecting
+    - combining
+    - communication:
       - ask:
         - poll
         - question
       - campaign
-      - commit
+      - commitment
       - debate
-      - deceive
-      - describe
-      - endorse
-      - highlight
-      - inform
-      - mediate
+      - deception
+      - description
+      - endorsement
+      - highlighting
+      - informing
+      - mediation
       - meeting
-      - negotiate
-      - oppose
-      - suggest
-      - warn
+      - negotiation
+      - opposition
+      - suggestion
+      - warning
     - conflict:
-      - abduct
+      - abduction
       - abuse
-      - assassinate
+      - assassination
       - attack
+      - clan_conflict
       - crackdown
       - defeat
-      - demonstrate
       - disarmament
       - discriminate
       - enlist
-      - ethnic_conflict
       - exploit
       - harass_or_persecute
+      - insurgency
       - peacebuilding
+      - peacekeeping
       - police_brutality
+      - protest_or_demonstration
       - resolution
       - retaliation
       - terrorism
       - threat
       - torture
+      - tribal_conflict
       - war
-    - consume
+    - construction
+    - consumption
     - damage
-    - decide
+    - decision
     - demand
-    - deploy
-    - depreciate
-    - destabilize
-    - destroy
-    - detect
-    - develop
+    - deployment
+    - depreciation
+    - destabilization
+    - destruction
+    - detection
+    - development
     - disguise
-    - enhance
+    - enhancement
     - evacuation
     - eviction
     - exploration
-    - extract
+    - extraction
     - farming:
       - harvesting
       - herding
@@ -417,40 +436,39 @@
       - weeding
     - fishing
     - flow
-    - forage
-    - group
+    - foraging
+    - grouping
     - hatching
-    - hunt
-    - imprison_or_detain
+    - hunting
+    - imprisonment_or_detention
     - incubation
-    - infest
+    - infestation
     - inflation
-    - inhabit
+    - inhabiting_or_occupancy
     - intake
-    - intensify
-    - invest
     - investigate
+    - investment
     - judicial:
-      - charge_or_prosecute
-      - convict_or_sentence
-    - legislate:
-      - regulate
-      - subsidize
-      - tax
-    - manage
-    - manipulate
+      - charge_or_prosecution
+      - conviction_or_sentencing
+    - legislation:
+      - regulation
+      - subsidization
+      - taxation
+    - management
+    - manipulation
     - medical:
       - contact_tracing
       - lockdown
       - quarantine
-      - sanitize
+      - sanitization
       - social_distancing
     - mining
-    - mitigate
-    - modify
-    - motivate
+    - mitigation
+    - modification
+    - motivation
     - nomination
-    - observe
+    - observation
     - outbreak
     - planning
     - population:
@@ -460,47 +478,50 @@
         - emigrate
         - immigrate
         - migrate
-    - predict
-    - prepare
-    - prevent
+    - prediction
+    - preparation
+    - prevention
     - processing
-    - produce
-    - prohibit
-    - provide
-    - publish
+    - production
+    - prohibition
+    - provision
+    - publication
     - radicalization
-    - react
-    - remediate
+    - reaction_or_response
+    - relief
+    - remediation
     - repair
+    - reproduction
     - research
-    - secure
-    - select
-    - stabilize
-    - stall
+    - securing
+    - selection
+    - sharing
+    - stabilization
+    - stalling
     - start
-    - stay
-    - strengthen
-    - supply
-    - tabulate
+    - stay_or_remain
+    - strengthening
+    - surveilance
+    - tabulation
     - trade:
       - export
       - import
-    - train:
+    - training:
       - agriculture_training
       - financial_training
       - humanitarian_training:
         - emergency_preparedness_training
       - medical_training
-      - train
+      - training
     - transaction
-    - transform
+    - transformation
     - transmission
-    - transport:
+    - transportation:
       - commercial_transportation
       - personal_transportation
     - travel
-    - vote
-    - weaken
+    - voting
+    - weakening
   - property:
     - accountability
     - affordability
@@ -508,21 +529,25 @@
     - allegiance
     - availability
     - chronic
+    - civic
     - common_understanding
     - condition
     - coping_capacities
     - diversity
+    - domestic
     - drug_resistance
     - efficiency
+    - exotic_breeds
     - fairness
+    - foreign
     - geographic_resolution:
       - global
       - international
       - local
       - national
       - sub-national
+    - hybrid_breeds
     - hydroponic
-    - improved_breeds
     - insecurity
     - instability
     - legality
@@ -534,12 +559,16 @@
     - private
     - productivity
     - public
+    - quality
     - resilience
+    - right_to_use
     - risk
     - seasonality
     - security
+    - social
     - stability
     - support
+    - surplus
     - sustainable
     - temporary
     - transparency
