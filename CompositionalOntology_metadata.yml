@@ -1641,7 +1641,6 @@
           semantic type: entity
         - OntologyNode:
           examples:
-          - neighbor
           - neighboring country
           name: neighboring_country
           polarity: 1
@@ -4747,7 +4746,7 @@
       - OntologyNode:
         examples:
         - insurgency
-        - 'revolt '
+        - revolt
         - uprising
         name: insurgency
         polarity: 1
@@ -5230,14 +5229,6 @@
       - eating
       - intake
       name: intake
-      polarity: 1
-      semantic type: event
-    - OntologyNode:
-      examples:
-      - amplify
-      - escalate
-      - intensify
-      name: intensification
       polarity: 1
       semantic type: event
     - OntologyNode:
@@ -6098,7 +6089,7 @@
       semantic type: property
     - OntologyNode:
       examples:
-      - 'bilateral '
+      - bilateral
       - external aid
       - foreign
       - foreign aid
