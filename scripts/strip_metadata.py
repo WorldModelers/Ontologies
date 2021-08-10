@@ -32,7 +32,7 @@ def main():
             with io.open(sys.argv[2], "w") as wm:
                 for line in wmLines:
                     wm.write(line + "\n")
-            print("Successuflly converted to stripped (human-diffable) format!")
+            print("Successfully converted to stripped (human-diffable) format!")
 
 
 if __name__ == '__main__':
