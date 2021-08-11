@@ -16,11 +16,13 @@ def main():
     else:
         rBranchingNodes = re.compile(r'-.*:\n')
         rMetadata = r'\n((- OntologyNode:.*)|(polarity:.*)|(semantic type:.*)|(definition:.*))'
+        rDefinitions = r'definition: .*\n.*\n'
         rPatterns = r'pattern:\n(- .*\n)+'
         with io.open(sys.argv[1], "r") as onto:
             ontoLines = yaml.load(onto, Loader=Loader)
             ontoLines = dump(ontoLines, Dumper=Dumper)
             ontoLines = re.sub(r'\n\s+', '\n', ontoLines)  # removes extra spaces
+            ontoLines = re.sub(rDefinitions, '', ontoLines)
             ontoLines = re.sub(rMetadata, '', ontoLines)  # removes (most) metadata fields
             ontoLines = re.sub(rBranchingNodes, '', ontoLines)  # removes non-leaf nodes
             ontoLines = re.sub(rPatterns, '', ontoLines)  # removes pattern metadata field w/ patterns
