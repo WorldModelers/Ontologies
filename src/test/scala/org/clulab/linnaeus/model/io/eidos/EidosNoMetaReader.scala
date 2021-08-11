@@ -22,43 +22,41 @@ class EidosNoMetaReader(val network: EidosNoMetaNetwork) extends GraphReader {
     val yamlNodes = yaml.load(bufferedInputStream).asInstanceOf[JCollection[Any]].asScala
 
     def parseYamlBranchOrLeaf(parentNodeOpt: Option[EidosNoMetaNode], yamlNodes: Iterable[Any]): Unit = {
-      yamlNodes.foreach { yamlNode =>
-        yamlNode match {
-          case name: String =>
-            if (parentNodeOpt.isEmpty)
-              throw new Exception(s"Ontology has string ($name) where it should have a map.")
+      yamlNodes.foreach {
+        case name: String =>
+          if (parentNodeOpt.isEmpty)
+            throw new Exception(s"Ontology has string ($name) where it should have a map.")
 
-            val childNode = new EidosNoMetaNode(network.nodeIndexer.next, name)
+          val childNode = new EidosNoMetaNode(network.nodeIndexer.next, name)
 
-            debugPrintln(s"Adding leaf node for $name")
-            network.addNode(childNode)
-            parentNodeOpt.foreach { parentNode =>
-              val edge = new EidosEdge(network.edgeIndexer.next)
+          debugPrintln(s"Adding leaf node for $name")
+          network.addNode(childNode)
+          parentNodeOpt.foreach { parentNode =>
+            val edge = new EidosEdge(network.edgeIndexer.next)
 
-              network.addEdge(parentNode.getId, edge, childNode.getId)
-            }
+            network.addEdge(parentNode.getId, edge, childNode.getId)
+          }
 
-          case jMap: JMap[_, _] =>
-            val map: mutable.Map[String, JCollection[Any]] = jMap.asInstanceOf[JMap[String, JCollection[Any]]].asScala
-            val key: String = map.keys.head
-            val childNode = new EidosNoMetaNode(network.nodeIndexer.next, key)
+        case jMap: JMap[_, _] =>
+          val map: mutable.Map[String, JCollection[Any]] = jMap.asInstanceOf[JMap[String, JCollection[Any]]].asScala
+          val key: String = map.keys.head
+          val childNode = new EidosNoMetaNode(network.nodeIndexer.next, key)
 
-            debugPrintln(s"Adding non-leaf node for $key")
-            network.addNode(childNode)
-            parentNodeOpt.foreach { parentNode =>
-              val edge = new EidosEdge(network.edgeIndexer.next)
+          debugPrintln(s"Adding non-leaf node for $key")
+          network.addNode(childNode)
+          parentNodeOpt.foreach { parentNode =>
+            val edge = new EidosEdge(network.edgeIndexer.next)
 
-              network.addEdge(parentNode.getId, edge, childNode.getId)
-            }
+            network.addEdge(parentNode.getId, edge, childNode.getId)
+          }
 
-            // This is to account for leafless branches.
-            val yamlNodesOpt = Option(map(key).asScala)
-            if (yamlNodesOpt.nonEmpty) // foreach does not work well here.
-              parseYamlBranchOrLeaf(Some(childNode), yamlNodesOpt.get.toSeq)
+          // This is to account for leafless branches.
+          val yamlNodesOpt = Option(map(key).asScala)
+          if (yamlNodesOpt.nonEmpty) // foreach does not work well here.
+            parseYamlBranchOrLeaf(Some(childNode), yamlNodesOpt.get.toSeq)
 
-          case _ =>
-            throw new Exception(s"Unexpected yaml node encountered: $yamlNode")
-        }
+        case yamlNode =>
+          throw new Exception(s"Unexpected yaml node encountered: $yamlNode")
       }
     }
 
