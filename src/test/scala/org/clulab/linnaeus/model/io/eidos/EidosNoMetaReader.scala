@@ -21,9 +21,6 @@ class EidosNoMetaReader(val network: EidosNoMetaNetwork) extends GraphReader {
     val yaml = new Yaml(new Constructor(classOf[JCollection[Any]]))
     val yamlNodes = yaml.load(bufferedInputStream).asInstanceOf[JCollection[Any]].asScala
 
-    def yamlNodesToStrings(yamlNodes: mutable.Map[String, JCollection[Any]], name: String): Seq[String] =
-        yamlNodes.get(name).map(_.asInstanceOf[JCollection[String]].asScala.toSeq).getOrElse(Seq.empty)
-
     def parseYamlBranchOrLeaf(parentNodeOpt: Option[EidosNoMetaNode], yamlNodes: Iterable[Any]): Unit = {
       yamlNodes.foreach { yamlNode =>
         yamlNode match {
