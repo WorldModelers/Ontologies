@@ -1,16 +1,19 @@
 sudo: required
 dist: xenial
 
-language: python
-python:
-  - 3.9
+#language: python
+#python:
+#  - 3.9
+#script:
+#  - cd scripts/tests; pytest
+#env:
+#  - PYTHONPATH=..
+
+language: scala
+scala:
+  - 2.12.13
 script:
-  - cd scripts/tests; pytest
+  - sbt test
+  - sbt testPython
 env:
   - PYTHONPATH=..
-install:
-
-
-#language: scala
-#scala:
-#  - 2.12.13
