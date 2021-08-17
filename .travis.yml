@@ -4,13 +4,11 @@ dist: xenial
 jobs:
     include:
         - language: python
-            python:
-                - 3.9
+            python: 3.9
             script:
                 - cd scripts/tests; pytest
             env:
                 - PYTHONPATH=..
 
         - language: scala
-            scala:
-                - 2.12.13
+            scala: 2.12.13
