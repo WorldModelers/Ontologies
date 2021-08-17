@@ -1,18 +1,5 @@
 sudo: required
 dist: xenial
 
-language:
-    -scala
-    -python
-
-jobs:
-    include:
-        - language: python
-            python: 3.9
-            script:
-                - cd scripts/tests; pytest
-            env:
-                - PYTHONPATH=..
-
-        - language: scala
-            scala: 2.12.13
+language: scala
+scala: 2.12.13
