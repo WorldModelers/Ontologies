@@ -11,18 +11,16 @@ testPythonTask := {
 
   val command = "pytest"
   val mainDir = new File("./scripts")
-  val testDir = new File("./scripts/tests")
   val workDir = new File("./target/python")
+  val testDir = new File("./target/python/tests")
 
   taskStreams.log.info(s"Deleting workDir $workDir...")
   IO.delete(workDir)
   taskStreams.log.info(s"Copying mainDir $mainDir...")
   IO.copyDirectory(mainDir, workDir)
-  taskStreams.log.info(s"Copying testDir $testDir...")
-  // Only copy one level deep?
-  IO.copyDirectory(testDir, workDir)
   taskStreams.log.info(s"Executing command $command...")
-  val result = Process(command, workDir) ! taskStreams.log
+  // The PYTHONPATH needs to point from testDir to workDir.
+  val result = Process(command, testDir, "PYTHONPATH" -> "..") ! taskStreams.log
   taskStreams.log.info("Stopping testPythonTask...")
 
   val message = s"Result of testPythonTask was $result."
