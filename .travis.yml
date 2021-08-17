@@ -1,7 +1,11 @@
 sudo: required
 dist: xenial
 
-matrix:
+language:
+    -scala
+    -python
+
+jobs:
     include:
         - language: python
             python: 3.9
