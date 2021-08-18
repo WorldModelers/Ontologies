@@ -3,7 +3,7 @@ name := "Ontologies"
 
 organization := "WorldModelers"
 
-scalaVersion := "2.12.4"
+scalaVersion := "2.12.13"
 
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.0.4" % Test,
