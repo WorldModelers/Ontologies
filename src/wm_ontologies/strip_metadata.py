@@ -4,7 +4,7 @@ import re
 
 def main():
 	if len(sys.argv) != 3:
-			println("usage: python strip_metadata.py [path_to_metadata_yaml] [output_file]")
+		print("usage: python -m wm_ontologies.strip_metadata.py [path_to_metadata_yaml] [output_file]")
 	else:
 		ontoNode = ""
 		rOntoNode = re.compile(r'\w*(OntologyNode:)\w*')

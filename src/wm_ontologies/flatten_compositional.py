@@ -2,7 +2,7 @@ import re
 import sys
 import yaml
 
-from convert_owl_yaml import ont_node, represent_none
+from .convert_owl_yaml import ont_node, represent_none
 
 
 fn = sys.argv[1]

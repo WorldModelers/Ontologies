@@ -1,18 +1,18 @@
+"""
+This is a script to convert the spreadsheet version of an ontology into the
+yaml-with-metadata format.
+Assumes the current format of sheet made by Alli for the compositional ontology
+(2020-08-20)
+
+Usage:
+    ``python -m wm_ontologies.convert_csv_to_yaml <csv spreadsheet> <filename for yaml version>`
+"""
+
 from collections import defaultdict
 import yaml
 import csv
 import re
 import sys
-
-'''
-    This is a script to convert the spreadsheet version of an ontology into the
-    yaml-with-metadata format.
-    Assumes the current format of sheet made by Alli for the compositional ontology
-    (2020-08-20)
-    
-    Usage: 
-        `python convert_csv_to_yaml.py <csv spreadsheet> <filename for yaml version>`
-'''
 
 
 # Since we seem to want a None for OntologyNode, but don't want to display it :)
