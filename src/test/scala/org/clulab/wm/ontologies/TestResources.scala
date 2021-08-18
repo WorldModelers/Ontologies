@@ -29,7 +29,7 @@ class TestResources extends FlatSpec with Matchers {
   }
 
   Seq(
-    "./CompositionalOntology_v2.1_metadata.yml",
+    "./CompositionalOntology_metadata.yml",
     "./wm_flat_metadata.yml"
   ).foreach(test)
 }
