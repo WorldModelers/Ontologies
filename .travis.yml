@@ -1,5 +1,14 @@
 sudo: required
-dist: trusty
-language: scala
-scala:
-  - 2.12.4
+dist: xenial
+matrix:
+  include:
+    - language: python
+      python: 3.9
+      install:
+        - pip install pyyaml
+      script:
+        - cd scripts/tests; pytest
+      env:
+        - PYTHONPATH=..
+    - language: scala
+      scala: 2.12.13
