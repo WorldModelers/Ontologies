@@ -4,6 +4,8 @@ matrix:
   include:
     - language: python
       python: 3.9
+      install:
+        - pip install pyyaml
       script:
         - cd scripts/tests; pytest
       env:
