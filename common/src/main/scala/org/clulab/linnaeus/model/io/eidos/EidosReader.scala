@@ -35,7 +35,7 @@ class EidosReader(val network: EidosNetwork) extends GraphReader {
       val descriptions = yamlNodesToStrings(yamlNodes, EidosIO.DESCRIPTIONS)
       // These need to be valid regexes, but don't check that just yet.
       val patterns = yamlNodesToStrings(yamlNodes, EidosIO.PATTERN)
-      val childNode = new EidosNode(network.nodeIndexer.next, name, oppositeOpt, polarityOpt, examples, descriptions, patterns)
+      val childNode = new EidosNode(network.nodeIndexer.next, name, oppositeOpt, polarityOpt, examples, descriptions, patterns, semanticTypeOpt)
 
       debugPrintln(s"Adding leaf node for $name")
       network.addNode(childNode)

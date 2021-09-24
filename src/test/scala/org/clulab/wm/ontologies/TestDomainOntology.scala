@@ -104,6 +104,77 @@ class TestDomainOntology extends FlatSpec with Matchers {
     spaces
   }
 
+  def hasBadPolarity(network: EidosNetwork): Boolean = {
+    val visitor = new network.HierarchicalGraphVisitor()
+    var path = mutable.Seq.empty[String]
+    var badPolarity = false
+
+    visitor.foreachNode { (node: EidosNode, depth: Int) =>
+      val nodeName = node.name
+
+      if (network.isLeaf(node)) {
+        val polarityOpt = node.polarityOpt
+        val newPath = path.slice(0, depth) :+ nodeName
+
+        if (polarityOpt.nonEmpty) {
+          val polarity = polarityOpt.get
+
+          if (polarity != 1 && polarity != -1) {
+            badPolarity = true
+            error(s"Invalid polarity '$polarity': $newPath")
+          }
+          else
+            trace(newPath)
+        }
+        else
+          trace(newPath)
+      }
+      else
+        if (depth < path.size)
+          path(depth) = nodeName
+        else
+          path = path :+ nodeName
+      true
+    }
+    badPolarity
+  }
+
+  def hasBadSemanticType(network: EidosNetwork): Boolean = {
+    val semanticTypes = Array("entity", "event", "property")
+    val visitor = new network.HierarchicalGraphVisitor()
+    var path = mutable.Seq.empty[String]
+    var badSemanticType = false
+
+    visitor.foreachNode { (node: EidosNode, depth: Int) =>
+      val nodeName = node.name
+
+      if (network.isLeaf(node)) {
+        val semanticTypeOpt = node.semanticTypeOpt
+        val newPath = path.slice(0, depth) :+ nodeName
+
+        if (semanticTypeOpt.nonEmpty) {
+          val semanticType = semanticTypeOpt.get
+
+          if (!semanticTypes.contains(semanticType)) {
+            badSemanticType = true
+            error(s"Invalid semantic type '$semanticType': $newPath")
+          }
+          else
+            trace(newPath)
+        }
+        else
+          trace(newPath)
+      }
+      else
+        if (depth < path.size)
+          path(depth) = nodeName
+        else
+          path = path :+ nodeName
+      true
+    }
+    badSemanticType
+  }
+
   def hasUnlabeled(network: EidosNetwork): Boolean = {
     val visitor = new network.HierarchicalGraphVisitor()
     var path = mutable.Seq.empty[String]
@@ -248,6 +319,14 @@ class TestDomainOntology extends FlatSpec with Matchers {
 
     it should "not have missing examples" in {
       hasMissingExamples(network) should be (false)
+    }
+
+    it should "have valid polarity values" in {
+      hasBadPolarity(network) should be (false)
+    }
+
+    it should "have valid semantic types" in {
+      hasBadSemanticType(network) should be (false)
     }
   }
 
