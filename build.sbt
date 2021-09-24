@@ -68,11 +68,12 @@ import scala.xml.{Node => XmlNode, NodeSeq => XmlNodeSeq, _}
 import scala.xml.transform.{RewriteRule, RuleTransformer}
 
 // See https://stackoverflow.com/questions/41670018/how-to-prevent-sbt-to-include-test-dependencies-into-the-pom
-// Skip dependency elements with a scope.
+// Skip all dependencies.
 pomPostProcess := { (node: XmlNode) =>
   new RuleTransformer(new RewriteRule {
     override def transform(node: XmlNode): XmlNodeSeq = node match {
-      case e: Elem if e.label == "dependency" => Text("")
+      case e: Elem if e.label == "dependencies" =>
+        e.copy(child = Array.empty[scala.xml.Node])
       case _ => node
     }
   }).transform(node).head
