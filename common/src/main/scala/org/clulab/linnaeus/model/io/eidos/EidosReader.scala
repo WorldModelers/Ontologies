@@ -30,8 +30,9 @@ class EidosReader(val network: EidosNetwork) extends GraphReader {
       val name = yamlNodes(EidosIO.NAME).asInstanceOf[String]
       val oppositeOpt = yamlNodes.get(EidosIO.OPPOSITE).asInstanceOf[Option[String]]
       val polarityOpt = yamlNodes.get(EidosIO.POLARITY).asInstanceOf[Option[Int]]
+      val semanticTypeOpt = yamlNodes.get(EidosIO.SEMANTIC_TYPE).asInstanceOf[Option[String]]
       val examples = yamlNodesToStrings(yamlNodes, EidosIO.EXAMPLES)
-      val descriptions = yamlNodesToStrings(yamlNodes, EidosIO.DESCRIPTION)
+      val descriptions = yamlNodesToStrings(yamlNodes, EidosIO.DESCRIPTIONS)
       // These need to be valid regexes, but don't check that just yet.
       val patterns = yamlNodesToStrings(yamlNodes, EidosIO.PATTERN)
       val childNode = new EidosNode(network.nodeIndexer.next, name, oppositeOpt, polarityOpt, examples, descriptions, patterns)

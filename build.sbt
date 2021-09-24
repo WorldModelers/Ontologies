@@ -54,4 +54,7 @@ resourceGenerators in Compile += Def.task {
 
 lazy val root = project in file(".")
 
+lazy val extras = project
+    .dependsOn(root)
+
 ThisBuild / Test / parallelExecution := false

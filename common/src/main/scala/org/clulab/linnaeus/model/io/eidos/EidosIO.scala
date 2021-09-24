@@ -5,8 +5,11 @@ object EidosIO {
   val FIELD = "OntologyNode"
   val PATTERN = "pattern"
   val EXAMPLES = "examples"
-  val DESCRIPTION = "descriptions"
+  val DESCRIPTIONS = "descriptions"
   val NAME = "name"
   val OPPOSITE = "opposite"
   val POLARITY = "polarity"
+  val SEMANTIC_TYPE = "semantic type"
 }
+
+// definition
