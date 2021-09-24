@@ -52,9 +52,12 @@ resourceGenerators in Compile += Def.task {
   versionTask.value.versionResources()
 }.taskValue
 
-lazy val root = project in file(".")
+lazy val root = (project in file("."))
+    .dependsOn(common % "test -> test")
+
+lazy val common = project
 
 lazy val extras = project
-    .dependsOn(root)
+    .dependsOn(common)
 
 ThisBuild / Test / parallelExecution := false
