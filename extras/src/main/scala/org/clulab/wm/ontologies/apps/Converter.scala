@@ -3,17 +3,19 @@ package org.clulab.wm.ontologies.apps
 import org.clulab.linnaeus.model.graph.eidos.EidosNetwork
 import org.clulab.linnaeus.model.graph.eidos.EidosNode
 import org.clulab.linnaeus.model.io.eidos.EidosReader
+import org.yaml.snakeyaml.Yaml
+import org.yaml.snakeyaml.nodes.Tag
 
-import scala.collection.mutable
+import scala.collection.JavaConverters._
+import java.io.StringWriter
+import java.util.{ArrayList => JArrayList}
+import java.util.{IdentityHashMap => JIdentityHashMap}
+import java.util.{List => JList}
+import java.util.{LinkedHashMap => JLinkedHashMap}
 
 object Converter extends App {
-
-  def toYValue(node: EidosNode): String = {
-    ""
-  }
-
-  val inputFile = "CompositionalOntology_metadata.yml"
-  val outputFile = "Revised-CompositionalOntology_metadata.yml"
+  val inputFile = "./CompositionalOntology_metadata.yml"
+  val outputFile = "./Revised-CompositionalOntology_metadata.yml"
   val network = {
     val network = new EidosNetwork()
     val reader = new EidosReader(network)
@@ -21,29 +23,58 @@ object Converter extends App {
     reader.readFromFile(inputFile)
     network
   }
-  val rootNode = network.getRootNode.get
-  val jRootNode = toYValue(rootNode)
+  val eidosToLocalMap = new JIdentityHashMap[EidosNode, LocalNode]()
+
+  def getOrAddNode(eidosNode: EidosNode): LocalNode = {
+    Option(eidosToLocalMap.get(eidosNode)).getOrElse {
+      val localNode = new LocalNode(eidosNode)
+
+      eidosToLocalMap.put(eidosNode, localNode)
+      localNode
+    }
+  }
+
+  new (network.HierarchicalGraphVisitor).foreachEdge { case (eidosParentNode, _, eidosChildNode) =>
+    val localParentNode = getOrAddNode(eidosParentNode)
+    val localChildNode = getOrAddNode(eidosChildNode)
+
+    localParentNode.addChild(localChildNode)
+    true
+  }
+
+  val localRoot = eidosToLocalMap.get(network.getRootNode.get)
+  val yaml = new Yaml().dumpAs(localRoot, Tag.MAP, null)
+
+  println(yaml)
 }
 
-class Node(eidosNode: EidosNode) {
-  val data = new mutable.LinkedHashMap[String, Any]()
+class LocalNode(eidosNode: EidosNode) extends JLinkedHashMap[String, Any] {
+  val data = this
+  val children = new JArrayList[LocalNode]()
 
-  data("name") = eidosNode.name // required
-  data("descriptions") = eidosNode.descriptions
-  data("examples") = eidosNode.examples
-  data("patterns") = eidosNode.patterns
+  data.put("name", eidosNode.name) // required
+  if (eidosNode.descriptions.nonEmpty)
+    data.put("descriptions", eidosNode.descriptions.asJava)
+  if (eidosNode.examples.nonEmpty)
+    data.put("examples", eidosNode.examples.asJava)
+  if (eidosNode.patterns.nonEmpty)
+    data.put("patterns", eidosNode.patterns.asJava)
   // opposite: [String]
   eidosNode.oppositeOpt.foreach { opposite =>
-    data("opposite") = opposite
+    data.put("opposite", opposite)
   }
   // polarity: [1|-1]
   eidosNode.polarityOpt.foreach { polarity =>
-    data("polarity") = polarity
+    data.put("polarity", polarity)
   }
   // semantic type: [entity | event | property]
   eidosNode.semanticTypeOpt.foreach { semanticType =>
-    data("semantic type") = semanticType
+    data.put("semantic type", semanticType)
   }
-  data("children") = "" // multiple, last, recursion // optional or empty
-  // Something from OntologyNode
+
+  def addChild(localNode: LocalNode): Unit = {
+    if (!data.containsKey("children"))
+      data.put("children", children)
+    children.add(localNode)
+  }
 }
