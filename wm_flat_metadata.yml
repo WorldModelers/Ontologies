@@ -2401,7 +2401,6 @@
         examples:
         - geographic location
         name: geo-location
-        take_args: 0
         polarity: 1
       - OntologyNode:
         examples:
@@ -2415,14 +2414,12 @@
         - Programme Work
         - convention
         name: organization
-        take_args: 1
         polarity: 1
       - OntologyNode:
         examples:
         - government entity
         - program entity
         name: government_entity
-        take_args: 0
         polarity: 1
       - person_and_group:
         - OntologyNode:
@@ -2433,7 +2430,6 @@
           - population
           - rural
           name: population
-          take_args: 0
           polarity: 1
         - OntologyNode:
           examples:
@@ -2444,13 +2440,11 @@
           - families
           - communities
           name: community
-          take_args: 0
           polarity: 1
       - OntologyNode:
         examples:
         - artifact
         name: artifact
-        take_args: 0
         polarity: 1
     - time:
       - temporal:
@@ -2461,7 +2455,6 @@
           - planting season
           - sowing season
           name: crop_season
-          take_args: 0
           polarity: 1
         - OntologyNode:
           examples:
@@ -2473,5 +2466,4 @@
           - rainy season
           - monsoon season
           name: season
-          take_args: 1
           polarity: 1
