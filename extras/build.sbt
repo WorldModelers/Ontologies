@@ -1,3 +1,3 @@
 libraryDependencies ++= Seq(
-  "org.yaml"       % "snakeyaml" % "1.14"
+  "org.yaml"       % "snakeyaml" % "1.29"
 )

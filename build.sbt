@@ -6,8 +6,7 @@ organization := "WorldModelers"
 scalaVersion := "2.12.13"
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.0.4" % Test,
-  "org.yaml"       % "snakeyaml" % "1.14"  % Test
+  "org.scalatest" %% "scalatest" % "3.0.4" % Test
 )
 
 lazy val root = (project in file("."))
