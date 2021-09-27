@@ -42,7 +42,7 @@
               - violations
             - statistics:
               - national_survey
-          - livelihood_support: 
+          - livelihood_support:
             - food_aid
             - nutrition_support
             - water
