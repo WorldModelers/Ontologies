@@ -20,7 +20,7 @@
                 - soybean hulls
                 name: livestock_feed
                 polarity: 1
-              - OntologyNode: 
+              - OntologyNode:
                 examples:
                 - veterinary services medicine
                 - animal birthing
@@ -35,7 +35,7 @@
                 polarity: 1
             - crop_production_equipment:
               - OntologyNode:
-                examples: 
+                examples:
                 - farm equipment
                 - machinery
                 - tractor
@@ -46,7 +46,7 @@
                 name: farm_equipment
                 polarity: 1
               - OntologyNode:
-                examples: 
+                examples:
                 - harvesting equipment
                 - baskets
                 - pickers
@@ -113,14 +113,14 @@
                   - biological pest weed control
                   - crop rotation
                   - cover crop
-                  - integrated pest management 
+                  - integrated pest management
                   - IPM
                   - companion planting
                   name: biological
                   polarity: 1
                 - OntologyNode:
                   pattern:
-                  - \b(DDT|dicamba|round-up)\b 
+                  - \b(DDT|dicamba|round-up)\b
                   examples:
                   - chemical pest weed control
                   - glysophate
@@ -232,15 +232,15 @@
                 examples:
                 - survey
                 - Census
-                - DHS 
+                - DHS
                 - demographic health surveys
                 - CFSVA
                 - comprehensive food security and vulnerability assessment
-                - AgSS 
+                - AgSS
                 - agricultural sample survey
                 name: national_survey
                 polarity: 1
-          - livelihood_support: 
+          - livelihood_support:
             - OntologyNode:
               examples:
               - food aid
@@ -264,7 +264,7 @@
               polarity: 1
             - OntologyNode:
               examples:
-              - water 
+              - water
               - water trucking
               name: water
               polarity: 1
@@ -326,7 +326,7 @@
               - childhood essential health services
               - obstetric and newborn care
               - operation of mobile clinics
-              - therapeutic feeding 
+              - therapeutic feeding
               - trauma and surgical care
               - trauma and post operative rehabilitation
               name: medical_treatment
@@ -351,7 +351,7 @@
               name: psychological
               polarity: 1
           - OntologyNode:
-            examples: 
+            examples:
             - sanitation and hygiene input
             - desludging
             - toilet
@@ -527,7 +527,7 @@
                 - cover cropping
                 - composting
                 - planting practices
-                - training 
+                - training
                 name: planting_training # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
                 polarity: 1
               - OntologyNode:
