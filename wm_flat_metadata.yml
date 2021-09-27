@@ -917,14 +917,14 @@
               name: sanitation
               polarity: 1
             - OntologyNode:
-              patterns:
+              pattern:
                 - (contact tracing)
               examples:
                 - contact tracing
               name: contact_tracing
               polarity: 1
             - OntologyNode:
-              patterns:
+              pattern:
                 - (quarantin|shelter[- ]in[- ]place)
               examples:
                 - quarantine
@@ -934,7 +934,7 @@
               name: quarantine
               polarity: 1
             - OntologyNode:
-              patterns:
+              pattern:
                 - (social distancing)
               examples:
                 - social distancing
@@ -1812,7 +1812,7 @@
                   polarity: -1
               - gregarious:
                 - OntologyNode:
-                  patterns:
+                  pattern:
                     - (hopper\s+band)|(bands?\s+of\s+hoppers)
                   examples:
                     - bands of hoppers
@@ -1822,7 +1822,7 @@
                   name: hopper_band
                   polarity: -1
                 - OntologyNode:
-                  patterns:
+                  pattern:
                     - (locust\s+swarm)|(swarms?\s+of\s+locust)
                   examples:
                     - swarm
@@ -2086,7 +2086,7 @@
             name: transmission
             polarity: -1
           - OntologyNode:
-            patterns:
+            pattern:
              - (COVID|covid)
             examples:
               - covid
