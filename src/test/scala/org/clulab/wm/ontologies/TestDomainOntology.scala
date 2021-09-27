@@ -175,6 +175,35 @@ class TestDomainOntology extends FlatSpec with Matchers {
     badSemanticType
   }
 
+  def hasUnknownKeys(network: EidosNetwork): Boolean = {
+    val visitor = new network.HierarchicalGraphVisitor()
+    var path = mutable.Seq.empty[String]
+    var unknownKeys = false
+
+    visitor.foreachNode { (node: EidosNode, depth: Int) =>
+      val nodeName = node.name
+
+      if (network.isLeaf(node)) {
+        val otherKeys = node.others
+        val newPath = path.slice(0, depth) :+ nodeName
+
+        if (otherKeys.nonEmpty) {
+          unknownKeys = true
+          error(s"Unknown keys '${otherKeys.mkString(", ")}': $newPath")
+        }
+        else
+          trace(newPath)
+      }
+      else
+        if (depth < path.size)
+          path(depth) = nodeName
+        else
+          path = path :+ nodeName
+      true
+    }
+    unknownKeys
+  }
+
   def hasUnlabeled(network: EidosNetwork): Boolean = {
     val visitor = new network.HierarchicalGraphVisitor()
     var path = mutable.Seq.empty[String]
@@ -327,6 +356,10 @@ class TestDomainOntology extends FlatSpec with Matchers {
 
     it should "have valid semantic types" in {
       hasBadSemanticType(network) should be (false)
+    }
+
+    it should "not have unknown keys" in {
+      hasUnknownKeys(network) should be (false)
     }
   }
 
