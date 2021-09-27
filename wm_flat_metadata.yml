@@ -376,7 +376,7 @@
                 - coop
                 name: livestock_shelter # enclosure, barn, pasture, etc
                 polarity: 1
-            - crop_production_infrastructure: #
+            - crop_production_infrastructure:
               - OntologyNode:
                 examples:
                 - canal
@@ -583,7 +583,7 @@
           - OntologyNode:
             examples:
             - human rights training
-            name: human_rights_training #
+            name: human_rights_training
             polarity: 1
           - OntologyNode:
             examples:

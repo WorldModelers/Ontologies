@@ -60,7 +60,7 @@
           - agriculture_infrastructure:
             - livestock_production_infrastructure:
               - livestock_shelter # enclosure, barn, pasture, etc
-            - crop_production_infrastructure: #
+            - crop_production_infrastructure:
               - irrigation_infrastructure # canal, reservoir, water_tower
               - extension_offices # farmer_training_centers, demonstration plots, etc
               - greenhouse # nursery, high_tunnel, etc.
@@ -83,7 +83,7 @@
           - medical_training: # capacity_assessments, community_health_workers (CHWs),
             - assessment_and_triage_of_health_facilities
             - capacity_building_of_medical_staff
-          - human_rights_training #
+          - human_rights_training
           - financial_management # provision_of_credit_and_training_for_income_generation
           - education_systems #  provision_of_non_formal_education, community_sourced_temporary_teachers
           - public_health_campaigns # behaviour change, campaigns, public information, hygiene_promotion, information_campaign, health_promoters,
