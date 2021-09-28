@@ -8,32 +8,32 @@ import org.scalatest._
 import scala.collection.mutable
 
 class TestDomainOntology extends FlatSpec with Matchers {
+  type Path = mutable.Seq[String]
 
   def trace(text: Seq[String]): Unit = {
 //    println(text)
   }
 
-  def error(text: String): Unit = {
+  protected def error(text: String): Boolean = {
     println(text)
+    true
   }
 
-  def hasDuplicatePaths(network: EidosNetwork): Boolean = {
+  protected val success: Boolean = false
+
+  // If f returns true, it is tracked in overallResult and returned.
+  protected def visit(network: EidosNetwork)(f: (EidosNode, Path) => Boolean): Boolean = {
     val visitor = new network.HierarchicalGraphVisitor()
-    var paths = List.empty[Seq[String]]
     var path = mutable.Seq.empty[String]
-    var duplicate = false
+    var overallResult = false
 
     visitor.foreachNode { (node: EidosNode, depth: Int) =>
       if (network.isLeaf(node)) {
         val newPath = path.slice(0, depth) :+ node.name
 
-        trace(newPath)
-        if (paths.contains(newPath)) {
-          duplicate = true
-          error(s"Duplicate path: $newPath")
-        }
-        else
-          paths = newPath :: paths
+        trace(path)
+        if (f(node, newPath))
+          overallResult = true
       }
       else
         if (depth < path.size)
@@ -42,242 +42,146 @@ class TestDomainOntology extends FlatSpec with Matchers {
           path = path :+ node.name
       true
     }
+    overallResult
+  }
+
+  def hasDuplicatePaths(network: EidosNetwork): Boolean = {
+    var paths = List.empty[Seq[String]]
+    val duplicate = visit(network) { (node: EidosNode, path: Path) =>
+      if (paths.contains(path))
+        error(s"Duplicate path: $path")
+      else {
+        paths = path :: paths
+        success
+      }
+    }
+
     duplicate
   }
 
   def hasDuplicateLeaves(network: EidosNetwork): Boolean = {
-    val visitor = new network.HierarchicalGraphVisitor()
     var leaves = List.empty[String]
-    var path = mutable.Seq.empty[String]
-    var duplicate = false
+    val duplicate = visit(network) { (node: EidosNode, path: Path) =>
+      val leaf = node.name
 
-    visitor.foreachNode { (node: EidosNode, depth: Int) =>
-      if (network.isLeaf(node)) {
-        val newPath = path.slice(0, depth) :+ node.name
-        val newLeaf = node.name
-
-        trace(newPath)
-        if (leaves.contains(newLeaf)) {
-          duplicate = true
-          error(s"Duplicate leaf: $newPath")
-        }
-        else
-          leaves = newLeaf :: leaves
+      if (leaves.contains(leaf))
+        error(s"Duplicate leaf: $path")
+      else {
+        leaves = leaf :: leaves
+        success
       }
-      else
-        if (depth < path.size)
-          path(depth) = node.name
-        else
-          path = path :+ node.name
-      true
     }
+
     duplicate
   }
 
   def hasSpaces(network: EidosNetwork): Boolean = {
-    val visitor = new network.HierarchicalGraphVisitor()
-    var path = mutable.Seq.empty[String]
-    var spaces = false
-
-    visitor.foreachNode { (node: EidosNode, depth: Int) =>
+    val spaces = visit(network) { (node: EidosNode, path: Path) =>
       val nodeName = Option(node.name).getOrElse("")
 
-      if (nodeName.contains(' ')) {
-        val newPath = path.slice(0, depth) :+ nodeName
-        spaces = true
-        error(s"Spaces: $newPath")
-      }
-
-      if (network.isLeaf(node)) {
-        if (!nodeName.contains(' ')) { // Otherwise already printed
-          val newPath = path.slice(0, depth) :+ nodeName
-          trace(newPath)
-        }
-      }
+      if (nodeName.contains(' ') || path.exists(_.contains(' ')))
+        error(s"Spaces: $path")
       else
-        if (depth < path.size)
-          path(depth) = nodeName
-        else
-          path = path :+ nodeName
-        true
+        success
     }
+
     spaces
   }
 
   def hasBadPolarity(network: EidosNetwork): Boolean = {
-    val visitor = new network.HierarchicalGraphVisitor()
-    var path = mutable.Seq.empty[String]
-    var badPolarity = false
+    val badPolarity = visit(network) { (node: EidosNode, path: Path) =>
+      val polarityOpt = node.polarityOpt
 
-    visitor.foreachNode { (node: EidosNode, depth: Int) =>
-      val nodeName = node.name
+      if (polarityOpt.nonEmpty) {
+        val polarity = polarityOpt.get
 
-      if (network.isLeaf(node)) {
-        val polarityOpt = node.polarityOpt
-        val newPath = path.slice(0, depth) :+ nodeName
-
-        if (polarityOpt.nonEmpty) {
-          val polarity = polarityOpt.get
-
-          if (polarity != 1 && polarity != -1) {
-            badPolarity = true
-            error(s"Invalid polarity '$polarity': $newPath")
-          }
-          else
-            trace(newPath)
-        }
+        if (polarity != 1 && polarity != -1)
+          error(s"Invalid polarity '$polarity': $path")
         else
-          trace(newPath)
+          success
       }
       else
-        if (depth < path.size)
-          path(depth) = nodeName
-        else
-          path = path :+ nodeName
-      true
+        success
     }
+
     badPolarity
   }
 
   def hasBadSemanticType(network: EidosNetwork): Boolean = {
     val semanticTypes = Array("entity", "event", "property")
-    val visitor = new network.HierarchicalGraphVisitor()
-    var path = mutable.Seq.empty[String]
-    var badSemanticType = false
+    val badSemanticType = visit(network) { (node: EidosNode, path: Path) =>
+      val semanticTypeOpt = node.semanticTypeOpt
 
-    visitor.foreachNode { (node: EidosNode, depth: Int) =>
-      val nodeName = node.name
+      if (semanticTypeOpt.nonEmpty) {
+        val semanticType = semanticTypeOpt.get
 
-      if (network.isLeaf(node)) {
-        val semanticTypeOpt = node.semanticTypeOpt
-        val newPath = path.slice(0, depth) :+ nodeName
-
-        if (semanticTypeOpt.nonEmpty) {
-          val semanticType = semanticTypeOpt.get
-
-          if (!semanticTypes.contains(semanticType)) {
-            badSemanticType = true
-            error(s"Invalid semantic type '$semanticType': $newPath")
-          }
-          else
-            trace(newPath)
-        }
+        if (!semanticTypes.contains(semanticType))
+          error(s"Invalid semantic type '$semanticType': $path")
         else
-          trace(newPath)
+          success
       }
       else
-        if (depth < path.size)
-          path(depth) = nodeName
-        else
-          path = path :+ nodeName
-      true
+        success
     }
+
     badSemanticType
   }
 
   def hasUnknownKeys(network: EidosNetwork): Boolean = {
-    val visitor = new network.HierarchicalGraphVisitor()
-    var path = mutable.Seq.empty[String]
-    var unknownKeys = false
+    val unknownKeys = visit(network) { (node: EidosNode, path: Path) =>
+      val otherKeys = node.others
 
-    visitor.foreachNode { (node: EidosNode, depth: Int) =>
-      val nodeName = node.name
-
-      if (network.isLeaf(node)) {
-        val otherKeys = node.others
-        val newPath = path.slice(0, depth) :+ nodeName
-
-        if (otherKeys.nonEmpty) {
-          unknownKeys = true
-          error(s"Unknown keys '${otherKeys.mkString(", ")}': $newPath")
-        }
-        else
-          trace(newPath)
-      }
+      if (otherKeys.nonEmpty)
+        error(s"Unknown keys '${otherKeys.mkString(", ")}': $path")
       else
-        if (depth < path.size)
-          path(depth) = nodeName
-        else
-          path = path :+ nodeName
-      true
+        success
     }
+
     unknownKeys
   }
 
   def hasUnlabeled(network: EidosNetwork): Boolean = {
-    val visitor = new network.HierarchicalGraphVisitor()
-    var path = mutable.Seq.empty[String]
-    var unlabeled = false
-
-    visitor.foreachNode { (node: EidosNode, depth: Int) =>
+    val unlabeled = visit(network) { (node: EidosNode, path: Path) =>
       val nodeName = Option(node.name).getOrElse("")
 
-      if (nodeName.isEmpty) {
-        val newPath = path.slice(0, depth) :+ nodeName
-        unlabeled = true
-        error(s"Unlabeled: $newPath")
-      }
-
-      if (network.isLeaf(node)) {
-        if (nodeName.nonEmpty) { // Otherwise already printed
-          val newPath = path.slice(0, depth) :+ nodeName
-          trace(newPath)
-        }
-      }
+      if (nodeName.isEmpty)
+        error(s"Unlabeled: $path")
       else
-        if (depth < path.size)
-          path(depth) = nodeName
-        else
-          path = path :+ nodeName
-      true
+        success
     }
+
     unlabeled
   }
 
   def hasMissingOpposites(network: EidosNetwork): Boolean = {
-    val visitor = new network.HierarchicalGraphVisitor()
     var leaves: Map[String, EidosNode] = Map.empty
-    var path = mutable.Seq.empty[String]
-    var missing = false
 
-    visitor.foreachNode { (node: EidosNode, depth: Int) =>
-      if (network.isLeaf(node)) {
-        val newPath = path.slice(0, depth) :+ node.name
+    // TODO: Is this string stuffing
 
-        trace(newPath)
-        leaves = leaves + (newPath.mkString("/") -> node)
-      }
-      else
-      if (depth < path.size)
-        path(depth) = node.name
-      else
-        path = path :+ node.name
-      true
+    visit(network) { (node: EidosNode, path: Path) =>
+      leaves = leaves + (path.mkString("/") -> node)
+      success
     }
+
+    var missing = false
 
     leaves.foreach { case (path, node) =>
       if (node.oppositeOpt.isDefined) {
         val opposite = node.oppositeOpt.get
 
-        if (!leaves.contains(opposite)) {
-          missing = true
-          error(s"Missing opposite: $path -> $opposite")
-        }
+        if (!leaves.contains(opposite))
+          missing = error(s"Missing opposite: $path -> $opposite")
         else {
           val counterpart = leaves(opposite)
 
-          if (node.polarityOpt.isEmpty || counterpart.polarityOpt.isEmpty) {
-            missing = true
-            error(s"Missing polarity: $path -> $opposite")
-          }
+          if (node.polarityOpt.isEmpty || counterpart.polarityOpt.isEmpty)
+            missing = error(s"Missing polarity: $path -> $opposite")
           else {
             val nodePolarity: Int = node.polarityOpt.get
             val counterpartPolarity: Int = counterpart.polarityOpt.get
 
-            if (nodePolarity != -counterpartPolarity) {
-              missing = true
-              error(s"Mismatched polarity: $path -> $opposite")
-            }
+            if (nodePolarity != -counterpartPolarity)
+              missing = error(s"Mismatched polarity: $path -> $opposite")
           }
         }
       }
@@ -286,33 +190,18 @@ class TestDomainOntology extends FlatSpec with Matchers {
   }
 
   def hasMissingExamples(network: EidosNetwork): Boolean = {
-    val visitor = new network.HierarchicalGraphVisitor()
-    var path = mutable.Seq.empty[String]
-    var missing = false
-
-    visitor.foreachNode { (node: EidosNode, depth: Int) =>
-      val nodeName = Option(node.name).getOrElse("")
-
-      if (network.isLeaf(node)) {
-        val newPath = path.slice(0, depth) :+ nodeName
-        val examples = node.examples
-        val isMissing = /*examples.isEmpty ||*/ examples.exists { example =>
-          Option(example).isEmpty || example.isEmpty
-        }
-        if (isMissing) {
-          error(s"Missing example: $newPath")
-          missing = isMissing
-        }
-        else
-          trace(newPath)
+    val missing = visit(network) { (node: EidosNode, path: Path) =>
+      val examples = node.examples
+      val isMissing = /*examples.isEmpty ||*/ examples.exists { example =>
+        Option(example).isEmpty || example.isEmpty
       }
+
+      if (isMissing)
+        error(s"Missing example: $path")
       else
-        if (depth < path.size)
-          path(depth) = nodeName
-        else
-          path = path :+ nodeName
-      true
+        success
     }
+
     missing
   }
 
