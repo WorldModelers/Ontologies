@@ -20,7 +20,7 @@
                 - soybean hulls
                 name: livestock_feed
                 polarity: 1
-              - OntologyNode: 
+              - OntologyNode:
                 examples:
                 - veterinary services medicine
                 - animal birthing
@@ -35,7 +35,7 @@
                 polarity: 1
             - crop_production_equipment:
               - OntologyNode:
-                examples: 
+                examples:
                 - farm equipment
                 - machinery
                 - tractor
@@ -46,7 +46,7 @@
                 name: farm_equipment
                 polarity: 1
               - OntologyNode:
-                examples: 
+                examples:
                 - harvesting equipment
                 - baskets
                 - pickers
@@ -113,14 +113,12 @@
                   - biological pest weed control
                   - crop rotation
                   - cover crop
-                  - integrated pest management 
+                  - integrated pest management
                   - IPM
                   - companion planting
                   name: biological
                   polarity: 1
                 - OntologyNode:
-                  pattern:
-                  - \b(DDT|dicamba|round-up)\b 
                   examples:
                   - chemical pest weed control
                   - glysophate
@@ -128,6 +126,8 @@
                   - dicamba
                   - DDT
                   name: chemical
+                  pattern:
+                    - \b(DDT|dicamba|round-up)\b
                   polarity: 1
                 - OntologyNode:
                   examples:
@@ -169,9 +169,6 @@
                 polarity: 1
           - information_services:
             - OntologyNode:
-              pattern:
-              - \b(IPC|FEWS|VAM)\b
-              - \bearly\s+warning\s+system\b
               examples:
               - surveillance system
               - early warning systems
@@ -185,6 +182,9 @@
               - vulnerability analysis mapping
               - VAM
               name: surveillance_system
+              pattern:
+                - \b(IPC|FEWS|VAM)\b
+                - \bearly\s+warning\s+system\b
               polarity: 1
             - OntologyNode:
               examples:
@@ -227,20 +227,20 @@
                 polarity: 1
             - statistics:
               - OntologyNode:
-                pattern:
-                - \b(census|AgSS|CFSVA)\b
                 examples:
                 - survey
                 - Census
-                - DHS 
+                - DHS
                 - demographic health surveys
                 - CFSVA
                 - comprehensive food security and vulnerability assessment
-                - AgSS 
+                - AgSS
                 - agricultural sample survey
                 name: national_survey
+                pattern:
+                  - \b(census|AgSS|CFSVA)\b
                 polarity: 1
-          - livelihood_support: 
+          - livelihood_support:
             - OntologyNode:
               examples:
               - food aid
@@ -264,7 +264,7 @@
               polarity: 1
             - OntologyNode:
               examples:
-              - water 
+              - water
               - water trucking
               name: water
               polarity: 1
@@ -303,8 +303,6 @@
                 polarity: 1
           - medical_inputs:
             - OntologyNode:
-              pattern:
-              - \b(immuniz(ations?|e))\b
               examples:
               - vaccine
               - vaccination
@@ -315,6 +313,8 @@
               - measles
               - yellow fever
               name: vaccine
+              pattern:
+                - \b(immuniz(ations?|e))\b
               polarity: 1
             - OntologyNode:
               examples:
@@ -326,7 +326,7 @@
               - childhood essential health services
               - obstetric and newborn care
               - operation of mobile clinics
-              - therapeutic feeding 
+              - therapeutic feeding
               - trauma and surgical care
               - trauma and post operative rehabilitation
               name: medical_treatment
@@ -351,7 +351,7 @@
               name: psychological
               polarity: 1
           - OntologyNode:
-            examples: 
+            examples:
             - sanitation and hygiene input
             - desludging
             - toilet
@@ -376,7 +376,7 @@
                 - coop
                 name: livestock_shelter # enclosure, barn, pasture, etc
                 polarity: 1
-            - crop_production_infrastructure: #
+            - crop_production_infrastructure:
               - OntologyNode:
                 examples:
                 - canal
@@ -387,13 +387,13 @@
                 name: irrigation_infrastructure # canal, reservoir, water_tower
                 polarity: 1
               - OntologyNode:
-                pattern:
-                - \bextension\s+offices?
                 examples:
                 - farmer training center
                 - demonstration plot
                 - extension office
                 name: extension_offices # farmer_training_centers, demonstration plots, etc
+                pattern:
+                  - \bextension\s+offices?
                 polarity: 1
               - OntologyNode:
                 examples:
@@ -416,9 +416,9 @@
                 - grain elevator
                 - cooperative processing
                 - post-harvest
-                pattern:
-                - \b(tower|bunker|stave|grain)\b\s(silo)
                 name: post_harvest_infrastructure # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
+                pattern:
+                  - \b(tower|bunker|stave|grain)\b\s(silo)
                 polarity: 1
           - OntologyNode:
             examples:
@@ -464,9 +464,9 @@
             - permanent water point
             - borehole repair
             - WASH infrastructure
-            pattern:
-            - \b(WASH)\binfrastructure
             name: WASH_infrastructure # sanitation facilities, latrines, washing_and_bathing_facilities, temporary_water_points, boreholes, permanent_water_points, borehole_repair, etc.
+            pattern:
+              - \b(WASH)\binfrastructure
             polarity: 1
           - OntologyNode:
             examples:
@@ -489,9 +489,9 @@
             - road rehabilitation
             - road repair
             - transportation infrastructure
-            pattern:
-            - \b(road|bridge|rail)\s(repair)
             name: transportation_infrastructure # bridge, repair, all_weather_roads, railway_lines, temporary_roads, road_rehabilitation
+            pattern:
+              - \b(road|bridge|rail)\s(repair)
             polarity: 1
           - OntologyNode:
             examples:
@@ -527,7 +527,7 @@
                 - cover cropping
                 - composting
                 - planting practices
-                - training 
+                - training
                 name: planting_training # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
                 polarity: 1
               - OntologyNode:
@@ -536,9 +536,9 @@
                 - training integrated pest management
                 - training pest control
                 - weed control
-                pattern:
-                - (\bIPM\b)(\s(practices))?
                 name: pest_weed_control # IPM_practices (integrated pest management), etc
+                pattern:
+                  - (\bIPM\b)(\s(practices))?
                 polarity: 1
               - OntologyNode:
                 examples:
@@ -559,9 +559,9 @@
               - weather information
               - national weather service meteorological met
               - agriculture information
-              pattern:
-              - (\bNM[AS]\b)\s(reports?)
               name: agriculture_information # digital_extension, famers_almanac, mobile_extension, SMS reminders,  Weather_information,  NMA_reports (national met agency), broadcast_weather_reports,
+              pattern:
+                - (\bNM[AS]\b)\s(reports?)
               polarity: 1
           - medical_training: # capacity_assessments, community_health_workers (CHWs),
             - OntologyNode:
@@ -583,7 +583,7 @@
           - OntologyNode:
             examples:
             - human rights training
-            name: human_rights_training #
+            name: human_rights_training
             polarity: 1
           - OntologyNode:
             examples:
@@ -670,9 +670,6 @@
               name: temporary_policing_services
               polarity: 1
           - OntologyNode:
-            pattern:
-            - peace\s+(building|talks)
-            - conflict\s+resolution
             examples:
             - conflict mediation
             - political dialogue
@@ -683,6 +680,9 @@
             - rehabilitation of child soldiers
             - conflict resolution
             name: conflict_resolution # conflict_mediation, political_dialogue, disarmament, demobilization, reintegration, family_reunification, rehabilitation_of_child_soldier
+            pattern:
+              - peace\s+(building|talks)
+              - conflict\s+resolution
             polarity: 1
           - OntologyNode:
             examples:
@@ -700,13 +700,13 @@
             name: secure_natural_resources # Water_rights, Land_rights, land_deeds, Biotechnology, etc.
             polarity: 1
           - OntologyNode:
-            pattern:
-            - \bUNESCO\b\sworld\sheritage\ssite
             examples:
             - landmark designation conservation
             - world heritage status site
             - cultural resources protections
             name: cultural_resources # landmark_designation, world_heritage_status, etc.
+            pattern:
+              - \bUNESCO\b\sworld\sheritage\ssite
             polarity: 1
         - legislate: # regulate, control, tax,  subsidize, penalize, certify, ban, etc.
           - OntologyNode:
@@ -917,28 +917,28 @@
               name: sanitation
               polarity: 1
             - OntologyNode:
-              patterns:
-                - (contact tracing)
               examples:
                 - contact tracing
               name: contact_tracing
+              pattern:
+                - (contact tracing)
               polarity: 1
             - OntologyNode:
-              patterns:
-                - (quarantin|shelter[- ]in[- ]place)
               examples:
                 - quarantine
                 - shelter in place
                 - isolation
                 - restrict movements
               name: quarantine
+              pattern:
+                - (quarantin|shelter[- ]in[- ]place)
               polarity: 1
             - OntologyNode:
-              patterns:
-                - (social distancing)
               examples:
                 - social distancing
               name: social_distancing
+              pattern:
+                - (social distancing)
               polarity: 1
             - OntologyNode:
               examples:
@@ -1812,18 +1812,16 @@
                   polarity: -1
               - gregarious:
                 - OntologyNode:
-                  patterns:
-                    - (hopper\s+band)|(bands?\s+of\s+hoppers)
                   examples:
                     - bands of hoppers
                     - locust hopper groups
                     - hopper outbreak upsurge
                     - immature
                   name: hopper_band
+                  pattern:
+                    - (hopper\s+band)|(bands?\s+of\s+hoppers)
                   polarity: -1
                 - OntologyNode:
-                  patterns:
-                    - (locust\s+swarm)|(swarms?\s+of\s+locust)
                   examples:
                     - swarm
                     - locust swarm
@@ -1832,6 +1830,8 @@
                     - locust infestation
                     - locust outbreak
                   name: locust_swarm
+                  pattern:
+                    - (locust\s+swarm)|(swarms?\s+of\s+locust)
                   polarity: -1
         - OntologyNode:
           examples:
@@ -2086,13 +2086,13 @@
             name: transmission
             polarity: -1
           - OntologyNode:
-            patterns:
-             - (COVID|covid)
             examples:
               - covid
               - corona virus
               - coronavirus
             name: covid_virus
+            pattern:
+              - (COVID|covid)
             polarity: -1
           - OntologyNode:
             examples:
@@ -2401,7 +2401,6 @@
         examples:
         - geographic location
         name: geo-location
-        take_args: 0
         polarity: 1
       - OntologyNode:
         examples:
@@ -2415,14 +2414,12 @@
         - Programme Work
         - convention
         name: organization
-        take_args: 1
         polarity: 1
       - OntologyNode:
         examples:
         - government entity
         - program entity
         name: government_entity
-        take_args: 0
         polarity: 1
       - person_and_group:
         - OntologyNode:
@@ -2433,7 +2430,6 @@
           - population
           - rural
           name: population
-          take_args: 0
           polarity: 1
         - OntologyNode:
           examples:
@@ -2444,13 +2440,11 @@
           - families
           - communities
           name: community
-          take_args: 0
           polarity: 1
       - OntologyNode:
         examples:
         - artifact
         name: artifact
-        take_args: 0
         polarity: 1
     - time:
       - temporal:
@@ -2461,7 +2455,6 @@
           - planting season
           - sowing season
           name: crop_season
-          take_args: 0
           polarity: 1
         - OntologyNode:
           examples:
@@ -2473,5 +2466,4 @@
           - rainy season
           - monsoon season
           name: season
-          take_args: 1
           polarity: 1
