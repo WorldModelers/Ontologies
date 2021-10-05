@@ -6,3 +6,7 @@ target/
 
 # IntelliJ
 .idea
+
+# Python
+.vscode/
+__pycache__/

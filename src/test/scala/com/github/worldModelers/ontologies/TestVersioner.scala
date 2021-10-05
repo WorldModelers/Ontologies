@@ -1,17 +1,12 @@
 package com.github.worldModelers.ontologies
 
-import java.time.ZonedDateTime
-import java.util.Properties
-
-// Switch these back and forth to test code generation
-//import com.github.worldModelers.ontologies.{MockVersions => TestVersions, MockVersion => TestVersion }
-import com.github.worldModelers.ontologies.{Version => TestVersion, Versions => TestVersions}
 import org.clulab.wm.eidos.utils.Closer.AutoCloser
-
 import org.scalatest._
 
+import java.util.Properties
+import java.time.ZonedDateTime
+
 class TestVersioner extends FlatSpec with Matchers {
-  val now: ZonedDateTime = ZonedDateTime.now
   // This has to be coordinated with the build file.
   val resourceBase = "/org/clulab/wm/eidos/english/ontologies/"
 
@@ -21,41 +16,33 @@ class TestVersioner extends FlatSpec with Matchers {
 
   behavior of "Versions"
 
-  def test(file: String, versionOpt: Option[TestVersion], expirationDate: ZonedDateTime): Unit = {
-    it should "document version of " + file in {
+  def getVersionAndDate(filename: String): (String, ZonedDateTime) = {
+    val path = resourceBase + extensionless(filename) + ".properties"
+    val properties = this.getClass.getResourceAsStream(path).autoClose { inputStream =>
+      val properties = new Properties
 
-      versionOpt.nonEmpty should be (true)
-
-      val version = versionOpt.get
-      version.commit.nonEmpty should be (true)
-
-      val versionDate = version.date
-      (versionDate.isBefore(expirationDate) || versionDate.isEqual(expirationDate)) should be (true)
-      println(file + ": " + version)
-
-      if (file != "HEAD") {
-        val resourceName = extensionless(resourceBase + file) + ".properties"
-        val properties = getClass.getResourceAsStream(resourceName).autoClose { stream =>
-          val properties = new Properties()
-
-          properties.load(stream)
-          properties
-        }
-
-        val hash = properties.getProperty("hash")
-        val date = properties.getProperty("date")
-
-        hash should be (version.commit)
-        date should be (versionDate.toString)
-      }
+      properties.load(inputStream)
+      properties
     }
+    val version = properties.getProperty("hash")
+    val date = properties.getProperty("date")
+    val zonedDateTime = ZonedDateTime.parse(date)
+
+    (version, zonedDateTime)
   }
 
-  test("HEAD", TestVersions.version, now)
 
-  TestVersions.versions.nonEmpty should be (true)
+  it should "version" in {
+    Seq(
+      // This has to be coordinated with the build file.
+      "wm_flat_metadata.yml",
+      "CompositionalOntology_metadata.yml"
+    ).foreach { filename =>
+      val (version, zonedDateTime) = getVersionAndDate(filename)
 
-  TestVersions.versions.foreach { case (file, version) =>
-    test(file, version, TestVersions.version.map { _.date }.getOrElse(now))
+      println(s"$filename")
+      println(s"  version: $version")
+      println(s"     date: $zonedDateTime")
+    }
   }
 }

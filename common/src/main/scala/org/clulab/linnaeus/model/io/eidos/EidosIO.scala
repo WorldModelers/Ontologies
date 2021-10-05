@@ -5,8 +5,14 @@ object EidosIO {
   val FIELD = "OntologyNode"
   val PATTERN = "pattern"
   val EXAMPLES = "examples"
-  val DESCRIPTION = "descriptions"
+  val DEFINITION = "definition"
+  val DESCRIPTIONS = "descriptions"
   val NAME = "name"
   val OPPOSITE = "opposite"
   val POLARITY = "polarity"
+  val SEMANTIC_TYPE = "semantic type"
+
+  val keys = Set(FIELD, PATTERN, EXAMPLES, DEFINITION, DESCRIPTIONS, NAME, OPPOSITE, POLARITY, SEMANTIC_TYPE)
 }
+
+// definition
