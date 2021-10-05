@@ -9,15 +9,22 @@ import org.yaml.snakeyaml.DumperOptions.FlowStyle
 import org.yaml.snakeyaml.Yaml
 import org.yaml.snakeyaml.nodes.Tag
 
+import java.io.File
+import java.io.FileOutputStream
+import java.io.OutputStreamWriter
+import java.io.PrintWriter
+import java.nio.charset.StandardCharsets
 import scala.collection.JavaConverters._
 import java.util.{ArrayList => JArrayList}
 import java.util.{IdentityHashMap => JIdentityHashMap}
 import java.util.{LinkedHashMap => JLinkedHashMap}
 
-object Converter extends App {
-//  val inputFile = "./CompositionalOntology_metadata.yml"
-  val inputFile = "./wm_flat_metadata.yml"
-  val outputFile = "./Revised-Ontology_metadata.yml"
+class Converter(inputFile: String, outputFilename: String, newLocalNode: EidosNode => LocalNode) {
+  val utf8: String = StandardCharsets.UTF_8.toString
+
+  def newPrintWriterFromFile(file: File): PrintWriter =
+      new PrintWriter(new OutputStreamWriter(new FileOutputStream(file), utf8))
+
   val (headerText, network) = {
     val network = new EidosNetwork()
     val reader = new EidosReader(network)
@@ -33,13 +40,13 @@ object Converter extends App {
     val trailerText = trailers.mkString("\n")
 
     reader.readFromString(trailerText)
-    (headers.mkString("", "\n", "\n"), network)
+    (headers.mkString("", "\n", if (headers.isEmpty) "" else "\n"), network)
   }
   val eidosToLocalMap = new JIdentityHashMap[EidosNode, LocalNode]()
 
   def getOrAddNode(eidosNode: EidosNode): LocalNode = {
     Option(eidosToLocalMap.get(eidosNode)).getOrElse {
-      val localNode = new LocalNode(eidosNode)
+      val localNode = newLocalNode(eidosNode)
 
       eidosToLocalMap.put(eidosNode, localNode)
       localNode
@@ -72,21 +79,44 @@ object Converter extends App {
       .distinct
       .sorted
       .zipWithIndex.map { case (indent, index) =>
-        indent -> 4 * index
-      }
+    indent -> 4 * index
+  }
       .toMap
   val newLines = lines.zip(indents).map { case (line, indent) =>
     " " * indentMap(indent) + line.substring(indent).replace('@', '#')
   }
-  val newYaml = headerText + newLines.mkString("\n")
+  val newYaml = headerText + newLines.mkString("", "\n", "\n")
 
-  println(newYaml)
+  val printWriter = newPrintWriterFromFile(new File(outputFilename))
+  printWriter.println(newYaml)
+  printWriter.close()
 }
 
-class LocalNode(eidosNode: EidosNode) extends JLinkedHashMap[String, Any] {
+object ConverterApp extends App {
+
+  def run(inputFile: String): Unit = {
+    new Converter(inputFile, inputFile + ".1", eidosNode => new LocalNode1(eidosNode)) // make children explicit
+    new Converter(inputFile, inputFile + ".2", eidosNode => new LocalNode2(eidosNode)) // change OntologyNode to node
+    new Converter(inputFile, inputFile + ".3", eidosNode => new LocalNode3(eidosNode)) // move name to top
+    // restore comments
+  }
+
+  run("./CompositionalOntology_metadata.yml")
+  run("./wm_flat_metadata.yml")
+}
+
+abstract class LocalNode(eidosNode: EidosNode) extends JLinkedHashMap[String, Any] {
   val node = new JLinkedHashMap[String, Any]
   val children = new JArrayList[LocalNode]()
 
+  def addChild(localNode: LocalNode): Unit = {
+    if (!node.containsKey("children"))
+      node.put("children", children)
+    children.add(localNode)
+  }
+}
+
+class LocalNode1(eidosNode: EidosNode) extends LocalNode(eidosNode) {
 //  this.put("node", node)
   this.put("OntologyNode", node)
   eidosNode.definitionOpt.foreach { definition =>
@@ -96,7 +126,7 @@ class LocalNode(eidosNode: EidosNode) extends JLinkedHashMap[String, Any] {
     node.put("descriptions", eidosNode.descriptions.asJava)
   // For flat, patterns come before examples and name.  Otherwise, put it after examples.
   if (eidosNode.patterns.nonEmpty)
-    node.put("pattern", eidosNode.patterns.asJava) // change back to patterns
+    node.put("patterns", eidosNode.patterns.asJava) // change back to patterns
   if (eidosNode.examples.nonEmpty)
     node.put("examples", eidosNode.examples.asJava)
   // TODO: Move back up to top
@@ -113,10 +143,62 @@ class LocalNode(eidosNode: EidosNode) extends JLinkedHashMap[String, Any] {
   eidosNode.semanticTypeOpt.foreach { semanticType =>
     node.put("semantic type", semanticType)
   }
+}
 
-  def addChild(localNode: LocalNode): Unit = {
-    if (!node.containsKey("children"))
-      node.put("children", children)
-    children.add(localNode)
+class LocalNode2(eidosNode: EidosNode) extends LocalNode(eidosNode) {
+    this.put("node", node)
+//  this.put("OntologyNode", node)
+  eidosNode.definitionOpt.foreach { definition =>
+    node.put("definition", definition)
+  }
+  if (eidosNode.descriptions.nonEmpty)
+    node.put("descriptions", eidosNode.descriptions.asJava)
+  // For flat, patterns come before examples and name.  Otherwise, put it after examples.
+  if (eidosNode.patterns.nonEmpty)
+    node.put("patterns", eidosNode.patterns.asJava) // change back to patterns
+  if (eidosNode.examples.nonEmpty)
+    node.put("examples", eidosNode.examples.asJava)
+  // TODO: Move back up to top
+  node.put("name", eidosNode.name) // required
+  // opposite: [String]
+  eidosNode.oppositeOpt.foreach { opposite =>
+    node.put("opposite", opposite)
+  }
+  // polarity: [1|-1]
+  eidosNode.polarityOpt.foreach { polarity =>
+    node.put("polarity", polarity)
+  }
+  // semantic type: [entity | event | property]
+  eidosNode.semanticTypeOpt.foreach { semanticType =>
+    node.put("semantic type", semanticType)
+  }
+}
+
+class LocalNode3(eidosNode: EidosNode) extends LocalNode(eidosNode) {
+  this.put("node", node)
+  //  this.put("OntologyNode", node)
+  // TODO: Move back up to top
+  node.put("name", eidosNode.name) // required
+  eidosNode.definitionOpt.foreach { definition =>
+    node.put("definition", definition)
+  }
+  if (eidosNode.descriptions.nonEmpty)
+    node.put("descriptions", eidosNode.descriptions.asJava)
+  // For flat, patterns come before examples and name.  Otherwise, put it after examples.
+  if (eidosNode.patterns.nonEmpty)
+    node.put("patterns", eidosNode.patterns.asJava) // change back to patterns
+  if (eidosNode.examples.nonEmpty)
+    node.put("examples", eidosNode.examples.asJava)
+  // opposite: [String]
+  eidosNode.oppositeOpt.foreach { opposite =>
+    node.put("opposite", opposite)
+  }
+  // polarity: [1|-1]
+  eidosNode.polarityOpt.foreach { polarity =>
+    node.put("polarity", polarity)
+  }
+  // semantic type: [entity | event | property]
+  eidosNode.semanticTypeOpt.foreach { semanticType =>
+    node.put("semantic type", semanticType)
   }
 }
