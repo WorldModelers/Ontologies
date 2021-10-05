@@ -98,6 +98,7 @@ object ConverterApp extends App {
     new Converter(inputFile, inputFile + ".1", eidosNode => new LocalNode1(eidosNode)) // make children explicit
     new Converter(inputFile, inputFile + ".2", eidosNode => new LocalNode2(eidosNode)) // change OntologyNode to node
     new Converter(inputFile, inputFile + ".3", eidosNode => new LocalNode3(eidosNode)) // move name to top
+    new Converter(inputFile, inputFile + ".4", eidosNode => new LocalNode4(eidosNode)) // combine definition and descriptions
     // restore comments
   }
 
@@ -184,6 +185,37 @@ class LocalNode3(eidosNode: EidosNode) extends LocalNode(eidosNode) {
   }
   if (eidosNode.descriptions.nonEmpty)
     node.put("descriptions", eidosNode.descriptions.asJava)
+  // For flat, patterns come before examples and name.  Otherwise, put it after examples.
+  if (eidosNode.patterns.nonEmpty)
+    node.put("patterns", eidosNode.patterns.asJava) // change back to patterns
+  if (eidosNode.examples.nonEmpty)
+    node.put("examples", eidosNode.examples.asJava)
+  // opposite: [String]
+  eidosNode.oppositeOpt.foreach { opposite =>
+    node.put("opposite", opposite)
+  }
+  // polarity: [1|-1]
+  eidosNode.polarityOpt.foreach { polarity =>
+    node.put("polarity", polarity)
+  }
+  // semantic type: [entity | event | property]
+  eidosNode.semanticTypeOpt.foreach { semanticType =>
+    node.put("semantic type", semanticType)
+  }
+}
+
+class LocalNode4(eidosNode: EidosNode) extends LocalNode(eidosNode) {
+  this.put("node", node)
+  //  this.put("OntologyNode", node)
+  // TODO: Move back up to top
+  node.put("name", eidosNode.name) // required
+
+  val definitionAndDescriptions = {
+    val definitions = eidosNode.definitionOpt.map(Seq(_)).getOrElse(Seq.empty)
+    definitions ++ eidosNode.descriptions
+  }
+  if (definitionAndDescriptions.nonEmpty)
+    node.put("descriptions", definitionAndDescriptions.asJava)
   // For flat, patterns come before examples and name.  Otherwise, put it after examples.
   if (eidosNode.patterns.nonEmpty)
     node.put("patterns", eidosNode.patterns.asJava) // change back to patterns
