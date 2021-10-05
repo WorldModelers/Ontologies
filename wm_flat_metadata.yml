@@ -25,6 +25,7 @@ node:
                                                     name: livestock_production_inputs
                                                     children:
                                                         - node:
+                                                            name: livestock_feed
                                                             examples:
                                                                 - livestock feed
                                                                 - hay
@@ -32,25 +33,25 @@ node:
                                                                 - silage
                                                                 - corn meal
                                                                 - soybean hulls
-                                                            name: livestock_feed
                                                             polarity: 1
                                                         - node:
+                                                            name: veterinary_services
                                                             examples:
                                                                 - veterinary services medicine
                                                                 - animal birthing
                                                                 - antibiotics
                                                                 - livestock vaccination
-                                                            name: veterinary_services
                                                             polarity: 1
                                                         - node:
+                                                            name: livestock_watering
                                                             examples:
                                                                 - livestock watering
-                                                            name: livestock_watering
                                                             polarity: 1
                                                 - node:
                                                     name: crop_production_equipment
                                                     children:
                                                         - node:
+                                                            name: farm_equipment
                                                             examples:
                                                                 - farm equipment
                                                                 - machinery
@@ -59,54 +60,54 @@ node:
                                                                 - row planter
                                                                 - plow
                                                                 - winnower
-                                                            name: farm_equipment
                                                             polarity: 1
                                                         - node:
+                                                            name: harvesting_equipment
                                                             examples:
                                                                 - harvesting equipment
                                                                 - baskets
                                                                 - pickers
                                                                 - ladders
                                                                 - clippers
-                                                            name: harvesting_equipment
                                                             polarity: 1
                                                         - node:
+                                                            name: seed
                                                             examples:
                                                                 - seed
                                                                 - planting
-                                                            name: seed
                                                             polarity: 1
                                                         - node:
                                                             name: irrigation_equipment
                                                             children:
                                                                 - node:
+                                                                    name: water_source
                                                                     examples:
                                                                         - water source
                                                                         - wells
                                                                         - bore-holes
                                                                         - irrigation ditch
                                                                         - canal
-                                                                    name: water_source
                                                                     polarity: 1
                                                                 - node:
+                                                                    name: pumps
                                                                     examples:
                                                                         - water pumps
                                                                         - treadle
                                                                         - electric pump
                                                                         - small scale irrigation pump
-                                                                    name: pumps
                                                                     polarity: 1
                                                                 - node:
+                                                                    name: field_irrigation
                                                                     examples:
                                                                         - field irrigation
                                                                         - drip
                                                                         - sprinklers
-                                                                    name: field_irrigation
                                                                     polarity: 1
                                                         - node:
                                                             name: soil_inputs
                                                             children:
                                                                 - node:
+                                                                    name: fertilizer
                                                                     examples:
                                                                         - fertilizer
                                                                         - DAP
@@ -116,21 +117,21 @@ node:
                                                                         - nitrogen
                                                                         - potassium
                                                                         - phosphorous
-                                                                    name: fertilizer
                                                                     polarity: 1
                                                                 - node:
+                                                                    name: fertilizer_subsidy
                                                                     examples:
                                                                         - fertilizer subsidy
                                                                         - fertilizer voucher
                                                                         - cash
                                                                         - price control
                                                                         - fertilizer coupon
-                                                                    name: fertilizer_subsidy
                                                                     polarity: 1
                                                         - node:
                                                             name: weed_pest_control
                                                             children:
                                                                 - node:
+                                                                    name: biological
                                                                     examples:
                                                                         - biological pest weed control
                                                                         - crop rotation
@@ -138,9 +139,9 @@ node:
                                                                         - integrated pest management
                                                                         - IPM
                                                                         - companion planting
-                                                                    name: biological
                                                                     polarity: 1
                                                                 - node:
+                                                                    name: chemical
                                                                     patterns:
                                                                         - \b(DDT|dicamba|round-up)\b
                                                                     examples:
@@ -149,20 +150,20 @@ node:
                                                                         - round-up
                                                                         - dicamba
                                                                         - DDT
-                                                                    name: chemical
                                                                     polarity: 1
                                                                 - node:
+                                                                    name: organic
                                                                     examples:
                                                                         - organic pest weed control
                                                                         - vinegar
                                                                         - pine oil
                                                                         - neem oil
-                                                                    name: organic
                                                                     polarity: 1
                                                 - node:
                                                     name: post_harvest_inputs
                                                     children:
                                                         - node:
+                                                            name: processing_equipment
                                                             examples:
                                                                 - harvest processing equipment
                                                                 - thresher
@@ -173,28 +174,28 @@ node:
                                                                 - harvest laser sorter
                                                                 - tarp
                                                                 - harvest drier racks
-                                                            name: processing_equipment
                                                             polarity: 1
                                                         - node:
+                                                            name: packaging
                                                             examples:
                                                                 - harvest packaging
                                                                 - packing lines
                                                                 - branding
                                                                 - packaging material
-                                                            name: packaging
                                                             polarity: 1
                                                         - node:
+                                                            name: warehousing
                                                             examples:
                                                                 - warehousing
                                                                 - warehouse receipt system
                                                                 - WRS
                                                                 - storage
-                                                            name: warehousing
                                                             polarity: 1
                                         - node:
                                             name: information_services
                                             children:
                                                 - node:
+                                                    name: surveillance_system
                                                     patterns:
                                                         - \b(IPC|FEWS|VAM)\b
                                                         - \bearly\s+warning\s+system\b
@@ -210,22 +211,22 @@ node:
                                                         - FEWS NET
                                                         - vulnerability analysis mapping
                                                         - VAM
-                                                    name: surveillance_system
                                                     polarity: 1
                                                 - node:
+                                                    name: weather_monitoring
                                                     examples:
                                                         - weather monitoring
-                                                    name: weather_monitoring
                                                     polarity: 1
                                                 - node:
+                                                    name: price_monitoring
                                                     examples:
                                                         - price monitoring
-                                                    name: price_monitoring
                                                     polarity: 1
                                                 - node:
                                                     name: human_rights_monitoring
                                                     children:
                                                         - node:
+                                                            name: victims
                                                             examples:
                                                                 - victims
                                                                 - children victims
@@ -233,30 +234,30 @@ node:
                                                                 - refugees
                                                                 - IDP
                                                                 - ethnic minorities
-                                                            name: victims
                                                             polarity: 1
                                                         - node:
+                                                            name: perpetrators
                                                             examples:
                                                                 - perpetrators
                                                                 - militias
                                                                 - gangs
                                                                 - terrorist groups
                                                                 - non state actors
-                                                            name: perpetrators
                                                             polarity: 1
                                                         - node:
+                                                            name: violations
                                                             examples:
                                                                 - violations
                                                                 - human rights violations crimes
                                                                 - war crimes
                                                                 - gender based violence
                                                                 - GBV
-                                                            name: violations
                                                             polarity: 1
                                                 - node:
                                                     name: statistics
                                                     children:
                                                         - node:
+                                                            name: national_survey
                                                             patterns:
                                                                 - \b(census|AgSS|CFSVA)\b
                                                             examples:
@@ -268,12 +269,12 @@ node:
                                                                 - comprehensive food security and vulnerability assessment
                                                                 - AgSS
                                                                 - agricultural sample survey
-                                                            name: national_survey
                                                             polarity: 1
                                         - node:
                                             name: livelihood_support
                                             children:
                                                 - node:
+                                                    name: food_aid
                                                     examples:
                                                         - food aid
                                                         - food for work
@@ -282,9 +283,9 @@ node:
                                                         - food vouchers
                                                         - free food distribution
                                                         - school feeding
-                                                    name: food_aid
                                                     polarity: 1
                                                 - node:
+                                                    name: nutrition_support
                                                     examples:
                                                         - nutrition support
                                                         - food fortification
@@ -292,15 +293,15 @@ node:
                                                         - infant and young child feeding
                                                         - micro nutrient supplementation
                                                         - supplementary feeding
-                                                    name: nutrition_support
                                                     polarity: 1
                                                 - node:
+                                                    name: water
                                                     examples:
                                                         - water
                                                         - water trucking
-                                                    name: water
                                                     polarity: 1
                                                 - node:
+                                                    name: financial_assistance
                                                     examples:
                                                         - financial assistance
                                                         - cash
@@ -311,9 +312,9 @@ node:
                                                         - once off cash transfer to facilitate return
                                                         - grants
                                                         - remittances
-                                                    name: financial_assistance
                                                     polarity: 1
                                                 - node:
+                                                    name: livelihood_assets
                                                     examples:
                                                         - livelihood assets
                                                         - fishing nets
@@ -323,22 +324,22 @@ node:
                                                         - improved chicken breed
                                                         - bicycle
                                                         - cart
-                                                    name: livelihood_assets
                                                     polarity: 1
                                                 - node:
                                                     name: humanitarian_nonfood_items
                                                     children:
                                                         - node:
+                                                            name: shelter
                                                             examples:
                                                                 - shelter
                                                                 - tents
                                                                 - shelter kits
-                                                            name: shelter
                                                             polarity: 1
                                         - node:
                                             name: medical_inputs
                                             children:
                                                 - node:
+                                                    name: vaccine
                                                     patterns:
                                                         - \b(immuniz(ations?|e))\b
                                                     examples:
@@ -350,9 +351,9 @@ node:
                                                         - polio
                                                         - measles
                                                         - yellow fever
-                                                    name: vaccine
                                                     polarity: 1
                                                 - node:
+                                                    name: medical_treatment
                                                     examples:
                                                         - medical treatment
                                                         - anti retroviral treatment
@@ -365,9 +366,9 @@ node:
                                                         - therapeutic feeding
                                                         - trauma and surgical care
                                                         - trauma and post operative rehabilitation
-                                                    name: medical_treatment
                                                     polarity: 1
                                                 - node:
+                                                    name: prevention
                                                     examples:
                                                         - prevention
                                                         - insecticide treated bednets
@@ -375,18 +376,18 @@ node:
                                                         - preventative medicine
                                                         - well-child visit
                                                         - well-visit
-                                                    name: prevention
                                                     polarity: 1
                                                 - node:
+                                                    name: psychological
                                                     examples:
                                                         - psychological
                                                         - therapy
                                                         - clinical management of sexual violence
                                                         - psychological support
                                                         - therapist counselor
-                                                    name: psychological
                                                     polarity: 1
                                         - node:
+                                            name: sanitation_and_hygiene_inputs
                                             examples:
                                                 - sanitation and hygiene input
                                                 - desludging
@@ -396,7 +397,6 @@ node:
                                                 - solid waste management
                                                 - point of use water treatment
                                                 - piped water supply treatment
-                                            name: sanitation_and_hygiene_inputs
                                             polarity: 1
                                 - node:
                                     name: build
@@ -408,6 +408,7 @@ node:
                                                     name: livestock_production_infrastructure
                                                     children:
                                                         - node:
+                                                            name: livestock_shelter # enclosure, barn, pasture, etc
                                                             examples:
                                                                 - enclosure
                                                                 - barn
@@ -416,30 +417,30 @@ node:
                                                                 - paddock
                                                                 - chicken coop
                                                                 - coop
-                                                            name: livestock_shelter # enclosure, barn, pasture, etc
                                                             polarity: 1
                                                 - node:
                                                     name: crop_production_infrastructure
                                                     children:
                                                         - node:
+                                                            name: irrigation_infrastructure # canal, reservoir, water_tower
                                                             examples:
                                                                 - canal
                                                                 - reservoir
                                                                 - water tower
                                                                 - standpipe
                                                                 - irrigation infrastructure
-                                                            name: irrigation_infrastructure # canal, reservoir, water_tower
                                                             polarity: 1
                                                         - node:
+                                                            name: extension_offices # farmer_training_centers, demonstration plots, etc
                                                             patterns:
                                                                 - \bextension\s+offices?
                                                             examples:
                                                                 - farmer training center
                                                                 - demonstration plot
                                                                 - extension office
-                                                            name: extension_offices # farmer_training_centers, demonstration plots, etc
                                                             polarity: 1
                                                         - node:
+                                                            name: greenhouse # nursery, high_tunnel, etc.
                                                             examples:
                                                                 - nursery
                                                                 - plant nursery
@@ -447,9 +448,9 @@ node:
                                                                 - high tunnel
                                                                 - glasshouse
                                                                 - hothouse
-                                                            name: greenhouse # nursery, high_tunnel, etc.
                                                             polarity: 1
                                                         - node:
+                                                            name: post_harvest_infrastructure # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
                                                             patterns:
                                                                 - \b(tower|bunker|stave|grain)\b\s(silo)
                                                             examples:
@@ -462,9 +463,9 @@ node:
                                                                 - grain elevator
                                                                 - cooperative processing
                                                                 - post-harvest
-                                                            name: post_harvest_infrastructure # on-farm_processing_facility, silos, cooperative_processing, storage, etc.
                                                             polarity: 1
                                         - node:
+                                            name: trade_infrastructure # factory, industrial_park, storage_facilities, warehouse, processing_facilities, etc.
                                             examples:
                                                 - factory
                                                 - industrial park
@@ -472,9 +473,9 @@ node:
                                                 - warehouse
                                                 - processing facility
                                                 - trade infrastructure
-                                            name: trade_infrastructure # factory, industrial_park, storage_facilities, warehouse, processing_facilities, etc.
                                             polarity: 1
                                         - node:
+                                            name: educational_infrastructure # community_centers, child_friendly_learning_spaces, school_rehabilitation, gender_specific_bathrooms, etc.
                                             examples:
                                                 - community center
                                                 - classroom
@@ -483,9 +484,9 @@ node:
                                                 - gender-specific bathrooms
                                                 - educational infrastructure
                                                 - school infrastructure
-                                            name: educational_infrastructure # community_centers, child_friendly_learning_spaces, school_rehabilitation, gender_specific_bathrooms, etc.
                                             polarity: 1
                                         - node:
+                                            name: shelter_housing # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
                                             examples:
                                                 - permanent house
                                                 - temporary housing
@@ -496,9 +497,9 @@ node:
                                                 - temporary shelter
                                                 - portable shelter
                                                 - shelter
-                                            name: shelter_housing # permanent_house, temporary_housing, refugee_camp, housing_provision, leasing_or_rental_services, temporary_communal_settlement, etc.
                                             polarity: 1
                                         - node:
+                                            name: WASH_infrastructure # sanitation facilities, latrines, washing_and_bathing_facilities, temporary_water_points, boreholes, permanent_water_points, borehole_repair, etc.
                                             patterns:
                                                 - \b(WASH)\binfrastructure
                                             examples:
@@ -510,9 +511,9 @@ node:
                                                 - permanent water point
                                                 - borehole repair
                                                 - WASH infrastructure
-                                            name: WASH_infrastructure # sanitation facilities, latrines, washing_and_bathing_facilities, temporary_water_points, boreholes, permanent_water_points, borehole_repair, etc.
                                             polarity: 1
                                         - node:
+                                            name: medical_infrastructure # hospitals, mobile clinics, field_hospitals, emergency treatment centers, medical supply chain facilities, etc.
                                             examples:
                                                 - hospital
                                                 - mobile clinic
@@ -522,9 +523,9 @@ node:
                                                 - emergency treatment centre
                                                 - medical supply chain facility
                                                 - medical infrastructure
-                                            name: medical_infrastructure # hospitals, mobile clinics, field_hospitals, emergency treatment centers, medical supply chain facilities, etc.
                                             polarity: 1
                                         - node:
+                                            name: transportation_infrastructure # bridge, repair, all_weather_roads, railway_lines, temporary_roads, road_rehabilitation
                                             patterns:
                                                 - \b(road|bridge|rail)\s(repair)
                                             examples:
@@ -535,9 +536,9 @@ node:
                                                 - road rehabilitation
                                                 - road repair
                                                 - transportation infrastructure
-                                            name: transportation_infrastructure # bridge, repair, all_weather_roads, railway_lines, temporary_roads, road_rehabilitation
                                             polarity: 1
                                         - node:
+                                            name: communication_infrastructure # cell-phone_towers, landlines, etc
                                             examples:
                                                 - internet access service
                                                 - cell-phone tower
@@ -547,9 +548,9 @@ node:
                                                 - telephone pole
                                                 - telepole
                                                 - communication infrastructure
-                                            name: communication_infrastructure # cell-phone_towers, landlines, etc
                                             polarity: 1
                                         - node:
+                                            name: energy_infrastructure # dams, electricity_grids, micro-grids, solar_panels, wind_turbines, wind_farms, solar_farms, etc.
                                             examples:
                                                 - dam
                                                 - electricity grid
@@ -561,7 +562,6 @@ node:
                                                 - wind farm
                                                 - solar farm
                                                 - energy infrastructure
-                                            name: energy_infrastructure # dams, electricity_grids, micro-grids, solar_panels, wind_turbines, wind_farms, solar_farms, etc.
                                             polarity: 1
                                 - node:
                                     name: train
@@ -573,14 +573,15 @@ node:
                                                     name: production_practices
                                                     children:
                                                         - node:
+                                                            name: planting_training # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
                                                             examples:
                                                                 - cover cropping
                                                                 - composting
                                                                 - planting practices
                                                                 - training
-                                                            name: planting_training # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
                                                             polarity: 1
                                                         - node:
+                                                            name: pest_weed_control # IPM_practices (integrated pest management), etc
                                                             patterns:
                                                                 - (\bIPM\b)(\s(practices))?
                                                             examples:
@@ -588,9 +589,9 @@ node:
                                                                 - training integrated pest management
                                                                 - training pest control
                                                                 - weed control
-                                                            name: pest_weed_control # IPM_practices (integrated pest management), etc
                                                             polarity: 1
                                                         - node:
+                                                            name: post_harvest_practices # storage, processing, packaging, safety_and_hygiene, certifications, ISO, FDA, work_place_safety, etc.
                                                             examples:
                                                                 - training storage
                                                                 - training processing
@@ -601,9 +602,9 @@ node:
                                                                 - FDA
                                                                 - workplace safety
                                                                 - post-harvest practices
-                                                            name: post_harvest_practices # storage, processing, packaging, safety_and_hygiene, certifications, ISO, FDA, work_place_safety, etc.
                                                             polarity: 1
                                                 - node:
+                                                    name: agriculture_information # digital_extension, famers_almanac, mobile_extension, SMS reminders,  Weather_information,  NMA_reports (national met agency), broadcast_weather_reports,
                                                     patterns:
                                                         - (\bNM[AS]\b)\s(reports?)
                                                     examples:
@@ -611,12 +612,12 @@ node:
                                                         - weather information
                                                         - national weather service meteorological met
                                                         - agriculture information
-                                                    name: agriculture_information # digital_extension, famers_almanac, mobile_extension, SMS reminders,  Weather_information,  NMA_reports (national met agency), broadcast_weather_reports,
                                                     polarity: 1
                                         - node:
                                             name: medical_training
                                             children:
                                                 - node:
+                                                    name: assessment_and_triage_of_health_facilities
                                                     examples:
                                                         - medical training
                                                         - assessment of health facilities
@@ -624,38 +625,38 @@ node:
                                                         - evaluation community health workers
                                                         - CHWs
                                                         - medical capacity assessment
-                                                    name: assessment_and_triage_of_health_facilities
                                                     polarity: 1
                                                 - node:
+                                                    name: capacity_building_of_medical_staff
                                                     examples:
                                                         - capacity building of medical staff
                                                         - medical capacity building
-                                                    name: capacity_building_of_medical_staff
                                                     polarity: 1
                                         - node:
+                                            name: human_rights_training
                                             examples:
                                                 - human rights training
-                                            name: human_rights_training
                                             polarity: 1
                                         - node:
+                                            name: financial_management # provision_of_credit_and_training_for_income_generation
                                             examples:
                                                 - provision of credit
                                                 - training for income generation
                                                 - training credit provision
                                                 - income generation training
                                                 - financial management
-                                            name: financial_management # provision_of_credit_and_training_for_income_generation
                                             polarity: 1
                                         - node:
+                                            name: education_systems #  provision_of_non_formal_education, community_sourced_temporary_teachers
                                             examples:
                                                 - provision of non-formal education
                                                 - training community sourced temporary teachers
                                                 - education systems
                                                 - capacity building of educational staff
                                                 - training education capacity building
-                                            name: education_systems #  provision_of_non_formal_education, community_sourced_temporary_teachers
                                             polarity: 1
                                         - node:
+                                            name: public_health_campaigns # behaviour change, campaigns, public information, hygiene_promotion, information_campaign, health_promoters,
                                             examples:
                                                 - behavior change campaign
                                                 - behaviour change campaign
@@ -665,34 +666,34 @@ node:
                                                 - health promotors
                                                 - health promotion
                                                 - public health campaigns
-                                            name: public_health_campaigns # behaviour change, campaigns, public information, hygiene_promotion, information_campaign, health_promoters,
                                             polarity: 1
                                         - node:
+                                            name: public_safety_campaigns # explosive_hazards
                                             examples:
                                                 - explosive hazards campaign
                                                 - public safety campaigns
-                                            name: public_safety_campaigns # explosive_hazards
                                             polarity: 1
                                         - node:
                                             name: emergency_preparedness_training
                                             children:
                                                 - node:
+                                                    name: surveillance_system_strengthening
                                                     examples:
                                                         - surveillance system strengthening
-                                                    name: surveillance_system_strengthening
                                                     polarity: 1
                                                 - node:
+                                                    name: humanitarian_certifications # SPHERE, core_standards, humanitarian_charter, etc.
                                                     examples:
                                                         - SPHERE
                                                         - core standards
                                                         - humanitarian charter
                                                         - humanitarian certifications
-                                                    name: humanitarian_certifications # SPHERE, core_standards, humanitarian_charter, etc.
                                                     polarity: 1
                                 - node:
                                     name: secure
                                     children:
                                         - node:
+                                            name: livelihood_protections #  agricultural assets, cattle_raids, supply chains,
                                             examples:
                                                 - agricultural assets
                                                 - cattle raid
@@ -705,29 +706,29 @@ node:
                                                 - neutralize threat to livelihood
                                                 - preserve livelihood
                                                 - secure livelihood
-                                            name: livelihood_protections #  agricultural assets, cattle_raids, supply chains,
                                             polarity: 1
                                         - node:
                                             name: community_security
                                             children:
                                                 - node:
+                                                    name: mine_clearance
                                                     examples:
                                                         - mine clearance
                                                         - demining
                                                         - remove land mines
                                                         - clear land mines
                                                         - neutralize land mines
-                                                    name: mine_clearance
                                                     polarity: 1
                                                 - node:
+                                                    name: temporary_policing_services
                                                     examples:
                                                         - temporary policing services
                                                         - temporary police
                                                         - temporary security services
                                                         - security escort
-                                                    name: temporary_policing_services
                                                     polarity: 1
                                         - node:
+                                            name: conflict_resolution # conflict_mediation, political_dialogue, disarmament, demobilization, reintegration, family_reunification, rehabilitation_of_child_soldier
                                             patterns:
                                                 - peace\s+(building|talks)
                                                 - conflict\s+resolution
@@ -740,9 +741,9 @@ node:
                                                 - family reunification
                                                 - rehabilitation of child soldiers
                                                 - conflict resolution
-                                            name: conflict_resolution # conflict_mediation, political_dialogue, disarmament, demobilization, reintegration, family_reunification, rehabilitation_of_child_soldier
                                             polarity: 1
                                         - node:
+                                            name: secure_natural_resources # Water_rights, Land_rights, land_deeds, Biotechnology, etc.
                                             examples:
                                                 - water rights
                                                 - land rights
@@ -755,28 +756,28 @@ node:
                                                 - neutralize threat to natural resources
                                                 - preserve natural resources
                                                 - secure natural resources
-                                            name: secure_natural_resources # Water_rights, Land_rights, land_deeds, Biotechnology, etc.
                                             polarity: 1
                                         - node:
+                                            name: cultural_resources # landmark_designation, world_heritage_status, etc.
                                             patterns:
                                                 - \bUNESCO\b\sworld\sheritage\ssite
                                             examples:
                                                 - landmark designation conservation
                                                 - world heritage status site
                                                 - cultural resources protections
-                                            name: cultural_resources # landmark_designation, world_heritage_status, etc.
                                             polarity: 1
                                 - node:
                                     name: legislate
                                     children:
                                         - node:
+                                            name: subsidize
                                             examples:
                                                 - subsidize
                                                 - subsidies
                                                 - subsidy
-                                            name: subsidize
                                             polarity: 1
                                         - node:
+                                            name: tax
                                             examples:
                                                 - tax
                                                 - taxation
@@ -784,9 +785,9 @@ node:
                                                 - tax legislation
                                                 - duty
                                                 - tariff
-                                            name: tax
                                             polarity: 1
                                         - node:
+                                            name: control_prices
                                             examples:
                                                 - control prices
                                                 - price control
@@ -794,7 +795,6 @@ node:
                                                 - legislate prices
                                                 - price ceiling
                                                 - price floor
-                                            name: control_prices
                                             polarity: 1
                         - node:
                             name: environmental
@@ -803,6 +803,7 @@ node:
                                     name: meteorologic
                                     children:
                                         - node:
+                                            name: weather
                                             examples:
                                                 - weather
                                                 - weather systems
@@ -814,34 +815,34 @@ node:
                                                 - climate variability
                                                 - snow
                                                 - humid
-                                            name: weather
                                             polarity: 1
                                         - node:
+                                            name: climate
                                             examples:
                                                 - climate
                                                 - tropical
                                                 - equatorial
-                                            name: climate
                                             polarity: 1
                                         - node:
                                             name: precipitation
                                             children:
                                                 - node:
+                                                    name: rainfall
                                                     examples:
                                                         - rainfall
                                                         - precipitation
                                                         - rains
                                                         - rain
-                                                    name: rainfall
                                                     polarity: 1
                                                 - node:
+                                                    name: storm
                                                     examples:
                                                         - storm
                                                         - seasonal monsoon
                                                         - extreme weather
-                                                    name: storm
                                                     polarity: 1
                                         - node:
+                                            name: temperature # temperature of ...
                                             examples:
                                                 - temperature
                                                 - cooler
@@ -853,20 +854,20 @@ node:
                                                 - record highs
                                                 - warmer
                                                 - warming
-                                            name: temperature # temperature of ...
                                             polarity: 1
                                 - node:
+                                    name: environment
                                     examples:
                                         - environment
-                                    name: environment
                                     polarity: 1
                                 - node:
+                                    name: climate_change_mitigation
                                     examples:
                                         - climate change mitigation
                                         - climate change adaptation
-                                    name: climate_change_mitigation
                                     polarity: 1
                                 - node:
+                                    name: resource_management
                                     examples:
                                         - conservation
                                         - sustainable use
@@ -876,9 +877,9 @@ node:
                                         - management forest
                                         - depleted resources
                                         - overexploitation
-                                    name: resource_management
                                     polarity: 1
                                 - node:
+                                    name: forestry
                                     examples:
                                         - afforestation
                                         - agroforestry
@@ -886,12 +887,12 @@ node:
                                         - reforestation
                                         - forestry
                                         - logging
-                                    name: forestry
                                     polarity: 1
                                 - node:
                                     name: natural_resources
                                     children:
                                         - node:
+                                            name: water_bodies
                                             examples:
                                                 - water
                                                 - sea
@@ -905,49 +906,49 @@ node:
                                                 - snow melt
                                                 - water body
                                                 - reservoir
-                                            name: water_bodies
                                             polarity: 1
                                         - node:
+                                            name: land_availability
                                             examples:
                                                 - land availability
                                                 - availability of cropland
-                                            name: land_availability
                                             polarity: 1
                                         - node:
+                                            name: fossil_fuels
                                             examples:
                                                 - fossil fuels
                                                 - coal
                                                 - oil
                                                 - natural gas
-                                            name: fossil_fuels
                                             polarity: 1
                                         - node:
+                                            name: soil
                                             examples:
                                                 - soil
                                                 - soil quality
                                                 - leaching into the soil
-                                            name: soil
                                             polarity: 1
                                         - node:
+                                            name: pasture
                                             examples:
                                                 - pastoral conditions
                                                 - pasture conditions
                                                 - rangeland conditions
                                                 - vegetation conditions
                                                 - grazing conditions
-                                            name: pasture
                                             polarity: 1
                                 - node:
                                     name: pollution
                                     children:
                                         - node:
+                                            name: air_pollution
                                             examples:
                                                 - pollution
                                                 - greenhouse gas emission
                                                 - ghg emission
-                                            name: air_pollution
                                             polarity: -1
                                         - node:
+                                            name: land_pollution
                                             examples:
                                                 - contaminant
                                                 - contamination
@@ -958,14 +959,13 @@ node:
                                                 - pollution
                                                 - leakage
                                                 - acidification
-                                            name: land_pollution
                                             polarity: -1
                                         - node:
+                                            name: climate_change
                                             examples:
                                                 - deforestation
                                                 - desertification
                                                 - climate change
-                                            name: climate_change
                                             polarity: -1
                         - node:
                             name: crisis_and_disaster
@@ -974,32 +974,33 @@ node:
                                     name: health
                                     children:
                                         - node:
+                                            name: pandemic
                                             examples:
                                                 - disease outbreak
                                                 - global pandemic
                                                 - pandemic
                                                 - epidemic
-                                            name: pandemic
                                             polarity: -1
                                         - node:
                                             name: mitigation
                                             children:
                                                 - node:
+                                                    name: sanitation
                                                     examples:
                                                         - sanitation
                                                         - hygiene materials
                                                         - soap
                                                         - wash hands
-                                                    name: sanitation
                                                     polarity: 1
                                                 - node:
+                                                    name: contact_tracing
                                                     patterns:
                                                         - (contact tracing)
                                                     examples:
                                                         - contact tracing
-                                                    name: contact_tracing
                                                     polarity: 1
                                                 - node:
+                                                    name: quarantine
                                                     patterns:
                                                         - (quarantin|shelter[- ]in[- ]place)
                                                     examples:
@@ -1007,23 +1008,23 @@ node:
                                                         - shelter in place
                                                         - isolation
                                                         - restrict movements
-                                                    name: quarantine
                                                     polarity: 1
                                                 - node:
+                                                    name: social_distancing
                                                     patterns:
                                                         - (social distancing)
                                                     examples:
                                                         - social distancing
-                                                    name: social_distancing
                                                     polarity: 1
                                                 - node:
+                                                    name: masks
                                                     examples:
                                                         - masks
                                                         - mask requirements
                                                         - wearing face coverings
-                                                    name: masks
                                                     polarity: 1
                                 - node:
+                                    name: famine
                                     examples:
                                         - famine
                                         - hunger
@@ -1033,84 +1034,84 @@ node:
                                         - severe food insecurity
                                         - global acute malnutrition
                                         - acute malnutrition
-                                    name: famine
                                     polarity: -1
                                 - node:
+                                    name: crisis
                                     examples:
                                         - crisis
                                         - crises
                                         - emergency
                                         - disasters
                                         - catastrophe
-                                    name: crisis
                                     polarity: -1
                                 - node:
                                     name: economic
                                     children:
                                         - node:
+                                            name: economic_crisis
                                             examples:
                                                 - economic crisis
                                                 - financial crisis
                                                 - economic volatility
-                                            name: economic_crisis
                                             polarity: -1
                                 - node:
                                     name: environmental_disasters
                                     children:
                                         - node:
+                                            name: crop_failure
                                             examples:
                                                 - crop failure
                                                 - loss of crops
                                                 - decimated crop yields
-                                            name: crop_failure
                                             polarity: -1
                                         - node:
+                                            name: insect_infestation
                                             examples:
                                                 - insect infestation
-                                            name: insect_infestation
                                             polarity: -1
                                         - node:
                                             name: natural_disaster
                                             children:
                                                 - node:
+                                                    name: flooding
                                                     examples:
                                                         - flood
                                                         - floods
                                                         - flooding
                                                         - flash flood
-                                                    name: flooding
                                                     polarity: -1
                                                 - node:
+                                                    name: avalanche
                                                     examples:
                                                         - avalanche
-                                                    name: avalanche
                                                     polarity: -1
                                                 - node:
+                                                    name: wildfire
                                                     examples:
                                                         - wildfire
-                                                    name: wildfire
                                                     polarity: -1
                                                 - node:
+                                                    name: volcanic_eruption
                                                     examples:
                                                         - volcanic eruption
-                                                    name: volcanic_eruption
                                                     polarity: -1
                                                 - node:
+                                                    name: drought
                                                     examples:
                                                         - drought
                                                         - droughts
                                                         - low rainfall
-                                                    name: drought
                                                     polarity: -1
                                                 - node:
+                                                    name: earthquake
                                                     examples:
                                                         - earthquake
-                                                    name: earthquake
                                                     polarity: -1
                                         - node:
                                             name: weather_issue
                                             children:
                                                 - node:
+                                                    name: cold_temperature
                                                     examples:
                                                         - cold temperature
                                                         - frigid conditions
@@ -1118,24 +1119,23 @@ node:
                                                         - arctic winds
                                                         - winter emergency
                                                         - state of emergency due to cold weather
-                                                    name: cold_temperature
                                                     polarity: -1
                                         - node:
+                                            name: fire # what is on fire?
                                             examples:
                                                 - fire
                                                 - blaze
                                                 - wildfires
                                                 - burned
-                                            name: fire # what is on fire?
                                             polarity: -1
                         - node:
                             name: economic_and_commerce
                             children:
                                 - node:
+                                    name: poverty
                                     examples:
                                         - poverty
                                         - poor
-                                    name: poverty
                                     polarity: -1
                                 - node:
                                     name: economic_activity
@@ -1144,11 +1144,12 @@ node:
                                             name: livelihood
                                             children:
                                                 - node:
+                                                    name: farming
                                                     examples:
                                                         - farming
-                                                    name: farming
                                                     polarity: 1
                                         - node:
+                                            name: currency
                                             examples:
                                                 - currency
                                                 - dollar
@@ -1157,7 +1158,6 @@ node:
                                                 - money
                                                 - hard currency
                                                 - foreign exchange
-                                            name: currency
                                             polarity: 1
                                         - node:
                                             name: cross_border_trade
@@ -1166,6 +1166,7 @@ node:
                                                     name: import
                                                     children:
                                                         - node:
+                                                            name: food_import # thing imported
                                                             examples:
                                                                 - imported foods
                                                                 - crop imports
@@ -1174,12 +1175,12 @@ node:
                                                                 - imports of staples
                                                                 - international crop trade
                                                                 - food trade between countries
-                                                            name: food_import # thing imported
                                                             polarity: 1
                                                 - node:
                                                     name: export
                                                     children:
                                                         - node:
+                                                            name: food_export # thing exported
                                                             examples:
                                                                 - crop exports
                                                                 - food exports
@@ -1188,12 +1189,12 @@ node:
                                                                 - exports of staples
                                                                 - international crop trade
                                                                 - food trade between countries
-                                                            name: food_export # thing exported
                                                             polarity: 1
                                         - node:
                                             name: market
                                             children:
                                                 - node:
+                                                    name: labor_market
                                                     examples:
                                                         - labor market
                                                         - labour market
@@ -1202,9 +1203,9 @@ node:
                                                         - employment
                                                         - recruit
                                                         - find work
-                                                    name: labor_market
                                                     polarity: 1
                                                 - node:
+                                                    name: fuel
                                                     examples:
                                                         - fuel
                                                         - biofuel
@@ -1218,12 +1219,12 @@ node:
                                                         - petrol
                                                         - diesel
                                                         - oil production
-                                                    name: fuel
                                                     polarity: 1
                                                 - node:
                                                     name: price_or_cost
                                                     children:
                                                         - node:
+                                                            name: food_price
                                                             examples:
                                                                 - food price
                                                                 - food prices
@@ -1239,9 +1240,9 @@ node:
                                                                 - rice prices
                                                                 - high food prices
                                                                 - grain cost
-                                                            name: food_price
                                                             polarity: 1
                                                         - node:
+                                                            name: crop_price
                                                             examples:
                                                                 - bamboo prices
                                                                 - banana prices
@@ -1287,120 +1288,120 @@ node:
                                                                 - vegetable prices
                                                                 - wheat prices
                                                                 - white maize prices
-                                                            name: crop_price
                                                             polarity: 1
                                                         - node:
+                                                            name: oil_price
                                                             examples:
                                                                 - oil price
                                                                 - cost of crude oil
-                                                            name: oil_price
                                                             polarity: 1
                                                         - node:
+                                                            name: cost_of_living
                                                             examples:
                                                                 - cost of living
                                                                 - rent
                                                                 - housing cost
-                                                            name: cost_of_living
                                                             polarity: 1
                                                         - node:
+                                                            name: cost_of_transportation
                                                             examples:
                                                                 - cost of transportation
                                                                 - rising transit costs
                                                                 - fuel prices
-                                                            name: cost_of_transportation
                                                             polarity: 1
                                                 - node:
                                                     name: revenue
                                                     children:
                                                         - node:
+                                                            name: household_income
                                                             examples:
                                                                 - household income
                                                                 - take home pay
                                                                 - wages
                                                                 - compensation
-                                                            name: household_income
                                                             polarity: 1
                                                         - node:
+                                                            name: farmer_income
                                                             examples:
                                                                 - farmer income
                                                                 - seasonal income
-                                                            name: farmer_income
                                                             polarity: 1
                                                 - node:
+                                                    name: budget
                                                     examples:
                                                         - budget
                                                         - budgetary constraints
                                                         - fiscal deficits
-                                                    name: budget
                                                     polarity: 1
                                                 - node:
+                                                    name: assets
                                                     examples:
                                                         - assets
                                                         - property
                                                         - land assets
-                                                    name: assets
                                                     polarity: 1
                                                 - node:
                                                     name: supply
                                                     children:
                                                         - node:
+                                                            name: food_supply
                                                             examples:
                                                                 - food supply
                                                                 - market supply of crops
                                                                 - maize supply
                                                                 - domestic food supplies
                                                                 - supplies of food crops
-                                                            name: food_supply
                                                             polarity: 1
                                                 - node:
                                                     name: demand
                                                     children:
                                                         - node:
+                                                            name: food_demand
                                                             examples:
                                                                 - food demand
                                                                 - maize demand
                                                                 - market demand for crops
-                                                            name: food_demand
                                                             polarity: 1
                                                 - node:
                                                     name: transaction
                                                     children:
                                                         - node:
+                                                            name: oil_transaction
                                                             examples:
                                                                 - oil transaction
                                                                 - purchasing crude oil
                                                                 - oil trade
                                                                 - selling barrels
-                                                            name: oil_transaction
                                                             polarity: 1
                                                         - node:
+                                                            name: food_purchase
                                                             examples:
                                                                 - purchasing food
-                                                            name: food_purchase
                                                             polarity: 1
                                                 - node:
+                                                    name: depreciation
                                                     examples:
                                                         - depreciation
                                                         - depreciating
                                                         - devaluation
                                                         - decreased in value
-                                                    name: depreciation
                                                     polarity: -1
                                                 - node:
+                                                    name: inflation
                                                     examples:
                                                         - inflation
                                                         - hyperinflation
                                                         - inflationary pressure
-                                                    name: inflation
                                                     polarity: -1
                                                 - node:
+                                                    name: currency_devaluation
                                                     examples:
                                                         - currency devaluation
                                                         - devaluate
                                                         - currency devalued
-                                                    name: currency_devaluation
                                                     polarity: -1
                                                 - node:
+                                                    name: food_stocks
                                                     examples:
                                                         - food stocks
                                                         - food reserves
@@ -1409,9 +1410,9 @@ node:
                                                         - grain reserves
                                                         - food emergency reserves
                                                         - price stabilization reserves
-                                                    name: food_stocks
                                                     polarity: 1
                                         - node:
+                                            name: competition # between? about?
                                             examples:
                                                 - business competition
                                                 - competitors
@@ -1419,25 +1420,24 @@ node:
                                                 - competition for resources
                                                 - economic competition
                                                 - market pressure
-                                            name: competition # between? about?
                                             polarity: 1
                                         - node:
+                                            name: development # being developed
                                             examples:
                                                 - development
                                                 - economic development
                                                 - rural development
                                                 - agricultural development
-                                            name: development # being developed
                                             polarity: 1
                         - node:
                             name: research_development
                             children:
                                 - node:
+                                    name: technology_and_innovation
                                     examples:
                                         - novel new technology
                                         - research innovation
                                         - breakthrough technology
-                                    name: technology_and_innovation
                                     polarity: 1
                         - node:
                             name: social_and_political
@@ -1446,21 +1446,22 @@ node:
                                     name: communication
                                     children:
                                         - node:
+                                            name: planning
                                             examples:
                                                 - planning
                                                 - develop plans
-                                            name: planning
                                             polarity: 1
                                         - node:
+                                            name: discussion_debate
                                             examples:
                                                 - discussion
                                                 - debate
                                                 - communication
                                                 - discourse
                                                 - dialogue
-                                            name: discussion_debate
                                             polarity: 1
                                         - node:
+                                            name: collaboration
                                             examples:
                                                 - collaboration
                                                 - collaborate
@@ -1468,41 +1469,41 @@ node:
                                                 - partner
                                                 - pact
                                                 - consortium
-                                            name: collaboration
                                             polarity: 1
                                 - node:
+                                    name: basic_services
                                     examples:
                                         - basic services
                                         - primary services
                                         - essential services
-                                    name: basic_services
                                     polarity: 1
                                 - node:
                                     name: population_group
                                     children:
                                         - node:
+                                            name: population_density
                                             examples:
                                                 - population density
                                                 - local population
-                                            name: population_density
                                             polarity: 1
                                         - node:
+                                            name: de-population
                                             examples:
                                                 - depopulation
                                                 - de-population
-                                            name: de-population
                                             polarity: -1
                                         - node:
+                                            name: overcrowding
                                             examples:
                                                 - overcrowding
                                                 - over-crowding
                                                 - population density
-                                            name: overcrowding
                                             polarity: -1
                                 - node:
                                     name: educational
                                     children:
                                         - node:
+                                            name: education
                                             examples:
                                                 - literacy
                                                 - education
@@ -1512,27 +1513,27 @@ node:
                                                 - classroom
                                                 - school leadership
                                                 - access to education
-                                            name: education
                                             polarity: 1
                                         - node:
+                                            name: educational_materials
                                             examples:
                                                 - educational materials
                                                 - reading materials
                                                 - teaching aids
                                                 - classroom supplies
                                                 - school supplies
-                                            name: educational_materials
                                             polarity: 1
                                 - node:
                                     name: government
                                     children:
                                         - node:
+                                            name: census
                                             examples:
                                                 - census
                                                 - survey
-                                            name: census
                                             polarity: 1
                                         - node:
+                                            name: regulation # topic
                                             examples:
                                                 - regulation
                                                 - governance
@@ -1541,9 +1542,9 @@ node:
                                                 - policy
                                                 - legislation
                                                 - policies
-                                            name: regulation # topic
                                             polarity: 1
                                         - node:
+                                            name: tax_duty
                                             examples:
                                                 - tax duty
                                                 - taxes
@@ -1552,21 +1553,21 @@ node:
                                                 - tariff
                                                 - export taxes
                                                 - excise
-                                            name: tax_duty
                                             polarity: 1
                                 - node:
                                     name: political
                                     children:
                                         - node:
+                                            name: political_instability
                                             examples:
                                                 - political instability
                                                 - power struggle
                                                 - regime breakdown
                                                 - political violence
                                                 - unrest
-                                            name: political_instability
                                             polarity: -1
                                         - node:
+                                            name: corruption
                                             examples:
                                                 - corruption
                                                 - fraud
@@ -1574,27 +1575,27 @@ node:
                                                 - bribery
                                                 - extortion
                                                 - nepotism
-                                            name: corruption
                                             polarity: -1
                                         - node:
+                                            name: independence
                                             examples:
                                                 - independence
                                                 - self-rule
                                                 - political independence
-                                            name: independence
                                             polarity: 1
                                         - node:
+                                            name: sanction
                                             examples:
                                                 - sanction
                                                 - economic sanctions
                                                 - diplomatic sanctions
                                                 - sanctioned
-                                            name: sanction
                                             polarity: -1
                                 - node:
                                     name: migration
                                     children:
                                         - node:
+                                            name: human_migration
                                             examples:
                                                 - migration
                                                 - displacement
@@ -1612,18 +1613,18 @@ node:
                                                 - refugee population
                                                 - IDPs
                                                 - human displacement
-                                            name: human_migration
                                             polarity: 1
                                         - node:
+                                            name: hosting_idps
                                             examples:
                                                 - hosting IDPs
                                                 - internal displacement
                                                 - host internally displaced persons
                                                 - host refugees
                                                 - host migrants
-                                            name: hosting_idps
                                             polarity: 1
                                         - node:
+                                            name: emigration
                                             examples:
                                                 - emigration
                                                 - leaving
@@ -1633,9 +1634,9 @@ node:
                                                 - fleeing
                                                 - fled
                                                 - refugees from countries
-                                            name: emigration
                                             polarity: 1
                                         - node:
+                                            name: immigration
                                             examples:
                                                 - arrival
                                                 - arrivals
@@ -1645,48 +1646,48 @@ node:
                                                 - choose to come
                                                 - influx
                                                 - new refugees
-                                            name: immigration
                                             polarity: 1
                                         - node:
+                                            name: migration_returnees
                                             examples:
                                                 - returnee
                                                 - return to homeland
                                                 - returned to countries
-                                            name: migration_returnees
                                             polarity: 1
                                         - node:
+                                            name: seasonal_migration
                                             examples:
                                                 - seasonal migration
                                                 - cyclic migration
                                                 - migrant
-                                            name: seasonal_migration
                                             polarity: 1
                                 - node:
                                     name: threat
                                     children:
                                         - node:
+                                            name: exploitation
                                             examples:
                                                 - exploitation
-                                            name: exploitation
                                             polarity: -1
                                         - node:
+                                            name: physical_insecurity
                                             examples:
                                                 - insecurity
                                                 - instability
                                                 - physical insecurity
                                                 - perceived security
                                                 - dangerous
-                                            name: physical_insecurity
                                             polarity: -1
                                         - node:
+                                            name: disarmament
                                             examples:
                                                 - disarmament
-                                            name: disarmament
                                             polarity: 1
                                 - node:
                                     name: criminal
                                     children:
                                         - node:
+                                            name: crime
                                             examples:
                                                 - crime
                                                 - crimes
@@ -1706,9 +1707,9 @@ node:
                                                 - violent crime
                                                 - lawlessness
                                                 - illegal
-                                            name: crime
                                             polarity: -1
                                         - node:
+                                            name: abduction
                                             examples:
                                                 - child abductions
                                                 - abduction
@@ -1716,12 +1717,12 @@ node:
                                                 - forced recruitment
                                                 - abducted
                                                 - kidnapped
-                                            name: abduction
                                             polarity: -1
                                 - node:
                                     name: conflict
                                     children:
                                         - node:
+                                            name: tension
                                             examples:
                                                 - political tension
                                                 - political tensions
@@ -1733,9 +1734,9 @@ node:
                                                 - hardship
                                                 - burden
                                                 - threatening
-                                            name: tension
                                             polarity: -1
                                         - node:
+                                            name: hostility
                                             examples:
                                                 - conflict
                                                 - war
@@ -1759,9 +1760,9 @@ node:
                                                 - sabotage
                                                 - vandalized
                                                 - army mobilization
-                                            name: hostility
                                             polarity: -1
                                         - node:
+                                            name: demonstrate
                                             examples:
                                                 - civil unrest
                                                 - social unrest
@@ -1776,9 +1777,9 @@ node:
                                                 - turmoil
                                                 - demands
                                                 - riot
-                                            name: demonstrate
                                             polarity: -1
                                         - node:
+                                            name: war
                                             examples:
                                                 - bombard
                                                 - genocide
@@ -1800,9 +1801,9 @@ node:
                                                 - invaded
                                                 - warfare
                                                 - the outbreak of war
-                                            name: war
                                             polarity: -1
                                         - node:
+                                            name: attack
                                             examples:
                                                 - bombard
                                                 - genocide
@@ -1824,9 +1825,9 @@ node:
                                                 - invasion
                                                 - massacre
                                                 - psychological warfare
-                                            name: attack
                                             polarity: -1
                                         - node:
+                                            name: strike
                                             examples:
                                                 - bombard
                                                 - attack
@@ -1835,9 +1836,9 @@ node:
                                                 - bomb
                                                 - bombing
                                                 - explosion
-                                            name: strike
                                             polarity: -1
                                         - node:
+                                            name: terrorism
                                             examples:
                                                 - terrorism
                                                 - insurgency
@@ -1845,39 +1846,38 @@ node:
                                                 - terrorist activity
                                                 - roadside bombing
                                                 - bomb threat
-                                            name: terrorism
                                             polarity: -1
                                         - node:
+                                            name: livestock_raid
                                             examples:
                                                 - cattle raid
                                                 - livestock raid
                                                 - steal livestock
                                                 - cattle raiding
-                                            name: livestock_raid
                                             polarity: -1
                         - node:
                             name: movement
                             children:
                                 - node:
+                                    name: transport
                                     examples:
                                         - transport
                                         - transporting
                                         - transportation
                                         - delivery
-                                    name: transport
                                     polarity: 1
                                 - node:
+                                    name: evacuate_humanitarian_workers
                                     examples:
                                         - evacuate humanitarian workers
                                         - evacuated aid personnel
                                         - evacuating humanitarian
-                                    name: evacuate_humanitarian_workers
                                     polarity: -1
                                 - node:
+                                    name: animal_migration
                                     examples:
                                         - animal migration
                                         - livestock migration
-                                    name: animal_migration
                                     polarity: 1
                         - node:
                             name: agriculture
@@ -1889,44 +1889,45 @@ node:
                                             name: locust_related
                                             children:
                                                 - node:
+                                                    name: locust_eggs
                                                     examples:
                                                         - locust eggs
-                                                    name: locust_eggs
                                                     polarity: -1
                                                 - node:
+                                                    name: locust_breeding
                                                     examples:
                                                         - locust breeding
                                                         - breeding area locust
-                                                    name: locust_breeding
                                                     polarity: -1
                                                 - node:
+                                                    name: locust_hatching
                                                     examples:
                                                         - locust hatching
-                                                    name: locust_hatching
                                                     polarity: -1
                                                 - node:
                                                     name: solitary
                                                     children:
                                                         - node:
+                                                            name: solitary_hopper
                                                             examples:
                                                                 - solitarious hopper
                                                                 - solitary
                                                                 - hopper
                                                                 - immature
                                                                 - instar
-                                                            name: solitary_hopper
                                                             polarity: -1
                                                         - node:
+                                                            name: solitary_locust
                                                             examples:
                                                                 - solitary locust
                                                                 - solitarious adult locust
                                                                 - mature
-                                                            name: solitary_locust
                                                             polarity: -1
                                                 - node:
                                                     name: gregarious
                                                     children:
                                                         - node:
+                                                            name: hopper_band
                                                             patterns:
                                                                 - (hopper\s+band)|(bands?\s+of\s+hoppers)
                                                             examples:
@@ -1934,9 +1935,9 @@ node:
                                                                 - locust hopper groups
                                                                 - hopper outbreak upsurge
                                                                 - immature
-                                                            name: hopper_band
                                                             polarity: -1
                                                         - node:
+                                                            name: locust_swarm
                                                             patterns:
                                                                 - (locust\s+swarm)|(swarms?\s+of\s+locust)
                                                             examples:
@@ -1946,23 +1947,23 @@ node:
                                                                 - adult
                                                                 - locust infestation
                                                                 - locust outbreak
-                                                            name: locust_swarm
                                                             polarity: -1
                                 - node:
+                                    name: planting
                                     examples:
                                         - planting
                                         - plant
                                         - planted crops
                                         - horticulture
-                                    name: planting
                                     polarity: 1
                                 - node:
+                                    name: crop_storage
                                     examples:
                                         - store crops
                                         - granary
-                                    name: crop_storage
                                     polarity: 1
                                 - node:
+                                    name: fertilization
                                     examples:
                                         - fertilization
                                         - biofertilizers
@@ -1971,9 +1972,9 @@ node:
                                         - composts
                                         - guano
                                         - manure
-                                    name: fertilization
                                     polarity: 1
                                 - node:
+                                    name: irrigation
                                     examples:
                                         - localized irrigation
                                         - capillary irrigation
@@ -1992,14 +1993,14 @@ node:
                                         - subsurface irrigation
                                         - irrigation system
                                         - irrigation
-                                    name: irrigation
                                     polarity: 1
                                 - node:
+                                    name: pesticide
                                     examples:
                                         - pesticide
-                                    name: pesticide
                                     polarity: 1
                                 - node:
+                                    name: crop_production
                                     examples:
                                         - crop yield
                                         - harvest
@@ -2057,9 +2058,9 @@ node:
                                         - cropping
                                         - agricultural production
                                         - cultivate
-                                    name: crop_production
                                     polarity: 1
                                 - node:
+                                    name: livestock_production
                                     examples:
                                         - livestock
                                         - cattle
@@ -2072,12 +2073,12 @@ node:
                                         - livestock production
                                         - domestic animals
                                         - meat production
-                                    name: livestock_production
                                     polarity: 1
                                 - node:
                                     name: plant_disease
                                     children:
                                         - node:
+                                            name: pest_infestation
                                             examples:
                                                 - pest infestation
                                                 - armyworm
@@ -2094,29 +2095,28 @@ node:
                                                 - midges
                                                 - slugs
                                                 - pest
-                                            name: pest_infestation
                                             polarity: -1
                                 - node:
+                                    name: livestock_disease
                                     examples:
                                         - livestock disease
                                         - livestock diseases
-                                    name: livestock_disease
                                     polarity: -1
                         - node:
                             name: wild_food_sources
                             children:
                                 - node:
+                                    name: foraging_wild_foods
                                     examples:
                                         - gather gathering wild foods
                                         - forage
                                         - foraging
-                                    name: foraging_wild_foods
                                     polarity: 1
                                 - node:
+                                    name: hunting
                                     examples:
                                         - hunting
                                         - trapping
-                                    name: hunting
                                     polarity: 1
                         - node:
                             name: health_and_life
@@ -2125,58 +2125,59 @@ node:
                                     name: living_condition
                                     children:
                                         - node:
+                                            name: food_safety
                                             examples:
                                                 - food safety
-                                            name: food_safety
                                             polarity: 1
                                         - node:
+                                            name: water_safety
                                             examples:
                                                 - water safety
                                                 - unsafe water
                                                 - lack of clean water
                                                 - unpotable
-                                            name: water_safety
                                             polarity: 1
                                         - node:
+                                            name: sanitation_and_hygiene
                                             examples:
                                                 - unsanitary condition
                                                 - unclean workspaces
                                                 - unclean unsafe living conditions
-                                            name: sanitation_and_hygiene
                                             polarity: 1
                                 - node:
                                     name: nutrition
                                     children:
                                         - node:
+                                            name: food_intake
                                             examples:
                                                 - food intake
-                                            name: food_intake
                                             polarity: 1
                                         - node:
+                                            name: food_diversity
                                             examples:
                                                 - food diversity
                                                 - food variety
                                                 - nutritional variety
                                                 - nutrition
                                                 - nutritional security
-                                            name: food_diversity
                                             polarity: 1
                                         - node:
+                                            name: food_preparation
                                             examples:
                                                 - food preparation
                                                 - cooking
                                                 - meal preparation
-                                            name: food_preparation
                                             polarity: 1
                                         - node:
+                                            name: food_preference
                                             examples:
                                                 - food preference
                                                 - seed preference
                                                 - dietary preferences
                                                 - food taste choice
-                                            name: food_preference
                                             polarity: 1
                                         - node:
+                                            name: malnutrition
                                             examples:
                                                 - food gap
                                                 - malnutrition
@@ -2185,43 +2186,43 @@ node:
                                                 - nutritional deficiency
                                                 - vitamin deficiencies
                                                 - food riots
-                                            name: malnutrition
                                             polarity: -1
                                         - node:
+                                            name: breast_feeding
                                             examples:
                                                 - breast feeding
                                                 - breastfeeding
                                                 - breastfed
-                                            name: breast_feeding
                                             polarity: 1
                                 - node:
+                                    name: biometrics
                                     examples:
                                         - biometrics
                                         - fingerprint
                                         - human features
-                                    name: biometrics
                                     polarity: 1
                                 - node:
                                     name: disease
                                     children:
                                         - node:
+                                            name: transmission
                                             examples:
                                                 - transmission
                                                 - community spread
                                                 - airborne
                                                 - virus
-                                            name: transmission
                                             polarity: -1
                                         - node:
+                                            name: covid_virus
                                             patterns:
                                                 - (COVID|covid)
                                             examples:
                                                 - covid
                                                 - corona virus
                                                 - coronavirus
-                                            name: covid_virus
                                             polarity: -1
                                         - node:
+                                            name: human_disease
                                             examples:
                                                 - HIV
                                                 - malaria
@@ -2247,19 +2248,19 @@ node:
                                                 - preventable diseases
                                                 - infection
                                                 - infectious
-                                            name: human_disease
                                             polarity: 1
                                         - node:
+                                            name: alcohol_drug_and_substance_abuse
                                             examples:
                                                 - alcohol drug and substance abuse
                                                 - alcohol abuse
                                                 - drug rehabilitation
-                                            name: alcohol_drug_and_substance_abuse
                                             polarity: -1
                                 - node:
                                     name: treatment
                                     children:
                                         - node:
+                                            name: health_treatment
                                             examples:
                                                 - disease treatment
                                                 - medication
@@ -2268,9 +2269,9 @@ node:
                                                 - therapeutic treatment
                                                 - cure
                                                 - surgery
-                                            name: health_treatment
                                             polarity: 1
                                 - node:
+                                    name: death
                                     examples:
                                         - death
                                         - mortality
@@ -2284,41 +2285,41 @@ node:
                                         - suicide
                                         - deaths
                                         - murder
-                                    name: death
                                     polarity: -1
                                 - node:
+                                    name: injury
                                     examples:
                                         - injury
                                         - wounds
-                                    name: injury
                                     polarity: -1
                                 - node:
+                                    name: birth
                                     examples:
                                         - birth
                                         - childbirth
                                         - neonatal
                                         - born
-                                    name: birth
                                     polarity: 1
                                 - node:
+                                    name: basic_needs
                                     examples:
                                         - basic needs
                                         - population needs
                                         - humanitarian needs
-                                    name: basic_needs
                                     polarity: 1
                         - node:
                             name: access
                             children:
                                 - node:
+                                    name: market_access
                                     examples:
                                         - market access
-                                    name: market_access
                                     polarity: 1
                                 - node:
                                     name: infrastructure_access
                                     children:
                                         - node:
+                                            name: electrical
                                             examples:
                                                 - energy
                                                 - electric plant
@@ -2327,17 +2328,17 @@ node:
                                                 - electricity
                                                 - access to electrical services
                                                 - electrical services
-                                            name: electrical
                                             polarity: 1
                                         - node:
+                                            name: waste
                                             examples:
                                                 - waste
                                                 - sewage treatment
                                                 - sewage treatment
                                                 - garbage removal
-                                            name: waste
                                             polarity: 1
                                         - node:
+                                            name: road_access
                                             examples:
                                                 - highway access
                                                 - road network access
@@ -2345,24 +2346,24 @@ node:
                                                 - accessibility by road
                                                 - able to be reached by road
                                                 - road conditions
-                                            name: road_access
                                             polarity: 1
                                         - node:
+                                            name: bridge
                                             examples:
                                                 - bridge
-                                            name: bridge
                                             polarity: 1
                                         - node:
+                                            name: construction_materials
                                             examples:
                                                 - construction materials
                                                 - access to construction materials
                                                 - availability of building materials
-                                            name: construction_materials
                                             polarity: 1
                                         - node:
                                             name: transportation
                                             children:
                                                 - node:
+                                                    name: travel
                                                     examples:
                                                         - transit system
                                                         - public transportation
@@ -2370,25 +2371,25 @@ node:
                                                         - travel
                                                         - transit
                                                         - air services
-                                                    name: travel
                                                     polarity: 1
                                                 - node:
+                                                    name: shipping
                                                     examples:
                                                         - shipping
                                                         - freight
                                                         - cargo
-                                                    name: shipping
                                                     polarity: 1
                                         - node:
                                             name: medical
                                             children:
                                                 - node:
+                                                    name: ambulances
                                                     examples:
                                                         - ambulances
                                                         - EMS
-                                                    name: ambulances
                                                     polarity: 1
                                                 - node:
+                                                    name: medical_facility
                                                     examples:
                                                         - hospital
                                                         - clinic
@@ -2396,18 +2397,18 @@ node:
                                                         - health post
                                                         - healthcare facility availability
                                                         - access to hospitals
-                                                    name: medical_facility
                                                     polarity: 1
                                                 - node:
+                                                    name: medical_workers
                                                     examples:
                                                         - medical workers
                                                         - health workers
                                                         - doctors
                                                         - nurses nursing staff
                                                         - first responders
-                                                    name: medical_workers
                                                     polarity: 1
                                 - node:
+                                    name: water_access
                                     examples:
                                         - water insecurity
                                         - water shortage
@@ -2442,9 +2443,9 @@ node:
                                         - water pipes
                                         - water access
                                         - water supply
-                                    name: water_access
                                     polarity: 1
                         - node:
+                            name: trend
                             examples:
                                 - trend
                                 - trends
@@ -2456,54 +2457,54 @@ node:
                                 - tendency
                                 - declined
                                 - improved
-                            name: trend
                             polarity: 1
                         - node:
                             name: food_security
                             children:
                                 - node:
+                                    name: food_availability
                                     examples:
                                         - food availability
                                         - food security
                                         - good domestic food supply
                                         - availability of foods
-                                    name: food_availability
                                     opposite: wm/concept/causal_factor/food_insecurity/food_unavailability
                                     polarity: 1
                                 - node:
+                                    name: food_production
                                     examples:
                                         - food production
                                         - producing food
-                                    name: food_production
                                     polarity: 1
                                 - node:
+                                    name: food_utilization
                                     examples:
                                         - food utilization
                                         - consumption of enough food
-                                    name: food_utilization
                                     opposite: wm/concept/causal_factor/food_insecurity/food_nonutilization
                                     polarity: 1
                                 - node:
+                                    name: household_food_storage
                                     examples:
                                         - household food storage
-                                    name: household_food_storage
                                     polarity: 1
                                 - node:
+                                    name: food_access
                                     examples:
                                         - food access
-                                    name: food_access
                                     opposite: wm/concept/causal_factor/food_insecurity/food_nonaccess
                                     polarity: 1
                                 - node:
+                                    name: food_stability
                                     examples:
                                         - food stability
-                                    name: food_stability
                                     opposite: wm/concept/causal_factor/food_insecurity/food_instability
                                     polarity: 1
                         - node:
                             name: food_insecurity
                             children:
                                 - node:
+                                    name: food_unavailability
                                     examples:
                                         - food insecurity
                                         - food scarcity
@@ -2513,39 +2514,39 @@ node:
                                         - unavailability of food
                                         - food deficits
                                         - cereal shortage
-                                    name: food_unavailability
                                     opposite: wm/concept/causal_factor/food_security/food_availability
                                     polarity: -1
                                 - node:
+                                    name: food_nonutilization
                                     examples:
                                         - food wasting
                                         - food wastage
                                         - inadequate food consumption
-                                    name: food_nonutilization
                                     opposite: wm/concept/causal_factor/food_security/food_utilization
                                     polarity: -1
                                 - node:
+                                    name: food_nonaccess
                                     examples:
                                         - food nonaccess
                                         - unable to access food supplies
-                                    name: food_nonaccess
                                     opposite: wm/concept/causal_factor/food_security/food_access
                                     polarity: -1
                                 - node:
+                                    name: food_instability
                                     examples:
                                         - food instability
-                                    name: food_instability
                                     opposite: wm/concept/causal_factor/food_security/food_stability
                                     polarity: -1
                 - node:
                     name: entity
                     children:
                         - node:
+                            name: geo-location
                             examples:
                                 - geographic location
-                            name: geo-location
                             polarity: 1
                         - node:
+                            name: organization
                             examples:
                                 - commission
                                 - workshop
@@ -2556,27 +2557,27 @@ node:
                                 - programme
                                 - Programme Work
                                 - convention
-                            name: organization
                             polarity: 1
                         - node:
+                            name: government_entity
                             examples:
                                 - government entity
                                 - program entity
-                            name: government_entity
                             polarity: 1
                         - node:
                             name: person_and_group
                             children:
                                 - node:
+                                    name: population
                                     examples:
                                         - people group
                                         - people
                                         - ethnic group
                                         - population
                                         - rural
-                                    name: population
                                     polarity: 1
                                 - node:
+                                    name: community
                                     examples:
                                         - community
                                         - villages
@@ -2584,12 +2585,11 @@ node:
                                         - family
                                         - families
                                         - communities
-                                    name: community
                                     polarity: 1
                         - node:
+                            name: artifact
                             examples:
                                 - artifact
-                            name: artifact
                             polarity: 1
                 - node:
                     name: time
@@ -2598,14 +2598,15 @@ node:
                             name: temporal
                             children:
                                 - node:
+                                    name: crop_season
                                     examples:
                                         - harvest
                                         - lean season
                                         - planting season
                                         - sowing season
-                                    name: crop_season
                                     polarity: 1
                                 - node:
+                                    name: season
                                     examples:
                                         - summer
                                         - winter
@@ -2614,6 +2615,5 @@ node:
                                         - dry season
                                         - rainy season
                                         - monsoon season
-                                    name: season
                                     polarity: 1
 
