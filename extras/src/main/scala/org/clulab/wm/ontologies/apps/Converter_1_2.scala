@@ -19,7 +19,7 @@ import java.util.{ArrayList => JArrayList}
 import java.util.{IdentityHashMap => JIdentityHashMap}
 import java.util.{LinkedHashMap => JLinkedHashMap}
 
-class Converter(inputFile: String, outputFilename: String, newLocalNode: EidosNode => LocalNode) {
+class Converter_1_2(inputFile: String, outputFilename: String, newLocalNode: EidosNode => LocalNode) {
   val utf8: String = StandardCharsets.UTF_8.toString
 
   def newPrintWriterFromFile(file: File): PrintWriter =
@@ -61,7 +61,7 @@ class Converter(inputFile: String, outputFilename: String, newLocalNode: EidosNo
     true
   }
 
-  val localRoot = eidosToLocalMap.get(network.getRootNode.get)
+  val localRoot: LocalNode = eidosToLocalMap.get(network.getRootNode.get)
   // See https://stackoverflow.com/questions/57728245/how-can-i-control-yaml-indentation-using-snakeyaml-during-dumping
   val dumperOptions = new DumperOptions()
   dumperOptions.setWidth(300)
@@ -69,36 +69,36 @@ class Converter(inputFile: String, outputFilename: String, newLocalNode: EidosNo
   dumperOptions.setIndent(2)
   dumperOptions.setIndicatorIndent(2)
   dumperOptions.setIndentWithIndicator(true) // Would like this to be false, but then have indent on that line be 6
-  val yaml = new Yaml(dumperOptions).dumpAs(localRoot, Tag.MAP, FlowStyle.BLOCK)
+  val yaml: String = new Yaml(dumperOptions).dumpAs(localRoot, Tag.MAP, FlowStyle.BLOCK)
 
   def leadingSpaces(text: String): Int = text.indexWhere(_ != ' ')
 
-  val lines = yaml.split('\n')
-  val indents = lines.map(leadingSpaces)
-  val indentMap = indents
+  val lines: Array[String] = yaml.split('\n')
+  val indents: Array[Int] = lines.map(leadingSpaces)
+  val indentMap: Map[Int, Int] = indents
       .distinct
       .sorted
       .zipWithIndex.map { case (indent, index) =>
     indent -> 4 * index
   }
       .toMap
-  val newLines = lines.zip(indents).map { case (line, indent) =>
+  val newLines: Array[String] = lines.zip(indents).map { case (line, indent) =>
     " " * indentMap(indent) + line.substring(indent).replace('@', '#')
   }
-  val newYaml = headerText + newLines.mkString("", "\n", "\n")
+  val newYaml: String = headerText + newLines.mkString("", "\n", "\n")
 
-  val printWriter = newPrintWriterFromFile(new File(outputFilename))
+  val printWriter: PrintWriter = newPrintWriterFromFile(new File(outputFilename))
   printWriter.println(newYaml)
   printWriter.close()
 }
 
-object ConverterApp extends App {
+object Converter_1_2_App extends App {
 
   def run(inputFile: String): Unit = {
-    new Converter(inputFile, inputFile + ".1", eidosNode => new LocalNode1(eidosNode)) // make children explicit
-    new Converter(inputFile, inputFile + ".2", eidosNode => new LocalNode2(eidosNode)) // change OntologyNode to node
-    new Converter(inputFile, inputFile + ".3", eidosNode => new LocalNode3(eidosNode)) // move name to top
-    new Converter(inputFile, inputFile + ".4", eidosNode => new LocalNode4(eidosNode)) // combine definition and descriptions
+    new Converter_1_2(inputFile, inputFile + ".1", eidosNode => new LocalNode1(eidosNode)) // make children explicit
+    new Converter_1_2(inputFile, inputFile + ".2", eidosNode => new LocalNode2(eidosNode)) // change OntologyNode to node
+    new Converter_1_2(inputFile, inputFile + ".3", eidosNode => new LocalNode3(eidosNode)) // move name to top
+    new Converter_1_2(inputFile, inputFile + ".4", eidosNode => new LocalNode4(eidosNode)) // combine definition and descriptions
     // restore comments
   }
 
