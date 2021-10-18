@@ -84,7 +84,8 @@ node:
                             children:
                                 - node:
                                     name: cereals
-                                    definition: A grass cultivated for the edible parts of its grain.
+                                    descriptions:
+                                        - A grass cultivated for the edible parts of its grain.
                                     examples:
                                         - barley
                                         - cereals
@@ -198,7 +199,8 @@ node:
                                     semantic type: entity
                                 - node:
                                     name: vegetables
-                                    definition: vegetable crops and food
+                                    descriptions:
+                                        - vegetable crops and food
                                     examples:
                                         - beets
                                         - cabbage
@@ -275,7 +277,8 @@ node:
                                     semantic type: event
                         - node:
                             name: livestock_nonpoultry
-                            definition: Domesticated animals raised for their labor or to produce commodities such as milk, meat, eggs, fur, leather, or wool.
+                            descriptions:
+                                - Domesticated animals raised for their labor or to produce commodities such as milk, meat, eggs, fur, leather, or wool.
                             examples:
                                 - beef
                                 - bull
@@ -844,7 +847,8 @@ node:
                             children:
                                 - node:
                                     name: drought
-                                    definition: A prolonged shortage in the water supply.
+                                    descriptions:
+                                        - A prolonged shortage in the water supply.
                                     examples:
                                         - drought
                                         - droughts
@@ -937,7 +941,8 @@ node:
                                     semantic type: event
                         - node:
                             name: epidemic
-                            definition: The rapid spread of disease to a large population in a short amount of time.
+                            descriptions:
+                                - The rapid spread of disease to a large population in a short amount of time.
                             examples:
                                 - disease
                                 - epidemic
@@ -2150,7 +2155,8 @@ node:
                             semantic type: entity
                         - node:
                             name: ruling_party
-                            definition: 'note: in Kenya, the ruling party is the Jubilee party'
+                            descriptions:
+                                - 'note: in Kenya, the ruling party is the Jubilee party'
                             examples:
                                 - incumbent
                                 - incumbent government
@@ -2376,7 +2382,8 @@ node:
                                     semantic type: event
                                 - node:
                                     name: weather
-                                    definition: The state of the atmosphere, describing the degree to which it is hot or cold, wet or dry, calm or stormy, clear or cloudy.
+                                    descriptions:
+                                        - The state of the atmosphere, describing the degree to which it is hot or cold, wet or dry, calm or stormy, clear or cloudy.
                                     examples:
                                         - climate variability
                                         - extreme winds
@@ -2396,7 +2403,8 @@ node:
                             children:
                                 - node:
                                     name: fossil_fuels
-                                    definition: Fuels formed from natural processes, containing organic molecules, that release energy in combustion.
+                                    descriptions:
+                                        - Fuels formed from natural processes, containing organic molecules, that release energy in combustion.
                                     examples:
                                         - carbon
                                         - crude oil
@@ -2425,7 +2433,8 @@ node:
                                     semantic type: entity
                                 - node:
                                     name: pasture
-                                    definition: Land used for grazing by domesticated livestock.
+                                    descriptions:
+                                        - Land used for grazing by domesticated livestock.
                                     examples:
                                         - grazing
                                         - pastoral
@@ -2991,7 +3000,8 @@ node:
                             semantic type: entity
                         - node:
                             name: sanction
-                            definition: A restriction on trade, or measures by a country on a state or individual intended to elicit a change in their behavior.
+                            descriptions:
+                                - A restriction on trade, or measures by a country on a state or individual intended to elicit a change in their behavior.
                             examples:
                                 - sanction
                             polarity: -1
@@ -3457,7 +3467,8 @@ node:
                             semantic type: event
                         - node:
                             name: vector
-                            definition: An agent that carries or transmits an infectious pathogen into another living organism.
+                            descriptions:
+                                - An agent that carries or transmits an infectious pathogen into another living organism.
                             examples:
                                 - excrement
                                 - mosquitos
@@ -4356,7 +4367,8 @@ node:
             children:
                 - node:
                     name: access
-                    definition: The ability or right to approach, enter, exit, make use of, or communicate with something.
+                    descriptions:
+                        - The ability or right to approach, enter, exit, make use of, or communicate with something.
                     examples:
                         - access
                     polarity: 1
@@ -4803,7 +4815,8 @@ node:
                             semantic type: event
                         - node:
                             name: exploit
-                            definition: To make use of (sometimes unfairly) to one's own advantage.
+                            descriptions:
+                                - To make use of (sometimes unfairly) to one's own advantage.
                             examples:
                                 - cheat
                                 - coerce
@@ -5158,7 +5171,8 @@ node:
                             semantic type: event
                         - node:
                             name: irrigation
-                            definition: The process of applying controlled amounts of water to plants.
+                            descriptions:
+                                - The process of applying controlled amounts of water to plants.
                             examples:
                                 - irrigate
                                 - irrigating
@@ -5467,7 +5481,8 @@ node:
                     semantic type: event
                 - node:
                     name: mitigation
-                    definition: make less severe, serious, or painful; lessen the gravity
+                    descriptions:
+                        - make less severe, serious, or painful; lessen the gravity
                     examples:
                         - alleviate
                         - counteract
@@ -5621,7 +5636,8 @@ node:
                     semantic type: event
                 - node:
                     name: prevention
-                    definition: keep something from happening or arising
+                    descriptions:
+                        - keep something from happening or arising
                     examples:
                         - limit
                         - prevent
@@ -5708,7 +5724,8 @@ node:
                     semantic type: event
                 - node:
                     name: remediation
-                    definition: provide a remedy for; redress or make right; restore by reversing or stopping environmental damage
+                    descriptions:
+                        - provide a remedy for; redress or make right; restore by reversing or stopping environmental damage
                     examples:
                         - reconcile
                         - remediate
@@ -5737,7 +5754,8 @@ node:
                     semantic type: event
                 - node:
                     name: research
-                    definition: The collection, organization, and analysis of information to increase understanding of a topic or issue.
+                    descriptions:
+                        - The collection, organization, and analysis of information to increase understanding of a topic or issue.
                     examples:
                         - experiment
                         - observe
@@ -6091,7 +6109,8 @@ node:
                     semantic type: property
                 - node:
                     name: civic
-                    definition: relating to ordinary citizens and their concerns
+                    descriptions:
+                        - relating to ordinary citizens and their concerns
                     examples:
                         - citizen
                         - civic
@@ -6442,7 +6461,8 @@ node:
                     semantic type: property
                 - node:
                     name: stability
-                    definition: Being unlikely to move or change.
+                    descriptions:
+                        - Being unlikely to move or change.
                     examples:
                         - order
                         - stability
@@ -6505,7 +6525,8 @@ node:
                     semantic type: property
                 - node:
                     name: uncertainty
-                    definition: An epistemic situation involving imperfect or unknown information.
+                    descriptions:
+                        - An epistemic situation involving imperfect or unknown information.
                     examples:
                         - uncertainty
                         - volatility

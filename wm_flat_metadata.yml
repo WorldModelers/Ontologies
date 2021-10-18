@@ -16,10 +16,10 @@ node:
                             name: interventions
                             children:
                                 - node:
-                                    name: provide
+                                    name: provide # (supply, distribute, deliver, vaccinate, give)
                                     children:
                                         - node:
-                                            name: agriculture_inputs
+                                            name: agriculture_inputs # agricultural_productivity
                                             children:
                                                 - node:
                                                     name: livestock_production_inputs
@@ -399,7 +399,7 @@ node:
                                                 - piped water supply treatment
                                             polarity: 1
                                 - node:
-                                    name: build
+                                    name: build # (construct/repair)
                                     children:
                                         - node:
                                             name: agriculture_infrastructure
@@ -564,13 +564,13 @@ node:
                                                 - energy infrastructure
                                             polarity: 1
                                 - node:
-                                    name: train
+                                    name: train # teach, capacity_building, educate, etc
                                     children:
                                         - node:
-                                            name: agriculture_training
+                                            name: agriculture_training # extension, capacity_building, training_of_trainers, development_agents (ET specific name for extension workers), extension_workers
                                             children:
                                                 - node:
-                                                    name: production_practices
+                                                    name: production_practices # Pasture_management, Herd_management, planting_practices, etc.
                                                     children:
                                                         - node:
                                                             name: planting_training # crop_spacing, planting_times, seed_depth, watering, crop_rotation, cover_cropping, composting, low_till, no_till, perennial_planting, Conservation_agriculture
@@ -614,7 +614,7 @@ node:
                                                         - agriculture information
                                                     polarity: 1
                                         - node:
-                                            name: medical_training
+                                            name: medical_training # capacity_assessments, community_health_workers (CHWs),
                                             children:
                                                 - node:
                                                     name: assessment_and_triage_of_health_facilities
@@ -674,7 +674,7 @@ node:
                                                 - public safety campaigns
                                             polarity: 1
                                         - node:
-                                            name: emergency_preparedness_training
+                                            name: emergency_preparedness_training # disaster risk management, resilience building, etc.
                                             children:
                                                 - node:
                                                     name: surveillance_system_strengthening
@@ -690,7 +690,7 @@ node:
                                                         - humanitarian certifications
                                                     polarity: 1
                                 - node:
-                                    name: secure
+                                    name: secure # protect, stabilize, defend, conserve, neutralize, preserve
                                     children:
                                         - node:
                                             name: livelihood_protections #  agricultural assets, cattle_raids, supply chains,
@@ -708,7 +708,7 @@ node:
                                                 - secure livelihood
                                             polarity: 1
                                         - node:
-                                            name: community_security
+                                            name: community_security # policing, governance
                                             children:
                                                 - node:
                                                     name: mine_clearance
@@ -767,7 +767,7 @@ node:
                                                 - cultural resources protections
                                             polarity: 1
                                 - node:
-                                    name: legislate
+                                    name: legislate # regulate, control, tax,  subsidize, penalize, certify, ban, etc.
                                     children:
                                         - node:
                                             name: subsidize
@@ -1142,6 +1142,21 @@ node:
                                     children:
                                         - node:
                                             name: livelihood
+                                            #examples:
+                                                #- livelihood
+                                                #- livelihood activities
+                                                #- workplace
+                                                #- work
+                                                #- job
+                                                #- career
+                                                #- opportunity
+                                                #- employment
+                                                #- agribusiness
+                                                #- pastoralist livelihood
+                                                #- find work
+                                                #- wages
+                                                #- high unemployment
+                                                #- underemployment
                                             children:
                                                 - node:
                                                     name: farming
@@ -1292,7 +1307,7 @@ node:
                                                         - node:
                                                             name: oil_price
                                                             examples:
-                                                                - oil price
+                                                                - oil price # should we have these?
                                                                 - cost of crude oil
                                                             polarity: 1
                                                         - node:
@@ -1311,6 +1326,18 @@ node:
                                                             polarity: 1
                                                 - node:
                                                     name: revenue
+                                                    #examples:
+                                                        #- livelihood
+                                                        #- net profit
+                                                        #- profit
+                                                        #- earning
+                                                        #- earnings
+                                                        #- revenue
+                                                        #- investment
+                                                        #- repaying
+                                                        #- fee
+                                                        #- dividend
+                                                        #- disbursements
                                                     children:
                                                         - node:
                                                             name: household_income
