@@ -1,18 +1,17 @@
 package org.clulab.linnaeus.model.io.eidos
 
 object EidosIO {
-  // This is approximately the order they appear in the file.
-  val FIELD = "OntologyNode"
-  val PATTERN = "pattern"
-  val EXAMPLES = "examples"
-  val DEFINITION = "definition"
+  // alphabetical
   val DESCRIPTIONS = "descriptions"
+  val CHILDREN = "children"
+  val EXAMPLES = "examples"
   val NAME = "name"
+  val NODE = "node"
   val OPPOSITE = "opposite"
+  val PATTERNS = "patterns"
   val POLARITY = "polarity"
   val SEMANTIC_TYPE = "semantic type"
 
-  val keys = Set(FIELD, PATTERN, EXAMPLES, DEFINITION, DESCRIPTIONS, NAME, OPPOSITE, POLARITY, SEMANTIC_TYPE)
+  // This is approximately the order they appear in the file.
+  val keys = Set(NODE, NAME, DESCRIPTIONS, PATTERNS, EXAMPLES, OPPOSITE, POLARITY, SEMANTIC_TYPE)
 }
-
-// definition
