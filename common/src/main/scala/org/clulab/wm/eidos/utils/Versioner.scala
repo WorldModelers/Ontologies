@@ -1,5 +1,7 @@
 package org.clulab.wm.eidos.utils
 
+import org.clulab.wm.eidos.utils.Closer.AutoCloser
+
 import java.time.ZonedDateTime
 import java.util.Properties
 
