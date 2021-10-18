@@ -1,4 +1,4 @@
-package org.clulab.linnaeus.model.graph
+package org.clulab.linnaeus.model.fmt1.graph
 
 class GraphNode[NodeIdentityType](
   protected val id: NodeIdentityType

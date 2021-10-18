@@ -1,4 +1,4 @@
-package org.clulab.linnaeus.model.io
+package org.clulab.linnaeus.model.fmt1.io
 
 import java.io.BufferedInputStream
 import java.io.ByteArrayInputStream

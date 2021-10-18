@@ -11,8 +11,8 @@ class TestVersioner extends FlatSpec with Matchers {
   val resourceBase = "/org/clulab/wm/eidos/english/ontologies/"
 
   protected def extensionless(filename: String): String =
-      if (filename.contains('.')) filename.substring(0, filename.lastIndexOf('.'))
-      else filename
+    if (filename.contains('.')) filename.substring(0, filename.lastIndexOf('.'))
+    else filename
 
   behavior of "Versions"
 

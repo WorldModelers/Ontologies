@@ -1,8 +1,8 @@
 package org.clulab.wm.ontologies.apps
 
-import org.clulab.linnaeus.model.graph.eidos.EidosNetwork
-import org.clulab.linnaeus.model.graph.eidos.EidosNode
-import org.clulab.linnaeus.model.io.eidos.EidosReader
+import org.clulab.linnaeus.model.fmt1.graph.eidos.EidosNetwork
+import org.clulab.linnaeus.model.fmt1.graph.eidos.EidosNode
+import org.clulab.linnaeus.model.fmt1.io.eidos.EidosReader
 import org.clulab.wm.eidos.utils.FileUtils
 import org.yaml.snakeyaml.DumperOptions
 import org.yaml.snakeyaml.DumperOptions.FlowStyle

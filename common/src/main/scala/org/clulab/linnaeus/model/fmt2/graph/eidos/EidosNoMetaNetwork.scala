@@ -1,7 +1,7 @@
-package org.clulab.linnaeus.model.graph.eidos
+package org.clulab.linnaeus.model.fmt2.graph.eidos
 
-import org.clulab.linnaeus.model.graph.GraphNetwork
-import org.clulab.linnaeus.model.graph.Indexer
+import org.clulab.linnaeus.model.fmt2.graph.GraphNetwork
+import org.clulab.linnaeus.model.fmt2.graph.Indexer
 
 class EidosNoMetaNetwork(id: Int = 0, path: String = "") extends GraphNetwork[
   Long,

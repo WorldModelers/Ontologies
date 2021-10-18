@@ -1,9 +1,9 @@
-package org.clulab.linnaeus.model.io.eidos
+package org.clulab.linnaeus.model.fmt2.io.eidos
 
-import org.clulab.linnaeus.model.graph.eidos.EidosEdge
-import org.clulab.linnaeus.model.graph.eidos.EidosNoMetaNetwork
-import org.clulab.linnaeus.model.graph.eidos.EidosNoMetaNode
-import org.clulab.linnaeus.model.io.GraphReader
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosEdge
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNoMetaNetwork
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNoMetaNode
+import org.clulab.linnaeus.model.fmt2.io.GraphReader
 import org.yaml.snakeyaml.Yaml
 import org.yaml.snakeyaml.constructor.Constructor
 

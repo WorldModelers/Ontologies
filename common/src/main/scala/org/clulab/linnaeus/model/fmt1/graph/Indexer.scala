@@ -1,4 +1,4 @@
-package org.clulab.linnaeus.model.graph
+package org.clulab.linnaeus.model.fmt1.graph
 
 class Indexer {
   protected var prevIndex: Int = -1

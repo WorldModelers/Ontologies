@@ -1,8 +1,8 @@
 package org.clulab.wm.ontologies
 
-import org.clulab.linnaeus.model.graph.eidos.EidosNetwork
-import org.clulab.linnaeus.model.graph.eidos.EidosNode
-import org.clulab.linnaeus.model.io.eidos.EidosReader
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNetwork
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNode
+import org.clulab.linnaeus.model.fmt2.io.eidos.EidosReader
 import org.scalatest._
 
 import scala.collection.mutable
@@ -11,7 +11,7 @@ class TestDomainOntology extends FlatSpec with Matchers {
   type Path = mutable.Seq[String]
 
   def trace(text: Seq[String]): Unit = {
-//    println(text)
+    //    println(text)
   }
 
   protected def error(text: String): Boolean = {
@@ -156,8 +156,6 @@ class TestDomainOntology extends FlatSpec with Matchers {
   def hasMissingOpposites(network: EidosNetwork): Boolean = {
     var leaves: Map[String, EidosNode] = Map.empty
 
-    // TODO: Is this string stuffing
-
     visit(network) { (node: EidosNode, path: Path) =>
       leaves = leaves + (path.mkString("/") -> node)
       success
@@ -206,8 +204,8 @@ class TestDomainOntology extends FlatSpec with Matchers {
   }
 
   def test(path: String): Unit = {
-      val network = new EidosNetwork()
-      val reader = new EidosReader(network)
+    val network = new EidosNetwork()
+    val reader = new EidosReader(network)
 
     behavior of "ontology in " + path
 
