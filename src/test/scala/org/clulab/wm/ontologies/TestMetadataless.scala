@@ -1,11 +1,11 @@
 package org.clulab.wm.ontologies
 
-import org.clulab.linnaeus.model.fmt1.graph.eidos.EidosNetwork
-import org.clulab.linnaeus.model.fmt1.graph.eidos.EidosNoMetaNetwork
-import org.clulab.linnaeus.model.fmt1.graph.eidos.EidosNoMetaNode
-import org.clulab.linnaeus.model.fmt1.graph.eidos.EidosNode
-import org.clulab.linnaeus.model.fmt1.io.eidos.EidosNoMetaReader
-import org.clulab.linnaeus.model.fmt1.io.eidos.EidosReader
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNetwork
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNoMetaNetwork
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNoMetaNode
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNode
+import org.clulab.linnaeus.model.fmt2.io.eidos.EidosNoMetaReader
+import org.clulab.linnaeus.model.fmt2.io.eidos.EidosReader
 import org.scalatest._
 
 import scala.collection.mutable.ArrayBuffer
