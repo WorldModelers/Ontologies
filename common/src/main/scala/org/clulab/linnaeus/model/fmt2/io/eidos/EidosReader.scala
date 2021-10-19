@@ -15,7 +15,8 @@ class EidosReader(val network: EidosNetwork) extends GraphReader {
   def read(bufferedInputStream: BufferedInputStream): Unit = {
     val yaml = new Yaml()
     val loadedYaml = yaml.load(bufferedInputStream)
-    val yamlNode = YamlNode.parse(loadedYaml)
+    val headNode = YamlNode.getHeadNode(loadedYaml)
+    val yamlNode = YamlNode.parse(headNode)
 
     def walk(yamlNode: YamlNode, parentNodeOpt: Option[EidosNode]): EidosNode = {
       debugPrintln(yamlNode.name)
