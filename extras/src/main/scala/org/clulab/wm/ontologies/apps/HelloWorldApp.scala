@@ -1,5 +1,5 @@
 package org.clulab.wm.ontologies.apps
 
-object HelloWorld extends App {
+object HelloWorldApp extends App {
   println("Hello, world!")
 }
