@@ -1,8 +1,8 @@
 package org.clulab.wm.ontologies
 
-import org.clulab.linnaeus.model.graph.eidos.EidosNetwork
-import org.clulab.linnaeus.model.graph.eidos.EidosNode
-import org.clulab.linnaeus.model.io.eidos.EidosReader
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNetwork
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNode
+import org.clulab.linnaeus.model.fmt2.io.eidos.EidosReader
 import org.scalatest._
 
 import scala.collection.mutable
