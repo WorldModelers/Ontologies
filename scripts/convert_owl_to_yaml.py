@@ -1,5 +1,7 @@
 """
-This code takes an RDF file (eg:from kimetrica) and converts it into a YAML ontology suitable for usage with Eidos.
+This code takes an RDF file (eg:from kimetrica) and converts it into a fmt1 YAML ontology suitable for usage with Eidos,
+or at least Eidos at one time.  To get the a fmt2 YAML ontology that Eidos presently uses, additionally run the Scala
+App org.clulab.wm.ontologies.apps.Connverter_1_2_App.
 
 Prerequisites:
     python3, rdfextras,rdflib
