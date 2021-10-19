@@ -33,108 +33,112 @@ If you want to make edits directly through the GitHub user interface, please be 
 
 ## Format
 
-Leaf nodes in the ontology with metadata are presently formatted as such:
-```yml
-- OntologyNode:
-  pattern:
-  - pattern1
-  - ...
-  - patternN
-  examples:
-  - example1
-  - ...
-  - exampleN
-  descriptions:
-  - description1
-  - ...
-  - descriptionN
-  name: name
-  polarity: 1.0
+Described here is an updated format, `fmt2`.  See [lastFmt1](https://github.com/WorldModelers/Ontologies/blob/lastFmt1/README.md) for the last use of `fmt1`.
 
+Nodes in the ontology are formatted as such:
+```yml
+node:
+    name: [name_of_node]
+    descriptions:
+        - [description1]
+        - ...
+        - [descriptionL]
+    patterns:
+        - [pattern1]
+        - ...
+        - [patternM]
+    examples:
+        - [example1]
+        - ...
+        - [exampleN]
+    opposite: [path/to/opposite]
+    polarity: [1 | -1]
+    semantic type: [entity | event | property]
+    children:
+        - node:
+            name: ...
+        - node:
+            name: ...  
 ```
-where all the keys (`OntologyNode`, `pattern`, `examples`, `descriptions`, `name`, `opposite`, and `polarity`)
-should be reproduced verbatim when they are used.  If they are not used, e.g., there is no example1, then the
-key should not be listed.  The parser doesn't like superfluous keys.  `name` is the only one required.  Not all
-nodes need to have the same set of keys.
+where all the keys (`node`, `name`, `descriptions`, `patterns`, `examples`, `opposite`, `polarity`, `semantic type`, and `children`)
+should be reproduced verbatim when they are used.  If they are not used, e.g., there is no `example1`, then the key, `example` here, should not be listed.  The parser doesn't like superfluous keys.  `node` and `name` are the only keys required.  Not all nodes need to have the same set of keys.
 
 Values are described briefly in the table below.
 
 |Key|Description of Value|
 |---|---|
-|pattern|A regular expression that might be used to identify text that should match the node|
-|examples|Short phrases, possibly synonyms, that should match the node|
+|name|The name of the node, used for identification purposes.  Spaces should be replace by underscores.  Slashes should be avoided.|
 |descriptions|Longer texts that define the node or exemplify the context in which it might be found|
-|name|The name of the node, used for identification purposes|
+|patterns|Regular expressions that might be used to identify text that should match the node|
+|examples|Short phrases, possibly synonyms, that should match the node|
 |opposite|A /-separated path to an ontology node with the same meaning but of opposite polarity|
-|polarity|Presently always 1, but potentially -1 to use for opposites|
+|polarity|Either `1` or `-1`.  Opposites should have opposite polarity.|
+|semantic type|Either `entity`, `event`, or `property`|
+|children|A list is child nodes, each explicitely denoted with key `node`|
 
-Here are two examples based loosely on real entries:
-````yml
-- OntologyNode:
-  pattern:
-  - (intervention)
-  - (humanitarian)(\s|\w)+(aid|assistance)
-  examples:
-  - access
-  - humanitarian response
-  - humanitarian aid
-  - poverty alleviation
-  name: humanitarian assistance
-  opposite: wm/concept/.../water_security
-  polarity: 1
-````
+Here are some examples based on real entries:
 ```yml
-- OntologyNode:
-  descriptions:
-  - Upper secondary school pupil-teacher ratio is the average number of pupils per
-    teacher in upper secondary school.
-  name: Pupil-teacher_ratio,_upper_secondary
-  opposite: wm/concept/.../water_insecurity
-  polarity: -1
+- node:
+    name: irrigation
+    descriptions:
+        - The process of applying controlled amounts of water to plants.
+    examples:
+        - irrigate
+        - irrigating
+        - irrigation
+    polarity: 1
+    semantic type: event
+- node:
+    name: hopper_band
+    patterns:
+        - (hopper\s+band)|(bands?\s+of\s+hoppers)
+    examples:
+        - bands of hoppers
+        - locust hopper groups
+        - hopper outbreak upsurge
+        - immature
+    polarity: -1
+- node:
+    name: crop
+    children:
+        - node:
+            name: cereals
+            descriptions:
+                - A grass cultivated for the edible parts of its grain.
+            examples:
+                - barley
+                - cereals
+                - maize
+                - sorghum
+                - tef
+                - wheat
+            polarity: 1
+            semantic type: entity
+        - node:
+            name: crop_land
 ```
 
-Branch nodes have only a branch name and have no data associated with them other than
-their position in the hierarchical list and their potential leaves:
+Branch nodes, i.e., nodes with children, can in `fmt2` have all the data associated with leaf nodes, those without children.  Branches with no leaves and no data should be avoided.
 
-````yml
-- wm
-  - branch 1
-    - branch 1.1
-      - OntologyNode:
-      ...
-      - OntologyNode:
-      ...
-    - branch 1.2
-      - branch 1.2.1
-        - OntologyNode:
-      ...
-  - branch 2
-    - OntologyNode:
-    ...
-  - branch 3
-````
-
-The root branch, `wm` here, usually identifies the ontology itself.
-Branches with no leaves should be avoided.
-
-Here's a small, but concrete example:
+The root branch, usually named `wm`, is presently an object/dictionary but may soon be turned into a list.
 
 ```yml
-- wm:
-  - concept:
-    - causal_factor:
-      - intervention:
-        - OntologyNode:
-          name: humanitarian assistance
-        - provision of goods and services:
-          - education:
-            - OntologyNode:
-              name: child friendly learning spaces
-          - health:
-            - OntologyNode:
-              name: anti-retroviral treatment
-            - OntologyNode:
-              name: sexual violence management
+node:
+    name: wm
+    children:
+        - node:
+            ...
+        - node:
+            ...    
+```
+
+## Version
+
+If you use the jar file that is produced by [jitpack](https://jitpack.io/#WorldModelers/Ontologies) to encorporate the ontologies into your project, you  should find two properties files next to the ontology files which record their versions according to git.  `CompositionalOntology_metadata.properties`, for example, looks something like this:
+
+```
+hash = bbafee6c4eeb5f94cd746aceed21b48e5b5eae1a
+date = 2021-10-05T17:48:19Z
 ```
 
 ## Tests
@@ -144,8 +148,13 @@ The unit tests presently check for
 * special characters that might have been copied in unnecessarily
 * duplicate paths
 * duplicate leaf nodes
+* unlabeled nodes
 * spaces in path
 * mismatched opposites
+* missing examples
+* valid polarity
+* valid semantic types
+* unknown keys
 
 If a test fails, there may be a hint to the reason why in the output which shows nodes as they
 are processed.  The last node printed, or one after, is the likely problem case.
