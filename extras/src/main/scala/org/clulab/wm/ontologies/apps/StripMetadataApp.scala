@@ -34,17 +34,6 @@ object StripMetadataApp extends App {
       reader.readFromFile(inputFilename)
       network
     }
-    val eidosToLocalMap = new JIdentityHashMap[EidosNode, MetadatalessNode]()
-
-    def getOrAddNode(eidosNode: EidosNode, hasChildren: Boolean): MetadatalessNode = {
-      Option(eidosToLocalMap.get(eidosNode)).getOrElse {
-        val localNode = new MetadatalessNode(eidosNode, hasChildren)
-
-        eidosToLocalMap.put(eidosNode, localNode)
-        localNode
-      }
-    }
-
     val parentAndChildNodes = {
       val parentAndChildNodes = new ArrayBuffer[(EidosNode, EidosNode)]()
       new (network.HierarchicalGraphVisitor).foreachEdge { case (eidosParentNode, _, eidosChildNode) =>
@@ -53,24 +42,38 @@ object StripMetadataApp extends App {
       }
       parentAndChildNodes.toArray
     }
+    val metadatalessNode: MetadatalessNode = {
+      val eidosToLocalMap = new JIdentityHashMap[EidosNode, MetadatalessNode]()
 
-    parentAndChildNodes.foreach { case (eidosParentNode, eidosChildNode) =>
-      val localParentNode = getOrAddNode(eidosParentNode, true)
-      val childHasChildren = parentAndChildNodes.exists { case (eidosParentNode, _) =>
-        eidosParentNode.eq(eidosChildNode)
+      def getOrAddNode(eidosNode: EidosNode, hasChildren: Boolean): MetadatalessNode = {
+        Option(eidosToLocalMap.get(eidosNode)).getOrElse {
+          val localNode = new MetadatalessNode(eidosNode, hasChildren)
+
+          eidosToLocalMap.put(eidosNode, localNode)
+          localNode
+        }
       }
-      if (childHasChildren) {
-        val localChildNode = getOrAddNode(eidosChildNode, childHasChildren)
-        localParentNode.addChild(localChildNode)
+
+      parentAndChildNodes.foreach { case (eidosParentNode, eidosChildNode) =>
+        val localParentNode = getOrAddNode(eidosParentNode, true)
+        val childHasChildren = parentAndChildNodes.exists { case (eidosParentNode, _) =>
+          eidosParentNode.eq(eidosChildNode)
+        }
+        if (childHasChildren) {
+          val localChildNode = getOrAddNode(eidosChildNode, childHasChildren)
+          localParentNode.addChild(localChildNode)
+        }
+        else
+          // This is not even a node then, but just a string.
+          localParentNode.addChild(eidosChildNode.name)
       }
-      else
-        // This is not even a node then, but just a string.
-        localParentNode.addChild(eidosChildNode.name)
+      eidosToLocalMap.get(network.getRootNode.get)
     }
-    val metadatalessNode: MetadatalessNode = eidosToLocalMap.get(network.getRootNode.get)
-    val metadatalessNodes = new JArrayList[MetadatalessNode]()
-    metadatalessNodes.add(metadatalessNode)
-
+    val metadatalessNodes = {
+      val metadatalessNodes = new JArrayList[MetadatalessNode]()
+      metadatalessNodes.add(metadatalessNode)
+      metadatalessNodes
+    }
     // See https://stackoverflow.com/questions/57728245/how-can-i-control-yaml-indentation-using-snakeyaml-during-dumping
     val dumperOptions = {
       val dumperOptions = new DumperOptions()
@@ -80,8 +83,6 @@ object StripMetadataApp extends App {
       dumperOptions
     }
     val yaml: String = new Yaml(dumperOptions).dumpAs(metadatalessNodes, Tag.SEQ, FlowStyle.BLOCK)
-
-    println(yaml)
 
     newPrintWriterFromFile(new File(outputFilename)).autoClose { printWriter =>
       printWriter.println(yaml)
