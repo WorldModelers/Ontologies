@@ -1,7 +1,7 @@
 package org.clulab.wm.ontologies.apps
 
 import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNode
-import org.clulab.linnaeus.model.fmt2.graph.eidos.{EidosNetwork, EidosNode}
+import org.clulab.linnaeus.model.fmt2.graph.eidos.EidosNetwork
 import org.clulab.linnaeus.model.fmt2.io.eidos.EidosReader
 import org.clulab.wm.eidos.utils.Closer.AutoCloser
 import org.yaml.snakeyaml.{DumperOptions, Yaml}
@@ -101,11 +101,7 @@ class MetadatalessNode(eidosNode: EidosNode, hasChildren: Boolean) extends JLink
   if (hasChildren)
     this.put(eidosNode.name, children)
 
-  def addChild(localNode: MetadatalessNode): Unit = {
-    children.add(localNode)
-  }
+  def addChild(localNode: MetadatalessNode): Unit = children.add(localNode)
 
-  def addChild(child: String): Unit = {
-    children.add(child)
-  }
+  def addChild(child: String): Unit =  children.add(child)
 }
