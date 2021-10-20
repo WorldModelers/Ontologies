@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets
 import java.util.{ArrayList => JArrayList}
 import java.util.{IdentityHashMap => JIdentityHashMap}
 import java.util.{LinkedHashMap => JLinkedHashMap}
+import scala.collection.mutable.ArrayBuffer
 
 object StripMetadataApp extends App {
   val utf8: String = StandardCharsets.UTF_8.toString
@@ -27,30 +28,45 @@ object StripMetadataApp extends App {
       new PrintWriter(new OutputStreamWriter(new FileOutputStream(file), utf8))
 
   def stripMetadata(inputFilename: String, outputFilename: String): Unit = {
-    val network = new EidosNetwork()
-    val reader = new EidosReader(network)
-
-    reader.readFromFile(inputFilename)
-
+    val network = {
+      val network = new EidosNetwork()
+      val reader = new EidosReader(network)
+      reader.readFromFile(inputFilename)
+      network
+    }
     val eidosToLocalMap = new JIdentityHashMap[EidosNode, MetadatalessNode]()
 
-    def getOrAddNode(eidosNode: EidosNode): MetadatalessNode = {
+    def getOrAddNode(eidosNode: EidosNode, hasChildren: Boolean): MetadatalessNode = {
       Option(eidosToLocalMap.get(eidosNode)).getOrElse {
-        val localNode = new MetadatalessNode(eidosNode)
+        val localNode = new MetadatalessNode(eidosNode, hasChildren)
 
         eidosToLocalMap.put(eidosNode, localNode)
         localNode
       }
     }
 
-    new (network.HierarchicalGraphVisitor).foreachEdge { case (eidosParentNode, _, eidosChildNode) =>
-      val localParentNode = getOrAddNode(eidosParentNode)
-      val localChildNode = getOrAddNode(eidosChildNode)
-
-      localParentNode.addChild(localChildNode)
-      true
+    val parentAndChildNodes = {
+      val parentAndChildNodes = new ArrayBuffer[(EidosNode, EidosNode)]()
+      new (network.HierarchicalGraphVisitor).foreachEdge { case (eidosParentNode, _, eidosChildNode) =>
+        parentAndChildNodes.append((eidosParentNode, eidosChildNode))
+        true
+      }
+      parentAndChildNodes.toArray
     }
 
+    parentAndChildNodes.foreach { case (eidosParentNode, eidosChildNode) =>
+      val localParentNode = getOrAddNode(eidosParentNode, true)
+      val childHasChildren = parentAndChildNodes.exists { case (eidosParentNode, _) =>
+        eidosParentNode.eq(eidosChildNode)
+      }
+      if (childHasChildren) {
+        val localChildNode = getOrAddNode(eidosChildNode, childHasChildren)
+        localParentNode.addChild(localChildNode)
+      }
+      else
+        // This is not even a node then, but just a string.
+        localParentNode.addChild(eidosChildNode.name)
+    }
     val metadatalessNode: MetadatalessNode = eidosToLocalMap.get(network.getRootNode.get)
     val metadatalessNodes = new JArrayList[MetadatalessNode]()
     metadatalessNodes.add(metadatalessNode)
@@ -61,8 +77,6 @@ object StripMetadataApp extends App {
       dumperOptions.setWidth(300)
       dumperOptions.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK)
       dumperOptions.setIndent(2)
-//      dumperOptions.setIndicatorIndent(2)
-//      dumperOptions.setIndentWithIndicator(true) // Would like this to be false, but then have indent on that line be 6
       dumperOptions
     }
     val yaml: String = new Yaml(dumperOptions).dumpAs(metadatalessNodes, Tag.SEQ, FlowStyle.BLOCK)
@@ -80,15 +94,17 @@ object StripMetadataApp extends App {
   stripMetadata(inputFile, outputFile)
 }
 
-class MetadatalessNode(eidosNode: EidosNode) extends JLinkedHashMap[String, Any] {
-//  val node = new JLinkedHashMap[String, Any] // turn this to just name?
-  val children = new JArrayList[MetadatalessNode]() // put in names of children, no just node self?
+class MetadatalessNode(eidosNode: EidosNode, hasChildren: Boolean) extends JLinkedHashMap[String, Any] {
+  val children = new JArrayList[Any]() // either another MetadatalessNode or a String
 
-  this.put(eidosNode.name, children)
+  if (hasChildren)
+    this.put(eidosNode.name, children)
 
   def addChild(localNode: MetadatalessNode): Unit = {
-//    if (!node.containsKey("children"))
-//      node.put("children", children)
     children.add(localNode)
+  }
+
+  def addChild(child: String): Unit = {
+    children.add(child)
   }
 }
