@@ -5,7 +5,6 @@ import scala.collection.JavaConverters._
 import java.util.{ArrayList => JArrayList}
 import java.util.{LinkedHashMap => JLinkedHashMap}
 
-
 case class YamlNode(
   name: String,
   childrenOpt: Option[Array[YamlNode]],
@@ -40,6 +39,11 @@ object YamlNode {
   def getNode(any: Any): JLinkedHashMap[String, Any] = any
       .asInstanceOf[JLinkedHashMap[String, Any]]
       .get(YamlNode.NODE)
+      .asInstanceOf[JLinkedHashMap[String, Any]]
+
+  def getHeadNode(any: Any): JLinkedHashMap[String, Any] = any
+      .asInstanceOf[JArrayList[Any]]
+      .get(0)
       .asInstanceOf[JLinkedHashMap[String, Any]]
 
   def getString(node: JLinkedHashMap[String, Any], name: String): String =
