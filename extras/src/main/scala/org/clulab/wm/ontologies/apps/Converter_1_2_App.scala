@@ -3,6 +3,7 @@ package org.clulab.wm.ontologies.apps
 import org.clulab.linnaeus.model.fmt1.graph.eidos.EidosNetwork
 import org.clulab.linnaeus.model.fmt1.graph.eidos.EidosNode
 import org.clulab.linnaeus.model.fmt1.io.eidos.EidosReader
+import org.clulab.wm.eidos.utils.Closer.AutoCloser
 import org.clulab.wm.eidos.utils.FileUtils
 import org.yaml.snakeyaml.DumperOptions
 import org.yaml.snakeyaml.DumperOptions.FlowStyle
@@ -63,12 +64,15 @@ class Converter_1_2(inputFile: String, outputFilename: String, newLocalNode: Eid
 
   val localRoot: LocalNode = eidosToLocalMap.get(network.getRootNode.get)
   // See https://stackoverflow.com/questions/57728245/how-can-i-control-yaml-indentation-using-snakeyaml-during-dumping
-  val dumperOptions = new DumperOptions()
-  dumperOptions.setWidth(300)
-  dumperOptions.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK)
-  dumperOptions.setIndent(2)
-  dumperOptions.setIndicatorIndent(2)
-  dumperOptions.setIndentWithIndicator(true) // Would like this to be false, but then have indent on that line be 6
+  val dumperOptions = {
+    val dumperOptions = new DumperOptions()
+    dumperOptions.setWidth(300)
+    dumperOptions.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK)
+    dumperOptions.setIndent(2)
+    dumperOptions.setIndicatorIndent(2)
+    dumperOptions.setIndentWithIndicator(true) // Would like this to be false, but then have indent on that line be 6
+    dumperOptions
+  }
   val yaml: String = new Yaml(dumperOptions).dumpAs(localRoot, Tag.MAP, FlowStyle.BLOCK)
 
   def leadingSpaces(text: String): Int = text.indexWhere(_ != ' ')
@@ -87,9 +91,9 @@ class Converter_1_2(inputFile: String, outputFilename: String, newLocalNode: Eid
   }
   val newYaml: String = headerText + newLines.mkString("", "\n", "\n")
 
-  val printWriter: PrintWriter = newPrintWriterFromFile(new File(outputFilename))
-  printWriter.println(newYaml)
-  printWriter.close()
+  newPrintWriterFromFile(new File(outputFilename)).autoClose { printWriter =>
+    printWriter.println(newYaml)
+  }
 }
 
 object Converter_1_2_App extends App {

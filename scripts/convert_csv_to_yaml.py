@@ -6,7 +6,8 @@ import sys
 
 '''
     This is a script to convert the spreadsheet version of an ontology into the
-    yaml-with-metadata format.
+    yaml-with-metadata format (fmt1).  To convert to fmt2, also run the Scala
+    App org.clulab.wm.ontologies.apps.Connverter_1_2_App.
     Assumes the current format of sheet made by Alli for the compositional ontology
     (2020-08-20)
     
