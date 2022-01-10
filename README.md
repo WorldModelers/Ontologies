@@ -70,7 +70,7 @@ Values are described briefly in the table below.
 |name|The name of the node, used for identification purposes.  Spaces should be replace by underscores.  Slashes should be avoided.|
 |descriptions|Longer texts that define the node or exemplify the context in which it might be found|
 |patterns|Regular expressions that might be used to identify text that should match the node|
-|examples|Short phrases, possibly synonyms, that should match the node|
+|examples|Short phrases, possibly synonyms, that should match the node.  These may be used as "seeds" to calculate an embedding value for the node.|
 |opposite|A /-separated path to an ontology node with the same meaning but of opposite polarity|
 |polarity|Either `1` or `-1`.  Opposites should have opposite polarity.|
 |semantic type|Either `entity`, `event`, or `property`|
