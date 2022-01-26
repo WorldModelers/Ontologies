@@ -158,3 +158,7 @@ The unit tests presently check for
 
 If a test fails, there may be a hint to the reason why in the output which shows nodes as they
 are processed.  The last node printed, or one after, is the likely problem case.
+
+## License
+* Ontologies: [CC-BY](./LICENSE.txt)
+* Code: [BSD 2-Clause](./common/src/main/resources/LICENSE.txt)

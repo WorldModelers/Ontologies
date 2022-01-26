@@ -10,3 +10,6 @@ target/
 # Python
 .vscode/
 __pycache__/
+
+# VS Code
+.metals/
